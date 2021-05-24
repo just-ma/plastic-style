@@ -2,8 +2,6 @@ import React from 'react';
 
 import styles from './Nav.module.scss';
 import NavItem from './NavItem';
-import { Link } from 'react-router-dom';
-
 
 const NAV_MENU = [
   {
@@ -19,7 +17,6 @@ const NAV_MENU = [
     link: '/podcasts'
   }
 ]
-
 
 export default function Nav() {
   return (
