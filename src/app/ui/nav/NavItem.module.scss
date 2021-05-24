@@ -1,3 +1,16 @@
-.NavItem {
+.NavItem a {
+  color: black;
+  text-decoration: none;
+}
 
+.NavItem {
+  padding: 10px;
+}
+
+.active {
+  background: black;
+}
+
+.active a {
+  color: white;
 }

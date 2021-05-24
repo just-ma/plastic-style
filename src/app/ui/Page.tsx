@@ -9,9 +9,9 @@ export default function Page(Component: React.ComponentType)  {
   const component = () => {
     return (
       <div className={styles.Page}>
-        <Header />
         <div className={styles.navWrapper}>
-          <Nav />
+          <Header />
+          <Nav/>
           <Component />
         </div>
       </div>

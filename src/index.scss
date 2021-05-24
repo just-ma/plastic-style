@@ -3,4 +3,8 @@ body {
   font-family: 'Inconsolata', monospace;
   height: 100vh;
   overflow: hidden;
+
+  #root {
+    height: 100vh;
+  }
 }

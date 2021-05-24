@@ -1,8 +1,11 @@
 .Page {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .navWrapper {
   display: flex;
   align-items: stretch;
+  flex-grow: 1;
 }
