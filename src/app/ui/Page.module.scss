@@ -1,8 +1,6 @@
 .Page {
+  align-items: stretch;
+  display: flex;
   height: 100%;
 }
 
-.navWrapper {
-  display: flex;
-  align-items: stretch;
-}
