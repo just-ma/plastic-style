@@ -9,4 +9,13 @@
 
 .navItems {
   margin-bottom: 100px;
+  position: relative;
+}
+
+.navArrow {
+  position: absolute;
+  margin: 4px 10px;
+  font-size: 20px;
+
+  transition: top 0.3s;
 }
