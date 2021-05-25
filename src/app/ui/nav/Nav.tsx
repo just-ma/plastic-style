@@ -6,26 +6,26 @@ import NavItem from './NavItem';
 const NAV_MENU = [
   {
     title: 'Reviews',
-    link: '/reviews'
+    link: '/reviews',
   },
   {
     title: 'Lists',
-    link: '/lists'
+    link: '/lists',
   },
   {
     title: 'Podcasts',
-    link: '/podcasts'
-  }
-]
+    link: '/podcasts',
+  },
+];
 
 export default function Nav() {
   return (
     <div className={styles.Nav}>
       <div className={styles.navItems}>
         {NAV_MENU.map((item, index) => (
-          <NavItem key={index} {...item}/>
+          <NavItem key={index} {...item} />
         ))}
       </div>
     </div>
-  )
+  );
 }

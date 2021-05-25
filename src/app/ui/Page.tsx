@@ -5,12 +5,12 @@ import Nav from './nav/Nav';
 
 import styles from './Page.module.scss';
 
-export default function Page(Component: React.ComponentType)  {
+export default function Page(Component: React.ComponentType) {
   const component = () => {
     return (
       <div className={styles.Page}>
         <PageTitle />
-        <Nav/>
+        <Nav />
         <Component />
       </div>
     );
