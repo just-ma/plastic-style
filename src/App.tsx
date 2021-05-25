@@ -1,10 +1,11 @@
-import { BrowserRouter as Router , Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Page from "./app/ui/Page";
-import Home from "./home/Home";
-import Lists from "./lists/Lists";
-import Podcasts from "./podcasts/Podcasts";
-import Reviews from "./reviews/Reviews";
+import Page from './app/ui/Page';
+import Home from './home/Home';
+import Lists from './lists/Lists';
+import Podcasts from './podcasts/Podcasts';
+import Reviews from './reviews/Reviews';
 
 export default function App() {
   return (

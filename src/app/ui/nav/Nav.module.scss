@@ -1,6 +1,12 @@
 .Nav {
   padding: 30px;
   width: 100px;
-  height: fit-content;
-  align-self: center;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navItems {
+  margin-bottom: 100px;
 }
