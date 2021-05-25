@@ -4,3 +4,13 @@
   height: 100%;
 }
 
+.scrollContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 160px; // todo: remove this line and absolutely position Nav
+}
+
+.contentContainer {
+  max-width: 800px;
+  margin: 200px auto 250px;
+}

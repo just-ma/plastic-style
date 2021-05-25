@@ -11,7 +11,11 @@ export default function Page(Component: React.ComponentType) {
       <div className={styles.Page}>
         <PageTitle />
         <Nav />
-        <Component />
+        <div className={styles.scrollContainer}>
+          <div className={styles.contentContainer}>
+            <Component />
+          </div>
+        </div>
       </div>
     );
   };
