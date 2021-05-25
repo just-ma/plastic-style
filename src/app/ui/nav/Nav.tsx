@@ -21,9 +21,11 @@ const NAV_MENU = [
 export default function Nav() {
   return (
     <div className={styles.Nav}>
-      {NAV_MENU.map((item, index) => (
-        <NavItem key={index} {...item}/>
-      ))}
+      <div className={styles.navItems}>
+        {NAV_MENU.map((item, index) => (
+          <NavItem key={index} {...item}/>
+        ))}
+      </div>
     </div>
   )
 }
