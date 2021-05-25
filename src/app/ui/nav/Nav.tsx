@@ -19,7 +19,7 @@ const NAV_MENU = [
   },
 ];
 
-const NAV_ITEM_HEIGHT = 25;
+const NAV_ITEM_HEIGHT = 29;
 
 export default function Nav() {
   const currentPagePath = window.location.pathname;

@@ -21,6 +21,7 @@ export default function NavItem({ onMouseEnter, onMouseLeave, isActive, title, l
       onMouseLeave={onMouseLeave}
       className={classnames(styles.NavItem, isActive && styles.active)}
     >
+      {/* style to make link big */}
       <div className={styles.link}>
         <Link to={link}>{title}</Link>
       </div>
