@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import styles from './Nav.module.scss';
 import NavItem from './NavItem';
@@ -24,23 +24,25 @@ const NAV_ITEM_HEIGHT = 29;
 export default function Nav() {
   const currentPagePath = window.location.pathname;
 
-  let activeIndex = 0;
-  NAV_MENU.forEach((item, index) => {
-    if (currentPagePath === item.link) {
-      activeIndex = index;
-    }
-  });
+  const activeIndex = useMemo(() => {
+    let index = 0;
+    NAV_MENU.forEach((item, i) => {
+      if (currentPagePath === item.link) {
+        index = i;
+        return;
+      }
+    });
+    return index;
+  }, [currentPagePath]);
 
   const [hovered, setHovered] = useState(activeIndex);
 
-  const isActive = (link: string): boolean => {
-    const currentPagePath = window.location.pathname;
-
+  const getIsActive = (link: string): boolean => {
     if (link === '/' && currentPagePath !== '/') {
       return false;
     }
 
-    if (currentPagePath.includes(link)) {
+    if (currentPagePath.startsWith(link)) {
       return true;
     }
 
@@ -55,7 +57,7 @@ export default function Nav() {
           <NavItem
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(activeIndex)}
-            isActive={isActive(item.link)}
+            isActive={getIsActive(item.link)}
             index={index}
             key={index}
             {...item}
