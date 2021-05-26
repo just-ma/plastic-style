@@ -8,7 +8,6 @@ import classnames from 'classnames';
 type ComponentProps = {
   onMouseEnter: () => void;
   onMouseLeave: () => void;
-  index: number;
   isActive: boolean;
   title: string;
   link: string;
