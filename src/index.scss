@@ -1,3 +1,7 @@
+html {
+  background-color: #ebebeb;
+}
+
 body {
   margin: 0;
   font-family: 'Inconsolata', monospace;
@@ -7,4 +11,9 @@ body {
   #root {
     height: 100vh;
   }
+}
+
+p {
+  font-size: 14px;
+  line-height: 18px;
 }

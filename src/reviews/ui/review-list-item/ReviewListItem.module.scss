@@ -1,0 +1,32 @@
+.ReviewListItem {
+  display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: 100px;
+  }
+}
+
+.thumbnail {
+  flex-shrink: 0;
+}
+
+.info {
+  margin-left: 50px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.contentContainer {
+  margin-bottom: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  margin-bottom: 100px;
+}
