@@ -20,7 +20,7 @@ const NAV_MENU = [
   },
 ];
 
-const NAV_ITEM_HEIGHT = 29;
+const NAV_ITEM_HEIGHT = 25;
 
 export default function Nav(): React.ReactElement {
   const currentPagePath = window.location.pathname;
@@ -52,17 +52,20 @@ export default function Nav(): React.ReactElement {
 
   return (
     <div className={styles.Nav}>
-      <div className={styles.navItems}>
+      <div className={styles.center}>
         <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>{`>>`}</div>
-        {NAV_MENU.map((item, index) => (
-          <NavItem
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(activeIndex)}
-            isActive={getIsActive(item.link)}
-            key={index}
-            {...item}
-          />
-        ))}
+        <div className={styles.navItems}>
+          {NAV_MENU.map((item, index) => (
+            <NavItem
+              key={index}
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(activeIndex)}
+              isActive={getIsActive(item.link)}
+              isHover={hovered === index}
+              {...item}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

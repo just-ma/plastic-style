@@ -7,16 +7,18 @@
   justify-content: center;
 }
 
-.navItems {
+.center {
   margin-bottom: 100px;
   position: relative;
 }
 
+.navItems {
+  z-index: 1;
+}
+
 .navArrow {
   position: absolute;
-  margin: 4px 10px;
+  margin: -1px -10px;
   font-size: 20px;
-  z-index: -1;
-
   transition: top 0.3s;
 }
