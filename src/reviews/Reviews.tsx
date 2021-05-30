@@ -2,8 +2,9 @@ import React from 'react';
 
 import ReviewListItem from './ui/review-list-item/ReviewListItem';
 
-const MOCK_REVIEWS = [
+export const MOCK_REVIEWS = [
   {
+    reviewId: '123',
     artist: 'Lightning McQueen',
     title: 'Speed... I Am Speed',
     author: 'Parker Albert',
@@ -12,9 +13,44 @@ const MOCK_REVIEWS = [
     content:
       'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
       'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
+      'Lightning McQueen knocks it out of the park once again with his 10th album this year. ' +
+      'I dont know how he manages to create so much content without ever sacrficing quality. ' +
       '10/10 piston cups for this absolute banger.',
   },
   {
+    reviewId: '456',
     artist: 'Lightning McQueen',
     title: '2 Speedy',
     author: 'Ben Langdon-Westwood',

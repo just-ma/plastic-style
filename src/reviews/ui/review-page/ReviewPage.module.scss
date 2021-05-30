@@ -1,0 +1,35 @@
+.ReviewPage {
+  position: relative;
+  padding-left: 350px;
+}
+
+.leftContainer {
+  position: sticky;
+  top: 250px;
+  height: 0;
+  margin-left: -350px;
+  display: flex;
+  align-items: stretch;
+}
+
+.infoContainer {
+  width: 240px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.thumbnail {
+  margin-bottom: 30px;
+}
+
+.divider {
+  margin-left: 38px;
+}
+
+.metaContainer {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { reviewPagePath } from '../../routes';
 
 import AlbumCover from '../AlbumCover';
 import Header from '../Header';
@@ -8,6 +9,7 @@ import ReadMore from './ReadMore';
 import styles from './ReviewListItem.module.scss';
 
 type ComponentProps = {
+  reviewId: string;
   artist: string;
   title: string;
   author: string;
@@ -17,6 +19,7 @@ type ComponentProps = {
 };
 
 export default function ReviewListItem({
+  reviewId,
   artist,
   title,
   author,
@@ -35,7 +38,7 @@ export default function ReviewListItem({
             <Header artist={artist} title={title} />
           </div>
           <p className={styles.contentContainer}>{content}</p>
-          <ReadMore link={'/'} />
+          <ReadMore link={reviewPagePath(reviewId)} />
         </div>
       </div>
       <div className={styles.divider}>

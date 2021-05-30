@@ -28,7 +28,7 @@ export default function Nav(): React.ReactElement {
   const activeIndex = useMemo(() => {
     let index = 0;
     NAV_MENU.forEach((item, i) => {
-      if (currentPagePath === item.link) {
+      if (currentPagePath.startsWith(item.link)) {
         index = i;
         return;
       }

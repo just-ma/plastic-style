@@ -9,8 +9,12 @@ export default function Page(Component: React.ComponentType): () => React.ReactE
   const component = (): React.ReactElement => {
     return (
       <div className={styles.Page}>
-        <PageTitle />
-        <Nav />
+        <div className={styles.pageTitle}>
+          <PageTitle />
+        </div>
+        <div className={styles.nav}>
+          <Nav />
+        </div>
         <div className={styles.scrollContainer}>
           <div className={styles.contentContainer}>
             <Component />

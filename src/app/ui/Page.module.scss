@@ -1,16 +1,28 @@
 .Page {
-  align-items: stretch;
-  display: flex;
+  position: relative;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.pageTitle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.nav {
+  position: absolute;
+  top: 40%;
+  left: 30px;
 }
 
 .scrollContainer {
-  flex: 1;
+  height: 100%;
   overflow-y: auto;
-  padding-right: 160px; // todo: remove this line and absolutely position Nav
 }
 
 .contentContainer {
   max-width: 800px;
-  margin: 200px auto 250px;
+  margin: 250px auto 300px;
 }
