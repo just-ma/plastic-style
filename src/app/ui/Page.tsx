@@ -5,8 +5,8 @@ import Nav from './nav/Nav';
 
 import styles from './Page.module.scss';
 
-export default function Page(Component: React.ComponentType) {
-  const component = () => {
+export default function Page(Component: React.ComponentType): () => React.ReactElement {
+  const component = (): React.ReactElement => {
     return (
       <div className={styles.Page}>
         <PageTitle />

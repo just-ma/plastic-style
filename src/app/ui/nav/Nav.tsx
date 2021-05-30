@@ -1,7 +1,8 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
+
+import NavItem from './NavItem';
 
 import styles from './Nav.module.scss';
-import NavItem from './NavItem';
 
 const NAV_MENU = [
   { title: 'Home', link: '/' },
@@ -21,7 +22,7 @@ const NAV_MENU = [
 
 const NAV_ITEM_HEIGHT = 29;
 
-export default function Nav() {
+export default function Nav(): React.ReactElement {
   const currentPagePath = window.location.pathname;
 
   const activeIndex = useMemo(() => {
@@ -58,7 +59,6 @@ export default function Nav() {
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(activeIndex)}
             isActive={getIsActive(item.link)}
-            index={index}
             key={index}
             {...item}
           />

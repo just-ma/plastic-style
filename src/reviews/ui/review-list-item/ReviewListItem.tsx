@@ -16,7 +16,14 @@ type ComponentProps = {
   content: string;
 };
 
-export default function ReviewListItem({ artist, title, author, dateCreated, src, content }: ComponentProps) {
+export default function ReviewListItem({
+  artist,
+  title,
+  author,
+  dateCreated,
+  src,
+  content,
+}: ComponentProps): React.ReactElement {
   return (
     <>
       <div className={styles.ReviewListItem}>

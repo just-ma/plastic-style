@@ -7,7 +7,7 @@ import Lists from './lists/Lists';
 import Podcasts from './podcasts/Podcasts';
 import Reviews from './reviews/Reviews';
 
-export default function App() {
+export default function App(): React.ReactElement {
   return (
     <Router>
       <Switch>

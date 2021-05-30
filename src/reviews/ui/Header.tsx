@@ -7,7 +7,7 @@ type ComponentProps = {
   title: string;
 };
 
-export default function Header({ artist, title }: ComponentProps) {
+export default function Header({ artist, title }: ComponentProps): React.ReactElement {
   return (
     <div>
       <div className={styles.artist}>{artist}</div>

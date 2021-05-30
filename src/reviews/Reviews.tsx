@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ReviewListItem from './ui/review-list-item/ReviewListItem';
 
 const MOCK_REVIEWS = [
@@ -23,7 +24,7 @@ const MOCK_REVIEWS = [
   },
 ];
 
-export default function Reviews() {
+export default function Reviews(): React.ReactElement {
   return (
     <div>
       {MOCK_REVIEWS.map((meta, index) => (
