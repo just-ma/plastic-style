@@ -54,18 +54,16 @@ export default function Nav(): React.ReactElement {
     <div className={styles.Nav}>
       <div className={styles.center}>
         <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>{`>>`}</div>
-        <div className={styles.navItems}>
-          {NAV_MENU.map((item, index) => (
-            <NavItem
-              key={index}
-              onMouseEnter={() => setHovered(index)}
-              onMouseLeave={() => setHovered(activeIndex)}
-              isActive={getIsActive(item.link)}
-              isHover={hovered === index}
-              {...item}
-            />
-          ))}
-        </div>
+        {NAV_MENU.map((item, index) => (
+          <NavItem
+            key={index}
+            onMouseEnter={() => setHovered(index)}
+            onMouseLeave={() => setHovered(activeIndex)}
+            isActive={getIsActive(item.link)}
+            isHover={hovered === index}
+            {...item}
+          />
+        ))}
       </div>
     </div>
   );
