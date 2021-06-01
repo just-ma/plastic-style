@@ -35,7 +35,7 @@ export default function ReviewListItem({
         </div>
         <div className={styles.info}>
           <div className={styles.header}>
-            <Header artist={artist} title={title} />
+            <Header artist={artist} title={title} fullWidth />
           </div>
           <p className={styles.contentContainer}>{content}</p>
           <ReadMore link={reviewPagePath(reviewId)} />

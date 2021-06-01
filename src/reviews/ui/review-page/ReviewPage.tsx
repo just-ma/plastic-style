@@ -26,8 +26,8 @@ export default function ReviewPage(): React.ReactElement {
 
   return (
     <div className={styles.ReviewPage}>
-      <div className={styles.leftContainer}>
-        <div className={styles.infoContainer}>
+      <div className={styles.staticContainer}>
+        <div className={styles.infoCard}>
           <div className={styles.header}>
             <Header artist={artist} title={title} />
           </div>
