@@ -1,22 +1,18 @@
 .Nav {
-  padding: 30px;
   width: 100px;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.navItems {
-  margin-bottom: 100px;
+.center {
   position: relative;
 }
 
 .navArrow {
   position: absolute;
-  margin: 4px 10px;
+  margin: -1px -10px;
   font-size: 20px;
   z-index: -1;
-
   transition: top 0.3s;
 }

@@ -1,0 +1,38 @@
+.ReviewPage {
+  position: relative;
+}
+
+.staticContainer {
+  position: sticky;
+  top: 250px;
+  height: 0;
+}
+
+.infoCard {
+  position: absolute;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.thumbnail {
+  margin-bottom: 30px;
+}
+
+.divider {
+  position: absolute;
+  top: -30px;
+  left: 290px;
+}
+
+.metaContainer {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentContainer {
+  width: 460px;
+  margin-left: auto;
+}

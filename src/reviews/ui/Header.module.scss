@@ -1,3 +1,11 @@
+.Header {
+  max-width: 240px;
+
+  &.fullWidth {
+    max-width: 100%;
+  }
+}
+
 .artist {
   font-size: 18px;
   font-weight: 300;
@@ -7,4 +15,13 @@
 .title {
   font-size: 22px;
   font-weight: 600;
+}
+
+.artist,
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

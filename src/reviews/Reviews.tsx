@@ -1,8 +1,10 @@
 import React from 'react';
+
 import ReviewListItem from './ui/review-list-item/ReviewListItem';
 
-const MOCK_REVIEWS = [
+export const MOCK_REVIEWS = [
   {
+    reviewId: '123',
     artist: 'Lightning McQueen',
     title: 'Speed... I Am Speed',
     author: 'Parker Albert',
@@ -14,6 +16,7 @@ const MOCK_REVIEWS = [
       '10/10 piston cups for this absolute banger.',
   },
   {
+    reviewId: '456',
     artist: 'Lightning McQueen',
     title: '2 Speedy',
     author: 'Ben Langdon-Westwood',
@@ -21,9 +24,18 @@ const MOCK_REVIEWS = [
     src: 'https://images-na.ssl-images-amazon.com/images/I/71KscxenwgL._AC_SL1500_.jpg',
     content: 'Wow... just wow.',
   },
+  {
+    reviewId: '789',
+    artist: 'Lightning McQueen McQueen McQueen',
+    title: 'Long Title Loooooong Title its a long title',
+    author: 'Ben Langdon-Westwood',
+    dateCreated: 1621816461,
+    src: 'https://images-na.ssl-images-amazon.com/images/I/71KscxenwgL._AC_SL1500_.jpg',
+    content: 'Wow... just wow.',
+  },
 ];
 
-export default function Reviews() {
+export default function Reviews(): React.ReactElement {
   return (
     <div>
       {MOCK_REVIEWS.map((meta, index) => (

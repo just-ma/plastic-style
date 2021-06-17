@@ -7,7 +7,7 @@ type ComponentProps = {
   link: string;
 };
 
-export default function ReadMore({ link }: ComponentProps) {
+export default function ReadMore({ link }: ComponentProps): React.ReactElement {
   return (
     <Link to={link} className={styles.ReadMore}>
       Read More {'>'}
