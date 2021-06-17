@@ -1,28 +1,58 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import API from '@aws-amplify/api';
 
-import { MOCK_REVIEWS } from '../../Reviews';
+import { getReview } from '../../../graphql/queries';
+import { Review } from '../../models/types';
+
 import AlbumCover from '../AlbumCover';
 import Header from '../Header';
 import Divider from './Divider';
 
 import styles from './ReviewPage.module.scss';
 
+type ComponentProps = {
+  id?: string;
+};
+
 type RouteParams = {
   reviewId: string;
 };
 
-export default function ReviewPage(): React.ReactElement {
-  const { reviewId } = useParams<RouteParams>();
+export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
+  const { reviewId = id } = useParams<RouteParams>();
 
-  const { artist, title, author, dateCreated, src, content } = MOCK_REVIEWS[0];
+  const [review, setReview] = useState<Review | null>(null);
 
-  const dateLabel = useMemo(() => {
-    const date = new Date(dateCreated * 1000);
+  const fetchReview = async (): Promise<void> => {
+    if (!reviewId) {
+      return;
+    }
+
+    const apiData: any = await API.graphql({ query: getReview, variables: { id: reviewId } });
+    setReview(apiData.data.getReview);
+  };
+
+  useEffect((): void => {
+    fetchReview();
+  }, [reviewId]);
+
+  const dateLabel = useMemo((): string => {
+    if (!review) {
+      return '';
+    }
+
+    const date = new Date(review.createdAt * 1000);
     const label = new Intl.DateTimeFormat('en-US').format(date);
 
     return label;
-  }, [dateCreated]);
+  }, [review?.createdAt]);
+
+  if (!review) {
+    return <>No Review Found</>;
+  }
+
+  const { artist, title, author, src, content } = review;
 
   return (
     <div className={styles.ReviewPage}>
