@@ -1,0 +1,10 @@
+type Review @model {
+  id: ID!
+  artist: String!
+  title: String!
+  author: String!
+  src: String!
+  content: String!
+  createdAt: Int!
+  modifiedAt: Int
+}
