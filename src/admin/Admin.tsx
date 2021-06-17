@@ -24,7 +24,7 @@ function Admin(): React.ReactElement {
 
   const fetchReviews = async (): Promise<void> => {
     const apiData: any = await API.graphql({ query: listReviews });
-    setReviews(apiData.data.listReviews.items.filter((r: Review) => r._version === 1));
+    setReviews(apiData.data.listReviews.items);
   };
 
   useEffect((): void => {
@@ -48,12 +48,12 @@ function Admin(): React.ReactElement {
     setFormData(DEFAULT_FORM);
   };
 
-  const handleDeleteReview = async (review: Review): Promise<void> => {
+  const handleDeleteReview = async (id: string): Promise<void> => {
     await API.graphql({
       query: deleteReview,
-      variables: { input: { id: review.id, _version: review._version } },
+      variables: { input: { id } },
     });
-    setReviews((prev) => prev.filter((r) => r.id !== review.id));
+    setReviews((prev) => prev.filter((review) => review.id !== id));
   };
 
   return (
@@ -81,7 +81,7 @@ function Admin(): React.ReactElement {
         <h2>Reviews</h2>
         {reviews.map((review) => (
           <div key={review.id} style={{ width: 800, marginBottom: 50 }}>
-            <button style={{ marginBottom: 20 }} onClick={() => handleDeleteReview(review)}>
+            <button style={{ marginBottom: 20 }} onClick={() => handleDeleteReview(review.id)}>
               delete review
             </button>
             <ReviewListItem review={review} />

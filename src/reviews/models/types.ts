@@ -7,5 +7,4 @@ export type Review = {
   content: string;
   createdAt: number;
   modifiedAt?: number;
-  _version?: number;
 };

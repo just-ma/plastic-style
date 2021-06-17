@@ -13,7 +13,6 @@ export const getReview = /* GraphQL */ `
       createdAt
       modifiedAt
       updatedAt
-      _version
     }
   }
 `;
@@ -34,7 +33,6 @@ export const listReviews = /* GraphQL */ `
         createdAt
         modifiedAt
         updatedAt
-        _version
       }
       nextToken
     }

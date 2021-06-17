@@ -11,7 +11,7 @@ export default function Reviews(): React.ReactElement {
 
   const fetchReviews = async (): Promise<void> => {
     const apiData: any = await API.graphql({ query: listReviews });
-    setReviews(apiData.data.listReviews.items.filter((r: Review) => r._version === 1));
+    setReviews(apiData.data.listReviews.items);
   };
 
   useEffect((): void => {
