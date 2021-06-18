@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { API } from 'aws-amplify';
+import { API, Storage } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
 import { listReviews } from '../graphql/queries';
@@ -8,19 +8,13 @@ import { Review } from '../reviews/models/types';
 
 import ReviewListItem from '../reviews/ui/review-list-item/ReviewListItem';
 
-type FormData = Omit<Review, 'id' | 'createdAt'>;
-
-const DEFAULT_FORM: FormData = {
-  title: '',
-  artist: '',
-  author: '',
-  src: '',
-  content: '',
-};
-
 function Admin(): React.ReactElement {
   const [reviews, setReviews] = useState<ReadonlyArray<Review>>([]);
-  const [formData, setFormData] = useState<FormData>(DEFAULT_FORM);
+  const [title, setTitle] = useState<string>('');
+  const [artist, setArtist] = useState<string>('');
+  const [author, setAuthor] = useState<string>('');
+  const [content, setContent] = useState<string>('');
+  const [image, setImage] = useState<File | undefined>(undefined);
 
   const fetchReviews = async (): Promise<void> => {
     const apiData: any = await API.graphql({ query: listReviews });
@@ -32,20 +26,33 @@ function Admin(): React.ReactElement {
   }, []);
 
   const handleCreateReview = async (): Promise<void> => {
-    const { title, artist, author, src, content } = formData;
-
-    if (!title || !artist || !author || !src || !content) {
+    if (!title || !artist || !author || !content || !image) {
       return;
     }
 
-    const review = { ...formData, createdAt: new Date().getTime() / 1000 };
+    await Storage.put(image.name, image);
+    const src = await Storage.get(image.name);
+
+    const review = {
+      title,
+      artist,
+      author,
+      content,
+      src,
+      createdAt: Math.round(new Date().getTime() / 1000),
+    };
 
     const apiData: any = await API.graphql({
       query: createReview,
       variables: { input: review },
     });
+
     setReviews((prev) => [...prev, apiData.data.createReview]);
-    setFormData(DEFAULT_FORM);
+    setTitle('');
+    setArtist('');
+    setAuthor('');
+    setContent('');
+    setImage(undefined);
   };
 
   const handleDeleteReview = async (id: string): Promise<void> => {
@@ -60,20 +67,26 @@ function Admin(): React.ReactElement {
     <div style={{ padding: 30 }}>
       <h1>MAKE REVIEW</h1>
       <div>
-        {Object.keys(DEFAULT_FORM).map((key) => {
-          const value = key as keyof FormData;
-
-          return (
-            <div key={key}>
-              <label>{value}</label>
-              <input
-                type="text"
-                value={formData[value]}
-                onChange={(val) => setFormData((prev) => ({ ...prev, [value]: val.target.value }))}
-              ></input>
-            </div>
-          );
-        })}
+        <div>
+          <label>title</label>
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+        </div>
+        <div>
+          <label>artist</label>
+          <input type="text" value={artist} onChange={(e) => setArtist(e.target.value)}></input>
+        </div>
+        <div>
+          <label>author</label>
+          <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)}></input>
+        </div>
+        <div>
+          <label>content</label>
+          <input type="textarea" value={content} onChange={(e) => setContent(e.target.value)}></input>
+        </div>
+        <div>
+          <label>img</label>
+          <input type="file" value={image ? undefined : ''} onChange={(e) => setImage(e.target.files?.[0])}></input>
+        </div>
         <button onClick={handleCreateReview}>create review</button>
       </div>
       <br />

@@ -1,6 +1,6 @@
 {
     "identityPoolName": "pushingtheenvelope68348f27_identitypool_68348f27",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "pushin68348f27",
     "userPoolName": "pushingtheenvelope68348f27_userpool_68348f27",
     "autoVerifiedAttributes": [
