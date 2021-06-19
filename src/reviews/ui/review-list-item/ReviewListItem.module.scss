@@ -1,18 +1,41 @@
 .ReviewListItem {
+  padding: 0 10px;
+
+  &.mobile {
+    .row {
+      padding: 0 10px 30px;
+      flex-direction: column;
+    }
+
+    .thumbnail {
+      align-self: center;
+      margin: 0 0 30px;
+    }
+
+    .contentContainer {
+      margin-bottom: 30px;
+    }
+
+    .divider {
+      padding: 0 10px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.row {
   display: flex;
   justify-content: space-between;
-
-  &:not(:last-of-type) {
-    margin-bottom: 60px;
-  }
+  padding: 0 50px 50px;
 }
 
 .thumbnail {
   flex-shrink: 0;
+  margin-right: 30px;
 }
 
 .info {
-  width: 490px;
+  flex-grow: 1;
 }
 
 .header {
