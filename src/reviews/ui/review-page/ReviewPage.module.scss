@@ -1,5 +1,27 @@
 .ReviewPage {
   position: relative;
+  padding: 0 20px;
+
+  &.mobile {
+    .staticContainer {
+      position: relative;
+      top: 0;
+      height: auto;
+    }
+
+    .infoCard {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .contentContainer {
+      margin: 0;
+    }
+  }
 }
 
 .staticContainer {
@@ -23,7 +45,7 @@
 .divider {
   position: absolute;
   top: -30px;
-  left: 290px;
+  left: 270px;
 }
 
 .metaContainer {
@@ -33,6 +55,6 @@
 }
 
 .contentContainer {
-  width: 460px;
-  margin-left: auto;
+  margin-left: 320px;
+  white-space: pre-wrap;
 }

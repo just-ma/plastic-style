@@ -1,7 +1,9 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import { Review } from '../../models/types';
 import { reviewPagePath } from '../../routes';
+import useResponsive from '../../../common/hooks/useResponsive';
 
 import AlbumCover from '../AlbumCover';
 import Header from '../Header';
@@ -17,9 +19,11 @@ type ComponentProps = {
 export default function ReviewListItem({
   review: { id, artist, title, src, content },
 }: ComponentProps): React.ReactElement {
+  const { isMobile } = useResponsive();
+
   return (
-    <>
-      <div className={styles.ReviewListItem}>
+    <div className={classnames(styles.ReviewListItem, isMobile && styles.mobile)}>
+      <div className={styles.row}>
         <div className={styles.thumbnail}>
           <AlbumCover src={src} />
         </div>
@@ -34,6 +38,6 @@ export default function ReviewListItem({
       <div className={styles.divider}>
         <Divider />
       </div>
-    </>
+    </div>
   );
 }

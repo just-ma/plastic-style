@@ -5,11 +5,12 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import { listReviews } from '../graphql/queries';
 import { createReview, deleteReview } from '../graphql/mutations';
 import { Review } from '../reviews/models/types';
+import { MOCK_REVIEWS } from '../reviews/Reviews';
 
 import ReviewListItem from '../reviews/ui/review-list-item/ReviewListItem';
 
 function Admin(): React.ReactElement {
-  const [reviews, setReviews] = useState<ReadonlyArray<Review>>([]);
+  const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);
   const [title, setTitle] = useState<string>('');
   const [artist, setArtist] = useState<string>('');
   const [author, setAuthor] = useState<string>('');
@@ -22,7 +23,7 @@ function Admin(): React.ReactElement {
   };
 
   useEffect((): void => {
-    fetchReviews();
+    //fetchReviews();
   }, []);
 
   const handleCreateReview = async (): Promise<void> => {
@@ -31,7 +32,12 @@ function Admin(): React.ReactElement {
     }
 
     await Storage.put(image.name, image);
-    const src = await Storage.get(image.name);
+    const srcRaw = await Storage.get(image.name);
+    let src = srcRaw;
+
+    if (typeof srcRaw === 'string') {
+      src = srcRaw.split('?')[0];
+    }
 
     const review = {
       title,
@@ -47,7 +53,7 @@ function Admin(): React.ReactElement {
       variables: { input: review },
     });
 
-    setReviews((prev) => [...prev, apiData.data.createReview]);
+    setReviews((prev) => [apiData.data.createReview, ...prev]);
     setTitle('');
     setArtist('');
     setAuthor('');
