@@ -4,6 +4,10 @@ yarn.lock
 yarn-error.log
 package-lock.json
 
+#editor configuration
+.vscode
+.idea
+
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
