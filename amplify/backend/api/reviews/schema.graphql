@@ -1,10 +1,11 @@
 type Review @model {
   id: ID!
-  artist: String!
   title: String!
-  author: String!
-  src: String!
+  artist: String!
+  recordLabel: String
   content: String!
-  createdAt: Int!
-  modifiedAt: Int
+  src: String!
+  author: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
 }
