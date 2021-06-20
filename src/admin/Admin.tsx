@@ -31,8 +31,10 @@ function Admin(): React.ReactElement {
       return;
     }
 
-    await Storage.put(image.name, image);
-    const srcRaw = await Storage.get(image.name);
+    const fileName = `${artist} - ${title}`;
+
+    await Storage.put(fileName, image);
+    const srcRaw = await Storage.get(fileName);
     let src = srcRaw;
 
     if (typeof srcRaw === 'string') {
@@ -45,7 +47,6 @@ function Admin(): React.ReactElement {
       author,
       content,
       src,
-      createdAt: Math.round(new Date().getTime() / 1000),
     };
 
     const apiData: any = await API.graphql({

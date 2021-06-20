@@ -1,3 +1,4 @@
+/* tslint:disable */
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
@@ -8,13 +9,13 @@ export const createReview = /* GraphQL */ `
   ) {
     createReview(input: $input, condition: $condition) {
       id
-      artist
       title
-      author
-      src
+      artist
+      recordLabel
       content
+      src
+      author
       createdAt
-      modifiedAt
       updatedAt
     }
   }
@@ -26,13 +27,13 @@ export const updateReview = /* GraphQL */ `
   ) {
     updateReview(input: $input, condition: $condition) {
       id
-      artist
       title
-      author
-      src
+      artist
+      recordLabel
       content
+      src
+      author
       createdAt
-      modifiedAt
       updatedAt
     }
   }
@@ -44,13 +45,13 @@ export const deleteReview = /* GraphQL */ `
   ) {
     deleteReview(input: $input, condition: $condition) {
       id
-      artist
       title
-      author
-      src
+      artist
+      recordLabel
       content
+      src
+      author
       createdAt
-      modifiedAt
       updatedAt
     }
   }
