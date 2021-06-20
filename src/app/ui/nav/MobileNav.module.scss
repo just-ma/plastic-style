@@ -16,12 +16,16 @@
 }
 
 .drawer {
-  display: flex;
-  align-items: center;
+  position: relative;
   width: 200px;
   height: 100%;
-  padding: 20px;
   background-color: #f4f4f4;
+}
+
+.navItems {
+  position: absolute;
+  top: 40%;
+  left: 20px;
 }
 
 .animationEnter {

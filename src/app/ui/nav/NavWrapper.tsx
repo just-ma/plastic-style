@@ -1,8 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import classnames from 'classnames';
 
-import useResponsive from '../../../common/hooks/useResponsive';
-
 import PageTitle from '../PageTitle';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
@@ -10,12 +8,11 @@ import MobileNav from './MobileNav';
 import styles from './NavWrapper.module.scss';
 
 type ComponentProps = {
+  isResponsive: boolean;
   children?: React.ReactNode;
 };
 
-export default function NavWrapper({ children }: ComponentProps): React.ReactElement {
-  const { isDesktop } = useResponsive();
-
+export default function NavWrapper({ isResponsive, children }: ComponentProps): React.ReactElement {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   const handleDrawerOpen = useCallback((): void => {
@@ -27,17 +24,17 @@ export default function NavWrapper({ children }: ComponentProps): React.ReactEle
   }, []);
 
   return (
-    <div className={classnames(styles.NavWrapper, !isDesktop && styles.responsive, isDrawerOpen && styles.blur)}>
+    <div className={classnames(styles.NavWrapper, isResponsive && styles.responsive, isDrawerOpen && styles.blur)}>
       <div className={styles.pageTitle}>
         <PageTitle />
       </div>
-      {isDesktop ? (
-        <div className={styles.nav}>
-          <Nav />
-        </div>
-      ) : (
+      {isResponsive ? (
         <div className={styles.drawerButton} onClick={handleDrawerOpen}>
           Menu
+        </div>
+      ) : (
+        <div className={styles.nav}>
+          <Nav />
         </div>
       )}
       {children}

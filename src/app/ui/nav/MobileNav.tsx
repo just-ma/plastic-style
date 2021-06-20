@@ -47,7 +47,9 @@ export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): R
         in={isOpen}
       >
         <div className={styles.drawer}>
-          <Nav />
+          <div className={styles.navItems}>
+            <Nav />
+          </div>
         </div>
       </CSSTransition>
     </div>,

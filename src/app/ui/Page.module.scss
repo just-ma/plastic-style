@@ -5,5 +5,10 @@
 
 .contentContainer {
   max-width: 800px;
-  margin: calc(10% + 80px) auto 20%;
+  margin: 15% auto 20%;
+
+  &.responsive {
+    margin: 130px auto 20%;
+    padding: 0 20px;
+  }
 }

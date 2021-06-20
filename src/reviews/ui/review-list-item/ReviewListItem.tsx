@@ -31,7 +31,7 @@ export default function ReviewListItem({
           <div className={styles.header}>
             <Header artist={artist} title={title} fullWidth />
           </div>
-          {!isMobile && <p className={styles.contentContainer}>{content}</p>}
+          <p className={styles.contentContainer}>{content}</p>
           <div className={styles.link}>{'Read More >'}</div>
         </div>
       </Link>

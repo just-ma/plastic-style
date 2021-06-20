@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
+import { reviewsPath } from '../../../reviews/routes';
+
 import NavItem from './NavItem';
 
 import styles from './Nav.module.scss';
@@ -8,7 +10,7 @@ const NAV_MENU = [
   { title: 'Home', link: '/' },
   {
     title: 'Reviews',
-    link: '/reviews',
+    link: reviewsPath(),
   },
   {
     title: 'Lists',
@@ -52,18 +54,20 @@ export default function Nav(): React.ReactElement {
 
   return (
     <div className={styles.Nav}>
-      <div className={styles.center}>
+      <div className={styles.navItemsContainer}>
         <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>{`>>`}</div>
-        {NAV_MENU.map((item, index) => (
-          <NavItem
-            key={index}
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(activeIndex)}
-            isActive={getIsActive(item.link)}
-            isHover={hovered === index}
-            {...item}
-          />
-        ))}
+        <div className={styles.navItems}>
+          {NAV_MENU.map((item, index) => (
+            <NavItem
+              key={index}
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(activeIndex)}
+              isActive={getIsActive(item.link)}
+              isHover={hovered === index}
+              {...item}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
