@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import { CSSTransition } from 'react-transition-group';
 
 import Nav from './Nav';
 
@@ -11,18 +12,46 @@ type ComponentProps = {
 };
 
 export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): React.ReactPortal | null {
+  const [open, setOpen] = useState<boolean>(isOpen);
+
+  useEffect((): void => {
+    setTimeout(
+      (): void => {
+        setOpen(isOpen);
+      },
+      isOpen ? 0 : 200,
+    );
+  }, [isOpen]);
+
   const root = document.getElementById('root');
 
-  if (!isOpen || !root) {
+  if (!open || !root) {
     return null;
   }
 
   return ReactDOM.createPortal(
     <div className={styles.MobileNav}>
       <div className={styles.background} onClick={onRequestClose} />
-      <div className={styles.drawer}>
-        <Nav />
-      </div>
+      <CSSTransition
+        classNames={{
+          enter: styles.animationEnter,
+          enterActive: styles.animationEnterActive,
+          appear: styles.animationEnter,
+          appearActive: styles.animationEnterActive,
+          exit: styles.animationExit,
+          exitActive: styles.animationExitActive,
+        }}
+        unmountOnExit
+        timeout={200}
+        appear
+        in={isOpen}
+      >
+        <div className={styles.drawer}>
+          <div className={styles.navItems}>
+            <Nav />
+          </div>
+        </div>
+      </CSSTransition>
     </div>,
     root,
   );

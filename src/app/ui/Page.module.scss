@@ -1,42 +1,3 @@
-.Page {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: filter 0.2s;
-
-  &.responsive {
-    .pageTitle {
-      top: 20px;
-      left: 20px;
-    }
-  }
-
-  &.blur {
-    filter: blur(5px);
-  }
-}
-
-.drawerButton {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.pageTitle {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.nav {
-  position: absolute;
-  top: 40%;
-  left: 30px;
-}
-
 .scrollContainer {
   height: 100%;
   overflow-y: auto;
@@ -44,5 +5,10 @@
 
 .contentContainer {
   max-width: 800px;
-  margin: 200px auto 250px;
+  margin: 15% auto 20%;
+
+  &.responsive {
+    margin: 130px auto 20%;
+    padding: 0 20px;
+  }
 }

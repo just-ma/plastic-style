@@ -1,10 +1,20 @@
 .ReviewListItem {
-  padding: 0 10px;
+  padding-top: 60px;
+
+  &:first-of-type {
+    margin-top: -60px;
+  }
 
   &.mobile {
+    padding-top: 40px;
+
+    &:first-of-type {
+      margin-top: -40px;
+    }
+
     .row {
-      padding: 0 10px 30px;
       flex-direction: column;
+      margin: 0 0 40px;
     }
 
     .thumbnail {
@@ -12,26 +22,24 @@
       margin: 0 0 30px;
     }
 
-    .contentContainer {
-      margin-bottom: 30px;
-    }
-
-    .divider {
-      padding: 0 10px;
-      margin-bottom: 50px;
+    .info {
+      align-self: stretch;
     }
   }
 }
 
 .row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 50px 50px;
+  color: black;
+  text-decoration: none;
+  margin: 0 50px 50px;
 }
 
 .thumbnail {
   flex-shrink: 0;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .info {
@@ -43,7 +51,7 @@
 }
 
 .contentContainer {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -51,6 +59,8 @@
   text-overflow: ellipsis;
 }
 
-.divider {
-  margin-bottom: 70px;
+.link {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
 }

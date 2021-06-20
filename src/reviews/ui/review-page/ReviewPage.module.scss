@@ -1,6 +1,5 @@
 .ReviewPage {
   position: relative;
-  padding: 0 20px;
 
   &.mobile {
     .staticContainer {
@@ -14,11 +13,23 @@
       margin-bottom: 30px;
     }
 
+    .thumbnail {
+      align-self: center;
+    }
+
+    .thumbnail {
+      margin-bottom: 10px;
+    }
+
     .divider {
       display: none;
     }
 
-    .contentContainer {
+    .metaContainer {
+      text-align: center;
+    }
+
+    .content {
       margin: 0;
     }
   }
@@ -26,20 +37,22 @@
 
 .staticContainer {
   position: sticky;
-  top: 250px;
+  top: 25%;
   height: 0;
 }
 
 .infoCard {
   position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .thumbnail {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .divider {
@@ -50,11 +63,9 @@
 
 .metaContainer {
   font-size: 14px;
-  display: flex;
-  justify-content: space-between;
+  color: #767676;
 }
 
-.contentContainer {
+.content {
   margin-left: 320px;
-  white-space: pre-wrap;
 }

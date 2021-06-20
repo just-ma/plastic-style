@@ -16,10 +16,36 @@
 }
 
 .drawer {
-  display: flex;
-  align-items: center;
+  position: relative;
   width: 200px;
   height: 100%;
-  padding: 20px;
   background-color: #f4f4f4;
+}
+
+.navItems {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+
+.animationEnter {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
+}
+
+.animationEnterActive {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExit {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExitActive {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
 }

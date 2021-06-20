@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.content {
+  white-space: pre-wrap;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.link {
+  color: black;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 700;
+}

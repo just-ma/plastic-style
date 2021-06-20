@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.center {
+.navItemsContainer {
   position: relative;
 }
 
@@ -12,6 +12,10 @@
   position: absolute;
   margin: -1px -10px;
   font-size: 20px;
-  z-index: -1;
   transition: top 0.3s;
+}
+
+.navItems {
+  position: absolute;
+  z-index: 1;
 }
