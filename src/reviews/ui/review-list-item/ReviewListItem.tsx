@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import { Review } from '../../models/types';
 import { reviewPagePath } from '../../routes';
@@ -8,7 +9,6 @@ import useResponsive from '../../../common/hooks/useResponsive';
 import AlbumCover from '../AlbumCover';
 import Header from '../Header';
 import Divider from './Divider';
-import ReadMore from './ReadMore';
 
 import styles from './ReviewListItem.module.scss';
 
@@ -23,7 +23,7 @@ export default function ReviewListItem({
 
   return (
     <div className={classnames(styles.ReviewListItem, isMobile && styles.mobile)}>
-      <div className={styles.row}>
+      <Link className={styles.row} to={reviewPagePath(id)}>
         <div className={styles.thumbnail}>
           <AlbumCover src={src} />
         </div>
@@ -32,9 +32,9 @@ export default function ReviewListItem({
             <Header artist={artist} title={title} fullWidth />
           </div>
           <p className={styles.contentContainer}>{content}</p>
-          <ReadMore link={reviewPagePath(id)} />
+          <div className={styles.link}>{'Read More >'}</div>
         </div>
-      </div>
+      </Link>
       <div className={styles.divider}>
         <Divider />
       </div>

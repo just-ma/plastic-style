@@ -3,6 +3,7 @@ export type Review = {
   artist: string;
   title: string;
   author: string;
+  recordLabel?: string;
   src: string;
   content: string;
   createdAt: number;

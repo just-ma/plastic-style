@@ -14,6 +14,10 @@
       margin-bottom: 30px;
     }
 
+    .thumbnail {
+      align-self: center;
+    }
+
     .divider {
       display: none;
     }
@@ -26,20 +30,22 @@
 
 .staticContainer {
   position: sticky;
-  top: 250px;
+  top: 25%;
   height: 0;
 }
 
 .infoCard {
   position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .thumbnail {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .divider {
@@ -50,11 +56,5 @@
 
 .metaContainer {
   font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contentContainer {
-  margin-left: 320px;
-  white-space: pre-wrap;
+  color: #767676;
 }
