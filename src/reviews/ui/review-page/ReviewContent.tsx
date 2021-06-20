@@ -2,15 +2,19 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Review } from '../../models/types';
-import { REVIEWS_PATH } from '../../routes';
+import { reviewsPath } from '../../routes';
 
 import styles from './ReviewContent.module.scss';
 
 type ComponentProps = {
+  className?: string;
   review: Review;
 };
 
-export default function ReviewContent({ review: { author, createdAt, content } }: ComponentProps): React.ReactElement {
+export default function ReviewContent({
+  className,
+  review: { id, author, createdAt, content },
+}: ComponentProps): React.ReactElement {
   const dateLabel = useMemo((): string => {
     if (!createdAt) {
       return '';
@@ -23,14 +27,14 @@ export default function ReviewContent({ review: { author, createdAt, content } }
   }, [createdAt]);
 
   return (
-    <div className={styles.ReviewContent}>
+    <div className={className}>
       <div className={styles.header}>
         <span>{`by ${author}`}</span>
         <div>{dateLabel}</div>
       </div>
       <p className={styles.content}>{content}</p>
       <div className={styles.footer}>
-        <Link className={styles.link} to={REVIEWS_PATH}>
+        <Link className={styles.link} to={reviewsPath(id)}>
           {'< MORE REVIEWS'}
         </Link>
       </div>

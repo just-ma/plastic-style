@@ -18,11 +18,19 @@
       align-self: center;
     }
 
+    .thumbnail {
+      margin-bottom: 10px;
+    }
+
     .divider {
       display: none;
     }
 
-    .contentContainer {
+    .metaContainer {
+      text-align: center;
+    }
+
+    .content {
       margin: 0;
     }
   }
@@ -57,4 +65,8 @@
 .metaContainer {
   font-size: 14px;
   color: #767676;
+}
+
+.content {
+  margin-left: 320px;
 }

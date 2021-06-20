@@ -22,7 +22,7 @@ export default function ReviewListItem({
   const { isMobile } = useResponsive();
 
   return (
-    <div className={classnames(styles.ReviewListItem, isMobile && styles.mobile)}>
+    <div id={id} className={classnames(styles.ReviewListItem, isMobile && styles.mobile)}>
       <Link className={styles.row} to={reviewPagePath(id)}>
         <div className={styles.thumbnail}>
           <AlbumCover src={src} />
@@ -31,7 +31,7 @@ export default function ReviewListItem({
           <div className={styles.header}>
             <Header artist={artist} title={title} fullWidth />
           </div>
-          <p className={styles.contentContainer}>{content}</p>
+          {!isMobile && <p className={styles.contentContainer}>{content}</p>}
           <div className={styles.link}>{'Read More >'}</div>
         </div>
       </Link>

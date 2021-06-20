@@ -1,9 +1,13 @@
 .ReviewListItem {
-  padding: 0 10px;
+  padding: 60px 10px 0;
+
+  &:first-of-type {
+    margin-top: -60px;
+  }
 
   &.mobile {
     .row {
-      padding: 0 10px 30px;
+      padding: 0 10px;
       flex-direction: column;
     }
 
@@ -12,13 +16,12 @@
       margin: 0 0 30px;
     }
 
-    .contentContainer {
-      margin-bottom: 30px;
+    .info {
+      align-self: stretch;
     }
 
     .divider {
       padding: 0 10px;
-      margin-bottom: 50px;
     }
   }
 }
@@ -34,7 +37,7 @@
 
 .thumbnail {
   flex-shrink: 0;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .info {
@@ -58,8 +61,4 @@
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-}
-
-.divider {
-  margin-bottom: 70px;
 }

@@ -64,7 +64,7 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
           <Divider />
         </div>
       </div>
-      <ReviewContent review={review} />
+      <ReviewContent className={styles.content} review={review} />
     </div>
   );
 }
