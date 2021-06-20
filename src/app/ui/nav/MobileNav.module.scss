@@ -23,3 +23,25 @@
   padding: 20px;
   background-color: #f4f4f4;
 }
+
+.animationEnter {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
+}
+
+.animationEnterActive {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExit {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExitActive {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
+}
