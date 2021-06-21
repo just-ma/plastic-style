@@ -18,6 +18,7 @@
     }
 
     .thumbnail {
+      align-self: stretch;
       margin-bottom: 10px;
     }
 
@@ -45,6 +46,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  width: 230px;
 }
 
 .header {
@@ -59,6 +61,7 @@
   position: absolute;
   top: -30px;
   left: 270px;
+  height: 450px;
 }
 
 .metaContainer {

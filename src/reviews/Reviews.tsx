@@ -4,7 +4,7 @@ import { API } from 'aws-amplify';
 import { listReviews } from '../graphql/queries';
 import { Review } from './models/types';
 
-import ReviewListItem from './ui/review-list-item/ReviewListItem';
+import ReviewListItem from './ui/ReviewListItem';
 
 export const MOCK_REVIEWS: ReadonlyArray<Review> = [
   {

@@ -8,9 +8,9 @@ import useResponsive from '../../../common/hooks/useResponsive';
 import { Review } from '../../models/types';
 import { MOCK_REVIEWS } from '../../Reviews';
 
-import AlbumCover from '../AlbumCover';
-import Header from '../Header';
-import Divider from './Divider';
+import Thumbnail from '../../../common/ui/Thumbnail';
+import Header from '../../../common/ui/Header';
+import Divider from '../../../common/ui/Divider';
 import ReviewContent from './ReviewContent';
 
 import styles from './ReviewPage.module.scss';
@@ -53,15 +53,15 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
       <div className={styles.staticContainer}>
         <div className={styles.infoCard}>
           <div className={styles.header}>
-            <Header artist={artist} title={title} fullWidth={isMobile} />
+            <Header title={title} secondaryTitle={artist} />
           </div>
           <div className={styles.thumbnail}>
-            <AlbumCover src={src} />
+            <Thumbnail src={src} fullWidth={isMobile} />
           </div>
           <div className={styles.metaContainer}>{recordLabel}</div>
         </div>
         <div className={styles.divider}>
-          <Divider />
+          <Divider vertical />
         </div>
       </div>
       <ReviewContent className={styles.content} review={review} />

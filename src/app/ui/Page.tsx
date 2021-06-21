@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import useResponsive from '../../common/hooks/useResponsive';
 
@@ -14,7 +14,7 @@ export default function Page(Component: React.ComponentType<any>): () => React.R
     return (
       <NavWrapper isResponsive={!isDesktop}>
         <div className={styles.scrollContainer}>
-          <div className={classNames(styles.contentContainer, !isDesktop && styles.responsive)}>
+          <div className={classnames(styles.contentContainer, !isDesktop && styles.responsive)}>
             <Component />
           </div>
         </div>

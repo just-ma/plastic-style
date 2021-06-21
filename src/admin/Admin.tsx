@@ -7,7 +7,7 @@ import { createReview, deleteReview } from '../graphql/mutations';
 import { Review } from '../reviews/models/types';
 import { MOCK_REVIEWS } from '../reviews/Reviews';
 
-import ReviewListItem from '../reviews/ui/review-list-item/ReviewListItem';
+import ReviewListItem from '../reviews/ui/ReviewListItem';
 
 function Admin(): React.ReactElement {
   const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);
