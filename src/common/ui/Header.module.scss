@@ -1,15 +1,5 @@
 .Header {
-  max-width: 240px;
-
-  &.fullWidth {
-    max-width: 100%;
-  }
-}
-
-.artist {
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 10px;
+  width: 100%;
 }
 
 .title {
@@ -17,7 +7,13 @@
   font-weight: 600;
 }
 
-.artist,
+.secondaryTitle {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.secondaryTitle,
 .title {
   display: -webkit-box;
   -webkit-line-clamp: 2;

@@ -1,0 +1,39 @@
+.TitleDisplay {
+  display: flex;
+  align-items: center;
+
+  &.mobile {
+    flex-direction: column;
+
+    .thumbnail {
+      align-self: stretch;
+      margin: 0 0 30px;
+    }
+
+    .titleContainer {
+      align-self: stretch;
+    }
+  }
+}
+
+.thumbnail {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.titleContainer {
+  flex-grow: 1;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.description {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import classnames from 'classnames';
 import API from '@aws-amplify/api';
 
@@ -7,10 +7,12 @@ import { getReview } from '../../../graphql/queries';
 import useResponsive from '../../../common/hooks/useResponsive';
 import { Review } from '../../models/types';
 import { MOCK_REVIEWS } from '../../Reviews';
+import { reviewsPath } from '../../routes';
 
-import AlbumCover from '../AlbumCover';
-import Header from '../Header';
-import Divider from './Divider';
+import TitleDisplay from '../../../common/ui/TitleDisplay';
+import Thumbnail from '../../../common/ui/Thumbnail';
+import Header from '../../../common/ui/Header';
+import Divider from '../../../common/ui/Divider';
 import ReviewContent from './ReviewContent';
 
 import styles from './ReviewPage.module.scss';
@@ -43,27 +45,33 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
   }, [reviewId]);
 
   if (!review) {
-    return <>No Review Found</>;
+    return <Redirect to={reviewsPath()} />;
   }
 
-  const { artist, title, recordLabel, src } = review;
+  const { artist, title, src } = review;
 
   return (
     <div className={classnames(styles.ReviewPage, isMobile && styles.mobile)}>
-      <div className={styles.staticContainer}>
-        <div className={styles.infoCard}>
-          <div className={styles.header}>
-            <Header artist={artist} title={title} fullWidth={isMobile} />
-          </div>
-          <div className={styles.thumbnail}>
-            <AlbumCover src={src} />
-          </div>
-          <div className={styles.metaContainer}>{recordLabel}</div>
-        </div>
-        <div className={styles.divider}>
+      {isMobile ? (
+        <div className={styles.mobileHeader}>
+          <TitleDisplay title={title} secondaryTitle={artist} src={src} />
           <Divider />
         </div>
-      </div>
+      ) : (
+        <div className={styles.staticContainer}>
+          <div className={styles.infoCard}>
+            <div className={styles.header}>
+              <Header title={title} secondaryTitle={artist} />
+            </div>
+            <div className={styles.thumbnail}>
+              <Thumbnail src={src} fullWidth={isMobile} />
+            </div>
+          </div>
+          <div className={styles.divider}>
+            <Divider vertical />
+          </div>
+        </div>
+      )}
       <ReviewContent className={styles.content} review={review} />
     </div>
   );

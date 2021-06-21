@@ -1,0 +1,9 @@
+.Thumbnail {
+  width: 230px;
+  height: 230px;
+
+  &.fullWidth {
+    width: 100%;
+    object-fit: cover;
+  }
+}
