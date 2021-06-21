@@ -90,8 +90,8 @@ export default function Reviews(): React.ReactElement {
 
   return (
     <div>
-      {reviews.map((review, index) => (
-        <ReviewListItem key={index} review={review} />
+      {reviews.map((review: Review) => (
+        <ReviewListItem key={review.id} review={review} />
       ))}
     </div>
   );
