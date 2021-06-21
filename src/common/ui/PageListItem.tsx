@@ -1,12 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import useResponsive from '../hooks/useResponsive';
 
-import Thumbnail from './Thumbnail';
-import Header from './Header';
+import TitleDisplay from './TitleDisplay';
 import Divider from './Divider';
-import PageLink from './PageLink';
 
 import styles from './PageListItem.module.scss';
 
@@ -16,8 +15,8 @@ type ComponentProps = {
   secondaryTitle?: string;
   description?: string;
   src: string;
-  link?: string;
-  linkLabel?: string;
+  link: string;
+  linkLabel: string;
 };
 
 export default function PageListItem({
@@ -33,20 +32,17 @@ export default function PageListItem({
 
   return (
     <div id={id} className={classnames(styles.PageListItem, isMobile && styles.mobile)}>
-      <PageLink className={styles.row} to={link}>
-        <>
-          <div className={styles.thumbnail}>
-            <Thumbnail src={src} fullWidth={isMobile} />
-          </div>
-          <div className={styles.infoContainer}>
-            <div className={styles.header}>
-              <Header title={title} secondaryTitle={secondaryTitle} />
-            </div>
-            {description && <p className={styles.description}>{description}</p>}
-            {linkLabel && <div className={styles.link}>{linkLabel}</div>}
-          </div>
-        </>
-      </PageLink>
+      <Link className={styles.link} to={link}>
+        <TitleDisplay
+          className={styles.titleDisplay}
+          title={title}
+          secondaryTitle={secondaryTitle}
+          src={src}
+          description={description}
+        >
+          <div className={styles.linkLabel}>{linkLabel}</div>
+        </TitleDisplay>
+      </Link>
       <div className={styles.divider}>
         <Divider />
       </div>

@@ -9,7 +9,7 @@ import { Review } from '../../models/types';
 import { MOCK_REVIEWS } from '../../Reviews';
 import { reviewsPath } from '../../routes';
 
-import PageListItem from '../../../common/ui/PageListItem';
+import TitleDisplay from '../../../common/ui/TitleDisplay';
 import Thumbnail from '../../../common/ui/Thumbnail';
 import Header from '../../../common/ui/Header';
 import Divider from '../../../common/ui/Divider';
@@ -54,7 +54,8 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
     <div className={classnames(styles.ReviewPage, isMobile && styles.mobile)}>
       {isMobile ? (
         <div className={styles.mobileHeader}>
-          <PageListItem title={title} secondaryTitle={artist} src={src} />
+          <TitleDisplay title={title} secondaryTitle={artist} src={src} />
+          <Divider />
         </div>
       ) : (
         <div className={styles.staticContainer}>
