@@ -2,38 +2,14 @@
   position: relative;
 
   &.mobile {
-    .staticContainer {
-      position: relative;
-      top: 0;
-      height: auto;
-    }
-
-    .infoCard {
-      position: relative;
-      margin-bottom: 30px;
-    }
-
-    .thumbnail {
-      align-self: center;
-    }
-
-    .thumbnail {
-      align-self: stretch;
-      margin-bottom: 10px;
-    }
-
-    .divider {
-      display: none;
-    }
-
-    .metaContainer {
-      text-align: center;
-    }
-
     .content {
       margin: 0;
     }
   }
+}
+
+.mobileHeader {
+  margin-bottom: 40px;
 }
 
 .staticContainer {
@@ -62,11 +38,6 @@
   top: -30px;
   left: 270px;
   height: 450px;
-}
-
-.metaContainer {
-  font-size: 14px;
-  color: #767676;
 }
 
 .content {

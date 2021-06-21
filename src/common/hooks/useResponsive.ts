@@ -3,8 +3,17 @@ import { useEffect, useState } from 'react';
 import { MOBILE_SIZE, RESPONSIVE_SIZE } from '../constants';
 
 type HookValue = {
+  /*
+   * true if window width is > responsive size
+   */
   isDesktop: boolean;
+  /*
+   * true if window width is <= responsive size
+   */
   isResponsive: boolean;
+  /*
+   * true if window width is <= mobile size
+   */
   isMobile: boolean;
 };
 
@@ -13,7 +22,7 @@ const getIsDesktop = (): boolean => {
 };
 
 const getIsResponsive = (): boolean => {
-  return window.innerWidth <= RESPONSIVE_SIZE && window.innerWidth > MOBILE_SIZE;
+  return window.innerWidth <= RESPONSIVE_SIZE;
 };
 
 const getIsMobile = (): boolean => {

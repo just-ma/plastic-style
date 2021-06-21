@@ -42,7 +42,7 @@ export default function PageListItem({
             <div className={styles.header}>
               <Header title={title} secondaryTitle={secondaryTitle} />
             </div>
-            <p className={styles.description}>{description}</p>
+            {description && <p className={styles.description}>{description}</p>}
             {linkLabel && <div className={styles.link}>{linkLabel}</div>}
           </div>
         </>

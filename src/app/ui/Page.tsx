@@ -8,13 +8,13 @@ import NavWrapper from './nav/NavWrapper';
 import styles from './Page.module.scss';
 
 export default function Page(Component: React.ComponentType<any>): () => React.ReactElement {
-  const { isDesktop } = useResponsive();
+  const { isResponsive } = useResponsive();
 
   const component = (): React.ReactElement => {
     return (
-      <NavWrapper isResponsive={!isDesktop}>
+      <NavWrapper isResponsive={isResponsive}>
         <div className={styles.scrollContainer}>
-          <div className={classnames(styles.contentContainer, !isDesktop && styles.responsive)}>
+          <div className={classnames(styles.contentContainer, isResponsive && styles.responsive)}>
             <Component />
           </div>
         </div>
