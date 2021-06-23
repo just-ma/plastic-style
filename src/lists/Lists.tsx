@@ -14,8 +14,20 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
     src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
     listItems: [
       {
+        id: '4adadad',
+        rank: 6,
+        title: 'Touche Amore',
+        content: `This is another album on the list that helped me through the rushed transition from college to living at home. Before I moved back into my childhood bedroom, I was whisked away to the Rockies with my family, providing me a moment to fully absorb what was happening. We spent hours trudging through deep snow, taking turns clearing a path through the woods and up the mountain. Every Bad accompanied me on this trek, lending acidic strings and fiery guitars to the tornado of thoughts whipped up by the chaos of covid. To listen to Every Bad is to sail a shaky boat through a turbulent sea of feelings while singer Dana Margolin tries to unwind her tangled brain by fashioning neurotic phrases into anthems. This daring voyage allows Porridge Radio to map out the fury and exuberance of being a human, hoping just to stay afloat.`,
+      },
+      {
+        id: '4222232',
+        rank: 5,
+        title: 'Every Bad',
+        content: `This is another album on the list that helped me through the rushed transition from college to living at home. Before I moved back into my childhood bedroom, I was whisked away to the Rockies with my family, providing me a moment to fully absorb what was happening. We spent hours trudging through deep snow, taking turns clearing a path through the woods and up the mountain. Every Bad accompanied me on this trek, lending acidic strings and fiery guitars to the tornado of thoughts whipped up by the chaos of covid. To listen to Every Bad is to sail a shaky boat through a turbulent sea of feelings while singer Dana Margolin tries to unwind her tangled brain by fashioning neurotic phrases into anthems. This daring voyage allows Porridge Radio to map out the fury and exuberance of being a human, hoping just to stay afloat.`,
+      },
+      {
         id: '123',
-        rank: 3,
+        rank: 4,
         title: 'Lament',
         artist: 'Touche Amore',
         content: `In a year where anxiety repeatedly got the best of me, Lament was my safe haven. From rage-fueled workouts to panic-ridden drives down the interstate, Lament channeled my chaotic thoughts through eleven songs of blistering post-hardcore. Singer Jeremy Bolm kicks off the album with a desperate cry for help: “From peaks of blue/Come Heroine”—a cleverly drawn double entendre about a woman he relies on to survive tough times—while the band barrels towards a climax that crashes into the title track. Out of “Lament” crawls a broken melody that stumbles over itself, wandering aimlessly as Bolm describes a cycle of sadness and anxiety that anyone who has battled with their brains can relate to.
@@ -30,16 +42,25 @@ Lament reminds me that when I fuck up, the world doesn’t end, even when I want
       },
       {
         id: '432',
-        rank: 2,
+        rank: 3,
         title: 'Every Bad',
         artist: 'Porridge Radio',
         content: `This is another album on the list that helped me through the rushed transition from college to living at home. Before I moved back into my childhood bedroom, I was whisked away to the Rockies with my family, providing me a moment to fully absorb what was happening. We spent hours trudging through deep snow, taking turns clearing a path through the woods and up the mountain. Every Bad accompanied me on this trek, lending acidic strings and fiery guitars to the tornado of thoughts whipped up by the chaos of covid. To listen to Every Bad is to sail a shaky boat through a turbulent sea of feelings while singer Dana Margolin tries to unwind her tangled brain by fashioning neurotic phrases into anthems. This daring voyage allows Porridge Radio to map out the fury and exuberance of being a human, hoping just to stay afloat.`,
       },
       {
         id: '465',
-        rank: 1,
+        rank: 2,
         title: 'Microphones in 2020',
         artist: 'The Microphones',
+        src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
+        content: `The most basic premise of meditation is to sit and be present. The breath is often used as a focal point – if one gets distracted by thoughts or outside stimuli, focus can always be turned back towards this life force. Phil Elverium’s Microphones in 2020 starts with just the breath. For the first 8 minutes of the song’s forty-five minute duration, two chords played on a five dollar acoustic guitar glide and cascade, undisturbed by anything else. Once Phil enters, he begins an exercise in excavation, examining his life at three different ages: 17, 20, and 23. Life’s undercurrent carries him through ruminations on the frivolity of band names, the tangibility of flashbulb memories, and the strange career of making art, but the song always returns to the breath. Microphones in 2020 simultaneously explores the impermanence of the present and the ceaseless nature of time, expressed succinctly in the final lines: “If there have to be words, they could just be/now only and there’s no end.”`,
+      },
+      {
+        id: '4645',
+        rank: 1,
+        title: 'Microphones in 2021',
+        artist: 'The Microphones',
+        src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
         content: `The most basic premise of meditation is to sit and be present. The breath is often used as a focal point – if one gets distracted by thoughts or outside stimuli, focus can always be turned back towards this life force. Phil Elverium’s Microphones in 2020 starts with just the breath. For the first 8 minutes of the song’s forty-five minute duration, two chords played on a five dollar acoustic guitar glide and cascade, undisturbed by anything else. Once Phil enters, he begins an exercise in excavation, examining his life at three different ages: 17, 20, and 23. Life’s undercurrent carries him through ruminations on the frivolity of band names, the tangibility of flashbulb memories, and the strange career of making art, but the song always returns to the breath. Microphones in 2020 simultaneously explores the impermanence of the present and the ceaseless nature of time, expressed succinctly in the final lines: “If there have to be words, they could just be/now only and there’s no end.”`,
       },
     ],

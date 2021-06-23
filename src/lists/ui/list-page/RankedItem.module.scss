@@ -1,6 +1,7 @@
-.RankedItem {
+div.RankedItem {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &.mobile {
     .rankContainer {
