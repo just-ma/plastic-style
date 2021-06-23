@@ -1,7 +1,12 @@
-.header {
-  margin-bottom: 40px;
+.ListPage {
+  &.mobile {
+    .titleDisplay {
+      margin-bottom: 45px;
+    }
+  }
 }
 
 .titleDisplay {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
+  align-items: flex-start;
 }
