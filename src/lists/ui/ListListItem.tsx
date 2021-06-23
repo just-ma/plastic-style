@@ -14,7 +14,7 @@ export default function ListListItem({ list: { id, title, src, description } }: 
     <PageListItem
       id={id}
       title={title}
-      src={src || ''}
+      src={src}
       description={description}
       link={listPagePath(id)}
       linkLabel={'VIEW LIST >'}

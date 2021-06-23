@@ -3,8 +3,7 @@ export type List = {
   title: string;
   description?: string;
   author: string;
-  src?: string;
-  images?: ReadonlyArray<string>;
+  src: string;
   listItems: ReadonlyArray<ListItem>;
   createdAt: number;
   modifiedAt?: number;

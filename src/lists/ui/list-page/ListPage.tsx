@@ -33,7 +33,7 @@ export default function ListPage(): React.ReactElement {
     return <Redirect to={listsPath()} />;
   }
 
-  const { title, description = '', author, src = '', createdAt, listItems } = list;
+  const { title, description = '', author, src, createdAt, listItems } = list;
 
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>

@@ -23,7 +23,7 @@ export default function RankedItem({
       <div className={styles.rankContainer}>
         <div className={styles.rankBubble}>{rank}</div>
       </div>
-      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src || ''}>
+      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src}>
         <p className={styles.content}>{content}</p>
       </TitleDisplay>
       <Divider />
