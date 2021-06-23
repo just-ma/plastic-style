@@ -13,7 +13,7 @@ type ComponentProps = {
   title: string;
   secondaryTitle?: string;
   description?: string;
-  src: string;
+  src?: string;
   children?: React.ReactNode;
 };
 
@@ -28,10 +28,12 @@ export default function TitleDisplay({
   const { isMobile } = useResponsive();
 
   return (
-    <div className={classnames(styles.TitleDisplay, isMobile && styles.mobile, className)}>
-      <div className={styles.thumbnail}>
-        <Thumbnail src={src} fullWidth={isMobile} />
-      </div>
+    <div className={classnames(styles.TitleDisplay, isMobile && styles.mobile, !src && styles.noThumbnail, className)}>
+      {src && (
+        <div className={styles.thumbnail}>
+          <Thumbnail src={src} fullWidth={isMobile} />
+        </div>
+      )}
       <div className={styles.titleContainer}>
         <div className={styles.title}>
           <Header title={title} secondaryTitle={secondaryTitle} />
