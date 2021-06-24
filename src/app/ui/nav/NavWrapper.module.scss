@@ -19,16 +19,16 @@
 
 .drawerButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  border: none;
-  cursor: pointer;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
 }
 
 .pageTitle {
   position: absolute;
   top: 30px;
   left: 30px;
+  z-index: 1;
 }
 
 .nav {

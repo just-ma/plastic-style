@@ -6,48 +6,47 @@ const FREQUENCY_1 = 51;
 const FREQUENCY_2 = 31;
 const FREQUENCY_3 = 17;
 
+const MAX_HEX = 255;
+const MAX_OPACITY = 50;
+
+const randHex = (): number => {
+  return Math.random() * MAX_HEX;
+};
+
+const randOpacity = (): number => {
+  return 1 + Math.random() * MAX_OPACITY;
+};
+
 export default function DecorativeBanner(): React.ReactElement {
-  const [x, setX] = useState<number>(Math.random() * 255);
-  const [y, setY] = useState<number>(Math.random() * 255);
-  const [z, setZ] = useState<number>(Math.random() * 255);
+  const [hex1, setHex1] = useState<number>(randHex());
+  const [hex2, setHex2] = useState<number>(randHex());
+  const [hex3, setHex3] = useState<number>(randHex());
 
-  const [opacity1, setOpacity1] = useState<number>(1 + Math.random() * 50);
-  const [opacity2, setOpacity2] = useState<number>(1 + Math.random() * 50);
-  const [opacity3, setOpacity3] = useState<number>(1 + Math.random() * 50);
+  const [opacity1, setOpacity1] = useState<number>(randOpacity());
+  const [opacity2, setOpacity2] = useState<number>(randOpacity());
+  const [opacity3, setOpacity3] = useState<number>(randOpacity());
 
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setOpacity1((prev) => {
+  const createColorInterval = (
+    setOpacity: React.Dispatch<React.SetStateAction<number>>,
+    setHex: React.Dispatch<React.SetStateAction<number>>,
+    frequency: number,
+  ): NodeJS.Timeout => {
+    return setInterval((): void => {
+      setOpacity((prev): number => {
         if (prev) {
           return 0;
         }
 
-        setX(Math.random() * 255);
-        return 1 + Math.random() * 50;
+        setHex(randHex());
+        return randOpacity();
       });
-    }, FREQUENCY_1 * 1000);
+    }, frequency * 1000);
+  };
 
-    const interval2 = setInterval(() => {
-      setOpacity2((prev) => {
-        if (prev) {
-          return 0;
-        }
-
-        setY(Math.random() * 255);
-        return 1 + Math.random() * 50;
-      });
-    }, FREQUENCY_2 * 1000);
-
-    const interval3 = setInterval(() => {
-      setOpacity3((prev) => {
-        if (prev) {
-          return 0;
-        }
-
-        setZ(Math.random() * 255);
-        return 1 + Math.random() * 50;
-      });
-    }, FREQUENCY_3 * 1000);
+  useEffect((): (() => void) => {
+    const interval1: NodeJS.Timeout = createColorInterval(setOpacity1, setHex1, FREQUENCY_1);
+    const interval2: NodeJS.Timeout = createColorInterval(setOpacity2, setHex2, FREQUENCY_2);
+    const interval3: NodeJS.Timeout = createColorInterval(setOpacity3, setHex3, FREQUENCY_3);
 
     return (): void => {
       clearInterval(interval1);
@@ -62,20 +61,24 @@ export default function DecorativeBanner(): React.ReactElement {
         className={styles.layer}
         style={{
           backgroundImage:
-            `linear-gradient(` + `rgba(40, 80, 255, .3), ` + `rgba(150, 150, 200, .1), ` + `rgba(235, 235, 235, 0))`,
+            `linear-gradient(` +
+            `rgba(80, 80, 255, 0.3), ` +
+            `rgba(150, 150, 200, 0.2), ` +
+            `rgba(150, 150, 200, 0.1), ` +
+            `rgba(235, 235, 235, 0))`,
         }}
       />
       <div
         className={styles.layer}
         style={{
           opacity: opacity1,
-          transition: `opacity ${FREQUENCY_1}s`,
+          transitionDuration: `${FREQUENCY_1}s`,
           backgroundImage:
             `linear-gradient(` +
             `rgba(40, 80, 255, 1), ` +
-            `rgba(${x}, 150, 140, .9), ` +
-            `rgba(200, ${x}, 240, .3), ` +
-            `rgba(150, 150, ${x}, .1), ` +
+            `rgba(${hex1}, 150, 140, 0.9), ` +
+            `rgba(200, ${hex1}, 240, 0.3), ` +
+            `rgba(150, 150, ${hex1}, 0.1), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
@@ -83,24 +86,24 @@ export default function DecorativeBanner(): React.ReactElement {
         className={styles.layer}
         style={{
           opacity: opacity2,
-          transition: `opacity ${FREQUENCY_2}s`,
+          transitionDuration: `${FREQUENCY_2}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(${y}, 40, 255, .5), ` +
-            `rgba(200, ${y}, ${y}, .1), ` +
-            `rgba(235, 235, 235, 0))`,
+            `rgba(80, 40, 255, 0.5), ` +
+            `rgba(200, ${hex2}, ${hex2}, 0.1), ` +
+            `rgba(235, ${hex2}, 235, 0))`,
         }}
       />
       <div
         className={styles.layer}
         style={{
           opacity: opacity3,
-          transition: `opacity ${FREQUENCY_3}s`,
+          transitionDuration: `${FREQUENCY_3}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(40, 80, 255, .5), ` +
-            `rgba(${z}, 207, ${z}, .2), ` +
-            `rgba(${z}, ${z}, 240, .1), ` +
+            `rgba(40, 80, 255, 0.5), ` +
+            `rgba(${hex3}, 207, ${hex3}, 0.2), ` +
+            `rgba(${hex3}, ${hex3}, 240, 0.1), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
