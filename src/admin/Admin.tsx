@@ -8,6 +8,7 @@ import { Review } from '../reviews/models/types';
 import { MOCK_REVIEWS } from '../reviews/Reviews';
 
 import ReviewListItem from '../reviews/ui/ReviewListItem';
+import styles from './Admin.module.scss';
 
 function Admin(): React.ReactElement {
   const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);

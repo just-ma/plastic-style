@@ -14,6 +14,12 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     "import/no-named-as-default": 0,
     indent: [2, 2, { SwitchCase: 1 }],
   },
