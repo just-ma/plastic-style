@@ -1,10 +1,21 @@
 .PageTitle {
   width: 100px;
+
+  &.responsive {
+    width: auto;
+
+    .title {
+      font-size: 20px;
+    }
+  }
 }
 
-.title > a {
-  color: black;
+.title {
   font-size: 24px;
   font-weight: bold;
-  text-decoration: none;
+
+  > a {
+    color: black;
+    text-decoration: none;
+  }
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 
 import Nav from './Nav';
+import DrawerButton from './DrawerButton';
 
 import styles from './MobileNav.module.scss';
 
@@ -49,6 +50,9 @@ export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): R
         <div className={styles.drawer}>
           <div className={styles.navItems}>
             <Nav />
+          </div>
+          <div className={styles.closeButton}>
+            <DrawerButton isOpen onClick={onRequestClose} />
           </div>
         </div>
       </CSSTransition>
