@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import { API, Storage } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
@@ -71,33 +71,69 @@ function Admin(): React.ReactElement {
     setReviews((prev) => prev.filter((review) => review.id !== id));
   };
 
-  return (
-    <div style={{ padding: 30 }}>
-      <h1>MAKE REVIEW</h1>
-      <div>
-        <div>
-          <label>title</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+  //POP WINDOW LOGIC
+
+  interface PopUpProps {
+    toggle: any;
+  }
+  function PopUp(props: PopUpProps) {
+    const handleClick = () => {
+      props.toggle();
+    };
+
+    return (
+      <div className={styles.modal}>
+        <div className={styles.modal_content}>
+          <span className={styles.close} onClick={() => handleClick()}>
+            &times;
+          </span>
+          <form className={styles.reviewLabel}>
+            <label>title</label>
+            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+            <label>artist</label>
+            <input type="text" value={artist} onChange={(e) => setArtist(e.target.value)}></input>
+            <label>author</label>
+            <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)}></input>
+            <label>content</label>
+            <input
+              className={styles.reviewContent}
+              type="textarea"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            ></input>
+            <label>
+              img{' '}
+              <input type="file" value={image ? undefined : ''} onChange={(e) => setImage(e.target.files?.[0])}></input>
+            </label>
+          </form>
+          <button
+            className={styles.btn}
+            onClick={() => {
+              handleCreateReview();
+              handleClick();
+            }}
+          >
+            Done
+          </button>
         </div>
-        <div>
-          <label>artist</label>
-          <input type="text" value={artist} onChange={(e) => setArtist(e.target.value)}></input>
-        </div>
-        <div>
-          <label>author</label>
-          <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)}></input>
-        </div>
-        <div>
-          <label>content</label>
-          <input type="textarea" value={content} onChange={(e) => setContent(e.target.value)}></input>
-        </div>
-        <div>
-          <label>img</label>
-          <input type="file" value={image ? undefined : ''} onChange={(e) => setImage(e.target.files?.[0])}></input>
-        </div>
-        <button onClick={handleCreateReview}>create review</button>
       </div>
-      <br />
+    );
+  }
+
+  const [seen, setSeen] = useState<boolean>(false);
+
+  const togglePop = () => {
+    setSeen(!seen);
+  };
+
+  return (
+    <div>
+      <div>
+        <button className={styles.btn} onClick={() => togglePop()}>
+          CREATE REVIEW
+        </button>
+      </div>
+      {seen ? <PopUp toggle={() => togglePop()} /> : null}
       <div style={{ overflowY: 'auto', height: 600 }}>
         <h2>Reviews</h2>
         {reviews.map((review) => (

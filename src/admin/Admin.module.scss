@@ -1,45 +1,46 @@
-// .ReviewPage {
-//     position: relative;
+.reviewLabel {
+  display: grid;
+  row-gap: 5px;
+  // grid-template-columns: 10% 30%;
+}
+.reviewContent {
+  height: 300px;
+}
+.btn {
+  padding: 5px;
+  margin: 10px;
+  background-color: rgba(113, 12, 245, 0.377);
+  border-radius: 7px;
+  zoom: 2;
+}
+.btn:hover {
+  color: white;
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 20, 20, 0.25);
+  backdrop-filter: blur(5px);
+}
 
-//     &.mobile {
-//       .content {
-//         margin: 0;
-//       }
-//     }
-//   }
-
-//   .mobileHeader {
-//     margin-bottom: 40px;
-//   }
-
-//   .staticContainer {
-//     position: sticky;
-//     top: 25%;
-//     height: 0;
-//   }
-
-//   .infoCard {
-//     position: absolute;
-//     display: flex;
-//     flex-direction: column;
-//     width: 230px;
-//   }
-
-//   .header {
-//     margin-bottom: 30px;
-//   }
-
-//   .thumbnail {
-//     margin-bottom: 20px;
-//   }
-
-//   .divider {
-//     position: absolute;
-//     top: -30px;
-//     left: 270px;
-//     height: 450px;
-//   }
-
-//   .content {
-//     margin-left: 320px;
-//   }
+.modal_content {
+  background-color: white;
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.close {
+  color: Black;
+  float: right;
+  zoom: 2;
+}
+.close:hover {
+  color: rgba(113, 12, 245, 0.377);
+  cursor: pointer;
+}
