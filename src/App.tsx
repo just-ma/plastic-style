@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Page from './app/ui/Page';
 import Home from './home/Home';
 import Admin from './admin/Admin';
-import Podcasts from './podcasts/Podcasts';
 
 // reviews
 import { reviewPagePath, reviewsPath } from './reviews/routes';
@@ -15,6 +14,10 @@ import ReviewPage from './reviews/ui/review-page/ReviewPage';
 import { listPagePath, listsPath } from './lists/routes';
 import Lists from './lists/Lists';
 import ListPage from './lists/ui/list-page/ListPage';
+
+// podcasts
+import { podcastPagePath, podcastsPath } from './podcasts/routes';
+import Podcasts from './podcasts/Podcasts';
 
 export default function App(): React.ReactElement {
   return (
@@ -29,7 +32,8 @@ export default function App(): React.ReactElement {
         <Route exact path={listsPath()} component={Page(Lists)} />
         <Route exact path={listPagePath(':listId')} component={Page(ListPage)} />
 
-        <Route exact path="/podcasts" component={Page(Podcasts)} />
+        <Route exact path={podcastsPath()} component={Page(Podcasts)} />
+        {/* <Route exact path={podcastsPagePath(':podcastId')} component={Page(PodcastPage)} /> */}
       </Switch>
     </Router>
   );
