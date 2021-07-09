@@ -3,8 +3,8 @@ import { Redirect, useParams } from 'react-router';
 import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
-import { MOCK_LISTS } from '../../Lists';
 import { List, ListItem } from '../../models/types';
+import { MOCK_LISTS } from '../../models/constants';
 import { listsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';

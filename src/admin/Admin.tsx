@@ -5,7 +5,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import { listReviews } from '../graphql/queries';
 import { createReview, deleteReview } from '../graphql/mutations';
 import { Review } from '../reviews/models/types';
-import { MOCK_REVIEWS } from '../reviews/Reviews';
+import { MOCK_REVIEWS } from '../reviews/models/constants';
 
 import ReviewListItem from '../reviews/ui/ReviewListItem';
 
