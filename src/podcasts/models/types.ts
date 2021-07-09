@@ -1,7 +1,7 @@
 export type PodcastSeason = {
   id: string;
   title: string;
-  seasonLabel: string;
+  seasonLabel?: string;
   description: string;
   author: string;
   src: string;
@@ -13,7 +13,7 @@ export type PodcastEpisode = {
   id: string;
   title: string;
   description: string;
-  link: string;
+  src: string;
   author?: string;
   date: number;
 };

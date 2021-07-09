@@ -6,7 +6,7 @@ import API from '@aws-amplify/api';
 import { getReview } from '../../../graphql/queries';
 import useResponsive from '../../../common/hooks/useResponsive';
 import { Review } from '../../models/types';
-import { MOCK_REVIEWS } from '../../Reviews';
+import { MOCK_REVIEWS } from '../../models/constants';
 import { reviewsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';

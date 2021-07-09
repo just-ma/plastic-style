@@ -1,0 +1,27 @@
+.PodcastEpisodeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.mobile {
+    .titleDisplay {
+      margin: 50px 0 20px;
+    }
+
+    .widget {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.titleDisplay {
+  margin: 60px 0 20px;
+  align-items: flex-start;
+}
+
+.widget {
+  width: 100%;
+  max-width: 530px;
+  height: 150px;
+  margin-bottom: 40px;
+}

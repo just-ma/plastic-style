@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { getDateLabel } from '../../../common/utils';
 import { Review } from '../../models/types';
 import { reviewsPath } from '../../routes';
 
@@ -19,7 +20,7 @@ export default function ReviewContent({
 }: ComponentProps): React.ReactElement {
   return (
     <div className={className}>
-      <AuthoredParagraph author={author} date={createdAt} content={content} />
+      <AuthoredParagraph author={author} date={getDateLabel(createdAt)} content={content} />
       <div className={styles.footer}>
         <Link className={styles.link} to={reviewsPath(id)}>
           {'< MORE REVIEWS'}
