@@ -18,6 +18,7 @@ import ListPage from './lists/ui/list-page/ListPage';
 // podcasts
 import { podcastPagePath, podcastsPath } from './podcasts/routes';
 import Podcasts from './podcasts/Podcasts';
+import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 
 export default function App(): React.ReactElement {
   return (
@@ -33,7 +34,7 @@ export default function App(): React.ReactElement {
         <Route exact path={listPagePath(':listId')} component={Page(ListPage)} />
 
         <Route exact path={podcastsPath()} component={Page(Podcasts)} />
-        {/* <Route exact path={podcastsPagePath(':podcastId')} component={Page(PodcastPage)} /> */}
+        <Route exact path={podcastPagePath(':podcastId')} component={Page(PodcastSeasonPage)} />
       </Switch>
     </Router>
   );

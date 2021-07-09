@@ -3,6 +3,7 @@ import { Redirect, useParams } from 'react-router';
 import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
+import { getDateLabel } from '../../../common/utils';
 import { List, ListItem } from '../../models/types';
 import { MOCK_LISTS } from '../../models/constants';
 import { listsPath } from '../../routes';
@@ -38,7 +39,7 @@ export default function ListPage(): React.ReactElement {
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>
       <TitleDisplay className={styles.titleDisplay} title={title} src={src}>
-        <AuthoredParagraph author={author} date={createdAt} content={description} />
+        <AuthoredParagraph author={author} date={getDateLabel(createdAt)} content={description} />
       </TitleDisplay>
       <Divider />
       <div className={styles.list}>
