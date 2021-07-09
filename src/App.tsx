@@ -20,6 +20,10 @@ import { podcastPagePath, podcastsPath } from './podcasts/routes';
 import Podcasts from './podcasts/Podcasts';
 import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 
+// contact
+import { contactPath } from './contact/routes';
+import Contact from './contact/Contact';
+
 export default function App(): React.ReactElement {
   return (
     <Router>
@@ -35,6 +39,8 @@ export default function App(): React.ReactElement {
 
         <Route exact path={podcastsPath()} component={Page(Podcasts)} />
         <Route exact path={podcastPagePath(':podcastId')} component={Page(PodcastSeasonPage)} />
+
+        <Route exact path={contactPath()} component={Page(Contact)} />
       </Switch>
     </Router>
   );
