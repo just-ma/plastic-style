@@ -15,7 +15,7 @@
     }
   }
 
-  &.noThumbnail {
+  &.noThumbnail:not(.fullWidth) {
     max-width: 530px;
   }
 }

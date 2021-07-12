@@ -20,10 +20,12 @@ export default function PodcastEpisodeItem({
 
   return (
     <div className={classnames(styles.PodcastEpisodeItem, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={author}>
-        <p className={styles.description}>{description}</p>
-      </TitleDisplay>
-      <iframe className={styles.widget} src={src} frameBorder="0" />
+      <div className={styles.content}>
+        <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={author} fullWidth>
+          <p className={styles.description}>{description}</p>
+        </TitleDisplay>
+        <iframe className={styles.widget} src={src} frameBorder="0" />
+      </div>
       <Divider />
     </div>
   );

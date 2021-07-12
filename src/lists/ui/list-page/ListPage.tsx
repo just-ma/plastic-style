@@ -9,7 +9,7 @@ import { MOCK_LISTS } from '../../models/constants';
 import { listsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
-import AuthoredParagraph from '../../../common/ui/AuthoredParagraph';
+import TitledParagraph from '../../../common/ui/TitledParagraph';
 import Divider from '../../../common/ui/Divider';
 
 import RankedItem from './RankedItem';
@@ -39,7 +39,7 @@ export default function ListPage(): React.ReactElement {
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>
       <TitleDisplay className={styles.titleDisplay} title={title} src={src}>
-        <AuthoredParagraph author={author} date={getDateLabel(createdAt)} content={description} />
+        <TitledParagraph leftTitle={`by ${author}`} rightTitle={getDateLabel(createdAt)} content={description} />
       </TitleDisplay>
       <Divider />
       <div className={styles.list}>
