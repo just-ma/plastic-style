@@ -1,5 +1,7 @@
 import React from 'react';
 
+import HTMLString from './HTMLString';
+
 import styles from './AuthoredParagraph.module.scss';
 
 type ComponentProps = {
@@ -15,7 +17,9 @@ export default function AuthoredParagraph({ author, date, content }: ComponentPr
         <span>{`by ${author}`}</span>
         <span>{date}</span>
       </div>
-      <p className={styles.content}>{content}</p>
+      <HTMLString className={styles.content} element="p">
+        {content}
+      </HTMLString>
     </div>
   );
 }
