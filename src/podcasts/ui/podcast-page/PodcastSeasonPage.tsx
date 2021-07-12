@@ -8,7 +8,7 @@ import { MOCK_PODCASTS } from '../../models/constants';
 import { podcastsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
-import AuthoredParagraph from '../../../common/ui/AuthoredParagraph';
+import TitledParagraph from '../../../common/ui/TitledParagraph';
 import Divider from '../../../common/ui/Divider';
 
 import PodcastEpisodeItem from './PodcastEpisodeItem';
@@ -38,7 +38,7 @@ export default function PodcastSeasonPage(): React.ReactElement {
   return (
     <div className={classnames(styles.PodcastSeasonPage, isMobile && styles.mobile)}>
       <TitleDisplay className={styles.titleDisplay} title={title} src={src}>
-        <AuthoredParagraph author={author} date={year} content={description} />
+        <TitledParagraph leftTitle={author} rightTitle={year} content={description} />
       </TitleDisplay>
       <Divider />
       <div className={styles.podcast}>

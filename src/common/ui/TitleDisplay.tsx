@@ -16,6 +16,7 @@ type ComponentProps = {
   description?: string;
   src?: string;
   children?: React.ReactNode;
+  fullWidth?: boolean;
 };
 
 export default function TitleDisplay({
@@ -25,11 +26,20 @@ export default function TitleDisplay({
   description,
   src,
   children,
+  fullWidth,
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
 
   return (
-    <div className={classnames(styles.TitleDisplay, isMobile && styles.mobile, !src && styles.noThumbnail, className)}>
+    <div
+      className={classnames(
+        styles.TitleDisplay,
+        isMobile && styles.mobile,
+        !src && styles.noThumbnail,
+        fullWidth && styles.fullWidth,
+        className,
+      )}
+    >
       {src && (
         <div className={styles.thumbnail}>
           <Thumbnail src={src} fullWidth={isMobile} />
