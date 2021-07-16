@@ -1,6 +1,6 @@
 export type Review = {
   id: string;
-  artist: string;
+  artist?: string;
   title: string;
   author: string;
   recordLabel?: string;

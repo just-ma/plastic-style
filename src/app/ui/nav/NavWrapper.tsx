@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import PageTitle from '../PageTitle';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
+import DrawerButton from './DrawerButton';
 import DecorativeBanner from '../DecorativeBanner';
 
 import styles from './NavWrapper.module.scss';
@@ -30,11 +31,11 @@ export default function NavWrapper({ isResponsive, children }: ComponentProps): 
         <DecorativeBanner />
       </div>
       <div className={styles.pageTitle}>
-        <PageTitle />
+        <PageTitle isResponsive={isResponsive} />
       </div>
       {isResponsive ? (
-        <div className={styles.drawerButton} onClick={handleDrawerOpen}>
-          Menu
+        <div className={styles.drawerButton}>
+          <DrawerButton isOpen={false} onClick={handleDrawerOpen} />
         </div>
       ) : (
         <div className={styles.nav}>

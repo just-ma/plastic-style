@@ -5,6 +5,7 @@ import useResponsive from '../hooks/useResponsive';
 
 import Thumbnail from './Thumbnail';
 import Header from './Header';
+import HTMLString from './HTMLString';
 
 import styles from './TitleDisplay.module.scss';
 
@@ -15,6 +16,7 @@ type ComponentProps = {
   description?: string;
   src?: string;
   children?: React.ReactNode;
+  fullWidth?: boolean;
 };
 
 export default function TitleDisplay({
@@ -24,11 +26,20 @@ export default function TitleDisplay({
   description,
   src,
   children,
+  fullWidth,
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
 
   return (
-    <div className={classnames(styles.TitleDisplay, isMobile && styles.mobile, !src && styles.noThumbnail, className)}>
+    <div
+      className={classnames(
+        styles.TitleDisplay,
+        isMobile && styles.mobile,
+        !src && styles.noThumbnail,
+        fullWidth && styles.fullWidth,
+        className,
+      )}
+    >
       {src && (
         <div className={styles.thumbnail}>
           <Thumbnail src={src} fullWidth={isMobile} />
@@ -38,7 +49,11 @@ export default function TitleDisplay({
         <div className={styles.title}>
           <Header title={title} secondaryTitle={secondaryTitle} />
         </div>
-        {description && <p className={styles.description}>{description}</p>}
+        {description && (
+          <HTMLString className={styles.description} element="p">
+            {description}
+          </HTMLString>
+        )}
         {children}
       </div>
     </div>

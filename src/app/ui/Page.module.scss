@@ -9,7 +9,7 @@
   padding: 0 150px;
 
   &.responsive {
-    margin: 130px auto 20%;
+    margin: 130px auto calc(20% + 80px);
     padding: 0 20px;
   }
 }

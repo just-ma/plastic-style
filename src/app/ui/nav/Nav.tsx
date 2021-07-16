@@ -1,6 +1,9 @@
 import React, { useMemo, useState } from 'react';
 
 import { reviewsPath } from '../../../reviews/routes';
+import { listsPath } from '../../../lists/routes';
+import { podcastsPath } from '../../../podcasts/routes';
+import { contactPath } from '../../../contact/routes';
 
 import NavItem from './NavItem';
 
@@ -14,11 +17,15 @@ const NAV_MENU = [
   },
   {
     title: 'Lists',
-    link: '/lists',
+    link: listsPath(),
   },
   {
     title: 'Podcasts',
-    link: '/podcasts',
+    link: podcastsPath(),
+  },
+  {
+    title: 'Contact',
+    link: contactPath(),
   },
 ];
 
