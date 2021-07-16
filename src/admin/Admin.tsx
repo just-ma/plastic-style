@@ -1,4 +1,4 @@
-import React, { useEffect, useState, FC } from 'react';
+import React, { useEffect, useState } from 'react';
 import { API, Storage } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
@@ -6,8 +6,14 @@ import { listReviews } from '../graphql/queries';
 import { createReview, deleteReview } from '../graphql/mutations';
 import { Review } from '../reviews/models/types';
 import { MOCK_REVIEWS } from '../reviews/Reviews';
-
 import ReviewListItem from '../reviews/ui/ReviewListItem';
+
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from './Admin.module.scss';
 
 function Admin(): React.ReactElement {
@@ -17,6 +23,18 @@ function Admin(): React.ReactElement {
   const [author, setAuthor] = useState<string>('');
   const [content, setContent] = useState<string>('');
   const [image, setImage] = useState<File | undefined>(undefined);
+
+  // Pop Up Form State
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  // Pop Up Form State
 
   const fetchReviews = async (): Promise<void> => {
     const apiData: any = await API.graphql({ query: listReviews });
@@ -71,76 +89,104 @@ function Admin(): React.ReactElement {
     setReviews((prev) => prev.filter((review) => review.id !== id));
   };
 
-  //POP WINDOW LOGIC
-
-  interface PopUpProps {
-    toggle: any;
-  }
-  function PopUp(props: PopUpProps) {
-    const handleClick = () => {
-      props.toggle();
-    };
-
-    return (
-      <div className={styles.modal}>
-        <div className={styles.modal_content}>
-          <span className={styles.close} onClick={() => handleClick()}>
-            &times;
-          </span>
-          <form className={styles.reviewLabel}>
-            <label>title</label>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}></input>
-            <label>artist</label>
-            <input type="text" value={artist} onChange={(e) => setArtist(e.target.value)}></input>
-            <label>author</label>
-            <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)}></input>
-            <label>content</label>
-            <input
-              className={styles.reviewContent}
-              type="textarea"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-            ></input>
-            <label>
-              img{' '}
-              <input type="file" value={image ? undefined : ''} onChange={(e) => setImage(e.target.files?.[0])}></input>
-            </label>
-          </form>
-          <button
-            className={styles.btn}
-            onClick={() => {
-              handleCreateReview();
-              handleClick();
-            }}
-          >
-            Done
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const [seen, setSeen] = useState<boolean>(false);
-
-  const togglePop = () => {
-    setSeen(!seen);
-  };
-
   return (
     <div>
       <div>
-        <button className={styles.btn} onClick={() => togglePop()}>
-          CREATE REVIEW
-        </button>
+        <Button
+          style={{ margin: '0 auto', display: 'flex', height: 60, borderRadius: 15, backgroundColor: 'purple' }}
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={handleClickOpen}
+        >
+          Create Review
+        </Button>
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">Review Form</DialogTitle>
+          <DialogContent>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="title"
+              label="title"
+              type="text"
+              fullWidth
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="artist"
+              label="artist"
+              type="text"
+              fullWidth
+              value={artist}
+              onChange={(e) => setArtist(e.target.value)}
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="author"
+              label="author"
+              type="text"
+              fullWidth
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="content"
+              label="content"
+              multiline
+              rows={14}
+              fullWidth
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+            <Button variant="contained" component="label">
+              Upload Image
+              <input
+                type="file"
+                hidden
+                value={image ? undefined : ''}
+                onChange={(e) => setImage(e.target.files?.[0])}
+              />
+            </Button>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Cancel
+            </Button>
+            <Button
+              onClick={() => {
+                handleCreateReview();
+                handleClose();
+              }}
+              color="primary"
+            >
+              Create
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
-      {seen ? <PopUp toggle={() => togglePop()} /> : null}
+      <br />
       <div style={{ overflowY: 'auto', height: 600 }}>
-        <h2>Reviews</h2>
+        <h2 style={{ margin: 20 }}>Reviews</h2>
         {reviews.map((review) => (
           <div key={review.id} style={{ width: 800, marginBottom: 50 }}>
-            <button style={{ marginBottom: 20 }} onClick={() => handleDeleteReview(review.id)}>
-              delete review
-            </button>
+            <Button
+              style={{ margin: 20, borderRadius: 15, backgroundColor: 'rgba(113, 12, 245, 0.777)' }}
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={() => {
+                handleDeleteReview(review.id);
+              }}
+            >
+              Delete Review
+            </Button>
             <ReviewListItem review={review} />
           </div>
         ))}
