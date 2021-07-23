@@ -15,7 +15,22 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import styles from './Admin.module.scss';
+import styles from './admin.module.scss';
+
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  picture: yup
+    .mixed()
+    .required('You need to provide a file')
+    .test('fileSize', 'The file is too large', (value) => {
+      return value && value[0].size <= 2000000;
+    })
+    .test('type', 'We only support jpeg', (value) => {
+      return value && value[0].type === 'image/jpeg';
+    }),
+});
 
 function Admin(): React.ReactElement {
   const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);
@@ -23,7 +38,8 @@ function Admin(): React.ReactElement {
   const [artist, setArtist] = useState<string>('');
   const [author, setAuthor] = useState<string>('');
   const [content, setContent] = useState<string>('');
-  const [image, setImage] = useState<File | undefined>(undefined);
+  // const [image, setImage] = useState<File | undefined>(undefined);
+  const [image, setImage] = useState<any>('');
 
   // Pop Up Form State
   const [open, setOpen] = useState<boolean>(false);
@@ -90,11 +106,51 @@ function Admin(): React.ReactElement {
     setReviews((prev) => prev.filter((review) => review.id !== id));
   };
 
+  const fileValidation = (e: any) => {
+    const imageFile = e.target.files[0];
+    const reader = new FileReader();
+
+    if (!imageFile) {
+      setImage({ invalidImage: 'Please select image.' });
+      alert('INVALID asoufhasfh');
+      // return false;
+    }
+
+    if (!imageFile.name.match(/\.(jpg|jpeg|png|gif)$/)) {
+      setImage({ invalidImage: 'Please select valid image.' });
+      // alert('INVALID');
+      // return false;
+    }
+
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        setImage({ selectedFile: imageFile, invalidImage: null });
+        return true;
+      };
+      img.onerror = () => {
+        setImage({ invalidImage: 'Invalid image content.' });
+        return false;
+      };
+      // img.src = e.target.result;  //debugger
+    };
+    reader.readAsDataURL(imageFile);
+  };
+
+  // const { register, handleSubmit, errors } = useForm({
+  //   validationSchema: schema,
+  // });
+
+  // const onSubmit = (data) => {
+  //   alert(JSON.stringify(data));
+  // };
+
   return (
     <div>
       <div>
         <Button
-          style={{ margin: '0 auto', display: 'flex', height: 60, borderRadius: 15, backgroundColor: 'purple' }}
+          className={styles.createButton}
+          // style={{ margin: '0 auto', display: 'flex', height: 60, borderRadius: 15, backgroundColor: 'purple' }}
           variant="contained"
           color="primary"
           size="large"
@@ -146,15 +202,24 @@ function Admin(): React.ReactElement {
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
-            <Button variant="contained" component="label">
+            {/* <Button variant="contained" component="label">
               Upload Image
               <input
                 type="file"
-                hidden
-                value={image ? undefined : ''}
+                id="file"
+                accept="image/*"
+                // hidden
+                // value={image ? undefined : ''}
+                value={image}
                 onChange={(e) => setImage(e.target.files?.[0])}
+                // onChange={(e) => fileValidation(e)}
               />
-            </Button>
+            </Button> */}
+            {/* <form onSubmit={handleSubmit(onSubmit)}>
+              <input ref={register} type="file" name="picture" />
+              {errors.picture && <p>{errors.picture.message}</p>}
+              <button>Submit</button>
+            </form> */}
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
@@ -173,12 +238,12 @@ function Admin(): React.ReactElement {
         </Dialog>
       </div>
       <br />
-      <div style={{ overflowY: 'auto', height: 600 }}>
-        <h2 style={{ margin: 20 }}>Reviews</h2>
+      <div className={styles.reviewsSection}>
+        <h2 className={styles.reviewsHeader}>{image}</h2>
         {reviews.map((review) => (
-          <div key={review.id} style={{ width: 800, marginBottom: 50 }}>
+          <div key={review.id} className={styles.reviewContent}>
             <Button
-              style={{ margin: 20, borderRadius: 15, backgroundColor: 'rgba(113, 12, 245, 0.777)' }}
+              className={styles.deleteButton}
               variant="contained"
               color="primary"
               size="large"

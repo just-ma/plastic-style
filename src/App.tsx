@@ -29,7 +29,7 @@ export default function App(): React.ReactElement {
     <Router>
       <Switch>
         <Route exact path="/" component={Page(Home)} />
-        {/* <Route exact path="/admin" component={Admin} /> */}
+        <Route exact path="/admin" component={Admin} />
 
         <Route exact path={reviewsPath()} component={Page(Reviews)} />
         <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} />
