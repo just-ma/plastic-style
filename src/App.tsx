@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Page from './app/ui/Page';
 import Home from './home/Home';
 import Admin from './admin/Admin';
+import './App.scss';
 
 // reviews
 import { reviewPagePath, reviewsPath } from './reviews/routes';

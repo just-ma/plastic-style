@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { API, Storage } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 
@@ -15,22 +15,29 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import styles from './admin.module.scss';
+import axios from 'axios';
 
-import { useForm } from 'react-hook-form';
-import * as yup from 'yup';
+// const FileUploader = (props: any) => {
+//   const fileInput: any = useRef(null);
 
-const schema = yup.object().shape({
-  picture: yup
-    .mixed()
-    .required('You need to provide a file')
-    .test('fileSize', 'The file is too large', (value) => {
-      return value && value[0].size <= 2000000;
-    })
-    .test('type', 'We only support jpeg', (value) => {
-      return value && value[0].type === 'image/jpeg';
-    }),
-});
+//   const handleFileInput = (e: any) => {
+//     // handle validations
+//     const file = e.target.files[0];
+//     if (file.size > 1024) {
+//       console.log('BRUHHHHHHH');
+//       props.onFileSelectError({ error: 'File size cannot exceed more than 1MB' });
+//     } else props.onFileSelectSuccess(file);
+//   };
+
+//   return (
+//     <div className="file-uploader">
+//       <input type="file" onChange={(e) => handleFileInput(e)} />
+//       <button onClick={(e) => fileInput.current && fileInput.current.click()} className="btn btn-primary">
+//         Submit
+//       </button>
+//     </div>
+//   );
+// };
 
 function Admin(): React.ReactElement {
   const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);
@@ -38,9 +45,21 @@ function Admin(): React.ReactElement {
   const [artist, setArtist] = useState<string>('');
   const [author, setAuthor] = useState<string>('');
   const [content, setContent] = useState<string>('');
-  // const [image, setImage] = useState<File | undefined>(undefined);
-  const [image, setImage] = useState<any>('');
+  const [image, setImage] = useState<any>(undefined);
 
+  const handleFileInput = (e: any) => {
+    // handle validations
+    const file = e.target.files?.[0];
+
+    if (file.size > 1024000) {
+      console.log('BRUHHHHHHH');
+      alert('File size cannot exceed more than 1MB');
+      console.log(image);
+      return false;
+    } else {
+      return true;
+    }
+  };
   // Pop Up Form State
   const [open, setOpen] = useState<boolean>(false);
 
@@ -64,6 +83,7 @@ function Admin(): React.ReactElement {
 
   const handleCreateReview = async (): Promise<void> => {
     if (!title || !artist || !author || !content || !image) {
+      console.log(title, artist, author, content, image);
       return;
     }
 
@@ -106,51 +126,11 @@ function Admin(): React.ReactElement {
     setReviews((prev) => prev.filter((review) => review.id !== id));
   };
 
-  const fileValidation = (e: any) => {
-    const imageFile = e.target.files[0];
-    const reader = new FileReader();
-
-    if (!imageFile) {
-      setImage({ invalidImage: 'Please select image.' });
-      alert('INVALID asoufhasfh');
-      // return false;
-    }
-
-    if (!imageFile.name.match(/\.(jpg|jpeg|png|gif)$/)) {
-      setImage({ invalidImage: 'Please select valid image.' });
-      // alert('INVALID');
-      // return false;
-    }
-
-    reader.onload = (e) => {
-      const img = new Image();
-      img.onload = () => {
-        setImage({ selectedFile: imageFile, invalidImage: null });
-        return true;
-      };
-      img.onerror = () => {
-        setImage({ invalidImage: 'Invalid image content.' });
-        return false;
-      };
-      // img.src = e.target.result;  //debugger
-    };
-    reader.readAsDataURL(imageFile);
-  };
-
-  // const { register, handleSubmit, errors } = useForm({
-  //   validationSchema: schema,
-  // });
-
-  // const onSubmit = (data) => {
-  //   alert(JSON.stringify(data));
-  // };
-
   return (
     <div>
       <div>
         <Button
-          className={styles.createButton}
-          // style={{ margin: '0 auto', display: 'flex', height: 60, borderRadius: 15, backgroundColor: 'purple' }}
+          style={{ margin: '0 auto', display: 'flex', height: 60, borderRadius: 15, backgroundColor: 'purple' }}
           variant="contained"
           color="primary"
           size="large"
@@ -202,24 +182,31 @@ function Admin(): React.ReactElement {
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
-            {/* <Button variant="contained" component="label">
+            {/* <form> */}
+            {/* <input
+                type="file"
+                value={selectedFile ? undefined : ''}
+                onChange={(e) => setSelectedFile(e.target.files?.[0])}
+              /> */}
+            {/* <FileUploader
+                onFileSelectSuccess={(file: any) => setImage(file)}
+                onFileSelectError={(error: string) => alert(error)}
+              />
+            </form> */}
+            <Button variant="contained" component="label">
               Upload Image
               <input
                 type="file"
                 id="file"
                 accept="image/*"
-                // hidden
-                // value={image ? undefined : ''}
-                value={image}
-                onChange={(e) => setImage(e.target.files?.[0])}
-                // onChange={(e) => fileValidation(e)}
+                hidden
+                value={image ? undefined : ''}
+                // value={image}
+                onChange={(e) => {
+                  handleFileInput(e) ? setImage(e.target.files?.[0]) : setImage(undefined);
+                }}
               />
-            </Button> */}
-            {/* <form onSubmit={handleSubmit(onSubmit)}>
-              <input ref={register} type="file" name="picture" />
-              {errors.picture && <p>{errors.picture.message}</p>}
-              <button>Submit</button>
-            </form> */}
+            </Button>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
@@ -238,12 +225,12 @@ function Admin(): React.ReactElement {
         </Dialog>
       </div>
       <br />
-      <div className={styles.reviewsSection}>
-        <h2 className={styles.reviewsHeader}>{image}</h2>
+      <div style={{ overflowY: 'auto', height: 600 }}>
+        <h2 style={{ margin: 20 }}>{image}</h2>
         {reviews.map((review) => (
-          <div key={review.id} className={styles.reviewContent}>
+          <div key={review.id} style={{ width: 800, marginBottom: 20 }}>
             <Button
-              className={styles.deleteButton}
+              style={{ margin: 20, borderRadius: 15, backgroundColor: 'rgba(113, 12, 245, 0.777)' }}
               variant="contained"
               color="primary"
               size="large"
