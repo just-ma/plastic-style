@@ -14,7 +14,7 @@
 
 .staticContainer {
   position: sticky;
-  top: 25%;
+  top: calc(15% + 100px);
   height: 0;
 }
 
