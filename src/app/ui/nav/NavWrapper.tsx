@@ -1,21 +1,45 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
+import DecorativeBanner from '../DecorativeBanner';
 import PageTitle from '../PageTitle';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
 import DrawerButton from './DrawerButton';
-import DecorativeBanner from '../DecorativeBanner';
 
 import styles from './NavWrapper.module.scss';
 
 type ComponentProps = {
   isResponsive: boolean;
+  scrollRef?: React.RefObject<HTMLDivElement>;
   children?: React.ReactNode;
 };
 
-export default function NavWrapper({ isResponsive, children }: ComponentProps): React.ReactElement {
+export default function NavWrapper({ isResponsive, scrollRef, children }: ComponentProps): React.ReactElement {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+  const [hideTitle, setHideTitle] = useState<boolean>(false);
+
+  const handleScroll = (e: Event): void => {
+    if (!e.target) {
+      return;
+    }
+
+    const target = e.target as HTMLDivElement;
+    setHideTitle(target.scrollTop > 50);
+  };
+
+  useEffect((): void | (() => void) => {
+    if (!isResponsive || !scrollRef?.current) {
+      setHideTitle(false);
+      return;
+    }
+
+    scrollRef.current.addEventListener('scroll', handleScroll);
+
+    return (): void => {
+      scrollRef?.current?.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollRef, isResponsive]);
 
   const handleDrawerOpen = useCallback((): void => {
     setIsDrawerOpen(true);
@@ -30,7 +54,7 @@ export default function NavWrapper({ isResponsive, children }: ComponentProps): 
       <div className={styles.banner}>
         <DecorativeBanner />
       </div>
-      <div className={styles.pageTitle}>
+      <div className={classnames(styles.pageTitle, hideTitle && styles.hide)}>
         <PageTitle isResponsive={isResponsive} />
       </div>
       {isResponsive ? (
