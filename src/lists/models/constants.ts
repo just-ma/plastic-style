@@ -11,7 +11,6 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
     listItems: [
       {
         id: '4adadad',
-        rank: 6,
         title: 'Touche Amore',
         content: `This is another album on the list that helped me through the rushed transition from college to living at home. Before I moved back into my childhood bedroom, I was whisked away to the Rockies with my family, providing me a moment to fully absorb what was happening. We spent hours trudging through deep snow, taking turns clearing a path through the woods and up the mountain. Every Bad accompanied me on this trek, lending acidic strings and fiery guitars to the tornado of thoughts whipped up by the chaos of covid. To listen to Every Bad is to sail a shaky boat through a turbulent sea of feelings while singer Dana Margolin tries to unwind her tangled brain by fashioning neurotic phrases into anthems. This daring voyage allows Porridge Radio to map out the fury and exuberance of being a human, hoping just to stay afloat.`,
       },
@@ -23,7 +22,6 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
       },
       {
         id: '123',
-        rank: 4,
         title: 'Lament',
         artist: 'Touche Amore',
         content: `In a year where anxiety repeatedly got the best of me, Lament was my safe haven. From rage-fueled workouts to panic-ridden drives down the interstate, Lament channeled my chaotic thoughts through eleven songs of blistering post-hardcore. Singer Jeremy Bolm kicks off the album with a desperate cry for help: “From peaks of blue/Come Heroine”—a cleverly drawn double entendre about a woman he relies on to survive tough times—while the band barrels towards a climax that crashes into the title track. Out of “Lament” crawls a broken melody that stumbles over itself, wandering aimlessly as Bolm describes a cycle of sadness and anxiety that anyone who has battled with their brains can relate to.

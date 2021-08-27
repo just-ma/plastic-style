@@ -20,9 +20,11 @@ export default function RankedItem({
 
   return (
     <div className={classnames(styles.RankedItem, isMobile && styles.mobile)}>
-      <div className={styles.rankContainer}>
-        <div className={styles.rankBubble}>{rank}</div>
-      </div>
+      {rank === undefined ? null : (
+        <div className={styles.rankContainer}>
+          <div className={styles.rankBubble}>{rank}</div>
+        </div>
+      )}
       <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src}>
         <p className={styles.content}>{content}</p>
       </TitleDisplay>
