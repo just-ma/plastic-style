@@ -6,6 +6,7 @@ import { ListItem } from '../../models/types';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import Divider from '../../../common/ui/Divider';
+import HTMLString from '../../../common/ui/HTMLString';
 
 import styles from './RankedItem.module.scss';
 
@@ -20,11 +21,13 @@ export default function RankedItem({
 
   return (
     <div className={classnames(styles.RankedItem, isMobile && styles.mobile)}>
-      <div className={styles.rankContainer}>
-        <div className={styles.rankBubble}>{rank}</div>
-      </div>
+      {rank === undefined ? null : (
+        <div className={styles.rankContainer}>
+          <div className={styles.rankBubble}>{rank}</div>
+        </div>
+      )}
       <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src}>
-        <p className={styles.content}>{content}</p>
+        <HTMLString element="p">{content}</HTMLString>
       </TitleDisplay>
       <Divider />
     </div>

@@ -11,7 +11,7 @@ export type List = {
 
 export type ListItem = {
   id: string;
-  rank: number;
+  rank?: number;
   artist?: string;
   title: string;
   src?: string;
