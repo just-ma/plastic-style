@@ -6,6 +6,7 @@ import { ListItem } from '../../models/types';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import Divider from '../../../common/ui/Divider';
+import HTMLString from '../../../common/ui/HTMLString';
 
 import styles from './RankedItem.module.scss';
 
@@ -26,7 +27,7 @@ export default function RankedItem({
         </div>
       )}
       <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src}>
-        <p className={styles.content}>{content}</p>
+        <HTMLString element="p">{content}</HTMLString>
       </TitleDisplay>
       <Divider />
     </div>
