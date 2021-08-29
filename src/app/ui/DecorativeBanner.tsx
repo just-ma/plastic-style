@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './DecorativeBanner.module.scss';
 
-const FREQUENCY_1 = 51;
-const FREQUENCY_2 = 31;
-const FREQUENCY_3 = 17;
+const FREQUENCY_1 = 11;
+const FREQUENCY_2 = 17;
+const FREQUENCY_3 = 31;
 
-const MAX_HEX = 255;
+const MAX_DIFF = 50;
 const MAX_OPACITY = 50;
 
-const randHex = (): number => {
-  return Math.random() * MAX_HEX;
+const randDiff = (): number => {
+  return (Math.random() - 1) * 2 * MAX_DIFF;
 };
 
 const randOpacity = (): number => {
@@ -18,17 +18,17 @@ const randOpacity = (): number => {
 };
 
 export default function DecorativeBanner(): React.ReactElement {
-  const [hex1, setHex1] = useState<number>(randHex());
-  const [hex2, setHex2] = useState<number>(randHex());
-  const [hex3, setHex3] = useState<number>(randHex());
+  const [diff1, setDiff1] = useState<number>(randDiff());
+  const [diff2, setDiff2] = useState<number>(randDiff());
+  const [diff3, setDiff3] = useState<number>(randDiff());
 
-  const [opacity1, setOpacity1] = useState<number>(randOpacity());
-  const [opacity2, setOpacity2] = useState<number>(randOpacity());
+  const [opacity1, setOpacity1] = useState<number>(0);
+  const [opacity2, setOpacity2] = useState<number>(0);
   const [opacity3, setOpacity3] = useState<number>(randOpacity());
 
   const createColorInterval = (
     setOpacity: React.Dispatch<React.SetStateAction<number>>,
-    setHex: React.Dispatch<React.SetStateAction<number>>,
+    setDiff: React.Dispatch<React.SetStateAction<number>>,
     frequency: number,
   ): NodeJS.Timeout => {
     return setInterval((): void => {
@@ -37,16 +37,16 @@ export default function DecorativeBanner(): React.ReactElement {
           return 0;
         }
 
-        setHex(randHex());
+        setDiff(randDiff());
         return randOpacity();
       });
     }, frequency * 1000);
   };
 
   useEffect((): (() => void) => {
-    const interval1: NodeJS.Timeout = createColorInterval(setOpacity1, setHex1, FREQUENCY_1);
-    const interval2: NodeJS.Timeout = createColorInterval(setOpacity2, setHex2, FREQUENCY_2);
-    const interval3: NodeJS.Timeout = createColorInterval(setOpacity3, setHex3, FREQUENCY_3);
+    const interval1: NodeJS.Timeout = createColorInterval(setOpacity1, setDiff1, FREQUENCY_1);
+    const interval2: NodeJS.Timeout = createColorInterval(setOpacity2, setDiff2, FREQUENCY_2);
+    const interval3: NodeJS.Timeout = createColorInterval(setOpacity3, setDiff3, FREQUENCY_3);
 
     return (): void => {
       clearInterval(interval1);
@@ -62,9 +62,9 @@ export default function DecorativeBanner(): React.ReactElement {
         style={{
           backgroundImage:
             `linear-gradient(` +
-            `rgba(80, 80, 255, 0.3), ` +
-            `rgba(150, 150, 200, 0.2), ` +
-            `rgba(150, 150, 200, 0.1), ` +
+            `rgba(110, 190, 255, 0.4), ` +
+            `rgba(0, 120, 190, 0.1), ` +
+            `rgba(255, 205, 98, 0.05), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
@@ -75,10 +75,10 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_1}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(40, 80, 255, 1), ` +
-            `rgba(${hex1}, 150, 140, 0.9), ` +
-            `rgba(200, ${hex1}, 240, 0.3), ` +
-            `rgba(150, 150, ${hex1}, 0.1), ` +
+            `rgba(0, 80, 255, 0.2), ` +
+            `rgba(255, 255, 220, 0.1), ` +
+            `rgba(255, ${150 + diff1}, 90, 0.05), ` +
+            `rgba(${150 + diff1}, ${120 + diff1}, 180, 0.05), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
@@ -89,9 +89,12 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_2}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(80, 40, 255, 0.5), ` +
-            `rgba(200, ${hex2}, ${hex2}, 0.1), ` +
-            `rgba(235, ${hex2}, 235, 0))`,
+            `rgba(0, 20, 60, 0.2), ` +
+            `rgba(10, 0, ${130 + diff2}, 0.2), ` +
+            `rgba(${100 + diff2}, 40, ${120 + diff2}, 0.1), ` +
+            `rgba(255, ${170 + diff2}, ${110 + diff2}, 0.1), ` +
+            `rgba(250, 255, ${160 + diff2}, 0.05),` +
+            `rgba(255, 220, 160, 0))`,
         }}
       />
       <div
@@ -101,9 +104,9 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_3}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(40, 80, 255, 0.5), ` +
-            `rgba(${hex3}, 207, ${hex3}, 0.2), ` +
-            `rgba(${hex3}, ${hex3}, 240, 0.1), ` +
+            `rgba(${50 + diff3}, ${170 + diff3}, 255, 0.2), ` +
+            `rgba(${150 + diff3}, 220, 230, 0.2), ` +
+            `rgba(255, 220, ${190 + diff3}, 0.1), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
