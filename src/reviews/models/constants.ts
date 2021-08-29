@@ -1,8 +1,11 @@
 import { Review } from './types';
 
+export const FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY = 'fiona-apple-fetch-the-bolt-cutters';
+export const DESTROYER_HAVE_WE_MET_KEY = 'destroyer-have-we-met';
+
 export const MOCK_REVIEWS: ReadonlyArray<Review> = [
   {
-    id: 'faftbc',
+    id: FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY,
     title: 'Fetch the Bolt Cutters',
     artist: 'Fiona Apple',
     author: 'Parker Albert',
@@ -33,7 +36,7 @@ Apple ends the album with “On I Go,” a relentless march that vocalizes how t
 Amidst the percussive clutter of Apple’s mind, she’s able to find something that perhaps eluded her previously: clarity. She no longer needs the lush orchestration of <i>When the Pawn…</i> or the poetic complexity of <i>The Idler Wheel</i>. All she needs is a pair of bolt cutters.`,
   },
   {
-    id: 'dhwm',
+    id: DESTROYER_HAVE_WE_MET_KEY,
     title: 'Have We Met',
     artist: 'Destroyer',
     author: 'Parker Albert',
@@ -52,7 +55,7 @@ Bejar certainly acts oblivious to the intruding stare of the Boston Strangler, o
 Dan Bejar is 47 years old. If he follows the normal trend, he’s just beginning to escape the depressing slump of middle age. “I thought I was sick and dying,” he muses in the celebratory ”Crimson Tide”. <i>Have We Met</i> confronts the inevitability of death, but Bejar seems more energized than ever to relish his remaining time.`,
   },
   {
-    id: 'gdlap',
+    id: 'gustavo-dudamel-la-philharmonic',
     title: 'A review of the LA Philharmonic conducted by Gustavo Dudamel',
     author: 'Parker Albert',
     createdAt: 1583222400,
@@ -74,7 +77,7 @@ The best surprise lay at the end of the fourth and final movement. The low brass
 The unexpected (and fantastic) end to the concert left me feeling energized and grateful even to see half of the concert. My night with the LA Philharmonic had taken me on a journey from dismay to delight, and I was glad to have taken it.`,
   },
   {
-    id: 'ptr',
+    id: 'pinegrove-the-roxy',
     title: 'A show review of Pinegrove at The Roxy',
     author: 'Parker Albert',
     createdAt: 1581408000,

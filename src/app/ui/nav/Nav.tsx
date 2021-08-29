@@ -7,6 +7,8 @@ import { contactPath } from '../../../contact/routes';
 
 import NavItem from './NavItem';
 
+import { ReactComponent as ArrowIcon } from '../../../images/icons/arrow.svg';
+
 import styles from './Nav.module.scss';
 
 const NAV_MENU = [
@@ -62,7 +64,9 @@ export default function Nav(): React.ReactElement {
   return (
     <div className={styles.Nav}>
       <div className={styles.navItemsContainer}>
-        <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>{`>>`}</div>
+        <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>
+          <ArrowIcon />
+        </div>
         <div className={styles.navItems}>
           {NAV_MENU.map((item, index) => (
             <NavItem
