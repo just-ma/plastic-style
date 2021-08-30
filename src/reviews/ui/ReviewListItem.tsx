@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Review } from '../models/types';
-import { reviewPagePath } from '../routes';
+import { reviewPagePath, reviewsPath } from '../routes';
 
 import PageListItem from '../../common/ui/PageListItem';
 
@@ -12,6 +12,9 @@ type ComponentProps = {
 export default function ReviewListItem({
   review: { id, artist, title, src, content },
 }: ComponentProps): React.ReactElement {
+  const link: string = reviewPagePath(id);
+  const preLink: string = reviewsPath(id);
+
   return (
     <PageListItem
       id={id}
@@ -19,8 +22,9 @@ export default function ReviewListItem({
       secondaryTitle={artist}
       src={src}
       description={content}
-      link={reviewPagePath(id)}
+      link={link}
       linkLabel={'READ MORE >'}
+      preLink={preLink}
     />
   );
 }

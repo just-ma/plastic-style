@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PodcastSeason } from '../models/types';
-import { podcastPagePath } from '../routes';
+import { podcastPagePath, podcastsPath } from '../routes';
 
 import PageListItem from '../../common/ui/PageListItem';
 
@@ -12,6 +12,9 @@ type ComponentProps = {
 export default function PodcastSeasonListItem({
   season: { id, title, src, description, seasonLabel },
 }: ComponentProps): React.ReactElement {
+  const link: string = podcastPagePath(id);
+  const preLink: string = podcastsPath(id);
+
   return (
     <PageListItem
       id={id}
@@ -19,8 +22,9 @@ export default function PodcastSeasonListItem({
       secondaryTitle={seasonLabel}
       src={src}
       description={description}
-      link={podcastPagePath(id)}
+      link={link}
       linkLabel={'VIEW SEASON >'}
+      preLink={preLink}
     />
   );
 }
