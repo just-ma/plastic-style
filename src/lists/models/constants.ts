@@ -4,9 +4,11 @@ import { reviewPagePath } from '../../reviews/routes';
 
 import { List } from './types';
 
+export const PARKERS_FAVORITE_ALBUMS_2020_KEY = 'parkers-favorite-albums-2020';
+
 export const MOCK_LISTS: ReadonlyArray<List> = [
   {
-    id: 'p2020',
+    id: PARKERS_FAVORITE_ALBUMS_2020_KEY,
     title: "Parker's Favorite Albums of 2020",
     author: 'Parker Albert',
     src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',

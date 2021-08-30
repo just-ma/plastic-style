@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import useResponsive from '../hooks/useResponsive';
 
@@ -17,6 +17,7 @@ type ComponentProps = {
   src: string;
   link: string;
   linkLabel: string;
+  preLink?: string;
 };
 
 export default function PageListItem({
@@ -27,12 +28,23 @@ export default function PageListItem({
   description,
   src,
   linkLabel,
+  preLink,
 }: ComponentProps): React.ReactElement {
+  const history = useHistory();
+
   const { isMobile } = useResponsive();
+
+  const onRedirect = useCallback((): void => {
+    if (preLink) {
+      history.replace(preLink);
+    }
+
+    history.push(link);
+  }, [link, preLink]);
 
   return (
     <div id={id} className={classnames(styles.PageListItem, isMobile && styles.mobile)}>
-      <Link className={styles.link} to={link}>
+      <div className={styles.link} onClick={onRedirect}>
         <TitleDisplay
           className={styles.titleDisplay}
           title={title}
@@ -42,7 +54,7 @@ export default function PageListItem({
         >
           <div className={styles.linkLabel}>{linkLabel}</div>
         </TitleDisplay>
-      </Link>
+      </div>
       <div className={styles.divider}>
         <Divider />
       </div>
