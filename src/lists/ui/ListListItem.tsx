@@ -20,7 +20,7 @@ export default function ListListItem({ list: { id, title, src, description } }: 
       src={src}
       description={description}
       link={link}
-      linkLabel={'VIEW LIST >'}
+      linkLabel="VIEW LIST >"
       preLink={preLink}
     />
   );
