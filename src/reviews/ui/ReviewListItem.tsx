@@ -23,7 +23,7 @@ export default function ReviewListItem({
       src={src}
       description={content}
       link={link}
-      linkLabel={'READ MORE >'}
+      linkLabel="READ MORE >"
       preLink={preLink}
     />
   );

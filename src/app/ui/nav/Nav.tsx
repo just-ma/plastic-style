@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 
 // import { reviewsPath } from '../../../reviews/routes';
 import { listsPath } from '../../../lists/routes';
+import { featuresPath } from '../../../features/routes';
 import { podcastsPath } from '../../../podcasts/routes';
 import { contactPath } from '../../../contact/routes';
 
@@ -20,6 +21,10 @@ const NAV_MENU = [
   {
     title: 'Lists',
     link: listsPath(),
+  },
+  {
+    title: 'Features',
+    link: featuresPath(),
   },
   {
     title: 'Podcasts',

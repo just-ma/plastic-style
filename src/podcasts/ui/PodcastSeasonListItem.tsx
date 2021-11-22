@@ -23,7 +23,7 @@ export default function PodcastSeasonListItem({
       src={src}
       description={description}
       link={link}
-      linkLabel={'VIEW SEASON >'}
+      linkLabel="VIEW SEASON >"
       preLink={preLink}
     />
   );

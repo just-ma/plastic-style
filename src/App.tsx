@@ -16,6 +16,11 @@ import { listPagePath, listsPath } from './lists/routes';
 import Lists from './lists/Lists';
 import ListPage from './lists/ui/list-page/ListPage';
 
+// features
+import { featurePagePath, featuresPath } from './features/routes';
+import Features from './features/Features';
+import FeaturePage from './features/ui/feature-page/FeaturePage';
+
 // podcasts
 import { podcastPagePath, podcastsPath } from './podcasts/routes';
 import Podcasts from './podcasts/Podcasts';
@@ -38,6 +43,9 @@ export default function App(): React.ReactElement {
 
         <Route exact path={listsPath()} component={Page(Lists)} />
         <Route exact path={listPagePath(':listId')} component={Page(ListPage)} />
+
+        <Route exact path={featuresPath()} component={Page(Features)} />
+        <Route exact path={featurePagePath(':featureId')} component={Page(FeaturePage)} />
 
         <Route exact path={podcastsPath()} component={Page(Podcasts)} />
         <Route exact path={podcastPagePath(':podcastId')} component={Page(PodcastSeasonPage)} />
