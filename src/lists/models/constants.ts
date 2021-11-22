@@ -2,6 +2,8 @@
 import { FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY, DESTROYER_HAVE_WE_MET_KEY } from '../../reviews/models/constants';
 import { reviewPagePath } from '../../reviews/routes';
 
+import PARKERS_FAVORITE_ALBUMS_2020_THUMBNAIL from '../../images/thumbnails/parkers-albums-2020.jpg';
+
 import { List } from './types';
 
 export const PARKERS_FAVORITE_ALBUMS_2020_KEY = 'parkers-favorite-albums-2020';
@@ -11,7 +13,9 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
     id: PARKERS_FAVORITE_ALBUMS_2020_KEY,
     title: "Parker's Favorite Albums of 2020",
     author: 'Parker Albert',
-    src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
+    description:
+      'Hey y’all it’s Ben here introducing Parker’s 2020 end of the year list. Although Waxahatchee’s Saint Cloud somehow isn’t no.1, it is still a pretty decent collection of albums. Only the top 3 albums have been ranked, everything else is unordered. Releasing this list so late in 2021 has given the both of us time to reflect, and damn what a year it was. We all had rather sentimental attachments to the albums that came out pre and during the pandemic, and this list is an honest representation of that. Included also is a section devoted to those artists who have collaborated with Pushing the Envelope in 2020, we truly appreciate it. Enjoy.',
+    src: PARKERS_FAVORITE_ALBUMS_2020_THUMBNAIL,
     listItems: [
       {
         id: 'touche-amore-lament',
@@ -266,16 +270,6 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
         <p>Named after the neighborhood in Nigeria where he was born and raised, <em>DIOBU </em>was released by Morris Ogbowu from his residence in Ottawa, Canada. While the EP was partially funded by the Ontario Arts Council and the City of Ottawa, it can largely be read as a homesick letter to his country of origin. This cultural dichotomy permeates <em>DIOBU</em>: &ldquo;YAHWEH&rdquo; features an Afrobeat groove coexisting with Ogbowu&rsquo;s determined flow, and &ldquo;FEEL AT HOME&rdquo; navigates his discovery of a sense of belonging while the beat wears the western hip-hop influence on its sleeve. As he happily dives into the record&rsquo;s intentions and inspirations, it&rsquo;s clear that the work of Asuquomo is meant to not only provide Ogbowu with a sense of peace but to make the listeners feel at home, wherever they may be.</p>`,
       },
     ],
-    createdAt: 1624082838,
-  },
-  {
-    id: '4679',
-    title: 'Best Songs of 2020',
-    description:
-      'I can hear your thoughts loud and clear: “Why on earth is this madlad posting a year-end list in the middle of May?” Well, lemme give you the scoop. 2021 fell like a bowling ball on my heart; a partnership forged during the pandemic blasted into pieces. My shattered self floated aimlessly, a recital of survival in its most primal form. Yet something monumental loomed just ahead of me, a towering beacon beckoning like a magnet.',
-    author: 'Parker Albert',
-    src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
-    listItems: [],
     createdAt: 1624082838,
   },
 ];

@@ -1,3 +1,7 @@
+import PUSHING_THE_ENVELOPE_THUMBNAIL from '../../images/thumbnails/pushing-the-envelope-s1.jpg';
+import PAINTING_MUSIC_S1_THUMBNAIL from '../../images/thumbnails/painting-music-s1.jpg';
+import PAINTING_MUSIC_S2_THUMBNAIL from '../../images/thumbnails/painting-music-s2.jpg';
+
 import { PodcastSeason } from './types';
 
 export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
@@ -7,7 +11,7 @@ export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
     description:
       'Pushing the Envelope was created with the intent of forming an experimental approach to music journalism. With our curation of up-and-coming independent artists, we hope to offer a new lens for those looking to explore while building a diverse community of fans along the way. Originally started as a podcast, PtE became a blog in the summer of 2021.',
     author: 'Parker Albert',
-    src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
+    src: PUSHING_THE_ENVELOPE_THUMBNAIL,
     year: 2021,
     episodes: [
       {
@@ -62,12 +66,12 @@ export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
     ],
   },
   {
-    id: 'painting-music-1',
+    id: 'painting-music-s1',
     title: 'Painting Music',
     description:
       'Season 1 of Painting Music provided imagistic narrations for songs, in addition to a historical and analytical background for each artist. Artists featured range from Brian Eno to Prefab Sprout, with each episode themed around a visual environment or music genre. Features several episodes with special guests!',
     author: 'Parker Albert',
-    src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
+    src: PAINTING_MUSIC_S1_THUMBNAIL,
     seasonLabel: 'Season 1',
     year: 2020,
     episodes: [
@@ -130,12 +134,12 @@ export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
     ],
   },
   {
-    id: 'painting-music-2',
+    id: 'painting-music-s2',
     title: 'Painting Music',
     description:
       'Season 2 of Painting Music was created at home during the pandemic, displaying DJ Klutzkat’s fine-honed craft of creating imagistic narrations for songs. One continuous story of a mysterious land hidden in the ocean is told throughout the season, and each episode starts off by discussing and reviewing an album that has come out in the past week.',
     author: 'Parker Albert',
-    src: 'https://www.amatruda.eu/wp-content/uploads/2017/05/PHO_0618-12x18-Amalfi-envelope-1626x1080.jpg',
+    src: PAINTING_MUSIC_S2_THUMBNAIL,
     seasonLabel: 'Season 2',
     year: 2021,
     episodes: [

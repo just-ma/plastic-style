@@ -1,5 +1,10 @@
 import { Review } from './types';
 
+import FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_THUMBNAIL from '../../images/thumbnails/fiona-apple-fetch-the-bolt-cutters.jpg';
+import DESTROYER_HAVE_WE_MET_THUMBNAIL from '../../images/thumbnails/destroyer-have-we-met.jpg';
+import GUSTAVO_DUDAMEL_LA_PHILHARMONIC_THUMBNAIL from '../../images/thumbnails/gustavo-dudamel-la-philharmonic.jpg';
+import PINEGROVE_THE_ROXY_THUMBNAIL from '../../images/thumbnails/pinegrove-the-roxy.jpg';
+
 export const FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY = 'fiona-apple-fetch-the-bolt-cutters';
 export const DESTROYER_HAVE_WE_MET_KEY = 'destroyer-have-we-met';
 
@@ -10,7 +15,7 @@ export const MOCK_REVIEWS: ReadonlyArray<Review> = [
     artist: 'Fiona Apple',
     author: 'Parker Albert',
     createdAt: 1589180400,
-    src: 'https://upload.wikimedia.org/wikipedia/en/0/00/Fiona_Apple_-_Fetch_the_Bolt_Cutters.png',
+    src: FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_THUMBNAIL,
     content: `Fiona Apple has never been afraid to speak her mind. 
 
 1999’s dramatic masterwork <i>When the Pawn…</i> raised a fist against misogynistic media while 2012’s anti-romantic <i>The Idler Wheel…</i>  revealed the harsh truths of love. But on <i>Fetch the Bolt Cutters</i>, she becomes miraculously lucid in the cyclone of sound she’s created, letting her mind speak for itself.
@@ -41,7 +46,7 @@ Amidst the percussive clutter of Apple’s mind, she’s able to find something 
     artist: 'Destroyer',
     author: 'Parker Albert',
     createdAt: 1582444800,
-    src: 'https://upload.wikimedia.org/wikipedia/en/5/56/Destroyer_-_Have_We_Met.png',
+    src: DESTROYER_HAVE_WE_MET_THUMBNAIL,
     content: `Why is Dan Bejar happy?
 
 In psychology there is a phenomenon known as the U-Bend. It describes the steep decline of happiness starting at age 20, and the relentless climb back up beginning at age 46. The second half of the bend puzzles academics. Why, they ask, do smiles grow wider as death looms nearer? The answer may lie in the new Destroyer album.
@@ -59,7 +64,7 @@ Dan Bejar is 47 years old. If he follows the normal trend, he’s just beginning
     title: 'A review of the LA Philharmonic conducted by Gustavo Dudamel',
     author: 'Parker Albert',
     createdAt: 1583222400,
-    src: 'https://csq.com/wp-content/uploads/2015/10/Gustavo-Dudamel-Opening-Image.png',
+    src: GUSTAVO_DUDAMEL_LA_PHILHARMONIC_THUMBNAIL,
     content: `Classical music transports you to fantastical lands, dropping you in the middle of a raging war or on top of a towering castle. These fabricated imaginations of the mind brim with emotion, transforming trivial troubles into matters of inconceivable importance. In the classical world my Uber was my chariot, dodging the spears of LA traffic as it arrived at its destination just on time.
 
 But, alas, I do not live in my fantasies and reality was much more disappointing.
@@ -81,7 +86,7 @@ The unexpected (and fantastic) end to the concert left me feeling energized and 
     title: 'A show review of Pinegrove at The Roxy',
     author: 'Parker Albert',
     createdAt: 1581408000,
-    src: 'https://static01.nyt.com/images/2020/01/30/arts/23pinegrove/23pinegrove-superJumbo.jpg?quality=90&auto=webp',
+    src: PINEGROVE_THE_ROXY_THUMBNAIL,
     content: `Pinegrove isn’t what they used to be, and neither am I.
 
 The summer of 2017 I was reeling from heartbreak in the heat of Tennessee. My car became my sanctuary; Pinegrove became my preacher. I drove through hills and trees, Cardinal baptizing me in alt-country goodness. Maybe I wasn’t the only person in the world with these feelings? 
