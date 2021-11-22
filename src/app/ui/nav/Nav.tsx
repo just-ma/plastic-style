@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-import { reviewsPath } from '../../../reviews/routes';
+// import { reviewsPath } from '../../../reviews/routes';
 import { listsPath } from '../../../lists/routes';
 import { podcastsPath } from '../../../podcasts/routes';
 import { contactPath } from '../../../contact/routes';
@@ -13,10 +13,10 @@ import styles from './Nav.module.scss';
 
 const NAV_MENU = [
   { title: 'Home', link: '/' },
-  {
-    title: 'Reviews',
-    link: reviewsPath(),
-  },
+  // {
+  //   title: 'Reviews',
+  //   link: reviewsPath(),
+  // },
   {
     title: 'Lists',
     link: listsPath(),
