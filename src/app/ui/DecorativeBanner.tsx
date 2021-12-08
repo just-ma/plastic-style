@@ -7,7 +7,7 @@ const FREQUENCY_2 = 17;
 const FREQUENCY_3 = 31;
 
 const MAX_DIFF = 50;
-const MAX_OPACITY = 50;
+const MAX_OPACITY = 70;
 
 const randDiff = (): number => {
   return (Math.random() - 1) * 2 * MAX_DIFF;
@@ -24,7 +24,7 @@ export default function DecorativeBanner(): React.ReactElement {
 
   const [opacity1, setOpacity1] = useState<number>(0);
   const [opacity2, setOpacity2] = useState<number>(0);
-  const [opacity3, setOpacity3] = useState<number>(randOpacity());
+  const [opacity3, setOpacity3] = useState<number>(1);
 
   const createColorInterval = (
     setOpacity: React.Dispatch<React.SetStateAction<number>>,

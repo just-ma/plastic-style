@@ -1,26 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { PARKERS_FAVORITE_ALBUMS_2020_KEY } from '../lists/models/constants';
-import { listPagePath } from '../lists/routes';
+import VinylRecord from './ui/VinylRecord';
 
-import styles from './Home.module.scss';
+import Logo from '../images/thumbnails/pushing-the-envelope-s1.jpg';
+
+const RecordContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const RecordLabelContainer = styled.img`
+  width: 100%;
+`;
 
 export default function Home(): React.ReactElement {
   return (
-    <div>
-      <div className={styles.title}>{"What's New?"}</div>
-      <ul className={styles.list}>
-        <li>
-          <Link to={listPagePath(PARKERS_FAVORITE_ALBUMS_2020_KEY)}>{"Parker's Favorite Albums of 2020"}</Link>
-        </li>
-        <li>
-          <Link to={listPagePath(PARKERS_FAVORITE_ALBUMS_2020_KEY)}>{"Parker's Favorite Albums of 2020"}</Link>
-        </li>
-        <li>
-          <Link to={listPagePath(PARKERS_FAVORITE_ALBUMS_2020_KEY)}>{"Parker's Favorite Albums of 2020"}</Link>
-        </li>
-      </ul>
-    </div>
+    <RecordContainer>
+      <VinylRecord>
+        <RecordLabelContainer src={Logo} />
+      </VinylRecord>
+    </RecordContainer>
   );
 }
