@@ -9,9 +9,12 @@ const HTMLOptions: Options = {
 };
 
 const formatHTML = (content: ContentState): string => {
-  return `\`${stateToHTML(content, HTMLOptions)
+  const html = stateToHTML(content, HTMLOptions)
     .replace(/<span>|<br>/g, '')
-    .replace(/<\/span>\s*/g, '\\n')}\``;
+    .replace(/<\/span>\s*/g, '\\n')
+    .slice(1);
+
+  return `\`${html.slice(0, html.length - 2)}\``;
 };
 
 const Page = styled.div`
@@ -55,14 +58,10 @@ export default function TextEditor(): React.ReactElement {
   const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
 
   const handleFocus = useCallback((): void => {
-    console.log('hioo');
-
     setTimeout(() => ref.current?.focus(), 0);
   }, [ref.current]);
 
   useEffect((): void => {
-    console.log('hiyy');
-
     handleFocus();
   }, []);
 
@@ -71,7 +70,6 @@ export default function TextEditor(): React.ReactElement {
   }, [editorState]);
 
   const handleKeyCommand = useCallback((command: string, editorState: EditorState): DraftHandleValue => {
-    console.log('what');
     const newState = RichUtils.handleKeyCommand(editorState, command);
 
     if (newState) {
@@ -83,7 +81,6 @@ export default function TextEditor(): React.ReactElement {
   }, []);
 
   const handleBoldClick = useCallback((): void => {
-    console.log('hi');
     setEditorState((prev) => RichUtils.toggleInlineStyle(prev, 'BOLD'));
     handleFocus();
   }, [handleFocus]);

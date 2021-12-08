@@ -2,20 +2,60 @@
 import { FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY, DESTROYER_HAVE_WE_MET_KEY } from '../../reviews/models/constants';
 import { reviewPagePath } from '../../reviews/routes';
 
-import PARKERS_FAVORITE_ALBUMS_2020_THUMBNAIL from '../../images/thumbnails/parkers-albums-2020.jpg';
+import PARKERS_TOP_ALBUMS_2020_THUMBNAIL from '../../images/thumbnails/parkers-albums-2020.jpg';
 
 import { List } from './types';
 
-export const PARKERS_FAVORITE_ALBUMS_2020_KEY = 'parkers-favorite-albums-2020';
+export const PARKERS_TOP_ALBUMS_2020_KEY = 'parkers-top-albums-2020';
 
 export const MOCK_LISTS: ReadonlyArray<List> = [
   {
-    id: PARKERS_FAVORITE_ALBUMS_2020_KEY,
-    title: "Parker's Favorite Albums of 2020",
+    id: 'prestion-top-albums-2021',
+    title: "Preston's Top Albums of 2021",
+    author: 'Preston Fulks',
+    src: PARKERS_TOP_ALBUMS_2020_THUMBNAIL,
+    createdAt: 1624082838,
+    listItems: [
+      {
+        id: 'vince-stapes-vince-stapes',
+        title: 'Vince Staples',
+        artist: 'Vince Staples',
+        content: `Vince Staples’ self-titled effort is the most understated in his discography, not quite as minimal as the Clams Casino productions from <em>Summertime ‘06 </em>but certainly more mellow, and likely the quietest rap record of 2021. Where the bass would normally propel the instrumental Kenny Beats’ 808s are damn near inaudible, giving more atmosphere than actual low end. The focus lands on Vince, whose nuanced evocations of life in Long Beach are tinged with his trademark colloquial complexity: “Yeah I love you ‘cause you black/ but don’t love your ass like that/ I will put you on a shirt/ if you fuck me out my racks.” Much like the record’s cover – an extreme close up of Vince’s face which stirs and twitches on digital streaming platforms – the music is unobfuscated, asking the listener to hone in on small details: garbled piano interpolations tucked into corners of “Law of Averages” or a counter melody hidden in the sub bass on “Lil Fade.” Rarely are big name rap releases so delicate.`,
+      },
+      {
+        id: 'tyler-the-creator-call-me-if-you-get-lost',
+        title: 'Call Me If You Get Lost',
+        artist: 'Tyler, the Creator',
+        content: `The Odd Future iconoclast returns to form on his 6th LP, leaning out the window to wave ‘goodbye’ as his private jet takes off for a country you didn’t know existed. The nonchalant splendor recalls Griselda’s Westside Gunn whom Tyler has credited with “making me wanna just rap again,” an influence demonstrated by the album’s scarce hooks and dense imagistic wordplay. The record opens with a warbling Billy Cobham sample which, save for Fabian Chavez’s gooey flute licks, is essentially the same beat as Westside Gunn’s “Michael Irvin.” What really cinches <em>Call Me’s </em>success is Tyler’s aptitude as executive producer; he navigates seamlessly from 2008 strip club trap to new jack swing to Lil’ Wayne free associating over Henry Mancini piano and basically no drums. Beneath the luxury lie melancholy and dissatisfaction, both of which come to the fore as the album progresses. “Wilshire,” the penultimate track and ostensible centerpiece, describes a passionate but adulterous relationship in vulnerably realistic detail uncommon for Tyler. The vocals rasp and peak noisily; I picture him recording all eight and a half minutes in one take onto a cheap mic, and the earlier braggadocio rings hollow by comparison. This lyrical tension between lavish expenditure and emotional discontentment make <em>Call Me if You Get Lost </em>a refreshingly complex listen.`,
+      },
+      {
+        id: 'joe-taylor-sutkowski-dirt-buyer-of-wisdom-n-folly',
+        title: 'Of Wisdom & Folly',
+        artist: 'Joe Taylor Sutkowski & Dirt Buyer',
+        content: `On his first guitar-music release since 2019’s <em>Dirt Buyer</em> Sutkowski plays to his strengths: vivid character studies, barebones arrangements, and melodies that follow you like shadows. <em>Of Wisdom and Folly </em>dips into an impressionistic world of aimless anthropomorphs whose personalities appear exact from afar but blur and disintegrate when approached. That they relay such candid-yet-obscured emotion is even more impressive considering the scarcity of instrumentation; many of the tracks are solely acoustic guitar and vocals, mic’d closely enough to pick up little plucks and scratches which lend an intimate coarseness. The full band arrangements (played entirely by Sutkowski himself) are just present enough to accentuate the songs, popping up here and there to widen the dynamic range without drawing too much attention to themselves. Sutkowski’s heart-rending, indelibly graceful vocal performances remain the focus; the record’s intriguing paradoxy is encapsulated in their gravelly lows and straining, ecstatic highs.`,
+      },
+      {
+        id: 'erika-de-casier-sensational',
+        title: 'Sensational',
+        artist: 'Erika de Casier',
+        content: `Forget PinkPantheress, <em>Sensational </em>is where to get your forlorn garage fix in 2021. De Casier’s latest may not be quite as groove-driven as 2019’s <em>Essentials</em> but maintains the same late 90’s/early aughts club nostalgia, this time with a subtler touch. “Polite” and “Busy,” the two lead singles, act as upbeat bookends for a record with a much darker sound. When drum loops do emerge under de Casier’s airy whisper they are driving but subdued, like a Pharrell beat on Xanax, but for the most part <em>Sensational </em>errs toward a intricately-arranged spaciousness. Her anti-opulence lamentations on “All You Talk About” mingle with a harp patch and dissolve like wisps of smoke; the next track begins with a cavernous flute and piano duet, gently rousing the listener before diving into boomy upright bass. In tandem with the record’s flux, skittering production de Casier plays hard-to-get, unfurling sensual details from past flings but rarely committing herself. This dynamic flips on standout track “Friendly,” and suddenly she’s the one persuading: “Take a bite of me/I got plenty of/ Take a bite of me/ I’m feeling friendly,” inflecting the titular adverb with lust rather than platonicism. De Casier drops the end of the second line, leaving it to your imagination, and once again the emptiness is what really binds <em>Sensational</em>.`,
+      },
+      {
+        id: 'sophia-chablau-e-uma-enorme-perda-de-tempo-sophia-chablau-e-uma-enorme-perda-de-tempo',
+        title: 'Sophia Chablau e Uma Enorme Perda de Tempo',
+        artist: 'Sophia Chablau e Uma Enorme Perda de Tempo',
+        content: `Despite their irreverent name, which translates to “Sophia Chablau and an enormous waste of time,” the group’s debut is anything but banal. On the contrary, this 23-minute self-titled LP gets right to the point on raucous opener “Pop Cabecinha,” initiated by a screeching guitar chord and one precise vibraslap. The band’s jittery hits and slack chemistry quickly give way to the wistful “Se Você,” on which Chablau’s haunting vocal performance is supported solely by murky bass chords until a droning cacophony creeps in on the back half. This wide dynamic range is one of the record’s signatures, swinging wildly from melancholic reflection to free-wheeling bombast and back again. Chablau adjusts her tone accordingly, whether musing over intimacy and isolation on “Fora do Meu Quarto” or parodying American imperialism on “Hello,” whose lyrics enact the opposite by gradually subsuming English with Portuguese (“a very pretty lingua!”) The band heaps humor and personality atop a luscious vintage production sound helmed by Ana Frango Elétrico, who hails from the same São Paulo scene. The sonic character she contributes is crucial; the record’s only preceding single, “Delicia/Luxúria,” leads with a menacing drum break so blown-out it’s difficult to hear the notes. The same break closes the track, its oversaturated snare roll careening into nothingness –&nbsp;the abrupt ending leaves not a moment wasted.`,
+      },
+    ],
+  },
+  {
+    id: PARKERS_TOP_ALBUMS_2020_KEY,
+    title: "Parker's Top Albums of 2020",
     author: 'Parker Albert',
     description:
       'Hey y’all it’s Ben here introducing Parker’s 2020 end of the year list. Although Waxahatchee’s Saint Cloud somehow isn’t no.1, it is still a pretty decent collection of albums. Only the top 3 albums have been ranked, everything else is unordered. Releasing this list so late in 2021 has given the both of us time to reflect, and damn what a year it was. We all had rather sentimental attachments to the albums that came out pre and during the pandemic, and this list is an honest representation of that. Included also is a section devoted to those artists who have collaborated with Pushing the Envelope in 2020, we truly appreciate it. Enjoy.',
-    src: PARKERS_FAVORITE_ALBUMS_2020_THUMBNAIL,
+    src: PARKERS_TOP_ALBUMS_2020_THUMBNAIL,
+    createdAt: 1624082838,
     listItems: [
       {
         id: 'touche-amore-lament',
@@ -270,6 +310,5 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
         <p>Named after the neighborhood in Nigeria where he was born and raised, <em>DIOBU </em>was released by Morris Ogbowu from his residence in Ottawa, Canada. While the EP was partially funded by the Ontario Arts Council and the City of Ottawa, it can largely be read as a homesick letter to his country of origin. This cultural dichotomy permeates <em>DIOBU</em>: &ldquo;YAHWEH&rdquo; features an Afrobeat groove coexisting with Ogbowu&rsquo;s determined flow, and &ldquo;FEEL AT HOME&rdquo; navigates his discovery of a sense of belonging while the beat wears the western hip-hop influence on its sleeve. As he happily dives into the record&rsquo;s intentions and inspirations, it&rsquo;s clear that the work of Asuquomo is meant to not only provide Ogbowu with a sense of peace but to make the listeners feel at home, wherever they may be.</p>`,
       },
     ],
-    createdAt: 1624082838,
   },
 ];

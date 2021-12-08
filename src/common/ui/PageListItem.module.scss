@@ -1,6 +1,7 @@
 .PageListItem {
   // top padding and negative margin used for hash links
   padding-top: 60px;
+  cursor: pointer;
 
   &:first-of-type {
     margin-top: -60px;
