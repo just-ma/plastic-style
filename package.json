@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-amplify/ui-react": "^1.2.2",
-    "aws-amplify": "^4.1.0",
     "classnames": "^2.3.1",
     "draft-js": "^0.11.7",
     "draft-js-export-html": "^1.4.1",
