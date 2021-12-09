@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { API } from 'aws-amplify';
+import React, { useEffect } from 'react';
 
-import { listReviews } from '../graphql/queries';
 import { Review } from './models/types';
 import { MOCK_REVIEWS } from './models/constants';
 
 import ReviewListItem from './ui/ReviewListItem';
 
 export default function Reviews(): React.ReactElement {
-  const [reviews, setReviews] = useState<ReadonlyArray<Review>>(MOCK_REVIEWS);
-
-  const fetchReviews = async (): Promise<void> => {
-    const apiData: any = await API.graphql({ query: listReviews });
-    setReviews(apiData.data.listReviews.items);
-  };
-
-  useEffect((): void => {
-    //fetchReviews();
-  }, []);
-
   useEffect((): void => {
     if (!location.hash) {
       return;
@@ -28,11 +15,11 @@ export default function Reviews(): React.ReactElement {
     if (element) {
       element.scrollIntoView();
     }
-  }, [reviews]);
+  }, []);
 
   return (
     <div>
-      {reviews.map((review: Review) => (
+      {MOCK_REVIEWS.map((review: Review) => (
         <ReviewListItem key={review.id} review={review} />
       ))}
     </div>
