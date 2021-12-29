@@ -1,15 +1,14 @@
 import { Feature } from './types';
 
-import TEST_THUMBNAIL from '../../images/thumbnails/fiona-apple-fetch-the-bolt-cutters.jpg';
+import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpeg';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
-    id: 'test',
-    title: 'Feature Title',
-    description: 'Here is the feature description. Describe me',
+    id: 'smashing-pumpkins',
+    title: 'I Keep Trying To Write But All I Can Do Is Listen To The Smashing Pumpkins’ 1979',
     author: 'Parker Albert',
-    createdAt: 1589180400,
-    src: TEST_THUMBNAIL,
-    content: `<b>Touche Amore</b> - <em>Lament </em>- Best album to listen to when everything is falling apart\n\nIn a year where anxiety repeatedly got the best of me, <em>Lament </em>was my safe haven. From rage-fueled workouts to panic-ridden drives down the interstate, <em>Lament </em>channeled my chaotic thoughts through eleven songs of blistering post-hardcore. Fittingly, singer Jeremy Bolm kicks off the album with a desperate cry for help: “From peaks of blue/Come Heroine”—a cleverly drawn double entendre about a woman he relies on to survive tough times—while the band barrels towards a climax that crashes into the title track. Out of “Lament” crawls a broken melody that stumbles over itself, wandering aimlessly as Bolm describes a cycle of sadness and anxiety that anyone who has battled with their brains can relate to.\n\nEach song on <em>Lament </em>peers into a corner of Bolm’s personal darkness, yet he allows a few glimpses of light as well, giving the album a determined drive that can bring someone back from the brink of collapse. The first two verses of “Limelight'' pour out the depths of Bolm’s fatigue with the world, while the third verse takes a last stand as Manchester Orchestra member Andy Hull makes a desperate swim upwards against Bolm's dark chants. He lets his voice reach manic heights as he runs out of breath, fighting for a gasp of air. Self-proclaimed as the catchiest song in their catalogue, “Reminders'' combines political disenchantment with the need for self-love, ending on an unanswered question that bellows with personal resonance: “Is there a way to feel free/Without being someone else.” On “I’ll Be Your Host,” Bolm deals with the aftermath of making music that heals others when he hasn’t finished healing himself. Yet even as he wrestles with the weight of countless letters from fans unloading their grief, the song simultaneously serves as a beacon for anyone that has carried the burden of another.\n`,
+    createdAt: 1639030136,
+    src: BILLY_THUMBNAIL,
+    content: `This is a serious problem I’m not joking. Every time I pull out my laptop and try to write (which is definitely every day because I definitely am a very productive individual) I inevitably hear the trademark electronic gurgles that set up Smashing Pumpkins’ second best song “1979”. I may not know how my finger landed on the play button but I certainly can’t prevent it once it starts -- the slicked-down mid-90’s indie rock strums are so very irresistible. I blame Ben for issuing an ultimatum at Scorpion Records: he would either leave or I would play Corgin’s spiritual successor to Sonic Youth’s “Teenage Riot.” It’d been bouncin’ around the ol’ brain for the past few days as a result of its perplexing inclusion on my work’s “60’s And 70’s Popular Rock” playlist, so I had no problem relenting to Ben’s demand.\n\nThe Pumpkins’ ode to fading youth soundtracked my life nonstop for the following week, but that was only the beginning. Before long my addiction extended to all of the tracks on <em>Melon Collie and the Infinite Sadness</em> — I played "Tonight, Tonight" about twenty times to dramatize my trips to the laundromat, and I couldn’t stop binging the record’s unimpeachable row of ballads that populate the second half. How am I supposed to write when I could instead succumb to the sweet drawl of “Lily My One and Only” or get swept up in the psychedelic tide of “Porcelina Of The Vast Oceans?”\n\nI’ve been a willing captive of <em>Melon Collie</em>; I like to follow the implicit advice of “1979” and enjoy the rush while it lasts. When you come across an album you just can't peel your ears away from, lean into it. Because after all, one day we'll all turn to dust I guess.`,
   },
 ];
