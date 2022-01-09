@@ -4,10 +4,10 @@ export default function Contact(): React.ReactElement {
   return (
     <div>
       <p>
-        Pushing the Envelope was created with the intent of forming an experimental approach to music journalism. With
-        our curation of up-and-coming independent artists, we hope to offer a new lens for those looking to explore
-        while building a diverse community of fans along the way. Originally started as a podcast, PtE became a blog in
-        the summer of 2021.
+        Plastic Style was created with the intent of forming an experimental approach to music journalism. With our
+        curation of up-and-coming independent artists, we hope to offer a new lens for those looking to explore while
+        building a diverse community of fans along the way. Originally started as a podcast, Plastic Style became a blog
+        in the summer of 2021.
       </p>
       <br />
       <br />
