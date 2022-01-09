@@ -62,9 +62,9 @@ export default function DecorativeBanner(): React.ReactElement {
         style={{
           backgroundImage:
             `linear-gradient(` +
-            `rgba(110, 190, 255, 0.4), ` +
-            `rgba(0, 120, 190, 0.1), ` +
-            `rgba(255, 205, 98, 0.05), ` +
+            `rgba(57, 102, 165, 0.4), ` +
+            `rgba(118, 91, 171, 0.1), ` +
+            `rgba(0, 255, 94, 0.05), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
@@ -104,9 +104,9 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_3}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(${50 + diff3}, ${170 + diff3}, 255, 0.2), ` +
-            `rgba(${150 + diff3}, 220, 230, 0.2), ` +
-            `rgba(255, 220, ${190 + diff3}, 0.1), ` +
+            `rgba(${50 + diff3}, ${140 + diff3}, 255, 0.2), ` +
+            `rgba(${120 + diff3}, 150, 240, 0.2), ` +
+            `rgba(200, 200, ${150 + diff3}, 0.1), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />

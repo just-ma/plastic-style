@@ -8,7 +8,7 @@ import { ReactComponent as VinylRecordRingsGraphic } from '../../images/graphics
 const DEAD_WAX_RING_SIZE = 42;
 const CENTER_LABEL_SIZE = 34;
 const RECORD_HOLE_SIZE = 3;
-const DEFAULT_VELOCITY = 1;
+const DEFAULT_VELOCITY = 0.5;
 
 const SpinningContainer = styled.div<{ rot: number }>`
   transform: rotate(${({ rot }) => rot}deg);
@@ -52,6 +52,7 @@ const CenterLabel = styled(CenteredCircle)`
   justify-content: center;
   background-color: #2c2cff;
   overflow: hidden;
+  pointer-events: none;
 `;
 
 const RecordHole = styled(CenteredCircle)`
