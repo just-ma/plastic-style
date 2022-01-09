@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import VinylRecord from './ui/VinylRecord';
 
-import Logo from '../images/thumbnails/pushing-the-envelope-s1.jpg';
+import AiGif from '../images/animations/ai-transitions.gif';
 
 const RecordContainer = styled.div`
   position: absolute;
@@ -20,7 +20,7 @@ export default function Home(): React.ReactElement {
   return (
     <RecordContainer>
       <VinylRecord>
-        <RecordLabelContainer src={Logo} />
+        <RecordLabelContainer src={AiGif} />
       </VinylRecord>
     </RecordContainer>
   );
