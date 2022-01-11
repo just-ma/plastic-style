@@ -4,20 +4,17 @@ export default function Contact(): React.ReactElement {
   return (
     <div>
       <p>
-        Plastic Style was created with the intent of forming an experimental approach to music journalism. With our
-        curation of up-and-coming independent artists, we hope to offer a new lens for those looking to explore while
-        building a diverse community of fans along the way. Originally started as a podcast, Plastic Style became a blog
-        in the summer of 2021.
+        Plastic Style is a digital publication which aims to enliven the current state of music journalism, offering stylized coverage from a team of contributors with diverse tastes. It began as a podcast founded by Parker Albert in 2020. 
       </p>
       <br />
       <br />
-      <a href="mailto:pushingtheenvelope@gmail.com">Email</a>
+      <a href="plasticstyledotnet@gmail.com">Email</a>
       <br />
-      <a href="https://www.instagram.com/pushingthe_envelope/" target="_blank" rel="noreferrer">
+      <a href="https://www.instagram.com/plasticstyledotnet/" target="_blank" rel="noreferrer">
         Instagram
       </a>
       <br />
-      <p>New York, New York, USA</p>
+      <p>Ridgewood, New York, USA</p>
     </div>
   );
 }
