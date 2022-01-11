@@ -1,6 +1,6 @@
 import { Feature } from './types';
 
-import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpeg';
+import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpg';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
