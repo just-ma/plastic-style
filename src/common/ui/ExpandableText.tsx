@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -6,7 +6,7 @@ const Text = styled.div`
   display: inline;
   color: #ff0059;
   font-weight: 700;
-  cursor: text;
+  cursor: pointer;
 `;
 
 type ExpandableTextProps = {
@@ -15,12 +15,33 @@ type ExpandableTextProps = {
 };
 
 export default function ExpandableText({ text, hiddenText }: ExpandableTextProps): React.ReactElement {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleMouseEnter = useCallback((): void => {
+    setOpen(true);
+  }, []);
+
+  const handleMouseOut = useCallback((): void => {
+    setOpen(false);
+  }, []);
+
+  const handleTouchStart = useCallback((): void => {
+    setOpen((prev) => !prev);
+  }, []);
+
   if (!hiddenText) {
     return <>{text}</>;
   }
 
   return (
-    <Tooltip title={hiddenText} placement="top">
+    <Tooltip
+      open={open}
+      onMouseEnter={handleMouseEnter}
+      onMouseOut={handleMouseOut}
+      onTouchStart={handleTouchStart}
+      title={hiddenText}
+      placement="top"
+    >
       <Text>{text}</Text>
     </Tooltip>
   );

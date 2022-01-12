@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Redirect, useParams } from 'react-router';
 import classnames from 'classnames';
 
@@ -23,10 +23,8 @@ export default function PodcastSeasonPage(): React.ReactElement {
   const { podcastId } = useParams<RouteParams>();
   const { isMobile } = useResponsive();
 
-  const [podcast, setPodcast] = useState<PodcastSeason | null>(MOCK_PODCASTS.find((p) => p.id === podcastId) || null);
-
-  useEffect((): void => {
-    //fetchPodcast();
+  const podcast = useMemo((): PodcastSeason | null => {
+    return MOCK_PODCASTS.find((p) => p.id === podcastId) || null;
   }, [podcastId]);
 
   if (!podcast) {
@@ -37,7 +35,7 @@ export default function PodcastSeasonPage(): React.ReactElement {
 
   return (
     <div className={classnames(styles.PodcastSeasonPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} src={src}>
+      <TitleDisplay className={styles.titleDisplay} title={title} src={src} largeHeader thumbnailWidthPx={260}>
         <TitledParagraph leftTitle={author} rightTitle={year} content={description} />
       </TitleDisplay>
       <Divider />
