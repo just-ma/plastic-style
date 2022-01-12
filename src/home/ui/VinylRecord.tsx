@@ -70,7 +70,7 @@ export default function VinylRecord({ children }: ComponentProps): React.ReactEl
   const nextV = useRef<number>(DEFAULT_VELOCITY);
   const requestRef = React.useRef<number>(-1);
 
-  const [rot, setRot] = useState(0);
+  const [rot, setRot] = useState(Math.random() * 360);
 
   const animate = (): void => {
     setRot((prev) => (prev + currV.current) % 360);
