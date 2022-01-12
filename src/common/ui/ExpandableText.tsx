@@ -25,23 +25,12 @@ export default function ExpandableText({ text, hiddenText }: ExpandableTextProps
     setOpen(false);
   }, []);
 
-  const handleTouchStart = useCallback((): void => {
-    setOpen((prev) => !prev);
-  }, []);
-
   if (!hiddenText) {
     return <>{text}</>;
   }
 
   return (
-    <Tooltip
-      open={open}
-      onMouseEnter={handleMouseEnter}
-      onMouseOut={handleMouseOut}
-      onTouchStart={handleTouchStart}
-      title={hiddenText}
-      placement="top"
-    >
+    <Tooltip open={open} onMouseEnter={handleMouseEnter} onMouseOut={handleMouseOut} title={hiddenText} placement="top">
       <Text>{text}</Text>
     </Tooltip>
   );
