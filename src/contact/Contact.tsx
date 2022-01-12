@@ -10,7 +10,7 @@ export default function Contact(): React.ReactElement {
       </p>
       <br />
       <br />
-      <a href="plasticstyledotnet@gmail.com">Email</a>
+      <a href="mailto:plasticstyledotnet@gmail.com">Email</a>
       <br />
       <a href="https://www.instagram.com/plasticstyledotnet/" target="_blank" rel="noreferrer">
         Instagram
