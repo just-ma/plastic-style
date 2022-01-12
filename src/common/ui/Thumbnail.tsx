@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => (fullWidth ? '100%' : '230px')};
-  height: 230px;
+  height: auto;
   background-color: #dcdcdc;
 `;
 

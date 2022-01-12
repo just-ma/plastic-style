@@ -98,9 +98,18 @@ export default function VinylRecord({ children }: ComponentProps): React.ReactEl
     nextV.current = DEFAULT_VELOCITY;
   }, []);
 
+  const handleTouchStart = useCallback((): void => {
+    nextV.current = DEFAULT_VELOCITY - nextV.current;
+  }, []);
+
   return (
     <SpinningContainer rot={rot}>
-      <Record isResponsive={isResponsive} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+      <Record
+        isResponsive={isResponsive}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+      >
         <RecordRings />
         <DeadWaxRing size={DEAD_WAX_RING_SIZE} />
         <CenterLabel size={CENTER_LABEL_SIZE}>{children}</CenterLabel>

@@ -1,7 +1,3 @@
-/* eslint-disable indent */
-import { FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY, DESTROYER_HAVE_WE_MET_KEY } from '../../reviews/models/constants';
-import { reviewPagePath } from '../../reviews/routes';
-import PRESTON_2021_LIST_THUMBNAIL from '../../images/thumbnails/sophia-thumbnail.jpeg';
 import SOPHIA_THUMBNAIL from '../../images/thumbnails/sophia-thumbnail.jpg';
 import VINCE_THUMBNAIL from '../../images/thumbnails/vince-thumbnail.jpg';
 import JOE_THUMBNAIL from '../../images/thumbnails/joe-thumbnail.jpg';
