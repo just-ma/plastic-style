@@ -13,9 +13,11 @@ type ComponentProps = {
   className?: string;
   title: string;
   secondaryTitle?: string;
+  largeHeader?: boolean;
   description?: string;
   src?: string;
   children?: React.ReactNode;
+  thumbnailWidthPx?: number;
   fullWidth?: boolean;
 };
 
@@ -23,9 +25,11 @@ export default function TitleDisplay({
   className,
   title,
   secondaryTitle,
+  largeHeader,
   description,
   src,
   children,
+  thumbnailWidthPx,
   fullWidth,
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
@@ -42,12 +46,12 @@ export default function TitleDisplay({
     >
       {src && (
         <div className={styles.thumbnail}>
-          <Thumbnail src={src} fullWidth={isMobile} />
+          <Thumbnail src={src} widthPx={thumbnailWidthPx} fullWidth={isMobile} />
         </div>
       )}
       <div className={styles.titleContainer}>
         <div className={styles.title}>
-          <Header title={title} secondaryTitle={secondaryTitle} />
+          <Header title={title} secondaryTitle={secondaryTitle} large={largeHeader} />
         </div>
         {description && (
           <HTMLString className={styles.description} element="p">

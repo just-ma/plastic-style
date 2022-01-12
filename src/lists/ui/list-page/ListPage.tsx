@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Redirect, useParams } from 'react-router';
 import classnames from 'classnames';
 
@@ -24,10 +24,8 @@ export default function ListPage(): React.ReactElement {
   const { listId } = useParams<RouteParams>();
   const { isMobile } = useResponsive();
 
-  const [list, setList] = useState<List | null>(MOCK_LISTS.find((l) => l.id === listId) || null);
-
-  useEffect((): void => {
-    //fetchList();
+  const list = useMemo((): List | null => {
+    return MOCK_LISTS.find((l) => l.id === listId) || null;
   }, [listId]);
 
   if (!list) {
@@ -38,7 +36,7 @@ export default function ListPage(): React.ReactElement {
 
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} src={src}>
+      <TitleDisplay className={styles.titleDisplay} title={title} src={src} thumbnailWidthPx={260} largeHeader>
         <TitledParagraph leftTitle={`by ${author}`} rightTitle={getDateLabel(createdAt)} content={description} />
       </TitleDisplay>
       <Divider />

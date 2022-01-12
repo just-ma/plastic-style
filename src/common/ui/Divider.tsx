@@ -1,12 +1,34 @@
 import React from 'react';
-import classnames from 'classnames';
+import styled, { css } from 'styled-components';
 
-import styles from './Divider.module.scss';
-
-type ComponentProps = {
+type ContainerProps = {
   vertical?: boolean;
+  filled?: boolean;
 };
 
-export default function Divider({ vertical }: ComponentProps): React.ReactElement {
-  return <div className={classnames(styles.Divider, vertical && styles.vertical)} />;
+const Container = styled.div<ContainerProps>`
+  border: 1px solid black;
+
+  ${({ vertical }) =>
+    vertical
+      ? css`
+          width: 3px;
+          height: 100%;
+        `
+      : css`
+          width: 100%;
+          height: 3px;
+        `}
+
+  ${({ filled }) =>
+    filled &&
+    css`
+      background-color: black;
+    `}
+`;
+
+type ComponentProps = ContainerProps;
+
+export default function Divider(props: ComponentProps): React.ReactElement {
+  return <Container {...props} />;
 }
