@@ -50,6 +50,7 @@ const ItalicButton = styled.button`
 `;
 
 const TextContainer = styled.div<{ editable?: boolean }>`
+  flex-shrink: 0;
   padding: 10px;
   margin-bottom: 20px;
   min-height: 20px;

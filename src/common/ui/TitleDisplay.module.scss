@@ -1,6 +1,7 @@
 .TitleDisplay {
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   &.mobile {
     flex-direction: column;
