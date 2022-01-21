@@ -7,9 +7,9 @@ import Home from './home/Home';
 import TextEditor from './admin/ui/TextEditor';
 
 // reviews
-// import { reviewPagePath, reviewsPath } from './reviews/routes';
-// import Reviews from './reviews/Reviews';
-// import ReviewPage from './reviews/ui/review-page/ReviewPage';
+import { reviewPagePath, reviewsPath } from './reviews/routes';
+import Reviews from './reviews/Reviews';
+import ReviewPage from './reviews/ui/review-page/ReviewPage';
 
 // lists
 import { listPagePath, listsPath } from './lists/routes';
@@ -38,8 +38,8 @@ export default function App(): React.ReactElement {
         {/* <Route exact path="/admin" component={Admin} /> */}
         <Route exact path="/admin/text-editor" component={TextEditor} />
 
-        {/* <Route exact path={reviewsPath()} component={Page(Reviews)} />
-        <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} /> */}
+        <Route exact path={reviewsPath()} component={Page(Reviews)} />
+        <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} />
 
         <Route exact path={listsPath()} component={Page(Lists)} />
         <Route exact path={listPagePath(':listId')} component={Page(ListPage)} />
