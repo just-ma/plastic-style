@@ -6,6 +6,23 @@ import { PodcastSeason } from './types';
 
 export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
   {
+    id: 'plastic-chair',
+    title: 'plastic chair',
+    description: 'Interviews with artists we like!',
+    author: 'Parker Albert',
+    src: PUSHING_THE_ENVELOPE_THUMBNAIL,
+    year: 2022,
+    episodes: [
+      {
+        id: '1',
+        title: 'Episode 1',
+        description: `Episode 1 of Pushing the Envelope featuring an interview with Ari Finkel of his experimental techno moniker Fake Phone Number!`,
+        src: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fpaintingmusicshow%2Fpushing-the-envelope-episode-1%2F',
+        date: 0,
+      },
+    ],
+  },
+  {
     id: 'pushing-the-envelope',
     title: 'Pushing the Envelope',
     description:
