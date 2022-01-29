@@ -1,10 +1,28 @@
 import PUSHING_THE_ENVELOPE_THUMBNAIL from '../../images/thumbnails/pushing-the-envelope-s1.jpg';
 import PAINTING_MUSIC_S1_THUMBNAIL from '../../images/thumbnails/painting-music-s1.jpg';
 import PAINTING_MUSIC_S2_THUMBNAIL from '../../images/thumbnails/painting-music-s2.jpg';
+import CHAIR_THUMBNAIL from '../../images/thumbnails/chair.jpg';
 
 import { PodcastSeason } from './types';
 
 export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
+  {
+    id: 'plastic-chair',
+    title: 'plastic chair',
+    description: 'Interviews with artists we like!',
+    author: 'Parker Albert',
+    src: CHAIR_THUMBNAIL,
+    year: 2022,
+    episodes: [
+      {
+        id: '1',
+        title: 'Episode 1: Fire-Toolz',
+        description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
+        src: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
+        date: 0,
+      },
+    ],
+  },
   {
     id: 'pushing-the-envelope',
     title: 'Pushing the Envelope',
