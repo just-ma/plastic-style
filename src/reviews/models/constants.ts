@@ -1,9 +1,5 @@
 import { Review } from './types';
 
-import FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_THUMBNAIL from '../../images/thumbnails/fiona-apple-fetch-the-bolt-cutters.jpg';
-import DESTROYER_HAVE_WE_MET_THUMBNAIL from '../../images/thumbnails/destroyer-have-we-met.jpg';
-import GUSTAVO_DUDAMEL_LA_PHILHARMONIC_THUMBNAIL from '../../images/thumbnails/gustavo-dudamel-la-philharmonic.jpg';
-import PINEGROVE_THE_ROXY_THUMBNAIL from '../../images/thumbnails/pinegrove-the-roxy.jpg';
 import TWIGS_THUMBNAIL from '../../images/thumbnails/twigs.jpg';
 
 export const FIONA_APPLE_FETCH_THE_BOLT_CUTTERS_KEY = 'fiona-apple-fetch-the-bolt-cutters';
