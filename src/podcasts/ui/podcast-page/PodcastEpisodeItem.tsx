@@ -24,7 +24,7 @@ export default function PodcastEpisodeItem({
         <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={author} fullWidth>
           <p className={styles.description}>{description}</p>
         </TitleDisplay>
-        <iframe className={styles.widget} image={link} frameBorder="0" />
+        <iframe className={styles.widget} src={link} frameBorder="0" />
       </div>
       <Divider />
     </div>

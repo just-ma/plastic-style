@@ -14,7 +14,7 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
-    "import/no-named-as-default": 0,
+    'import/no-named-as-default': 0,
     indent: [2, 2, { SwitchCase: 1 }],
   },
 };
