@@ -3,7 +3,7 @@ export type Feature = {
   title: string;
   description?: string;
   author?: string;
-  src: string;
+  image: string;
   content: string;
   createdAt: number;
   modifiedAt?: number;

@@ -4,7 +4,7 @@ export type Review = {
   title: string;
   author: string;
   recordLabel?: string;
-  src: string;
+  image: string;
   content: string;
   createdAt: number;
   modifiedAt?: number;

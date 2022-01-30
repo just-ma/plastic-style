@@ -31,13 +31,13 @@ export default function FeaturePage({ id }: ComponentProps): React.ReactElement 
     return <Redirect to={featuresPath()} />;
   }
 
-  const { title, description, author, src, content, createdAt } = review;
+  const { title, description, author, image, content, createdAt } = review;
 
   const dateLabel: string = createdAt ? getDateLabel(createdAt) : '';
 
   return (
     <div>
-      <TitleDisplay title={title} src={src} description={description} largeHeader thumbnailWidthPx={260} />
+      <TitleDisplay title={title} image={image} description={description} largeHeader thumbnailWidthPx={260} />
       <ContentContainer>
         <TitledParagraph leftTitle={author || ''} rightTitle={dateLabel} content={content}></TitledParagraph>
       </ContentContainer>

@@ -10,7 +10,7 @@ type ComponentProps = {
 };
 
 export default function ReviewListItem({
-  review: { id, artist, title, src, content },
+  review: { id, artist, title, image, content },
 }: ComponentProps): React.ReactElement {
   const link: string = reviewPagePath(id);
   const preLink: string = reviewsPath(id);
@@ -20,7 +20,7 @@ export default function ReviewListItem({
       id={id}
       title={title}
       secondaryTitle={artist}
-      src={src}
+      image={image}
       description={content}
       link={link}
       linkLabel="READ MORE >"

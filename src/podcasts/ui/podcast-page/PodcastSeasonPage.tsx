@@ -31,11 +31,11 @@ export default function PodcastSeasonPage(): React.ReactElement {
     return <Redirect to={podcastsPath()} />;
   }
 
-  const { title, description = '', author, src, year, episodes } = podcast;
+  const { title, description = '', author, image, year, episodes } = podcast;
 
   return (
     <div className={classnames(styles.PodcastSeasonPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} src={src} largeHeader thumbnailWidthPx={260}>
+      <TitleDisplay className={styles.titleDisplay} title={title} image={image} largeHeader thumbnailWidthPx={260}>
         <TitledParagraph leftTitle={author} rightTitle={year} content={description} />
       </TitleDisplay>
       <Divider />

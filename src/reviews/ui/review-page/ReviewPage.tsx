@@ -33,13 +33,13 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
     return <Redirect to={reviewsPath()} />;
   }
 
-  const { artist, title, src } = review;
+  const { artist, title, image } = review;
 
   return (
     <div className={classnames(styles.ReviewPage, isMobile && styles.mobile)}>
       {isMobile ? (
         <div className={styles.mobileHeader}>
-          <TitleDisplay title={title} secondaryTitle={artist} src={src} />
+          <TitleDisplay title={title} secondaryTitle={artist} image={image} />
           <Divider />
         </div>
       ) : (
@@ -49,7 +49,7 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
               <Header title={title} secondaryTitle={artist} />
             </div>
             <div className={styles.thumbnail}>
-              <Thumbnail src={src} fullWidth={isMobile} />
+              <Thumbnail src={image} fullWidth={isMobile} />
             </div>
           </div>
           <div className={styles.divider}>

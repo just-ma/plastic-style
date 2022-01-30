@@ -9,7 +9,7 @@ type ComponentProps = {
   list: List;
 };
 
-export default function ListListItem({ list: { id, title, src, description } }: ComponentProps): React.ReactElement {
+export default function ListListItem({ list: { id, title, image, description } }: ComponentProps): React.ReactElement {
   const link: string = listPagePath(id);
   const preLink: string = listsPath(id);
 
@@ -17,7 +17,7 @@ export default function ListListItem({ list: { id, title, src, description } }: 
     <PageListItem
       id={id}
       title={title}
-      src={src}
+      image={image}
       description={description}
       link={link}
       linkLabel="VIEW LIST >"

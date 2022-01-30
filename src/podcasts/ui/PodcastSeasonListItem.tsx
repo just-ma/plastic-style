@@ -10,7 +10,7 @@ type ComponentProps = {
 };
 
 export default function PodcastSeasonListItem({
-  season: { id, title, src, description, seasonLabel },
+  season: { id, title, image, description, seasonLabel },
 }: ComponentProps): React.ReactElement {
   const link: string = podcastPagePath(id);
   const preLink: string = podcastsPath(id);
@@ -20,7 +20,7 @@ export default function PodcastSeasonListItem({
       id={id}
       title={title}
       secondaryTitle={seasonLabel}
-      src={src}
+      image={image}
       description={description}
       link={link}
       linkLabel="VIEW SEASON >"
