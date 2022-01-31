@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div<{ widthPx: number; fullWidth: boolean }>`
   width: ${({ widthPx, fullWidth }) => (fullWidth ? '100%' : `${widthPx}px`)};
   height: ${({ widthPx, fullWidth }) => (fullWidth ? 'auto' : `${widthPx}px`)};
+  min-height: 230px;
   background-color: #dcdcdc;
 `;
 

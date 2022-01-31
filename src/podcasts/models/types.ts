@@ -4,7 +4,7 @@ export type PodcastSeason = {
   seasonLabel?: string;
   description: string;
   author: string;
-  src: string;
+  image: string;
   episodes: ReadonlyArray<PodcastEpisode>;
   year: number;
 };
@@ -13,7 +13,6 @@ export type PodcastEpisode = {
   id: string;
   title: string;
   description: string;
-  src: string;
+  link?: string;
   author?: string;
-  date: number;
 };

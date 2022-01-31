@@ -15,7 +15,7 @@ type ComponentProps = {
   secondaryTitle?: string;
   largeHeader?: boolean;
   description?: string;
-  src?: string;
+  image?: string;
   children?: React.ReactNode;
   thumbnailWidthPx?: number;
   fullWidth?: boolean;
@@ -27,7 +27,7 @@ export default function TitleDisplay({
   secondaryTitle,
   largeHeader,
   description,
-  src,
+  image,
   children,
   thumbnailWidthPx,
   fullWidth,
@@ -39,14 +39,14 @@ export default function TitleDisplay({
       className={classnames(
         styles.TitleDisplay,
         isMobile && styles.mobile,
-        !src && styles.noThumbnail,
+        !image && styles.noThumbnail,
         fullWidth && styles.fullWidth,
         className,
       )}
     >
-      {src && (
+      {image && (
         <div className={styles.thumbnail}>
-          <Thumbnail src={src} widthPx={thumbnailWidthPx} fullWidth={isMobile} />
+          <Thumbnail src={image} widthPx={thumbnailWidthPx} fullWidth={isMobile} />
         </div>
       )}
       <div className={styles.titleContainer}>

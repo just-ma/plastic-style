@@ -14,7 +14,7 @@ type ComponentProps = {
   title: string;
   secondaryTitle?: string;
   description?: string;
-  src: string;
+  image: string;
   link: string;
   linkLabel: string;
   preLink?: string;
@@ -26,7 +26,7 @@ export default function PageListItem({
   title,
   secondaryTitle,
   description,
-  src,
+  image,
   linkLabel,
   preLink,
 }: ComponentProps): React.ReactElement {
@@ -49,7 +49,7 @@ export default function PageListItem({
           className={styles.titleDisplay}
           title={title}
           secondaryTitle={secondaryTitle}
-          src={src}
+          image={image}
           description={description}
         >
           <div className={styles.linkLabel}>{linkLabel}</div>

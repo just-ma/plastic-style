@@ -10,7 +10,7 @@ type ComponentProps = {
 };
 
 export default function FeatureListItem({
-  feature: { id, title, description, src },
+  feature: { id, title, description, image },
 }: ComponentProps): React.ReactElement {
   const link: string = featurePagePath(id);
   const preLink: string = featuresPath(id);
@@ -19,7 +19,7 @@ export default function FeatureListItem({
     <PageListItem
       id={id}
       title={title}
-      src={src}
+      image={image}
       description={description}
       link={link}
       linkLabel="READ MORE >"
