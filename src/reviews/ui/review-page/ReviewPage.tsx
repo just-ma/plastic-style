@@ -2,9 +2,10 @@ import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import classnames from 'classnames';
 
+import { Review } from '../../../API';
+import { getReview } from '../../../graphql/queries';
+import useQueryData from '../../../common/hooks/useQueryData';
 import useResponsive from '../../../common/hooks/useResponsive';
-import { Review } from '../../models/types';
-import { MOCK_REVIEWS } from '../../models/constants';
 import { reviewsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
@@ -23,13 +24,25 @@ type RouteParams = {
   reviewId: string;
 };
 
-export default function ReviewPage({ id }: ComponentProps): React.ReactElement {
+export default function ReviewPage({ id }: ComponentProps): React.ReactElement | null {
   const { reviewId = id } = useParams<RouteParams>();
   const { isMobile } = useResponsive();
 
-  const review: Review | undefined = MOCK_REVIEWS.find((r) => r.id === reviewId);
+  const { data, loading } = useQueryData<{ getReview: Review }, { id: string }>({
+    query: getReview,
+    variables: { id: reviewId || '' },
+    skip: !reviewId,
+  });
+
+  if (loading) {
+    return null;
+  }
+
+  const review = data?.getReview;
 
   if (!review) {
+    console.log('review page', data, loading);
+
     return <Redirect to={reviewsPath()} />;
   }
 

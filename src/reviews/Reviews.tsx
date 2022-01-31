@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
 
-import { Review } from './models/types';
-import { MOCK_REVIEWS } from './models/constants';
+import { ModelReviewConnection } from '../API';
+import useQueryData from '../common/hooks/useQueryData';
+import { listReviews } from '../graphql/queries';
 
 import ReviewListItem from './ui/ReviewListItem';
 
 export default function Reviews(): React.ReactElement {
+  const { data } = useQueryData<{
+    listReviews: ModelReviewConnection | undefined;
+  }>({ query: listReviews });
+
   useEffect((): void => {
     if (!location.hash) {
       return;
@@ -19,9 +24,7 @@ export default function Reviews(): React.ReactElement {
 
   return (
     <div>
-      {MOCK_REVIEWS.map((review: Review) => (
-        <ReviewListItem key={review.id} review={review} />
-      ))}
+      {data?.listReviews?.items.map((review) => (review ? <ReviewListItem key={review.id} review={review} /> : null))}
     </div>
   );
 }

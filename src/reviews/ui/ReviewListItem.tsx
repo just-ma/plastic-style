@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Review } from '../models/types';
+import { Review } from '../../API';
 import { reviewPagePath, reviewsPath } from '../routes';
 
 import PageListItem from '../../common/ui/PageListItem';

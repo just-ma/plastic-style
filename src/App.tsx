@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
+
+import appConfig from './aws-exports';
 
 import Page from './app/ui/Page';
 import Home from './home/Home';
@@ -29,6 +32,15 @@ import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 // contact
 import { contactPath } from './contact/routes';
 import Contact from './contact/Contact';
+
+export const client = new AWSAppSyncClient({
+  url: appConfig.aws_appsync_graphqlEndpoint,
+  region: appConfig.aws_appsync_region,
+  auth: {
+    type: AUTH_TYPE.API_KEY,
+    apiKey: appConfig.aws_appsync_apiKey,
+  },
+});
 
 export default function App(): React.ReactElement {
   return (
