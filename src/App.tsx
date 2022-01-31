@@ -5,6 +5,7 @@ import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 import appConfig from './aws-exports';
 
 import Page from './app/ui/Page';
+import DecorativeBanner from './app/ui/DecorativeBanner';
 import Home from './home/Home';
 // import Admin from './admin/Admin';
 import TextEditor from './admin/ui/TextEditor';
@@ -45,6 +46,7 @@ export const client = new AWSAppSyncClient({
 export default function App(): React.ReactElement {
   return (
     <Router>
+      <DecorativeBanner />
       <Switch>
         <Route exact path="/" component={Page(Home)} />
         {/* <Route exact path="/admin" component={Admin} /> */}

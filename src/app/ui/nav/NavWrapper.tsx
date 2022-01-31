@@ -51,9 +51,6 @@ export default function NavWrapper({ isResponsive, scrollRef, children }: Compon
 
   return (
     <div className={classnames(styles.NavWrapper, isResponsive && styles.responsive, isDrawerOpen && styles.blur)}>
-      <div className={styles.banner}>
-        <DecorativeBanner />
-      </div>
       <div className={classnames(styles.pageTitle, hideTitle && styles.hide)}>
         <PageTitle />
       </div>
