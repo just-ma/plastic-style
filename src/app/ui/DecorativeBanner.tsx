@@ -7,7 +7,7 @@ const FREQUENCY_2 = 17;
 const FREQUENCY_3 = 31;
 
 const MAX_DIFF = 50;
-const MAX_OPACITY = 70;
+const MAX_OPACITY = 75;
 
 const randDiff = (): number => {
   return (Math.random() - 1) * 2 * MAX_DIFF;
