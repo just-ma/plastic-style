@@ -1,8 +1,1 @@
-export type AmplifyDependentResourcesAttributes = {
-  api: {
-    plasticstyle: {
-      GraphQLAPIIdOutput: 'string';
-      GraphQLAPIEndpointOutput: 'string';
-    };
-  };
-};
+export type AmplifyDependentResourcesAttributes = {}
