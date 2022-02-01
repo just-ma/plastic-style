@@ -3,7 +3,7 @@ export type List = {
   title: string;
   description?: string;
   author: string;
-  src: string;
+  image: string;
   listItems: ReadonlyArray<ListItem>;
   createdAt: number;
   modifiedAt?: number;
@@ -14,6 +14,6 @@ export type ListItem = {
   rank?: number;
   artist?: string;
   title: string;
-  src?: string;
+  image?: string;
   content: string;
 };

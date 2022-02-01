@@ -15,7 +15,7 @@ type ComponentProps = {
 };
 
 export default function RankedItem({
-  listItem: { rank, title, artist, src, content },
+  listItem: { rank, title, artist, image, content },
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
 
@@ -26,7 +26,7 @@ export default function RankedItem({
           <div className={styles.rankBubble}>{rank}</div>
         </div>
       )}
-      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} src={src}>
+      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} image={image}>
         <HTMLString element="p">{content}</HTMLString>
       </TitleDisplay>
       <Divider />

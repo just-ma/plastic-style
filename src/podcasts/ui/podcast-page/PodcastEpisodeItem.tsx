@@ -14,7 +14,7 @@ type ComponentProps = {
 };
 
 export default function PodcastEpisodeItem({
-  episode: { title, author, description, src },
+  episode: { title, author, description, link },
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
 
@@ -24,7 +24,7 @@ export default function PodcastEpisodeItem({
         <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={author} fullWidth>
           <p className={styles.description}>{description}</p>
         </TitleDisplay>
-        <iframe className={styles.widget} src={src} frameBorder="0" />
+        <iframe className={styles.widget} src={link} frameBorder="0" />
       </div>
       <Divider />
     </div>

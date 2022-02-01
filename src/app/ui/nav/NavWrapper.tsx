@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
-import DecorativeBanner from '../DecorativeBanner';
 import PageTitle from '../PageTitle';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
@@ -51,9 +50,6 @@ export default function NavWrapper({ isResponsive, scrollRef, children }: Compon
 
   return (
     <div className={classnames(styles.NavWrapper, isResponsive && styles.responsive, isDrawerOpen && styles.blur)}>
-      <div className={styles.banner}>
-        <DecorativeBanner />
-      </div>
       <div className={classnames(styles.pageTitle, hideTitle && styles.hide)}>
         <PageTitle />
       </div>

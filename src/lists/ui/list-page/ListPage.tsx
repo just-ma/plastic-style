@@ -32,11 +32,11 @@ export default function ListPage(): React.ReactElement {
     return <Redirect to={listsPath()} />;
   }
 
-  const { title, description = '', author, src, createdAt, listItems } = list;
+  const { title, description = '', author, image, createdAt, listItems } = list;
 
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} src={src} thumbnailWidthPx={260} largeHeader>
+      <TitleDisplay className={styles.titleDisplay} title={title} image={image} thumbnailWidthPx={260} largeHeader>
         <TitledParagraph leftTitle={`by ${author}`} rightTitle={getDateLabel(createdAt)} content={description} />
       </TitleDisplay>
       <Divider />
