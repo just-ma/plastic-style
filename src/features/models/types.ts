@@ -6,7 +6,6 @@ export type Feature = {
   artist?: string;
   author: string;
   recordLabel?: string;
-  src: string;
   content: string;
   createdAt: number;
   modifiedAt?: number;

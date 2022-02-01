@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 
-import appConfig from './aws-exports';
+import appConfig from './aws-exports.js';
 
 import Page from './app/ui/Page';
 import DecorativeBanner from './app/ui/DecorativeBanner';
