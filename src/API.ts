@@ -2,29 +2,30 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateFeatureInput = {
+export type CreateReviewInput = {
   id?: string | null;
   title: string;
-  description?: string | null;
-  author?: string | null;
-  image: string;
+  artist: string;
+  recordLabel?: string | null;
   content: string;
+  image: string;
+  author: string;
   createdAt: number;
-  modifiedAt?: number | null;
-  _version?: number | null;
+  updatedAt?: number | null;
 };
 
-export type ModelFeatureConditionInput = {
+export type ModelReviewConditionInput = {
   title?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  image?: ModelStringInput | null;
+  artist?: ModelStringInput | null;
+  recordLabel?: ModelStringInput | null;
   content?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  author?: ModelStringInput | null;
   createdAt?: ModelIntInput | null;
-  modifiedAt?: ModelIntInput | null;
-  and?: Array<ModelFeatureConditionInput | null> | null;
-  or?: Array<ModelFeatureConditionInput | null> | null;
-  not?: ModelFeatureConditionInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelReviewConditionInput | null> | null;
+  or?: Array<ModelReviewConditionInput | null> | null;
+  not?: ModelReviewConditionInput | null;
 };
 
 export type ModelStringInput = {
@@ -78,6 +79,59 @@ export type ModelIntInput = {
   attributeType?: ModelAttributeTypes | null;
 };
 
+export type Review = {
+  __typename: 'Review';
+  id: string;
+  title: string;
+  artist: string;
+  recordLabel?: string | null;
+  content: string;
+  image: string;
+  author: string;
+  createdAt: number;
+  updatedAt?: number | null;
+};
+
+export type UpdateReviewInput = {
+  id: string;
+  title?: string | null;
+  artist?: string | null;
+  recordLabel?: string | null;
+  content?: string | null;
+  image?: string | null;
+  author?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type DeleteReviewInput = {
+  id: string;
+};
+
+export type CreateFeatureInput = {
+  id?: string | null;
+  title: string;
+  description?: string | null;
+  author?: string | null;
+  image: string;
+  content: string;
+  createdAt: number;
+  updatedAt?: number | null;
+};
+
+export type ModelFeatureConditionInput = {
+  title?: ModelStringInput | null;
+  description?: ModelStringInput | null;
+  author?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  content?: ModelStringInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelFeatureConditionInput | null> | null;
+  or?: Array<ModelFeatureConditionInput | null> | null;
+  not?: ModelFeatureConditionInput | null;
+};
+
 export type Feature = {
   __typename: 'Feature';
   id: string;
@@ -87,11 +141,7 @@ export type Feature = {
   image: string;
   content: string;
   createdAt: number;
-  modifiedAt?: number | null;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-  updatedAt: string;
+  updatedAt?: number | null;
 };
 
 export type UpdateFeatureInput = {
@@ -102,13 +152,11 @@ export type UpdateFeatureInput = {
   image?: string | null;
   content?: string | null;
   createdAt?: number | null;
-  modifiedAt?: number | null;
-  _version?: number | null;
+  updatedAt?: number | null;
 };
 
 export type DeleteFeatureInput = {
   id: string;
-  _version?: number | null;
 };
 
 export type CreateListItemInput = {
@@ -118,8 +166,8 @@ export type CreateListItemInput = {
   title: string;
   image?: string | null;
   content: string;
-  listID: string;
-  _version?: number | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
 };
 
 export type ModelListItemConditionInput = {
@@ -128,10 +176,208 @@ export type ModelListItemConditionInput = {
   title?: ModelStringInput | null;
   image?: ModelStringInput | null;
   content?: ModelStringInput | null;
-  listID?: ModelIDInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelListItemConditionInput | null> | null;
   or?: Array<ModelListItemConditionInput | null> | null;
   not?: ModelListItemConditionInput | null;
+};
+
+export type ListItem = {
+  __typename: 'ListItem';
+  id: string;
+  rank?: number | null;
+  artist?: string | null;
+  title: string;
+  image?: string | null;
+  content: string;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type UpdateListItemInput = {
+  id: string;
+  rank?: number | null;
+  artist?: string | null;
+  title?: string | null;
+  image?: string | null;
+  content?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type DeleteListItemInput = {
+  id: string;
+};
+
+export type CreateListInput = {
+  id?: string | null;
+  author: string;
+  title: string;
+  description?: string | null;
+  image: string;
+  createdAt: number;
+  updatedAt?: number | null;
+};
+
+export type ModelListConditionInput = {
+  author?: ModelStringInput | null;
+  title?: ModelStringInput | null;
+  description?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelListConditionInput | null> | null;
+  or?: Array<ModelListConditionInput | null> | null;
+  not?: ModelListConditionInput | null;
+};
+
+export type List = {
+  __typename: 'List';
+  id: string;
+  author: string;
+  title: string;
+  description?: string | null;
+  image: string;
+  items: Array<ListItem>;
+  createdAt: number;
+  updatedAt?: number | null;
+};
+
+export type UpdateListInput = {
+  id: string;
+  author?: string | null;
+  title?: string | null;
+  description?: string | null;
+  image?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type DeleteListInput = {
+  id: string;
+};
+
+export type CreatePodcastEpisodeInput = {
+  id?: string | null;
+  title: string;
+  description?: string | null;
+  image?: string | null;
+  link?: string | null;
+  author?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type ModelPodcastEpisodeConditionInput = {
+  title?: ModelStringInput | null;
+  description?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  link?: ModelStringInput | null;
+  author?: ModelStringInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelPodcastEpisodeConditionInput | null> | null;
+  or?: Array<ModelPodcastEpisodeConditionInput | null> | null;
+  not?: ModelPodcastEpisodeConditionInput | null;
+};
+
+export type PodcastEpisode = {
+  __typename: 'PodcastEpisode';
+  id: string;
+  title: string;
+  description?: string | null;
+  image?: string | null;
+  link?: string | null;
+  author?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type UpdatePodcastEpisodeInput = {
+  id: string;
+  title?: string | null;
+  description?: string | null;
+  image?: string | null;
+  link?: string | null;
+  author?: string | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type DeletePodcastEpisodeInput = {
+  id: string;
+};
+
+export type CreatePodcastSeasonInput = {
+  id?: string | null;
+  title: string;
+  seasonLabel?: string | null;
+  description?: string | null;
+  author: string;
+  image: string;
+  year?: number | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type ModelPodcastSeasonConditionInput = {
+  title?: ModelStringInput | null;
+  seasonLabel?: ModelStringInput | null;
+  description?: ModelStringInput | null;
+  author?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  year?: ModelIntInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelPodcastSeasonConditionInput | null> | null;
+  or?: Array<ModelPodcastSeasonConditionInput | null> | null;
+  not?: ModelPodcastSeasonConditionInput | null;
+};
+
+export type PodcastSeason = {
+  __typename: 'PodcastSeason';
+  id: string;
+  title: string;
+  seasonLabel?: string | null;
+  description?: string | null;
+  author: string;
+  image: string;
+  year?: number | null;
+  episodes: Array<PodcastEpisode>;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type UpdatePodcastSeasonInput = {
+  id: string;
+  title?: string | null;
+  seasonLabel?: string | null;
+  description?: string | null;
+  author?: string | null;
+  image?: string | null;
+  year?: number | null;
+  createdAt?: number | null;
+  updatedAt?: number | null;
+};
+
+export type DeletePodcastSeasonInput = {
+  id: string;
+};
+
+export type ModelReviewFilterInput = {
+  id?: ModelIDInput | null;
+  title?: ModelStringInput | null;
+  artist?: ModelStringInput | null;
+  recordLabel?: ModelStringInput | null;
+  content?: ModelStringInput | null;
+  image?: ModelStringInput | null;
+  author?: ModelStringInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
+  and?: Array<ModelReviewFilterInput | null> | null;
+  or?: Array<ModelReviewFilterInput | null> | null;
+  not?: ModelReviewFilterInput | null;
 };
 
 export type ModelIDInput = {
@@ -150,277 +396,10 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null;
 };
 
-export type ListItem = {
-  __typename: 'ListItem';
-  id: string;
-  rank?: number | null;
-  artist?: string | null;
-  title: string;
-  image?: string | null;
-  content: string;
-  listID: string;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export type UpdateListItemInput = {
-  id: string;
-  rank?: number | null;
-  artist?: string | null;
-  title?: string | null;
-  image?: string | null;
-  content?: string | null;
-  listID?: string | null;
-  _version?: number | null;
-};
-
-export type DeleteListItemInput = {
-  id: string;
-  _version?: number | null;
-};
-
-export type CreateListInput = {
-  id?: string | null;
-  title: string;
-  description?: string | null;
-  author: string;
-  image: string;
-  createdAt: number;
-  modifiedAt?: number | null;
-  _version?: number | null;
-};
-
-export type ModelListConditionInput = {
-  title?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  image?: ModelStringInput | null;
-  createdAt?: ModelIntInput | null;
-  modifiedAt?: ModelIntInput | null;
-  and?: Array<ModelListConditionInput | null> | null;
-  or?: Array<ModelListConditionInput | null> | null;
-  not?: ModelListConditionInput | null;
-};
-
-export type List = {
-  __typename: 'List';
-  id: string;
-  title: string;
-  description?: string | null;
-  author: string;
-  image: string;
-  createdAt: number;
-  modifiedAt?: number | null;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-  updatedAt: string;
-  ListItems?: ModelListItemConnection | null;
-};
-
-export type ModelListItemConnection = {
-  __typename: 'ModelListItemConnection';
-  items: Array<ListItem | null>;
+export type ModelReviewConnection = {
+  __typename: 'ModelReviewConnection';
+  items: Array<Review | null>;
   nextToken?: string | null;
-  startedAt?: number | null;
-};
-
-export type UpdateListInput = {
-  id: string;
-  title?: string | null;
-  description?: string | null;
-  author?: string | null;
-  image?: string | null;
-  createdAt?: number | null;
-  modifiedAt?: number | null;
-  _version?: number | null;
-};
-
-export type DeleteListInput = {
-  id: string;
-  _version?: number | null;
-};
-
-export type CreatePodcastEpisodeInput = {
-  id?: string | null;
-  podcastSeasonID: string;
-  title: string;
-  description?: string | null;
-  image?: string | null;
-  link: string;
-  author?: string | null;
-  _version?: number | null;
-};
-
-export type ModelPodcastEpisodeConditionInput = {
-  podcastSeasonID?: ModelIDInput | null;
-  title?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  image?: ModelStringInput | null;
-  link?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  and?: Array<ModelPodcastEpisodeConditionInput | null> | null;
-  or?: Array<ModelPodcastEpisodeConditionInput | null> | null;
-  not?: ModelPodcastEpisodeConditionInput | null;
-};
-
-export type PodcastEpisode = {
-  __typename: 'PodcastEpisode';
-  id: string;
-  podcastSeasonID: string;
-  title: string;
-  description?: string | null;
-  image?: string | null;
-  link: string;
-  author?: string | null;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export type UpdatePodcastEpisodeInput = {
-  id: string;
-  podcastSeasonID?: string | null;
-  title?: string | null;
-  description?: string | null;
-  image?: string | null;
-  link?: string | null;
-  author?: string | null;
-  _version?: number | null;
-};
-
-export type DeletePodcastEpisodeInput = {
-  id: string;
-  _version?: number | null;
-};
-
-export type CreatePodcastSeasonInput = {
-  id?: string | null;
-  title: string;
-  seasonLabel?: string | null;
-  description?: string | null;
-  author: string;
-  image: string;
-  year: number;
-  _version?: number | null;
-};
-
-export type ModelPodcastSeasonConditionInput = {
-  title?: ModelStringInput | null;
-  seasonLabel?: ModelStringInput | null;
-  description?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  image?: ModelStringInput | null;
-  year?: ModelIntInput | null;
-  and?: Array<ModelPodcastSeasonConditionInput | null> | null;
-  or?: Array<ModelPodcastSeasonConditionInput | null> | null;
-  not?: ModelPodcastSeasonConditionInput | null;
-};
-
-export type PodcastSeason = {
-  __typename: 'PodcastSeason';
-  id: string;
-  title: string;
-  seasonLabel?: string | null;
-  description?: string | null;
-  author: string;
-  image: string;
-  year: number;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-  createdAt: string;
-  updatedAt: string;
-  PodcastEpisodes?: ModelPodcastEpisodeConnection | null;
-};
-
-export type ModelPodcastEpisodeConnection = {
-  __typename: 'ModelPodcastEpisodeConnection';
-  items: Array<PodcastEpisode | null>;
-  nextToken?: string | null;
-  startedAt?: number | null;
-};
-
-export type UpdatePodcastSeasonInput = {
-  id: string;
-  title?: string | null;
-  seasonLabel?: string | null;
-  description?: string | null;
-  author?: string | null;
-  image?: string | null;
-  year?: number | null;
-  _version?: number | null;
-};
-
-export type DeletePodcastSeasonInput = {
-  id: string;
-  _version?: number | null;
-};
-
-export type CreateReviewInput = {
-  id?: string | null;
-  title: string;
-  artist: string;
-  recordLabel?: string | null;
-  content: string;
-  image: string;
-  author: string;
-  createdAt?: number | null;
-  updatedAt?: number | null;
-  _version?: number | null;
-};
-
-export type ModelReviewConditionInput = {
-  title?: ModelStringInput | null;
-  artist?: ModelStringInput | null;
-  recordLabel?: ModelStringInput | null;
-  content?: ModelStringInput | null;
-  image?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  createdAt?: ModelIntInput | null;
-  updatedAt?: ModelIntInput | null;
-  and?: Array<ModelReviewConditionInput | null> | null;
-  or?: Array<ModelReviewConditionInput | null> | null;
-  not?: ModelReviewConditionInput | null;
-};
-
-export type Review = {
-  __typename: 'Review';
-  id: string;
-  title: string;
-  artist: string;
-  recordLabel?: string | null;
-  content: string;
-  image: string;
-  author: string;
-  createdAt?: number | null;
-  updatedAt?: number | null;
-  _version: number;
-  _deleted?: boolean | null;
-  _lastChangedAt: number;
-};
-
-export type UpdateReviewInput = {
-  id: string;
-  title?: string | null;
-  artist?: string | null;
-  recordLabel?: string | null;
-  content?: string | null;
-  image?: string | null;
-  author?: string | null;
-  createdAt?: number | null;
-  updatedAt?: number | null;
-  _version?: number | null;
-};
-
-export type DeleteReviewInput = {
-  id: string;
-  _version?: number | null;
 };
 
 export type ModelFeatureFilterInput = {
@@ -431,7 +410,7 @@ export type ModelFeatureFilterInput = {
   image?: ModelStringInput | null;
   content?: ModelStringInput | null;
   createdAt?: ModelIntInput | null;
-  modifiedAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelFeatureFilterInput | null> | null;
   or?: Array<ModelFeatureFilterInput | null> | null;
   not?: ModelFeatureFilterInput | null;
@@ -441,7 +420,6 @@ export type ModelFeatureConnection = {
   __typename: 'ModelFeatureConnection';
   items: Array<Feature | null>;
   nextToken?: string | null;
-  startedAt?: number | null;
 };
 
 export type ModelListItemFilterInput = {
@@ -451,20 +429,27 @@ export type ModelListItemFilterInput = {
   title?: ModelStringInput | null;
   image?: ModelStringInput | null;
   content?: ModelStringInput | null;
-  listID?: ModelIDInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelListItemFilterInput | null> | null;
   or?: Array<ModelListItemFilterInput | null> | null;
   not?: ModelListItemFilterInput | null;
 };
 
+export type ModelListItemConnection = {
+  __typename: 'ModelListItemConnection';
+  items: Array<ListItem | null>;
+  nextToken?: string | null;
+};
+
 export type ModelListFilterInput = {
   id?: ModelIDInput | null;
+  author?: ModelStringInput | null;
   title?: ModelStringInput | null;
   description?: ModelStringInput | null;
-  author?: ModelStringInput | null;
   image?: ModelStringInput | null;
   createdAt?: ModelIntInput | null;
-  modifiedAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelListFilterInput | null> | null;
   or?: Array<ModelListFilterInput | null> | null;
   not?: ModelListFilterInput | null;
@@ -474,20 +459,26 @@ export type ModelListConnection = {
   __typename: 'ModelListConnection';
   items: Array<List | null>;
   nextToken?: string | null;
-  startedAt?: number | null;
 };
 
 export type ModelPodcastEpisodeFilterInput = {
   id?: ModelIDInput | null;
-  podcastSeasonID?: ModelIDInput | null;
   title?: ModelStringInput | null;
   description?: ModelStringInput | null;
   image?: ModelStringInput | null;
   link?: ModelStringInput | null;
   author?: ModelStringInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelPodcastEpisodeFilterInput | null> | null;
   or?: Array<ModelPodcastEpisodeFilterInput | null> | null;
   not?: ModelPodcastEpisodeFilterInput | null;
+};
+
+export type ModelPodcastEpisodeConnection = {
+  __typename: 'ModelPodcastEpisodeConnection';
+  items: Array<PodcastEpisode | null>;
+  nextToken?: string | null;
 };
 
 export type ModelPodcastSeasonFilterInput = {
@@ -498,6 +489,8 @@ export type ModelPodcastSeasonFilterInput = {
   author?: ModelStringInput | null;
   image?: ModelStringInput | null;
   year?: ModelIntInput | null;
+  createdAt?: ModelIntInput | null;
+  updatedAt?: ModelIntInput | null;
   and?: Array<ModelPodcastSeasonFilterInput | null> | null;
   or?: Array<ModelPodcastSeasonFilterInput | null> | null;
   not?: ModelPodcastSeasonFilterInput | null;
@@ -507,401 +500,6 @@ export type ModelPodcastSeasonConnection = {
   __typename: 'ModelPodcastSeasonConnection';
   items: Array<PodcastSeason | null>;
   nextToken?: string | null;
-  startedAt?: number | null;
-};
-
-export type ModelReviewFilterInput = {
-  id?: ModelIDInput | null;
-  title?: ModelStringInput | null;
-  artist?: ModelStringInput | null;
-  recordLabel?: ModelStringInput | null;
-  content?: ModelStringInput | null;
-  image?: ModelStringInput | null;
-  author?: ModelStringInput | null;
-  createdAt?: ModelIntInput | null;
-  updatedAt?: ModelIntInput | null;
-  and?: Array<ModelReviewFilterInput | null> | null;
-  or?: Array<ModelReviewFilterInput | null> | null;
-  not?: ModelReviewFilterInput | null;
-};
-
-export type ModelReviewConnection = {
-  __typename: 'ModelReviewConnection';
-  items: Array<Review | null>;
-  nextToken?: string | null;
-  startedAt?: number | null;
-};
-
-export type CreateFeatureMutationVariables = {
-  input: CreateFeatureInput;
-  condition?: ModelFeatureConditionInput | null;
-};
-
-export type CreateFeatureMutation = {
-  createFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
-};
-
-export type UpdateFeatureMutationVariables = {
-  input: UpdateFeatureInput;
-  condition?: ModelFeatureConditionInput | null;
-};
-
-export type UpdateFeatureMutation = {
-  updateFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
-};
-
-export type DeleteFeatureMutationVariables = {
-  input: DeleteFeatureInput;
-  condition?: ModelFeatureConditionInput | null;
-};
-
-export type DeleteFeatureMutation = {
-  deleteFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
-};
-
-export type CreateListItemMutationVariables = {
-  input: CreateListItemInput;
-  condition?: ModelListItemConditionInput | null;
-};
-
-export type CreateListItemMutation = {
-  createListItem?: {
-    __typename: 'ListItem';
-    id: string;
-    rank?: number | null;
-    artist?: string | null;
-    title: string;
-    image?: string | null;
-    content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type UpdateListItemMutationVariables = {
-  input: UpdateListItemInput;
-  condition?: ModelListItemConditionInput | null;
-};
-
-export type UpdateListItemMutation = {
-  updateListItem?: {
-    __typename: 'ListItem';
-    id: string;
-    rank?: number | null;
-    artist?: string | null;
-    title: string;
-    image?: string | null;
-    content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type DeleteListItemMutationVariables = {
-  input: DeleteListItemInput;
-  condition?: ModelListItemConditionInput | null;
-};
-
-export type DeleteListItemMutation = {
-  deleteListItem?: {
-    __typename: 'ListItem';
-    id: string;
-    rank?: number | null;
-    artist?: string | null;
-    title: string;
-    image?: string | null;
-    content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type CreateListMutationVariables = {
-  input: CreateListInput;
-  condition?: ModelListConditionInput | null;
-};
-
-export type CreateListMutation = {
-  createList?: {
-    __typename: 'List';
-    id: string;
-    title: string;
-    description?: string | null;
-    author: string;
-    image: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
-};
-
-export type UpdateListMutationVariables = {
-  input: UpdateListInput;
-  condition?: ModelListConditionInput | null;
-};
-
-export type UpdateListMutation = {
-  updateList?: {
-    __typename: 'List';
-    id: string;
-    title: string;
-    description?: string | null;
-    author: string;
-    image: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
-};
-
-export type DeleteListMutationVariables = {
-  input: DeleteListInput;
-  condition?: ModelListConditionInput | null;
-};
-
-export type DeleteListMutation = {
-  deleteList?: {
-    __typename: 'List';
-    id: string;
-    title: string;
-    description?: string | null;
-    author: string;
-    image: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
-};
-
-export type CreatePodcastEpisodeMutationVariables = {
-  input: CreatePodcastEpisodeInput;
-  condition?: ModelPodcastEpisodeConditionInput | null;
-};
-
-export type CreatePodcastEpisodeMutation = {
-  createPodcastEpisode?: {
-    __typename: 'PodcastEpisode';
-    id: string;
-    podcastSeasonID: string;
-    title: string;
-    description?: string | null;
-    image?: string | null;
-    link: string;
-    author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type UpdatePodcastEpisodeMutationVariables = {
-  input: UpdatePodcastEpisodeInput;
-  condition?: ModelPodcastEpisodeConditionInput | null;
-};
-
-export type UpdatePodcastEpisodeMutation = {
-  updatePodcastEpisode?: {
-    __typename: 'PodcastEpisode';
-    id: string;
-    podcastSeasonID: string;
-    title: string;
-    description?: string | null;
-    image?: string | null;
-    link: string;
-    author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type DeletePodcastEpisodeMutationVariables = {
-  input: DeletePodcastEpisodeInput;
-  condition?: ModelPodcastEpisodeConditionInput | null;
-};
-
-export type DeletePodcastEpisodeMutation = {
-  deletePodcastEpisode?: {
-    __typename: 'PodcastEpisode';
-    id: string;
-    podcastSeasonID: string;
-    title: string;
-    description?: string | null;
-    image?: string | null;
-    link: string;
-    author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-};
-
-export type CreatePodcastSeasonMutationVariables = {
-  input: CreatePodcastSeasonInput;
-  condition?: ModelPodcastSeasonConditionInput | null;
-};
-
-export type CreatePodcastSeasonMutation = {
-  createPodcastSeason?: {
-    __typename: 'PodcastSeason';
-    id: string;
-    title: string;
-    seasonLabel?: string | null;
-    description?: string | null;
-    author: string;
-    image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
-};
-
-export type UpdatePodcastSeasonMutationVariables = {
-  input: UpdatePodcastSeasonInput;
-  condition?: ModelPodcastSeasonConditionInput | null;
-};
-
-export type UpdatePodcastSeasonMutation = {
-  updatePodcastSeason?: {
-    __typename: 'PodcastSeason';
-    id: string;
-    title: string;
-    seasonLabel?: string | null;
-    description?: string | null;
-    author: string;
-    image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
-};
-
-export type DeletePodcastSeasonMutationVariables = {
-  input: DeletePodcastSeasonInput;
-  condition?: ModelPodcastSeasonConditionInput | null;
-};
-
-export type DeletePodcastSeasonMutation = {
-  deletePodcastSeason?: {
-    __typename: 'PodcastSeason';
-    id: string;
-    title: string;
-    seasonLabel?: string | null;
-    description?: string | null;
-    author: string;
-    image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
 };
 
 export type CreateReviewMutationVariables = {
@@ -919,11 +517,8 @@ export type CreateReviewMutation = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
@@ -942,11 +537,8 @@ export type UpdateReviewMutation = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
@@ -965,20 +557,18 @@ export type DeleteReviewMutation = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
-export type GetFeatureQueryVariables = {
-  id: string;
+export type CreateFeatureMutationVariables = {
+  input: CreateFeatureInput;
+  condition?: ModelFeatureConditionInput | null;
 };
 
-export type GetFeatureQuery = {
-  getFeature?: {
+export type CreateFeatureMutation = {
+  createFeature?: {
     __typename: 'Feature';
     id: string;
     title: string;
@@ -987,79 +577,55 @@ export type GetFeatureQuery = {
     image: string;
     content: string;
     createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type ListFeaturesQueryVariables = {
-  filter?: ModelFeatureFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
+export type UpdateFeatureMutationVariables = {
+  input: UpdateFeatureInput;
+  condition?: ModelFeatureConditionInput | null;
 };
 
-export type ListFeaturesQuery = {
-  listFeatures?: {
-    __typename: 'ModelFeatureConnection';
-    items: Array<{
-      __typename: 'Feature';
-      id: string;
-      title: string;
-      description?: string | null;
-      author?: string | null;
-      image: string;
-      content: string;
-      createdAt: number;
-      modifiedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type UpdateFeatureMutation = {
+  updateFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type SyncFeaturesQueryVariables = {
-  filter?: ModelFeatureFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
-  lastSync?: number | null;
+export type DeleteFeatureMutationVariables = {
+  input: DeleteFeatureInput;
+  condition?: ModelFeatureConditionInput | null;
 };
 
-export type SyncFeaturesQuery = {
-  syncFeatures?: {
-    __typename: 'ModelFeatureConnection';
-    items: Array<{
-      __typename: 'Feature';
-      id: string;
-      title: string;
-      description?: string | null;
-      author?: string | null;
-      image: string;
-      content: string;
-      createdAt: number;
-      modifiedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type DeleteFeatureMutation = {
+  deleteFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type GetListItemQueryVariables = {
-  id: string;
+export type CreateListItemMutationVariables = {
+  input: CreateListItemInput;
+  condition?: ModelListItemConditionInput | null;
 };
 
-export type GetListItemQuery = {
-  getListItem?: {
+export type CreateListItemMutation = {
+  createListItem?: {
     __typename: 'ListItem';
     id: string;
     rank?: number | null;
@@ -1067,244 +633,200 @@ export type GetListItemQuery = {
     title: string;
     image?: string | null;
     content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type ListListItemsQueryVariables = {
-  filter?: ModelListItemFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
+export type UpdateListItemMutationVariables = {
+  input: UpdateListItemInput;
+  condition?: ModelListItemConditionInput | null;
 };
 
-export type ListListItemsQuery = {
-  listListItems?: {
-    __typename: 'ModelListItemConnection';
-    items: Array<{
-      __typename: 'ListItem';
-      id: string;
-      rank?: number | null;
-      artist?: string | null;
-      title: string;
-      image?: string | null;
-      content: string;
-      listID: string;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type UpdateListItemMutation = {
+  updateListItem?: {
+    __typename: 'ListItem';
+    id: string;
+    rank?: number | null;
+    artist?: string | null;
+    title: string;
+    image?: string | null;
+    content: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type SyncListItemsQueryVariables = {
-  filter?: ModelListItemFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
-  lastSync?: number | null;
+export type DeleteListItemMutationVariables = {
+  input: DeleteListItemInput;
+  condition?: ModelListItemConditionInput | null;
 };
 
-export type SyncListItemsQuery = {
-  syncListItems?: {
-    __typename: 'ModelListItemConnection';
-    items: Array<{
-      __typename: 'ListItem';
-      id: string;
-      rank?: number | null;
-      artist?: string | null;
-      title: string;
-      image?: string | null;
-      content: string;
-      listID: string;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type DeleteListItemMutation = {
+  deleteListItem?: {
+    __typename: 'ListItem';
+    id: string;
+    rank?: number | null;
+    artist?: string | null;
+    title: string;
+    image?: string | null;
+    content: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type GetListQueryVariables = {
-  id: string;
+export type CreateListMutationVariables = {
+  input: CreateListInput;
+  condition?: ModelListConditionInput | null;
 };
 
-export type GetListQuery = {
-  getList?: {
+export type CreateListMutation = {
+  createList?: {
     __typename: 'List';
     id: string;
+    author: string;
     title: string;
     description?: string | null;
-    author: string;
     image: string;
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
     createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type ListListsQueryVariables = {
-  filter?: ModelListFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
+export type UpdateListMutationVariables = {
+  input: UpdateListInput;
+  condition?: ModelListConditionInput | null;
 };
 
-export type ListListsQuery = {
-  listLists?: {
-    __typename: 'ModelListConnection';
+export type UpdateListMutation = {
+  updateList?: {
+    __typename: 'List';
+    id: string;
+    author: string;
+    title: string;
+    description?: string | null;
+    image: string;
     items: Array<{
-      __typename: 'List';
+      __typename: 'ListItem';
       id: string;
+      rank?: number | null;
+      artist?: string | null;
       title: string;
-      description?: string | null;
-      author: string;
-      image: string;
-      createdAt: number;
-      modifiedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt: number;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type SyncListsQueryVariables = {
-  filter?: ModelListFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
-  lastSync?: number | null;
+export type DeleteListMutationVariables = {
+  input: DeleteListInput;
+  condition?: ModelListConditionInput | null;
 };
 
-export type SyncListsQuery = {
-  syncLists?: {
-    __typename: 'ModelListConnection';
+export type DeleteListMutation = {
+  deleteList?: {
+    __typename: 'List';
+    id: string;
+    author: string;
+    title: string;
+    description?: string | null;
+    image: string;
     items: Array<{
-      __typename: 'List';
+      __typename: 'ListItem';
       id: string;
+      rank?: number | null;
+      artist?: string | null;
       title: string;
-      description?: string | null;
-      author: string;
-      image: string;
-      createdAt: number;
-      modifiedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt: number;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type GetPodcastEpisodeQueryVariables = {
-  id: string;
+export type CreatePodcastEpisodeMutationVariables = {
+  input: CreatePodcastEpisodeInput;
+  condition?: ModelPodcastEpisodeConditionInput | null;
 };
 
-export type GetPodcastEpisodeQuery = {
-  getPodcastEpisode?: {
+export type CreatePodcastEpisodeMutation = {
+  createPodcastEpisode?: {
     __typename: 'PodcastEpisode';
     id: string;
-    podcastSeasonID: string;
     title: string;
     description?: string | null;
     image?: string | null;
-    link: string;
+    link?: string | null;
     author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type ListPodcastEpisodesQueryVariables = {
-  filter?: ModelPodcastEpisodeFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
+export type UpdatePodcastEpisodeMutationVariables = {
+  input: UpdatePodcastEpisodeInput;
+  condition?: ModelPodcastEpisodeConditionInput | null;
 };
 
-export type ListPodcastEpisodesQuery = {
-  listPodcastEpisodes?: {
-    __typename: 'ModelPodcastEpisodeConnection';
-    items: Array<{
-      __typename: 'PodcastEpisode';
-      id: string;
-      podcastSeasonID: string;
-      title: string;
-      description?: string | null;
-      image?: string | null;
-      link: string;
-      author?: string | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type UpdatePodcastEpisodeMutation = {
+  updatePodcastEpisode?: {
+    __typename: 'PodcastEpisode';
+    id: string;
+    title: string;
+    description?: string | null;
+    image?: string | null;
+    link?: string | null;
+    author?: string | null;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type SyncPodcastEpisodesQueryVariables = {
-  filter?: ModelPodcastEpisodeFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
-  lastSync?: number | null;
+export type DeletePodcastEpisodeMutationVariables = {
+  input: DeletePodcastEpisodeInput;
+  condition?: ModelPodcastEpisodeConditionInput | null;
 };
 
-export type SyncPodcastEpisodesQuery = {
-  syncPodcastEpisodes?: {
-    __typename: 'ModelPodcastEpisodeConnection';
-    items: Array<{
-      __typename: 'PodcastEpisode';
-      id: string;
-      podcastSeasonID: string;
-      title: string;
-      description?: string | null;
-      image?: string | null;
-      link: string;
-      author?: string | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+export type DeletePodcastEpisodeMutation = {
+  deletePodcastEpisode?: {
+    __typename: 'PodcastEpisode';
+    id: string;
+    title: string;
+    description?: string | null;
+    image?: string | null;
+    link?: string | null;
+    author?: string | null;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type GetPodcastSeasonQueryVariables = {
-  id: string;
+export type CreatePodcastSeasonMutationVariables = {
+  input: CreatePodcastSeasonInput;
+  condition?: ModelPodcastSeasonConditionInput | null;
 };
 
-export type GetPodcastSeasonQuery = {
-  getPodcastSeason?: {
+export type CreatePodcastSeasonMutation = {
+  createPodcastSeason?: {
     __typename: 'PodcastSeason';
     id: string;
     title: string;
@@ -1312,76 +834,82 @@ export type GetPodcastSeasonQuery = {
     description?: string | null;
     author: string;
     image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type ListPodcastSeasonsQueryVariables = {
-  filter?: ModelPodcastSeasonFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
+export type UpdatePodcastSeasonMutationVariables = {
+  input: UpdatePodcastSeasonInput;
+  condition?: ModelPodcastSeasonConditionInput | null;
 };
 
-export type ListPodcastSeasonsQuery = {
-  listPodcastSeasons?: {
-    __typename: 'ModelPodcastSeasonConnection';
-    items: Array<{
-      __typename: 'PodcastSeason';
+export type UpdatePodcastSeasonMutation = {
+  updatePodcastSeason?: {
+    __typename: 'PodcastSeason';
+    id: string;
+    title: string;
+    seasonLabel?: string | null;
+    description?: string | null;
+    author: string;
+    image: string;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
       id: string;
       title: string;
-      seasonLabel?: string | null;
       description?: string | null;
-      author: string;
-      image: string;
-      year: number;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type SyncPodcastSeasonsQueryVariables = {
-  filter?: ModelPodcastSeasonFilterInput | null;
-  limit?: number | null;
-  nextToken?: string | null;
-  lastSync?: number | null;
+export type DeletePodcastSeasonMutationVariables = {
+  input: DeletePodcastSeasonInput;
+  condition?: ModelPodcastSeasonConditionInput | null;
 };
 
-export type SyncPodcastSeasonsQuery = {
-  syncPodcastSeasons?: {
-    __typename: 'ModelPodcastSeasonConnection';
-    items: Array<{
-      __typename: 'PodcastSeason';
+export type DeletePodcastSeasonMutation = {
+  deletePodcastSeason?: {
+    __typename: 'PodcastSeason';
+    id: string;
+    title: string;
+    seasonLabel?: string | null;
+    description?: string | null;
+    author: string;
+    image: string;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
       id: string;
       title: string;
-      seasonLabel?: string | null;
       description?: string | null;
-      author: string;
-      image: string;
-      year: number;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
-      createdAt: string;
-      updatedAt: string;
-    } | null>;
-    nextToken?: string | null;
-    startedAt?: number | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
@@ -1399,11 +927,8 @@ export type GetReviewQuery = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
@@ -1425,103 +950,61 @@ export type ListReviewsQuery = {
       content: string;
       image: string;
       author: string;
-      createdAt?: number | null;
+      createdAt: number;
       updatedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
     } | null>;
     nextToken?: string | null;
-    startedAt?: number | null;
   } | null;
 };
 
-export type SyncReviewsQueryVariables = {
-  filter?: ModelReviewFilterInput | null;
+export type GetFeatureQueryVariables = {
+  id: string;
+};
+
+export type GetFeatureQuery = {
+  getFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type ListFeaturesQueryVariables = {
+  filter?: ModelFeatureFilterInput | null;
   limit?: number | null;
   nextToken?: string | null;
-  lastSync?: number | null;
 };
 
-export type SyncReviewsQuery = {
-  syncReviews?: {
-    __typename: 'ModelReviewConnection';
+export type ListFeaturesQuery = {
+  listFeatures?: {
+    __typename: 'ModelFeatureConnection';
     items: Array<{
-      __typename: 'Review';
+      __typename: 'Feature';
       id: string;
       title: string;
-      artist: string;
-      recordLabel?: string | null;
-      content: string;
+      description?: string | null;
+      author?: string | null;
       image: string;
-      author: string;
-      createdAt?: number | null;
+      content: string;
+      createdAt: number;
       updatedAt?: number | null;
-      _version: number;
-      _deleted?: boolean | null;
-      _lastChangedAt: number;
     } | null>;
     nextToken?: string | null;
-    startedAt?: number | null;
   } | null;
 };
 
-export type OnCreateFeatureSubscription = {
-  onCreateFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
+export type GetListItemQueryVariables = {
+  id: string;
 };
 
-export type OnUpdateFeatureSubscription = {
-  onUpdateFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
-};
-
-export type OnDeleteFeatureSubscription = {
-  onDeleteFeature?: {
-    __typename: 'Feature';
-    id: string;
-    title: string;
-    description?: string | null;
-    author?: string | null;
-    image: string;
-    content: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-  } | null;
-};
-
-export type OnCreateListItemSubscription = {
-  onCreateListItem?: {
+export type GetListItemQuery = {
+  getListItem?: {
     __typename: 'ListItem';
     id: string;
     rank?: number | null;
@@ -1529,173 +1012,145 @@ export type OnCreateListItemSubscription = {
     title: string;
     image?: string | null;
     content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type OnUpdateListItemSubscription = {
-  onUpdateListItem?: {
-    __typename: 'ListItem';
-    id: string;
-    rank?: number | null;
-    artist?: string | null;
-    title: string;
-    image?: string | null;
-    content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+export type ListListItemsQueryVariables = {
+  filter?: ModelListItemFilterInput | null;
+  limit?: number | null;
+  nextToken?: string | null;
+};
+
+export type ListListItemsQuery = {
+  listListItems?: {
+    __typename: 'ModelListItemConnection';
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    } | null>;
+    nextToken?: string | null;
   } | null;
 };
 
-export type OnDeleteListItemSubscription = {
-  onDeleteListItem?: {
-    __typename: 'ListItem';
-    id: string;
-    rank?: number | null;
-    artist?: string | null;
-    title: string;
-    image?: string | null;
-    content: string;
-    listID: string;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
+export type GetListQueryVariables = {
+  id: string;
 };
 
-export type OnCreateListSubscription = {
-  onCreateList?: {
+export type GetListQuery = {
+  getList?: {
     __typename: 'List';
     id: string;
+    author: string;
     title: string;
     description?: string | null;
-    author: string;
     image: string;
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
     createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type OnUpdateListSubscription = {
-  onUpdateList?: {
-    __typename: 'List';
-    id: string;
-    title: string;
-    description?: string | null;
-    author: string;
-    image: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+export type ListListsQueryVariables = {
+  filter?: ModelListFilterInput | null;
+  limit?: number | null;
+  nextToken?: string | null;
+};
+
+export type ListListsQuery = {
+  listLists?: {
+    __typename: 'ModelListConnection';
+    items: Array<{
+      __typename: 'List';
+      id: string;
+      author: string;
+      title: string;
+      description?: string | null;
+      image: string;
+      items: Array<{
+        __typename: 'ListItem';
+        id: string;
+        rank?: number | null;
+        artist?: string | null;
+        title: string;
+        image?: string | null;
+        content: string;
+        createdAt?: number | null;
+        updatedAt?: number | null;
+      }>;
+      createdAt: number;
+      updatedAt?: number | null;
+    } | null>;
+    nextToken?: string | null;
   } | null;
 };
 
-export type OnDeleteListSubscription = {
-  onDeleteList?: {
-    __typename: 'List';
-    id: string;
-    title: string;
-    description?: string | null;
-    author: string;
-    image: string;
-    createdAt: number;
-    modifiedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    updatedAt: string;
-    ListItems?: {
-      __typename: 'ModelListItemConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
+export type GetPodcastEpisodeQueryVariables = {
+  id: string;
 };
 
-export type OnCreatePodcastEpisodeSubscription = {
-  onCreatePodcastEpisode?: {
+export type GetPodcastEpisodeQuery = {
+  getPodcastEpisode?: {
     __typename: 'PodcastEpisode';
     id: string;
-    podcastSeasonID: string;
     title: string;
     description?: string | null;
     image?: string | null;
-    link: string;
+    link?: string | null;
     author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type OnUpdatePodcastEpisodeSubscription = {
-  onUpdatePodcastEpisode?: {
-    __typename: 'PodcastEpisode';
-    id: string;
-    podcastSeasonID: string;
-    title: string;
-    description?: string | null;
-    image?: string | null;
-    link: string;
-    author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
+export type ListPodcastEpisodesQueryVariables = {
+  filter?: ModelPodcastEpisodeFilterInput | null;
+  limit?: number | null;
+  nextToken?: string | null;
+};
+
+export type ListPodcastEpisodesQuery = {
+  listPodcastEpisodes?: {
+    __typename: 'ModelPodcastEpisodeConnection';
+    items: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    } | null>;
+    nextToken?: string | null;
   } | null;
 };
 
-export type OnDeletePodcastEpisodeSubscription = {
-  onDeletePodcastEpisode?: {
-    __typename: 'PodcastEpisode';
-    id: string;
-    podcastSeasonID: string;
-    title: string;
-    description?: string | null;
-    image?: string | null;
-    link: string;
-    author?: string | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
+export type GetPodcastSeasonQueryVariables = {
+  id: string;
 };
 
-export type OnCreatePodcastSeasonSubscription = {
-  onCreatePodcastSeason?: {
+export type GetPodcastSeasonQuery = {
+  getPodcastSeason?: {
     __typename: 'PodcastSeason';
     id: string;
     title: string;
@@ -1703,63 +1158,56 @@ export type OnCreatePodcastSeasonSubscription = {
     description?: string | null;
     author: string;
     image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
 
-export type OnUpdatePodcastSeasonSubscription = {
-  onUpdatePodcastSeason?: {
-    __typename: 'PodcastSeason';
-    id: string;
-    title: string;
-    seasonLabel?: string | null;
-    description?: string | null;
-    author: string;
-    image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
-  } | null;
+export type ListPodcastSeasonsQueryVariables = {
+  filter?: ModelPodcastSeasonFilterInput | null;
+  limit?: number | null;
+  nextToken?: string | null;
 };
 
-export type OnDeletePodcastSeasonSubscription = {
-  onDeletePodcastSeason?: {
-    __typename: 'PodcastSeason';
-    id: string;
-    title: string;
-    seasonLabel?: string | null;
-    description?: string | null;
-    author: string;
-    image: string;
-    year: number;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
-    createdAt: string;
-    updatedAt: string;
-    PodcastEpisodes?: {
-      __typename: 'ModelPodcastEpisodeConnection';
-      nextToken?: string | null;
-      startedAt?: number | null;
-    } | null;
+export type ListPodcastSeasonsQuery = {
+  listPodcastSeasons?: {
+    __typename: 'ModelPodcastSeasonConnection';
+    items: Array<{
+      __typename: 'PodcastSeason';
+      id: string;
+      title: string;
+      seasonLabel?: string | null;
+      description?: string | null;
+      author: string;
+      image: string;
+      year?: number | null;
+      episodes: Array<{
+        __typename: 'PodcastEpisode';
+        id: string;
+        title: string;
+        description?: string | null;
+        image?: string | null;
+        link?: string | null;
+        author?: string | null;
+        createdAt?: number | null;
+        updatedAt?: number | null;
+      }>;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    } | null>;
+    nextToken?: string | null;
   } | null;
 };
 
@@ -1773,11 +1221,8 @@ export type OnCreateReviewSubscription = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
@@ -1791,11 +1236,8 @@ export type OnUpdateReviewSubscription = {
     content: string;
     image: string;
     author: string;
-    createdAt?: number | null;
+    createdAt: number;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
   } | null;
 };
 
@@ -1809,10 +1251,283 @@ export type OnDeleteReviewSubscription = {
     content: string;
     image: string;
     author: string;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnCreateFeatureSubscription = {
+  onCreateFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnUpdateFeatureSubscription = {
+  onUpdateFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnDeleteFeatureSubscription = {
+  onDeleteFeature?: {
+    __typename: 'Feature';
+    id: string;
+    title: string;
+    description?: string | null;
+    author?: string | null;
+    image: string;
+    content: string;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnCreateListItemSubscription = {
+  onCreateListItem?: {
+    __typename: 'ListItem';
+    id: string;
+    rank?: number | null;
+    artist?: string | null;
+    title: string;
+    image?: string | null;
+    content: string;
     createdAt?: number | null;
     updatedAt?: number | null;
-    _version: number;
-    _deleted?: boolean | null;
-    _lastChangedAt: number;
+  } | null;
+};
+
+export type OnUpdateListItemSubscription = {
+  onUpdateListItem?: {
+    __typename: 'ListItem';
+    id: string;
+    rank?: number | null;
+    artist?: string | null;
+    title: string;
+    image?: string | null;
+    content: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnDeleteListItemSubscription = {
+  onDeleteListItem?: {
+    __typename: 'ListItem';
+    id: string;
+    rank?: number | null;
+    artist?: string | null;
+    title: string;
+    image?: string | null;
+    content: string;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnCreateListSubscription = {
+  onCreateList?: {
+    __typename: 'List';
+    id: string;
+    author: string;
+    title: string;
+    description?: string | null;
+    image: string;
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnUpdateListSubscription = {
+  onUpdateList?: {
+    __typename: 'List';
+    id: string;
+    author: string;
+    title: string;
+    description?: string | null;
+    image: string;
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnDeleteListSubscription = {
+  onDeleteList?: {
+    __typename: 'List';
+    id: string;
+    author: string;
+    title: string;
+    description?: string | null;
+    image: string;
+    items: Array<{
+      __typename: 'ListItem';
+      id: string;
+      rank?: number | null;
+      artist?: string | null;
+      title: string;
+      image?: string | null;
+      content: string;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt: number;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnCreatePodcastEpisodeSubscription = {
+  onCreatePodcastEpisode?: {
+    __typename: 'PodcastEpisode';
+    id: string;
+    title: string;
+    description?: string | null;
+    image?: string | null;
+    link?: string | null;
+    author?: string | null;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnUpdatePodcastEpisodeSubscription = {
+  onUpdatePodcastEpisode?: {
+    __typename: 'PodcastEpisode';
+    id: string;
+    title: string;
+    description?: string | null;
+    image?: string | null;
+    link?: string | null;
+    author?: string | null;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnDeletePodcastEpisodeSubscription = {
+  onDeletePodcastEpisode?: {
+    __typename: 'PodcastEpisode';
+    id: string;
+    title: string;
+    description?: string | null;
+    image?: string | null;
+    link?: string | null;
+    author?: string | null;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnCreatePodcastSeasonSubscription = {
+  onCreatePodcastSeason?: {
+    __typename: 'PodcastSeason';
+    id: string;
+    title: string;
+    seasonLabel?: string | null;
+    description?: string | null;
+    author: string;
+    image: string;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnUpdatePodcastSeasonSubscription = {
+  onUpdatePodcastSeason?: {
+    __typename: 'PodcastSeason';
+    id: string;
+    title: string;
+    seasonLabel?: string | null;
+    description?: string | null;
+    author: string;
+    image: string;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
+  } | null;
+};
+
+export type OnDeletePodcastSeasonSubscription = {
+  onDeletePodcastSeason?: {
+    __typename: 'PodcastSeason';
+    id: string;
+    title: string;
+    seasonLabel?: string | null;
+    description?: string | null;
+    author: string;
+    image: string;
+    year?: number | null;
+    episodes: Array<{
+      __typename: 'PodcastEpisode';
+      id: string;
+      title: string;
+      description?: string | null;
+      image?: string | null;
+      link?: string | null;
+      author?: string | null;
+      createdAt?: number | null;
+      updatedAt?: number | null;
+    }>;
+    createdAt?: number | null;
+    updatedAt?: number | null;
   } | null;
 };
