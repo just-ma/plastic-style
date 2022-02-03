@@ -5,32 +5,154 @@ import PINO_THUMBNAIL from '../../images/thumbnails/blake-thumbnail.jpg';
 import MIKE_THUMBNAIL from '../../images/thumbnails/mike-thumbnail.jpg';
 import ERIKA_THUMBNAIL from '../../images/thumbnails/erika-thumbnail.jpg';
 import TYLER_THUMBNAIL from '../../images/thumbnails/tyler-thumbnail.jpg';
-import PARKER_THUMBNAIL from '../../images/thumbnails/parkers-albums-2020.jpg';
+
 import BALGAY_THUMBNAIL from '../../images/thumbnails/balgay-hill-thumbnail.jpg';
 import DRY_THUMBNAIL from '../../images/thumbnails/dry-cleaning-thumbnail.jpg';
 import FIRE_THUMBNAIL from '../../images/thumbnails/fire-toolz-thumbnail.jpg';
 import FORFOLKS_THUMBNAIL from '../../images/thumbnails/forfolks-thumbnail.jpg';
 import GIANT_THUMBNAIL from '../../images/thumbnails/giant-claw-thumbnail.jpg';
 import JUBILEE_THUMBNAIL from '../../images/thumbnails/jubilee-thumbnail.jpg';
+import GUNS_THUMBNAIL from '../../images/thumbnails/all-roads-lead-to-the-gun.jpg';
+import YVES_THUMBNAIL from '../../images/thumbnails/asymptotical.jpg';
+import SOL_GLOW_THUMBNAIL from '../../images/thumbnails/dis-n*gga-vol-2.jpg';
+import ACTION_NEWS_THUMBNAIL from '../../images/thumbnails/failed-state.jpg';
+import FLASH_THUMBNAIL from '../../images/thumbnails/flash.jpg';
+import KNOCKIN_THUMBNAIL from "../../images/thumbnails/knockin'.jpg";
+import PARKER_THUMBNAIL from '../../images/thumbnails/parkers-albums-2020.jpg';
+import MANNEQUIN_THUMBNAIL from '../../images/thumbnails/mannequin.jpg';
+import SHIMA_THUMBNAIL from '../../images/thumbnails/shima.jpg';
+import SKULLCRUSHER_THUMBNAIL from '../../images/thumbnails/skullcrusher.jpg';
+import TAWNY_THUMBNAIL from '../../images/thumbnails/tawny.jpg';
+import BLAIR_THUMBNAIL from '../../images/thumbnails/tears-to-grow.jpg';
+import YOUTH_THUMBNAIL from '../../images/thumbnails/total-serene.jpg';
 import HEY_THUMBNAIL from '../../images/thumbnails/low-thumbnail.jpg';
 import LUMINOL_THUMBNAIL from '../../images/thumbnails/midwife-thumbnail.jpg';
 import PARANNOUL_THUMBNAIL from '../../images/thumbnails/parannoul-thumbnail.jpg';
 import SKEE_THUMBNAIL from '../../images/thumbnails/skee-mask-thumbnail.jpg';
-import BILLION_THUMBNAIL from '../../images/thumbnails/a billion little lights.jpg';
-import BETWEEN_THUMBNAIL from '../../images/thumbnails/between the richness.jpg';
-import BRIGHT_THUMBNAIL from '../../images/thumbnails/bright green field.jpg';
+import BILLION_THUMBNAIL from '../../images/thumbnails/billion-lights.jpg';
+import BETWEEN_THUMBNAIL from '../../images/thumbnails/between-richness.jpg';
+import BRIGHT_THUMBNAIL from '../../images/thumbnails/bright-field.jpg';
 import CALVACADE_THUMBNAIL from '../../images/thumbnails/cavalcade.jpg';
-import CRIME_THUMBNAIL from '../../images/thumbnails/crime and punishment.jpg';
-import BECAME_THUMBNAIL from '../../images/thumbnails/i became birds.jpg';
+import CRIME_THUMBNAIL from '../../images/thumbnails/crime-punishment.jpg';
+import BECAME_THUMBNAIL from '../../images/thumbnails/became-birds.jpg';
 import DAZY_THUMBNAIL from '../../images/thumbnails/maximumblastsuperloud.jpg';
-import LIGHT_THUMBNAIL from '../../images/thumbnails/no light in heaven.jpg';
+import LIGHT_THUMBNAIL from '../../images/thumbnails/light-heaven.jpg';
 import STATE_THUMBNAIL from '../../images/thumbnails/statesend.jpg';
-import MUTTS_THUMBNAIL from '../../images/thumbnails/themutts nuts.jpg';
+import MUTTS_THUMBNAIL from '../../images/thumbnails/mutts-nuts.jpg';
 import { List } from './types';
 
 export const PARKERS_TOP_ALBUMS_2020_KEY = 'parkers-top-albums-2020';
 
 export const MOCK_LISTS: ReadonlyArray<List> = [
+  {
+    id: 'bens-low-effort-ep-list',
+    title: "Ben's Top 10 EPs of 2021",
+    description: `<expandableText text="Here are my most listened to EPs from 2021 in no particular order." hiddenText="So this is Ben’s first post he’s submitted for the blog since it launched with all of our year-end lists. Since it had been two weeks with no content from him I expected something verbose and prodigious, an opus if you will. But nay, instead I was handed this EP list. Which is cool, it’s great to see some EPs Ben’s been spinning. Except that, in this entire article, this guy wrote one sentence. ONE. “Here are my most listened to EPs from 2021 in no particular order.” Well that’s cute Ben, but this is my blog, and I get the final say on content here at plasticstyle.net!"></expandableText>`,
+    author: 'Ben Langdon',
+    image: FLASH_THUMBNAIL,
+    createdAt: 1641866481,
+    listItems: [
+      {
+        id: 'militarie-gun-all-roads-lead-to-the-gun',
+        title:
+          '<expandableText text="All Roads Lead To The Gun" hiddenText="More like all roads lead to Ben being fired from the blog if he doesn&apos;t make more content soon!"></expandableText>',
+        artist: 'Militarie Gun',
+        content:
+          '<a href="https://militariegun.bandcamp.com/album/all-roads-lead-to-the-gun" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: GUNS_THUMBNAIL,
+      },
+      {
+        id: 'drug-church-tawny',
+        title:
+          '<expandableText text="Tawny" hiddenText="Ben, you do know that my parents read this blog, right? They go to REAL church, and have no time for your heretically named hardcore bands"></expandableText>',
+        artist: 'Drug Church',
+        content:
+          '<a href="https://drugchurch.bandcamp.com/album/tawny" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: TAWNY_THUMBNAIL,
+      },
+      {
+        id: 'soul-glo-dis-n*gga-vol-2',
+        title:
+          '<expandableText text="Dis N*gga, Vol. 2" hiddenText="If tepid hardcore is Darth Vader then Soul Glo is Luke Skywalker"></expandableText>',
+        artist: 'Soul Glo',
+        content:
+          '<a href="https://soulglophl.bandcamp.com/album/disnigga-vol-2" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: SOL_GLOW_THUMBNAIL,
+      },
+      {
+        id: 'blair-tears-to-grow',
+        title:
+          '<expandableText text="Tears to Grow" hiddenText="This EP is great, but let&apos;s remember why we&apos;re here: Ben sucks"></expandableText>',
+        artist: 'Blair',
+        content:
+          '<a href="https://blair123xyz.bandcamp.com/album/tears-to-grow" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: BLAIR_THUMBNAIL,
+      },
+      {
+        id: 'action-news-failed-state',
+        title:
+          '<expandableText text="Failed State" hiddenText="Failed State? More like Ben failed to write a list, amirite?"></expandableText>',
+        artist: 'Action News',
+        content:
+          '<a href="https://actionnews.bandcamp.com/album/failed-state" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: ACTION_NEWS_THUMBNAIL,
+      },
+      {
+        id: 'yves-tumor-the-asymptotical-world',
+        title:
+          '<expandableText text="The Asymptotical World" hiddenText="Hey, this was my favorite EP of 2021 and I showed it to Ben! I guess in this case EP stands for Emulating Parker"></expandableText>',
+        artist: 'Yves Tumor',
+        content:
+          '<a href="https://yves-tumor.bandcamp.com/album/the-asymptotical-world-ep" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: YVES_THUMBNAIL,
+      },
+      {
+        id: 'gang-of-youths-total-serene',
+        title:
+          '<expandableText text="total serene" hiddenText="I&apos;D BE TOTALLY SERENE IF BEN PUT SOME FUCKING WORK INTO THIS BLOG!!!!"></expandableText>',
+        artist: 'Gang of Youths',
+        content:
+          '<a href="https://www.youtube.com/watch?v=H9QsAO4BU28&list=OLAK5uy_lo2LWdMR67GLXSOXPpq197wH8vEqOxvxw&index=1" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: YOUTH_THUMBNAIL,
+      },
+      {
+        id: 'mj-lenderman-knockin',
+        title:
+          '<expandableText text="Knockin&apos;" hiddenText="If Knockin&apos; is a reference to &apos;Knocking on Heaven&apos;s Door&apos; by Bob Dylan, then Ben is a piece of shit"></expandableText>',
+        artist: 'MJ Lenderman',
+        content:
+          '<a href="https://mjlenderman.bandcamp.com/album/dlrdg002-knockin" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: KNOCKIN_THUMBNAIL,
+      },
+      {
+        id: 'floating-room-shima',
+        title:
+          '<expandableText text="Shima" hiddenText="I&apos;d be floating in my room if Ben wasn&apos;t bothering me all the time - what a jackass!"></expandableText>',
+        artist: 'Floating Room',
+        content:
+          '<a href="https://floatingroom.bandcamp.com/album/shima" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: SHIMA_THUMBNAIL,
+      },
+      {
+        id: 'skullcrusher-storm-in-summer',
+        title:
+          '<expandableText text="Storm in Summer" hiddenText="If Skullcrusher were an artist, then Storm in Summer would be an album"></expandableText>',
+        artist: 'Skullcrusher',
+        content:
+          '<a href="https://imskullcrusher.bandcamp.com/album/storm-in-summer" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: SKULLCRUSHER_THUMBNAIL,
+      },
+      {
+        id: 'mannequin-pussy-perfect',
+        title:
+          '<expandableText text="Perfect" hiddenText="If modern-soul-bearing-punk-rock is The Flash, Mannequin Pussy is the most iconic individual to take up The Flash’s mantle: Barry Allen, of course, and the discography taken as a whole would be The Flash’s slick red-and-gold suit, conveniently stored in a powerful ring when he needs to move incognito. Or, if he’s really in a pickle, he’s able to compress his molecules and hide inside the ring itself!!!! Ain’t that a miracle? I wish I could be The Flash. Then I wouldn’t have to rely on my shitty friend Ben to write sub-par articles when I could write them all my goddamn self."></expandableText>',
+        artist: 'Mannequin Pussy',
+        content:
+          '<a href="https://mannequinpussy.bandcamp.com/album/perfect" target="_blank" rel="noreferrer"><u>Listen</u></a>',
+        image: MANNEQUIN_THUMBNAIL,
+      },
+    ],
+  },
   {
     id: 'preston-top-albums-2021',
     title: "Preston's Top 7 LPs of 2021",
