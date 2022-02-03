@@ -50,7 +50,7 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
     description: `<expandableText text="Here are my most listened to EPs from 2021 in no particular order." hiddenText="So this is Ben’s first post he’s submitted for the blog since it launched with all of our year-end lists. Since it had been two weeks with no content from him I expected something verbose and prodigious, an opus if you will. But nay, instead I was handed this EP list. Which is cool, it’s great to see some EPs Ben’s been spinning. Except that, in this entire article, this guy wrote one sentence. ONE. “Here are my most listened to EPs from 2021 in no particular order.” Well that’s cute Ben, but this is my blog, and I get the final say on content here at plasticstyle.net!"></expandableText>`,
     author: 'Ben Langdon',
     image: FLASH_THUMBNAIL,
-    createdAt: 1641866481,
+    createdAt: 1643904739,
     listItems: [
       {
         id: 'militarie-gun-all-roads-lead-to-the-gun',
