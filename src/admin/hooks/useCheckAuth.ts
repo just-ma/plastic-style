@@ -5,15 +5,21 @@ import Auth from '@aws-amplify/auth';
 import { STORAGE_USER_ACCESS_TOKEN } from '../models/constants';
 import { adminLoginPath, adminPath } from '../routes';
 
+type HookOptions = {
+  skip?: boolean;
+};
+
 type HookValue = {
   refetch: () => Promise<void>;
   loading: boolean;
 };
 
-export default function useCheckAuth(): HookValue {
+export default function useCheckAuth(options?: HookOptions): HookValue {
+  const { skip } = options || {};
+
   const history = useHistory();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!skip);
 
   const checkAuth = async (): Promise<void> => {
     setLoading(true);
@@ -29,12 +35,19 @@ export default function useCheckAuth(): HookValue {
     const session = await Auth.currentSession();
     const token = session.getIdToken().getJwtToken();
     localStorage.setItem(STORAGE_USER_ACCESS_TOKEN, token);
-    history.replace(adminPath());
+
+    if (history.location.pathname === adminLoginPath()) {
+      history.replace(adminPath());
+    }
   };
 
   useEffect((): void => {
+    if (skip) {
+      return;
+    }
+
     checkAuth();
-  }, []);
+  }, [skip]);
 
   return useMemo(
     (): HookValue => ({

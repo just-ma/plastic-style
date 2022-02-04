@@ -13,7 +13,7 @@ import { homePath } from './home/routes';
 import Home from './home/Home';
 
 // admin
-import { adminPath, adminLoginPath, adminTextEditorPath } from './admin/routes';
+import { adminPath, adminLoginPath, adminTextEditorPath, adminPagePath } from './admin/routes';
 import Admin from './admin/Admin';
 import AdminLogin from './admin/ui/AdminLogin';
 import TextEditor from './admin/ui/TextEditor';
@@ -60,9 +60,13 @@ export default function App(): React.ReactElement {
       <Switch>
         <Route exact path={homePath()} component={Page(Home)} />
 
-        <Route exact path={adminPath()} component={Admin} />
+        <Route exact path={adminPath()} component={Page(Admin, { isAdmin: true })} />
         <Route exact path={adminLoginPath()} component={AdminLogin} />
-        <Route exact path={adminTextEditorPath()} component={TextEditor} />
+        <Route exact path={adminTextEditorPath()} component={Page(TextEditor, { isAdmin: true })} />
+        <Route exact path={adminPagePath(reviewsPath())} component={Page(TextEditor, { isAdmin: true })} />
+        <Route exact path={adminPagePath(listsPath())} component={Page(TextEditor, { isAdmin: true })} />
+        <Route exact path={adminPagePath(featuresPath())} component={Page(TextEditor, { isAdmin: true })} />
+        <Route exact path={adminPagePath(podcastsPath())} component={Page(TextEditor, { isAdmin: true })} />
 
         <Route exact path={reviewsPath()} component={Page(Reviews)} />
         <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} />

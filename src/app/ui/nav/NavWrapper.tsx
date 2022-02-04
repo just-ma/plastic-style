@@ -1,6 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import classnames from 'classnames';
 
+import useCheckAuth from '../../../admin/hooks/useCheckAuth';
+import { NavMenuItem } from './types';
+import { ADMIN_NAV_MENU, DEFAULT_NAV_MENU } from './constants';
+
+import LogOutButton from '../../../admin/ui/LogOutButton';
 import PageTitle from '../PageTitle';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
@@ -12,11 +17,21 @@ type ComponentProps = {
   isResponsive: boolean;
   scrollRef?: React.RefObject<HTMLDivElement>;
   children?: React.ReactNode;
+  isAdmin?: boolean;
 };
 
-export default function NavWrapper({ isResponsive, scrollRef, children }: ComponentProps): React.ReactElement {
+export default function NavWrapper({
+  isResponsive,
+  scrollRef,
+  children,
+  isAdmin,
+}: ComponentProps): React.ReactElement | null {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [hideTitle, setHideTitle] = useState<boolean>(false);
+
+  const menu: ReadonlyArray<NavMenuItem> = isAdmin ? ADMIN_NAV_MENU : DEFAULT_NAV_MENU;
+
+  const { loading } = useCheckAuth({ skip: !isAdmin });
 
   const handleScroll = (e: Event): void => {
     if (!e.target) {
@@ -48,22 +63,31 @@ export default function NavWrapper({ isResponsive, scrollRef, children }: Compon
     setIsDrawerOpen(false);
   }, []);
 
+  if (loading) {
+    return null;
+  }
+
   return (
     <div className={classnames(styles.NavWrapper, isResponsive && styles.responsive, isDrawerOpen && styles.blur)}>
       <div className={classnames(styles.pageTitle, hideTitle && styles.hide)}>
         <PageTitle />
       </div>
+      {isAdmin && (
+        <div className={styles.logOutButton}>
+          <LogOutButton />
+        </div>
+      )}
       {isResponsive ? (
         <div className={styles.drawerButton}>
           <DrawerButton isOpen={false} onClick={handleDrawerOpen} />
         </div>
       ) : (
         <div className={styles.nav}>
-          <Nav />
+          <Nav menu={menu} />
         </div>
       )}
       {children}
-      <MobileNav isOpen={isDrawerOpen} onRequestClose={handleDrawerClose} />
+      <MobileNav menu={menu} isOpen={isDrawerOpen} onRequestClose={handleDrawerClose} />
     </div>
   );
 }

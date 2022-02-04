@@ -7,14 +7,20 @@ import NavWrapper from './nav/NavWrapper';
 
 import styles from './Page.module.scss';
 
-export default function Page(Component: React.ComponentType<any>): () => React.ReactElement {
+type PageProps = {
+  isAdmin?: boolean;
+};
+
+export default function Page(Component: React.ComponentType<any>, props?: PageProps): () => React.ReactElement {
+  const { isAdmin } = props || {};
+
   const { isResponsive } = useResponsive();
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const component = (): React.ReactElement => {
     return (
-      <NavWrapper isResponsive={isResponsive} scrollRef={scrollRef}>
+      <NavWrapper isResponsive={isResponsive} scrollRef={scrollRef} isAdmin={isAdmin}>
         <div className={styles.scrollContainer} ref={scrollRef}>
           <div className={classnames(styles.contentContainer, isResponsive && styles.responsive)}>
             <Component />

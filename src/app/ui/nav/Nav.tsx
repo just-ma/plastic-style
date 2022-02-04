@@ -1,70 +1,38 @@
 import React, { useMemo, useState } from 'react';
 
-import { reviewsPath } from '../../../reviews/routes';
-import { listsPath } from '../../../lists/routes';
-import { featuresPath } from '../../../features/routes';
-import { podcastsPath } from '../../../podcasts/routes';
-import { contactPath } from '../../../contact/routes';
-
 import NavItem from './NavItem';
 
 import { ReactComponent as ArrowIcon } from '../../../images/icons/arrow.svg';
 
-import styles from './Nav.module.scss';
+import { NavMenuItem } from './types';
 
-const NAV_MENU = [
-  { title: 'Home', link: '/' },
-  {
-    title: 'Reviews',
-    link: reviewsPath(),
-  },
-  {
-    title: 'Lists',
-    link: listsPath(),
-  },
-  {
-    title: 'Features',
-    link: featuresPath(),
-  },
-  {
-    title: 'Podcasts',
-    link: podcastsPath(),
-  },
-  {
-    title: 'Contact',
-    link: contactPath(),
-  },
-];
+import styles from './Nav.module.scss';
 
 const NAV_ITEM_HEIGHT = 25;
 
-export default function Nav(): React.ReactElement {
+type ComponentProps = {
+  menu: ReadonlyArray<NavMenuItem>;
+};
+
+export default function Nav({ menu }: ComponentProps): React.ReactElement {
   const currentPagePath = window.location.pathname;
 
-  const activeIndex = useMemo(() => {
-    let index = 0;
-    NAV_MENU.forEach((item, i) => {
-      if (currentPagePath.startsWith(item.link)) {
-        index = i;
-        return;
+  const activeIndex = useMemo((): number => {
+    let strictMatchIndex: number | null = null;
+    let prefixMatchIndex = 0;
+
+    menu.forEach((item, i) => {
+      if (currentPagePath === item.link) {
+        strictMatchIndex = i;
+      } else if (currentPagePath.startsWith(item.link)) {
+        prefixMatchIndex = i;
       }
     });
-    return index;
+
+    return strictMatchIndex || prefixMatchIndex;
   }, [currentPagePath]);
 
   const [hovered, setHovered] = useState(activeIndex);
-
-  const getIsActive = (link: string): boolean => {
-    if (link === '/' && currentPagePath !== '/') {
-      return false;
-    }
-
-    if (currentPagePath.startsWith(link)) {
-      return true;
-    }
-
-    return false;
-  };
 
   return (
     <div className={styles.Nav}>
@@ -73,12 +41,12 @@ export default function Nav(): React.ReactElement {
           <ArrowIcon />
         </div>
         <div className={styles.navItems}>
-          {NAV_MENU.map((item, index) => (
+          {menu.map((item, index) => (
             <NavItem
               key={index}
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(activeIndex)}
-              isActive={getIsActive(item.link)}
+              isActive={activeIndex === index}
               isHover={hovered === index}
               {...item}
             />

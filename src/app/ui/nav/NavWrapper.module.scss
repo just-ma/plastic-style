@@ -37,8 +37,16 @@
   }
 }
 
+.logOutButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+}
+
 .nav {
   position: absolute;
   top: 40%;
   left: 30px;
+  min-width: 100px;
 }

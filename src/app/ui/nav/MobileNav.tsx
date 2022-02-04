@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 
+import { NavMenuItem } from './types';
+
 import Nav from './Nav';
 import DrawerButton from './DrawerButton';
 
@@ -10,9 +12,10 @@ import styles from './MobileNav.module.scss';
 type ComponentProps = {
   isOpen: boolean;
   onRequestClose: () => void;
+  menu: ReadonlyArray<NavMenuItem>;
 };
 
-export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): React.ReactPortal | null {
+export default function MobileNav({ isOpen, onRequestClose, menu }: ComponentProps): React.ReactPortal | null {
   const [open, setOpen] = useState<boolean>(isOpen);
 
   useEffect((): void => {
@@ -49,7 +52,7 @@ export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): R
       >
         <div className={styles.drawer}>
           <div className={styles.navItems}>
-            <Nav />
+            <Nav menu={menu} />
           </div>
           <div className={styles.closeButton}>
             <DrawerButton isOpen onClick={onRequestClose} />
