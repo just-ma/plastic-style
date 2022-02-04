@@ -1,13 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Amplify } from 'aws-amplify';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 
-import appConfig from './aws-exports.js';
+import awsExports from './aws-exports.js';
 
 import Page from './app/ui/Page';
 import DecorativeBanner from './app/ui/DecorativeBanner';
+
+// home
+import { homePath } from './home/routes';
 import Home from './home/Home';
-// import Admin from './admin/Admin';
+
+// admin
+import { adminPath, adminLoginPath, adminTextEditorPath } from './admin/routes';
+import Admin from './admin/Admin';
+import AdminLogin from './admin/ui/AdminLogin';
 import TextEditor from './admin/ui/TextEditor';
 
 // reviews
@@ -34,12 +42,14 @@ import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 import { contactPath } from './contact/routes';
 import Contact from './contact/Contact';
 
+Amplify.configure(awsExports);
+
 export const client = new AWSAppSyncClient({
-  url: appConfig.aws_appsync_graphqlEndpoint,
-  region: appConfig.aws_appsync_region,
+  url: awsExports.aws_appsync_graphqlEndpoint,
+  region: awsExports.aws_appsync_region,
   auth: {
     type: AUTH_TYPE.API_KEY,
-    apiKey: appConfig.aws_appsync_apiKey,
+    apiKey: awsExports.aws_appsync_apiKey,
   },
 });
 
@@ -48,9 +58,11 @@ export default function App(): React.ReactElement {
     <Router>
       <DecorativeBanner />
       <Switch>
-        <Route exact path="/" component={Page(Home)} />
-        {/* <Route exact path="/admin" component={Admin} /> */}
-        <Route exact path="/admin/text-editor" component={TextEditor} />
+        <Route exact path={homePath()} component={Page(Home)} />
+
+        <Route exact path={adminPath()} component={Admin} />
+        <Route exact path={adminLoginPath()} component={AdminLogin} />
+        <Route exact path={adminTextEditorPath()} component={TextEditor} />
 
         <Route exact path={reviewsPath()} component={Page(Reviews)} />
         <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} />
