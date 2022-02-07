@@ -10,5 +10,6 @@ export default function AdminReviews(): React.ReactElement {
     listReviews: ModelReviewConnection | undefined;
   }>({ query: listReviews });
 
-  return <DataEditor<ReadonlyArray<Review | null> | undefined> data={data?.listReviews?.items} />;
+  // return <DataEditor<ReadonlyArray<Review | null> | undefined> data={data?.listReviews?.items} />;
+  return <div>hi</div>;
 }
