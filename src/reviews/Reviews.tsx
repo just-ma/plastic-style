@@ -24,7 +24,9 @@ export default function Reviews(): React.ReactElement {
 
   return (
     <div>
-      {data?.listReviews?.items.map((review) => (review ? <ReviewListItem key={review.id} review={review} /> : null))}
+      {data?.listReviews?.items
+        .sort((a, b) => (b?.createdAt || 0) - (a?.createdAt || 0))
+        .map((review) => (review ? <ReviewListItem key={review.id} review={review} /> : null))}
     </div>
   );
 }
