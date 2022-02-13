@@ -6,6 +6,7 @@ export const getReview = /* GraphQL */ `
   query GetReview($id: ID!) {
     getReview(id: $id) {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -26,6 +27,7 @@ export const listReviews = /* GraphQL */ `
     listReviews(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        reviewId
         title
         artist
         recordLabel
@@ -43,6 +45,7 @@ export const getFeature = /* GraphQL */ `
   query GetFeature($id: ID!) {
     getFeature(id: $id) {
       id
+      featureId
       title
       description
       author
@@ -62,6 +65,7 @@ export const listFeatures = /* GraphQL */ `
     listFeatures(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        featureId
         title
         description
         author
@@ -78,6 +82,8 @@ export const getListItem = /* GraphQL */ `
   query GetListItem($id: ID!) {
     getListItem(id: $id) {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -97,6 +103,8 @@ export const listListItems = /* GraphQL */ `
     listListItems(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        listItemId
+        listId
         rank
         artist
         title
@@ -113,20 +121,12 @@ export const getList = /* GraphQL */ `
   query GetList($id: ID!) {
     getList(id: $id) {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -141,20 +141,12 @@ export const listLists = /* GraphQL */ `
     listLists(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        listId
         author
         title
         description
         image
-        items {
-          id
-          rank
-          artist
-          title
-          image
-          content
-          createdAt
-          updatedAt
-        }
+        itemIds
         createdAt
         updatedAt
       }
@@ -166,6 +158,8 @@ export const getPodcastEpisode = /* GraphQL */ `
   query GetPodcastEpisode($id: ID!) {
     getPodcastEpisode(id: $id) {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -185,6 +179,8 @@ export const listPodcastEpisodes = /* GraphQL */ `
     listPodcastEpisodes(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        episodeId
+        podcastId
         title
         description
         image
@@ -201,22 +197,14 @@ export const getPodcastSeason = /* GraphQL */ `
   query GetPodcastSeason($id: ID!) {
     getPodcastSeason(id: $id) {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
@@ -231,22 +219,14 @@ export const listPodcastSeasons = /* GraphQL */ `
     listPodcastSeasons(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        podcastId
         title
         seasonLabel
         description
         author
         image
         year
-        episodes {
-          id
-          title
-          description
-          image
-          link
-          author
-          createdAt
-          updatedAt
-        }
+        episodeIds
         createdAt
         updatedAt
       }

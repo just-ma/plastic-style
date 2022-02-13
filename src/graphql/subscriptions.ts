@@ -6,6 +6,7 @@ export const onCreateReview = /* GraphQL */ `
   subscription OnCreateReview {
     onCreateReview {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -21,6 +22,7 @@ export const onUpdateReview = /* GraphQL */ `
   subscription OnUpdateReview {
     onUpdateReview {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -36,6 +38,7 @@ export const onDeleteReview = /* GraphQL */ `
   subscription OnDeleteReview {
     onDeleteReview {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -51,6 +54,7 @@ export const onCreateFeature = /* GraphQL */ `
   subscription OnCreateFeature {
     onCreateFeature {
       id
+      featureId
       title
       description
       author
@@ -65,6 +69,7 @@ export const onUpdateFeature = /* GraphQL */ `
   subscription OnUpdateFeature {
     onUpdateFeature {
       id
+      featureId
       title
       description
       author
@@ -79,6 +84,7 @@ export const onDeleteFeature = /* GraphQL */ `
   subscription OnDeleteFeature {
     onDeleteFeature {
       id
+      featureId
       title
       description
       author
@@ -93,6 +99,8 @@ export const onCreateListItem = /* GraphQL */ `
   subscription OnCreateListItem {
     onCreateListItem {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -107,6 +115,8 @@ export const onUpdateListItem = /* GraphQL */ `
   subscription OnUpdateListItem {
     onUpdateListItem {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -121,6 +131,8 @@ export const onDeleteListItem = /* GraphQL */ `
   subscription OnDeleteListItem {
     onDeleteListItem {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -135,20 +147,12 @@ export const onCreateList = /* GraphQL */ `
   subscription OnCreateList {
     onCreateList {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -158,20 +162,12 @@ export const onUpdateList = /* GraphQL */ `
   subscription OnUpdateList {
     onUpdateList {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -181,20 +177,12 @@ export const onDeleteList = /* GraphQL */ `
   subscription OnDeleteList {
     onDeleteList {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -204,6 +192,8 @@ export const onCreatePodcastEpisode = /* GraphQL */ `
   subscription OnCreatePodcastEpisode {
     onCreatePodcastEpisode {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -218,6 +208,8 @@ export const onUpdatePodcastEpisode = /* GraphQL */ `
   subscription OnUpdatePodcastEpisode {
     onUpdatePodcastEpisode {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -232,6 +224,8 @@ export const onDeletePodcastEpisode = /* GraphQL */ `
   subscription OnDeletePodcastEpisode {
     onDeletePodcastEpisode {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -246,22 +240,14 @@ export const onCreatePodcastSeason = /* GraphQL */ `
   subscription OnCreatePodcastSeason {
     onCreatePodcastSeason {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
@@ -271,22 +257,14 @@ export const onUpdatePodcastSeason = /* GraphQL */ `
   subscription OnUpdatePodcastSeason {
     onUpdatePodcastSeason {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
@@ -296,22 +274,14 @@ export const onDeletePodcastSeason = /* GraphQL */ `
   subscription OnDeletePodcastSeason {
     onDeletePodcastSeason {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }

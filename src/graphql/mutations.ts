@@ -9,6 +9,7 @@ export const createReview = /* GraphQL */ `
   ) {
     createReview(input: $input, condition: $condition) {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -27,6 +28,7 @@ export const updateReview = /* GraphQL */ `
   ) {
     updateReview(input: $input, condition: $condition) {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -45,6 +47,7 @@ export const deleteReview = /* GraphQL */ `
   ) {
     deleteReview(input: $input, condition: $condition) {
       id
+      reviewId
       title
       artist
       recordLabel
@@ -63,6 +66,7 @@ export const createFeature = /* GraphQL */ `
   ) {
     createFeature(input: $input, condition: $condition) {
       id
+      featureId
       title
       description
       author
@@ -80,6 +84,7 @@ export const updateFeature = /* GraphQL */ `
   ) {
     updateFeature(input: $input, condition: $condition) {
       id
+      featureId
       title
       description
       author
@@ -97,6 +102,7 @@ export const deleteFeature = /* GraphQL */ `
   ) {
     deleteFeature(input: $input, condition: $condition) {
       id
+      featureId
       title
       description
       author
@@ -114,6 +120,8 @@ export const createListItem = /* GraphQL */ `
   ) {
     createListItem(input: $input, condition: $condition) {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -131,6 +139,8 @@ export const updateListItem = /* GraphQL */ `
   ) {
     updateListItem(input: $input, condition: $condition) {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -148,6 +158,8 @@ export const deleteListItem = /* GraphQL */ `
   ) {
     deleteListItem(input: $input, condition: $condition) {
       id
+      listItemId
+      listId
       rank
       artist
       title
@@ -165,20 +177,12 @@ export const createList = /* GraphQL */ `
   ) {
     createList(input: $input, condition: $condition) {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -191,20 +195,12 @@ export const updateList = /* GraphQL */ `
   ) {
     updateList(input: $input, condition: $condition) {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -217,20 +213,12 @@ export const deleteList = /* GraphQL */ `
   ) {
     deleteList(input: $input, condition: $condition) {
       id
+      listId
       author
       title
       description
       image
-      items {
-        id
-        rank
-        artist
-        title
-        image
-        content
-        createdAt
-        updatedAt
-      }
+      itemIds
       createdAt
       updatedAt
     }
@@ -243,6 +231,8 @@ export const createPodcastEpisode = /* GraphQL */ `
   ) {
     createPodcastEpisode(input: $input, condition: $condition) {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -260,6 +250,8 @@ export const updatePodcastEpisode = /* GraphQL */ `
   ) {
     updatePodcastEpisode(input: $input, condition: $condition) {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -277,6 +269,8 @@ export const deletePodcastEpisode = /* GraphQL */ `
   ) {
     deletePodcastEpisode(input: $input, condition: $condition) {
       id
+      episodeId
+      podcastId
       title
       description
       image
@@ -294,22 +288,14 @@ export const createPodcastSeason = /* GraphQL */ `
   ) {
     createPodcastSeason(input: $input, condition: $condition) {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
@@ -322,22 +308,14 @@ export const updatePodcastSeason = /* GraphQL */ `
   ) {
     updatePodcastSeason(input: $input, condition: $condition) {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
@@ -350,22 +328,14 @@ export const deletePodcastSeason = /* GraphQL */ `
   ) {
     deletePodcastSeason(input: $input, condition: $condition) {
       id
+      podcastId
       title
       seasonLabel
       description
       author
       image
       year
-      episodes {
-        id
-        title
-        description
-        image
-        link
-        author
-        createdAt
-        updatedAt
-      }
+      episodeIds
       createdAt
       updatedAt
     }
