@@ -2,8 +2,17 @@ import { Feature } from './types';
 
 import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpg';
 import ANGEL_THUMBNAIL from '../../images/thumbnails/angel-thumbnail.jpg';
+import DESTROYER_THUMBNAIL from '../../images/thumbnails/destroyer-thumbnail.jpg';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'destroyer-new-singles',
+    title: 'Song of The Day: “Eat The Wine, Drink The Bread” / “Tintoretto, It’s For You” by Destroyer',
+    author: 'Parker Albert',
+    createdAt: 1645556387,
+    image: DESTROYER_THUMBNAIL,
+    content: `Masquerading is beyond fashionable in music these days – artists will adopt well-worn aesthetics at the drop of a good rebrand. Dan Bejar knows and exploits this – every few years or so he throws on a new cloak of sound, allowing Destroyer to still feel vital in its twenty-third year as a project. "Drink the Wine Eat the Bread" is the only Destroyer track I know that starts with a drum solo, introducing a common Bejar progression redressed in the more danceable digs of mutant disco. Post-punk stylings are all the rage right now but Bejar manages to make something fresh out of them: on "Tintoretto It's For You" a slow and cold Gang of Four-esque stomp is swept into a doom spiral of danger-in-the-club synths. It's the most raucous Destroyer track in years; prepare to be on your toes for the upcoming album.<br></br>Support Destroyer on <a href="https://destroyer.bandcamp.com/album/labyrinthitis" target="_blank" rel="noreferrer"><u>Bandcamp</u></a>`,
+  },
   {
     id: 'fire-toolz-interview',
     title: 'Fire-Toolz Interview',
