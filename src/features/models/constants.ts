@@ -3,8 +3,16 @@ import { Feature } from './types';
 import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpg';
 import ANGEL_THUMBNAIL from '../../images/thumbnails/angel-thumbnail.jpg';
 import DESTROYER_THUMBNAIL from '../../images/thumbnails/destroyer-thumbnail.jpg';
-
+import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'dltzk-movies-for-guys',
+    title: 'Song of The Day: “movies for guys" by dltzk',
+    author: 'Parker Albert',
+    createdAt: 1645647766,
+    image: FRAILTY_THUMBNAIL,
+    content: `I am certain that the first thought to flash through the mind of any sentient being when “Movies For Guys'' takes its initial trip down their ear canals will be precisely this: <em>damn what a banger</em>. The song’s got instant swagger; its jagged beat sways recklessly on the breathtaking precipice teens find themselves when harboring an unrequited crush – a volatile ‘I don’t need you anyway’ kinda attitude. 18-year old Zeke’s heartbroken adrenaline soon gets the best of them, though, and they careen into one hell of an emotional fallout. The explosion starts with an angsty, distortingly warbling bassdrop; a few seconds of tender, crying in the pillow pianos the eye of the hurricane before it’s all blown to a fuck, my universe is imploding, M83-sized grandness of crashing cymbals and spacefaring synths. Finally we land back in a tear-ridden bed and Zeke’s still plucking away at a despondent bass riff but now with some kind of resolve: “I don't really wanna be someone that gets in your way/But I won't let it slide past my face, what you said yesterday.” The track’s restlessness is bound to cause whiplash, but that’s kind of the point. “Movies For Guys” and <a href="https://dltzk.bandcamp.com/album/frailty-2" target="_blank" rel="noreferrer"><u><em>Frailty</em></u></a><em></em> as a whole use a heapload of varied electronic textures, rapid tone switches, and a knack for heart on the sleeve cinematics to map out the minutiae of adolescent emotion with remarkable accuracy.`,
+  },
   {
     id: 'destroyer-new-singles',
     title: 'Song of The Day: “Eat The Wine, Drink The Bread” / “Tintoretto, It’s For You” by Destroyer',
