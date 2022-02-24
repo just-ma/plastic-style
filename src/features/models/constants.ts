@@ -4,7 +4,16 @@ import BILLY_THUMBNAIL from '../../images/thumbnails/billy-thumbnail.jpg';
 import ANGEL_THUMBNAIL from '../../images/thumbnails/angel-thumbnail.jpg';
 import DESTROYER_THUMBNAIL from '../../images/thumbnails/destroyer-thumbnail.jpg';
 import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
+import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'dltzk-movies-for-guys',
+    title: 'Song of The Day: “Concorde" by Black Country, New Road',
+    author: 'Ben Langdon',
+    createdAt: 1645745109,
+    image: CONCORDE_THUMBNAIL,
+    content: `I am enjoying “Concorde,” the obvious hit off of Black Country, New Road’s second album <em>Ants From Up There</em>. This six minute epic breezes through its runtime, delicately balancing their pretensions with warmth and sympathy. Lead singer Isaac Wood’s vocal performance reminds me of peak Connor Oberst – the theatrical nature of the track’s patient buildup and inevitable clash could come straight out of <em>I’m Wide Awake, It’s Morning</em>. It is a case of staggering musicality that this art rock outfit can casually drop a classic in a different genre while retaining their identity.`,
+  },
   {
     id: 'dltzk-movies-for-guys',
     title: 'Song of The Day: “movies for guys" by dltzk',
