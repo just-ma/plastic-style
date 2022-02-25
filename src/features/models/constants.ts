@@ -7,7 +7,7 @@ import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
 import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
-    id: 'dltzk-movies-for-guys',
+    id: 'concorde-black-country-new-road',
     title: 'Song of The Day: “Concorde" by Black Country, New Road',
     author: 'Ben Langdon',
     createdAt: 1645745109,
