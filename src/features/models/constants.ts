@@ -9,7 +9,7 @@ import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'totsouko-and-illy-at',
-    title: 'Song of The Day: “Where is this place?" by Black Country, New Road',
+    title: 'Song of The Day: “Where is this place?" by Totsouko & illy',
     author: 'Parker Albert',
     createdAt: 1645840032,
     image: AT_THUMBNAIL,
