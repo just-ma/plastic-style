@@ -5,7 +5,16 @@ import ANGEL_THUMBNAIL from '../../images/thumbnails/angel-thumbnail.jpg';
 import DESTROYER_THUMBNAIL from '../../images/thumbnails/destroyer-thumbnail.jpg';
 import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
 import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
+import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'totsouko-and-illy-at',
+    title: 'Song of The Day: “Where is this place?" by Black Country, New Road',
+    author: 'Parker Albert',
+    createdAt: 1645840032,
+    image: AT_THUMBNAIL,
+    content: `The chopped-up, pitch-altered vocal samples on “Where is this place?” declare “space is the place,” but the way they’re altered makes it seem like they’re being chewed and spat back out of a black hole, and makes me think that if this place <em>is </em>space, it’s not a place I want to be. “Where is this place?” is the most cluttered track on Totsouko and Illy’s collaborative album <em>AT</em>, but that’s not saying much – the songs are disconcertingly void-like, so empty that instead of the work of two people it feels like discarded studio scraps have come together to create their own micro ecosystem. Restraint makes the shrill sirens, ominous synths, and fractured vocals of “Where is this place?” all the more frightening.<br></br>Support this project on <a href="https://totsouko.bandcamp.com/album/at"><u>Bandcamp</u></a>`,
+  },
   {
     id: 'concorde-black-country-new-road',
     title: 'Song of The Day: “Concorde" by Black Country, New Road',
