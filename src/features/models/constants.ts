@@ -6,10 +6,20 @@ import DESTROYER_THUMBNAIL from '../../images/thumbnails/destroyer-thumbnail.jpg
 import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
 import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
 import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
+import DAWN_THUMBNAIL from '../../images/thumbnails/slapp-happy-dawn-thumbnail.jpg';
+
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
+    id: 'slapp-happy-dawn',
+    title: 'Song of The Day: “Dawn” by Slapp Happy',
+    author: 'Parker Albert',
+    createdAt: 1646076623,
+    image: DAWN_THUMBNAIL,
+    content: `Faust-adjacent art pop group Slapp Happy exist in the liminal space between disdain and studied adherence for the pop format. While some of their tracks feel unenthusiastically put together, they never lack craft. Dagmar Krause’s vocals in particular elevate the group’s pretensions into something remarkable. “Dawn” is a personal highlight off of their most recognizable album,<em> Casablanca Moon. </em>The cinematic quality of the arrangement is striking: the horns at the forefront provide this dust-caked western drive, while the nimble guitar roaming in the background provides the surface level sheen of a Bond film. Lyrically we are dropped right in the middle of action, an unspecified chase involving a rather urbane cowboy. While each member had other musical ambitions, they sure did make some wonderful pop songs.`,
+  },
+  {
     id: 'totsouko-and-illy-at',
-    title: 'Song of The Day: “Where is this place?" by Totsouko & illy',
+    title: 'Song of The Day: “Where is this place?” by Totsouko & illy',
     author: 'Parker Albert',
     createdAt: 1645840032,
     image: AT_THUMBNAIL,
@@ -17,7 +27,7 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   },
   {
     id: 'concorde-black-country-new-road',
-    title: 'Song of The Day: “Concorde" by Black Country, New Road',
+    title: 'Song of The Day: “Concorde” by Black Country, New Road',
     author: 'Ben Langdon',
     createdAt: 1645745109,
     image: CONCORDE_THUMBNAIL,
@@ -25,7 +35,7 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   },
   {
     id: 'dltzk-movies-for-guys',
-    title: 'Song of The Day: “movies for guys" by dltzk',
+    title: 'Song of The Day: “movies for guys” by dltzk',
     author: 'Parker Albert',
     createdAt: 1645647766,
     image: FRAILTY_THUMBNAIL,
