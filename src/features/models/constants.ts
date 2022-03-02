@@ -7,8 +7,16 @@ import FRAILTY_THUMBNAIL from '../../images/thumbnails/frailty-thumbnail.jpg';
 import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
 import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
 import DAWN_THUMBNAIL from '../../images/thumbnails/slapp-happy-dawn-thumbnail.jpg';
-
+import CHUCKLE_THUMBNAIL from '../../images/thumbnails/chuckle-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'alpha-maid-chuckle',
+    title: 'EP of The Day: “CHUCKLE” by Alpha Maid',
+    author: 'Parker Albert',
+    createdAt: 1646181509,
+    image: CHUCKLE_THUMBNAIL,
+    content: `Texture, time, and the art of surprise. Alpha Maid, aka Leisha Thomas, uses all of these tools in spades on her 2021 EP <em>CHUCKLE</em>. Guitars chime like bells that choke mid-ring; trumpets dissolve into sirens. “Hungry, healthy, no time to eat,” she cries, fueling confusion into the quickly shifting flickers that pose as songs. Melodies give way to madness, and it's never quite clear where Thomas is headed. "Doggy" jitters with a broken riff, an obscured stutter that ends the EP on an uneasy question. Listen enough times, though, and each unexpected turn becomes natural, a strange comfort of kinship with the unknown.<br></br>Support Alpha Maid on <a href="https://canvas-index.bandcamp.com/album/chuckle"><u>Bandcamp</u></a>`,
+  },
   {
     id: 'slapp-happy-dawn',
     title: 'Song of The Day: “Dawn” by Slapp Happy',
