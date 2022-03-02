@@ -8,7 +8,16 @@ import CONCORDE_THUMBNAIL from '../../images/thumbnails/concorde-thumbnail.jpg';
 import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
 import DAWN_THUMBNAIL from '../../images/thumbnails/slapp-happy-dawn-thumbnail.jpg';
 import CHUCKLE_THUMBNAIL from '../../images/thumbnails/chuckle-thumbnail.jpg';
+import FLOWERS_THUMBNAIL from '../../images/thumbnails/flowers-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'big-thief-flower',
+    title: 'Song of The Day: “Flower” by Big Thief',
+    author: 'Ben Langdon',
+    createdAt: 1646256339,
+    image: FLOWERS_THUMBNAIL,
+    content: `For my money, the best track on Big Thief’s splendid new album <em>Dragon New Warm Mountain I Believe In You</em> is buried halfway through. “Flower of Blood” is a slow burning epic showcasing the outfits more adventurous side, sonically reminiscent of 80’s alt-rock and the last decade of bedroom pop while remaining fresh. The rather straightforward understated lyrics “Hearing you sigh soft and heavy/ Holding mine 'til you feel ready” give the track time to breathe and work as a complement to the rather driven instrumentation. This is a song showcasing Big Thief as a cohesive rock outfit rather than the more folk inspired Lenker vehicles that can be found across <em>DNWMIBIY</em>, and I am sure will sound great in a festival environment. “Flower of Blood '' is a <em>vibe </em>not a statement, this is a track you want companioning late night drives and special moments. For a band often taken too seriously in its weighty concepts this is a nice change of pace.<br></br>We have also published a mini review of Big Thief’s new album <em>Dragon New Warm Mountain I Believe In You</em> that can be found <a href="https://www.plasticstyle.net/reviews/big-thief-dragon-new-warm-mountain-i-believe-in-you"><u>here</u></a>.`,
+  },
   {
     id: 'alpha-maid-chuckle',
     title: 'EP of The Day: “CHUCKLE” by Alpha Maid',
