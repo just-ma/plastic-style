@@ -9,7 +9,16 @@ import AT_THUMBNAIL from '../../images/thumbnails/at-thumbnail.jpg';
 import DAWN_THUMBNAIL from '../../images/thumbnails/slapp-happy-dawn-thumbnail.jpg';
 import CHUCKLE_THUMBNAIL from '../../images/thumbnails/chuckle-thumbnail.jpg';
 import FLOWERS_THUMBNAIL from '../../images/thumbnails/flowers-thumbnail.jpg';
+import HURRAH_THUMBNAIL from '../../images/thumbnails/hurrah-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'hurrah-let-it-be-her',
+    title: 'Song of The Day: “Let It Be Her” by Hurrah',
+    author: 'Parker Albert',
+    createdAt: 1646684808,
+    image: HURRAH_THUMBNAIL,
+    content: `As I was leafing through the wonderful <a href="https://www.sproutology.co.uk/"><u>Sproutology</u></a> site to conduct research for my upcoming Prefab Sprout article, I stumbled across a little band called Hurrah!. They were the first band to sign to Kitchenware, the label home to Prefab Sprout, and it’s clear the two bands were cut from similar cloths: the lead singer for Hurrah! (Paul Handyside) carries much of the same emotional affect in his voice as Prefab’s singer Paddy McAloon. But Hurrah! never quite saw the success of Prefab Sprout and their material is quite tough to find on online streaming. One song of theirs that I was able to discover is <a href="https://www.youtube.com/watch?v=mOybuxbL104"><u>“Let It Be Her”</u></a> from 1989. The track’s built on pretty standard jangle-pop guitars, backed by chugging strums that conjure the same tone as overdone smolder on the album’s cover. But the pre-chorus uses the same bold, ringing chord as one of Prefab Sprout’s most overlooked tracks <a href="https://www.youtube.com/watch?v=zVoJDXdDgLU"><u>“The Golden Calf,”</u></a> &nbsp;while chorus is a powerhouse in its own: Handyside wails “Please let it be her” like it’s a rollercoaster, launching the song to new anthemic heights. The anthem never found its audience, but there’s a certain appeal to discovering an obscure track that never quite filled the shoes it wanted to wear.`,
+  },
   {
     id: 'big-thief-flower',
     title: 'Song of The Day: “Flower” by Big Thief',
