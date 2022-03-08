@@ -10,7 +10,16 @@ import DAWN_THUMBNAIL from '../../images/thumbnails/slapp-happy-dawn-thumbnail.j
 import CHUCKLE_THUMBNAIL from '../../images/thumbnails/chuckle-thumbnail.jpg';
 import FLOWERS_THUMBNAIL from '../../images/thumbnails/flowers-thumbnail.jpg';
 import HURRAH_THUMBNAIL from '../../images/thumbnails/hurrah-thumbnail.jpg';
+import PULP_THUMBNAIL from '../../images/thumbnails/pulp-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'pulp-do-you-remember-the-first-time',
+    title: 'Song of The Day: “Do You Remember The First Time?” by Pulp',
+    author: 'Ben Langdon',
+    createdAt: 1646774385,
+    image: PULP_THUMBNAIL,
+    content: `I would like to continue the thread of yesterday's unnoticed anthem by introducing a track that did find its audience. “Do You Remember The First Time?” remains one of Pulps signature tracks, the second single off of their breakthrough album <em>His ‘n’ Hers</em>. By the time of their success, Jarvis Cocker had been in Pulp for half of his life. A picture is painted of a botched first sexual experience, and the jealousies and desires – both realized and incomplete – that spring from that instance. By looking back on an era of youthful inexperience with world weariness and acidity, “Do You Remember The First Time?” ties off the band's first fifteen years with a ribbon. Regardless of how petulant the subject matter is, though, the track’s soaring and intimate chorus has an unmet verve that sends me into hysterics almost three decades later. Jarvis Cocker would deliver more refined anthems in later albums, but the scrappier package has an underdog appeal that, at least sentimentally, reaches the heights of later achievements.`,
+  },
   {
     id: 'hurrah-let-it-be-her',
     title: 'Song of The Day: “Let It Be Her” by Hurrah',
