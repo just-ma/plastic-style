@@ -11,7 +11,16 @@ import CHUCKLE_THUMBNAIL from '../../images/thumbnails/chuckle-thumbnail.jpg';
 import FLOWERS_THUMBNAIL from '../../images/thumbnails/flowers-thumbnail.jpg';
 import HURRAH_THUMBNAIL from '../../images/thumbnails/hurrah-thumbnail.jpg';
 import PULP_THUMBNAIL from '../../images/thumbnails/pulp-thumbnail.jpg';
+import CRANK_THUMBNAIL from '../../images/thumbnails/crank-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'catherine-wheel-crank',
+    title: 'Song of The Day: “Crank” by Catherine Wheel',
+    author: 'Ben Langdon',
+    createdAt: 1647372822,
+    image: CRANK_THUMBNAIL,
+    content: `While not the most storied band in 90’s shoegaze, Catherine Wheel are a heavy music touchstone with a passionate following. Their sound is a unique blend of heavy rock and alternative-pedal-tomfoolery that is only becoming more influential as metal infused shoegaze becomes a bigger movement. For my money, bands like Nothing and DIIV take a lot more from this sound than the usual suspects, MBV and Slowdive. One of Catherine Wheel’s signature songs, “Crank” was almost the title track to their second and most popular album <em>Chrome</em>. One listen and you can hear why, this is easily the most accessible and instantly gratifying cut on the album. “Crank” takes the band's heavier fixations and drapes them over smoldering power pop to create true bliss; the leanness and utility of its composition is something to marvel at.`,
+  },
   {
     id: 'pulp-do-you-remember-the-first-time',
     title: 'Song of The Day: “Do You Remember The First Time?” by Pulp',
