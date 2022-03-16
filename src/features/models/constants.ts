@@ -12,7 +12,16 @@ import FLOWERS_THUMBNAIL from '../../images/thumbnails/flowers-thumbnail.jpg';
 import HURRAH_THUMBNAIL from '../../images/thumbnails/hurrah-thumbnail.jpg';
 import PULP_THUMBNAIL from '../../images/thumbnails/pulp-thumbnail.jpg';
 import CRANK_THUMBNAIL from '../../images/thumbnails/crank-thumbnail.jpg';
+import YEULE_THUMBNAIL from '../../images/thumbnails/yeule-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'yeule-dont-be-so-hard-on-your-own-beauty',
+    title: "Song of The Day: “Don't Be So Hard On Your Own Beauty” by Yeule",
+    author: 'Parker Albert',
+    createdAt: 1647433694,
+    image: YEULE_THUMBNAIL,
+    content: `Yeule is dejected throughout their second album <em>Glitch Princess</em>. Anxious thoughts manifest as tarnished hyperpop that, as a result of the paralyzing distortion and malfunctioning electronics that cut through the record, doesn’t feel so hyper. One method of escape from this haze is attempted on “Electric” – Nat Ćmiel rises above despondency with a high-pitched wail, but their voice is still coated in digital effects that mask their true self. The most bare song on <em>Glitch Princess</em> is the most affecting: “Don’t Be So Hard On Your Own Beauty” is built by honeyed acoustic strums and two strands of Ćmiel’s voice, more unadorned than anywhere else on the record. Here a friend joins Ćmiel in the dark, lighting a match to guide them back to their lost self-worth. The vocals are mostly one-note, they’re breathless, grueling strides towards something brighter, a journey impossible taken alone: “Fall again, you pick up all my guts/Spilling out, bruised up, bloodied up.” Much of <em>Glitch Princess </em>is spent searching for an oasis, somewhere to rest one’s head. On this track, Yeule finds it. <br></br> Support Yeule on <a href="https://yeule.bandcamp.com/album/glitch-princess" target="_blank" rel="noreferrer"><u>Bandcamp</u></a>`,
+  },
   {
     id: 'catherine-wheel-crank',
     title: 'Song of The Day: “Crank” by Catherine Wheel',
