@@ -13,7 +13,16 @@ import HURRAH_THUMBNAIL from '../../images/thumbnails/hurrah-thumbnail.jpg';
 import PULP_THUMBNAIL from '../../images/thumbnails/pulp-thumbnail.jpg';
 import CRANK_THUMBNAIL from '../../images/thumbnails/crank-thumbnail.jpg';
 import YEULE_THUMBNAIL from '../../images/thumbnails/yeule-thumbnail.jpg';
+import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'my-dad-is-dead-babys-got-a-problem',
+    title: "Song of The Day: “Baby's Got A Problem” by My Dead Is Dead",
+    author: 'Ben Langdon',
+    createdAt: 1647558346,
+    image: DAD_THUMBNAIL,
+    content: `My Dad is Dead’s most recognized album <em>Let’s Skip the Details </em>is a notably dark and inhospitable work even within the realm of post punk. As the title suggests, one of the work's main preoccupations is the many ways in which communication can fail us, and how attempts at mutual understanding can further isolate. Album opener “Baby’s Got a Problem” is the greatest statement in this regard. By dancing around the true nature of our subject’s wounds, project frontman Mark Edwards dwells on the intangible ways that past trauma stays with us and affects our future relationships. Heavy stuff. The album is also notable for beefing up the group from a solo project to a full backing band, and the sound benefits greatly from it. <em>Let’s Skip the Details </em>dwells between the abrasive bile of Big Black and the more accessible jangle projects of R.E.M. and Camper Van Beethoven, and as a result, Mark Edwards makes damage sound pretty damn captivating.`,
+  },
   {
     id: 'yeule-dont-be-so-hard-on-your-own-beauty',
     title: "Song of The Day: “Don't Be So Hard On Your Own Beauty” by Yeule",
