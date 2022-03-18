@@ -14,7 +14,16 @@ import PULP_THUMBNAIL from '../../images/thumbnails/pulp-thumbnail.jpg';
 import CRANK_THUMBNAIL from '../../images/thumbnails/crank-thumbnail.jpg';
 import YEULE_THUMBNAIL from '../../images/thumbnails/yeule-thumbnail.jpg';
 import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
+import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'dog-faced-hermans-john-henry',
+    title: 'Song of The Day: “John Henry” by Dog Faced Hermans',
+    author: 'Parker Albert',
+    createdAt: 1647626746,
+    image: HERMAN_THUMBNAIL,
+    content: `“John Henry” is a folk song gone wrong. The track is fashioned from the traditional Scots ballad “Lass of Roch Royal,” with original lyrics that tell the tall tale of the steel driver <a href="https://www.nps.gov/neri/planyourvisit/the-legend-of-john-henry-talcott-wv.htm"><u>John Henry</u></a> – an American legend who bested a steam drill in a competition at the price of his own life. “John Henry” starts menacingly enough, with a dark drone and an autoharp played nervously. But as singer Marion Coutts plows through the verses, the song’s sanity is chipped away at more and more with loopy percussion, chunks of sparking guitar, and a wiry fiddle desperate to keep grasp of the track’s folksy roots. Coutts finishes the tale with the death of Henry on the mountain, mimicked by the song’s rapid acceleration like the last furious heartbeats of the overworked steel driver, and then the inevitable slowdown and collapse. “John Henry” is able to deconstruct folk song structure while staying true to the oft-told legend behind the lyrics.`,
+  },
   {
     id: 'my-dad-is-dead-babys-got-a-problem',
     title: "Song of The Day: “Baby's Got A Problem” by My Dead Is Dead",
