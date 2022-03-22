@@ -15,7 +15,16 @@ import CRANK_THUMBNAIL from '../../images/thumbnails/crank-thumbnail.jpg';
 import YEULE_THUMBNAIL from '../../images/thumbnails/yeule-thumbnail.jpg';
 import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
+import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'mj-lenderman-TLC-Cagematch',
+    title: 'Song of The Day: “TLC Cagematch” by Dog Faced Hermans',
+    author: 'Ben Langdon',
+    createdAt: 1647990504,
+    image: MJ_THUMBNAIL,
+    content: `Asheville’s MJ Lenderman has been quite prolific these last few years, from numerous solo outings to playing guitar for Wednesday. His upcoming album <em>Boat Songs</em> is shaping up to be quite an exciting release. Lenderman excels at painting vividly empathetic and humane characters with his off-kilter brand of Americana, and newest single “TLC Cagematch” does all that and more, handling the image of an aging professional wrestler with grace and confidence. Xandy Chelmis (also of Wednesday) is on lapsteel, providing some much welcomed flair to this slow burning tearjerker. Give it a spin <a href="https://mjlenderman.bandcamp.com/album/boat-songs"><u>here</u></a>.`,
+  },
   {
     id: 'dog-faced-hermans-john-henry',
     title: 'Song of The Day: “John Henry” by Dog Faced Hermans',
