@@ -16,7 +16,16 @@ import YEULE_THUMBNAIL from '../../images/thumbnails/yeule-thumbnail.jpg';
 import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
+import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'wire-i-am-the-fly',
+    title: 'Song of The Day: “I Am The Fly” by Wire',
+    author: 'Parker Albert',
+    createdAt: 1648148112,
+    image: WIRE_THUMBNAIL,
+    content: `Wire’s first album <em>Pink Flag </em>is seminal because it takes a handful of simple tools – guitars made of sandpaper, rapid, ladder-like chants, cryptic lyrics – and smashes them together to form economic punk songs, with the mission to discover new ways to shape an anthem. Their follow-up <em>Chairs Missing </em>eclipses <em>Pink Flag </em>by toying with not only song structure, but <em>mood</em>. An obvious example is “I Feel Mysterious Today,” a lurking, drumless creeper of a track fit for dark alleys. "I Am The Fly" kicks the cosplay up a notch with a character study on the household's most infamous pest – shrill guitars flit around honey-trapped synth, while singer Colin Newman fully inhabits the insect’s role: “I am the fly in the ointment/I can spread more disease than the fleas.” “I Am The Fly” becomes an anthem in its own right despite the repulsive subject matter; the song is a precursor to the seriously taken piss-takes of 90’s ironic indie rock.`,
+  },
   {
     id: 'mj-lenderman-TLC-Cagematch',
     title: 'Song of The Day: “TLC Cagematch” by Dog Faced Hermans',
