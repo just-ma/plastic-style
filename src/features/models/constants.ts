@@ -17,7 +17,16 @@ import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
+import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'greet-death-panic-song',
+    title: 'Song of The Day: “Panic Song” by Greet Death',
+    author: 'Ben Langdon',
+    createdAt: 1648585416,
+    image: PANIC_THUMBNAIL,
+    content: `Greet Death doesn’t miss. The Michigan based band have spent the last several months releasing singles sporadically, with the most recent, “Panic Song”, being perhaps the greatest. While this breezy and textured pop anthem is most reminiscent of The Lemonheads and earlier MBV, it still integrates their midwestern identity. This is the kind of short and direct pop song Husker Dü was releasing later in their career. When taken as a whole, these singles suggest a new and refined direction for a group that was already putting most shoegaze bands to shame. They are currently on <a href="https://twitter.com/deathbois/status/1506636677858709514"><u>tour</u></a>.`,
+  },
   {
     id: 'wire-i-am-the-fly',
     title: 'Song of The Day: “I Am The Fly” by Wire',
@@ -28,7 +37,7 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   },
   {
     id: 'mj-lenderman-TLC-Cagematch',
-    title: 'Song of The Day: “TLC Cagematch” by Dog Faced Hermans',
+    title: 'Song of The Day: “TLC Cagematch” by MJ Lenderman',
     author: 'Ben Langdon',
     createdAt: 1647990504,
     image: MJ_THUMBNAIL,
