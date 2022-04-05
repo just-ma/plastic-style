@@ -23,7 +23,7 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
     id: 'greet-death-panic-song',
     title: 'Song of The Day: “Panic Song” by Greet Death',
     author: 'Ben Langdon',
-    createdAt: 1648585416,
+    createdAt: 1649119771,
     image: PANIC_THUMBNAIL,
     content: `Greet Death doesn’t miss. The Michigan based band have spent the last several months releasing singles sporadically, with the most recent, “Panic Song”, being perhaps the greatest. While this breezy and textured pop anthem is most reminiscent of The Lemonheads and earlier MBV, it still integrates their midwestern identity. This is the kind of short and direct pop song Husker Dü was releasing later in their career. When taken as a whole, these singles suggest a new and refined direction for a group that was already putting most shoegaze bands to shame. They are currently on <a href="https://twitter.com/deathbois/status/1506636677858709514"><u>tour</u></a>.`,
   },
