@@ -12,6 +12,9 @@
       {
         "mode": "AMAZON_COGNITO_USER_POOLS",
         "cognitoUserPoolId": "authplasticstyle330f323d"
+      },
+      {
+        "mode": "AWS_IAM"
       }
     ]
   }

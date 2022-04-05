@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import Auth from '@aws-amplify/auth';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 import { STORAGE_USER_ACCESS_TOKEN } from '../models/constants';
 import useCheckAuth from '../hooks/useCheckAuth';
@@ -25,7 +26,7 @@ const ErrorMessage = styled.div`
   color: red;
 `;
 
-export default function AdminLogin(): React.ReactElement | null {
+function AdminLogin(): React.ReactElement | null {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -74,3 +75,6 @@ export default function AdminLogin(): React.ReactElement | null {
     </Container>
   );
 }
+
+// export default AdminLogin;
+export default withAuthenticator(AdminLogin);

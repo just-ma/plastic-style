@@ -15,6 +15,7 @@ export const getReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -36,6 +37,7 @@ export const listReviews = /* GraphQL */ `
         author
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -53,6 +55,7 @@ export const getFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -73,6 +76,7 @@ export const listFeatures = /* GraphQL */ `
         content
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -91,6 +95,7 @@ export const getListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -112,6 +117,7 @@ export const listListItems = /* GraphQL */ `
         content
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -129,6 +135,7 @@ export const getList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -149,6 +156,7 @@ export const listLists = /* GraphQL */ `
         itemIds
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -167,6 +175,7 @@ export const getPodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -188,6 +197,7 @@ export const listPodcastEpisodes = /* GraphQL */ `
         author
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -207,6 +217,7 @@ export const getPodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -229,6 +240,7 @@ export const listPodcastSeasons = /* GraphQL */ `
         episodeIds
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }

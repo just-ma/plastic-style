@@ -110,6 +110,7 @@ export type Review = {
   author: string,
   createdAt: number,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdateReviewInput = {
@@ -166,6 +167,7 @@ export type Feature = {
   content: string,
   createdAt: number,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdateFeatureInput = {
@@ -224,6 +226,7 @@ export type ListItem = {
   content: string,
   createdAt?: number | null,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdateListItemInput = {
@@ -280,6 +283,7 @@ export type List = {
   itemIds: Array< string >,
   createdAt: number,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdateListInput = {
@@ -338,6 +342,7 @@ export type PodcastEpisode = {
   author?: string | null,
   createdAt?: number | null,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdatePodcastEpisodeInput = {
@@ -400,6 +405,7 @@ export type PodcastSeason = {
   episodeIds: Array< string >,
   createdAt?: number | null,
   updatedAt?: string | null,
+  owner?: string | null,
 };
 
 export type UpdatePodcastSeasonInput = {
@@ -569,6 +575,7 @@ export type CreateReviewMutation = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -590,6 +597,7 @@ export type UpdateReviewMutation = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -611,6 +619,7 @@ export type DeleteReviewMutation = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -631,6 +640,7 @@ export type CreateFeatureMutation = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -651,6 +661,7 @@ export type UpdateFeatureMutation = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -671,6 +682,7 @@ export type DeleteFeatureMutation = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -692,6 +704,7 @@ export type CreateListItemMutation = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -713,6 +726,7 @@ export type UpdateListItemMutation = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -734,6 +748,7 @@ export type DeleteListItemMutation = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -754,6 +769,7 @@ export type CreateListMutation = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -774,6 +790,7 @@ export type UpdateListMutation = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -794,6 +811,7 @@ export type DeleteListMutation = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -815,6 +833,7 @@ export type CreatePodcastEpisodeMutation = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -836,6 +855,7 @@ export type UpdatePodcastEpisodeMutation = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -857,6 +877,7 @@ export type DeletePodcastEpisodeMutation = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -879,6 +900,7 @@ export type CreatePodcastSeasonMutation = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -901,6 +923,7 @@ export type UpdatePodcastSeasonMutation = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -923,6 +946,7 @@ export type DeletePodcastSeasonMutation = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -943,6 +967,7 @@ export type GetReviewQuery = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -967,6 +992,7 @@ export type ListReviewsQuery = {
       author: string,
       createdAt: number,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -988,6 +1014,7 @@ export type GetFeatureQuery = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -1011,6 +1038,7 @@ export type ListFeaturesQuery = {
       content: string,
       createdAt: number,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -1033,6 +1061,7 @@ export type GetListItemQuery = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -1057,6 +1086,7 @@ export type ListListItemsQuery = {
       content: string,
       createdAt?: number | null,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -1078,6 +1108,7 @@ export type GetListQuery = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -1101,6 +1132,7 @@ export type ListListsQuery = {
       itemIds: Array< string >,
       createdAt: number,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -1123,6 +1155,7 @@ export type GetPodcastEpisodeQuery = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -1147,6 +1180,7 @@ export type ListPodcastEpisodesQuery = {
       author?: string | null,
       createdAt?: number | null,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -1170,6 +1204,7 @@ export type GetPodcastSeasonQuery = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };
 
@@ -1195,9 +1230,14 @@ export type ListPodcastSeasonsQuery = {
       episodeIds: Array< string >,
       createdAt?: number | null,
       updatedAt?: string | null,
+      owner?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
+};
+
+export type OnCreateReviewSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreateReviewSubscription = {
@@ -1213,7 +1253,12 @@ export type OnCreateReviewSubscription = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdateReviewSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdateReviewSubscription = {
@@ -1229,7 +1274,12 @@ export type OnUpdateReviewSubscription = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeleteReviewSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeleteReviewSubscription = {
@@ -1245,7 +1295,12 @@ export type OnDeleteReviewSubscription = {
     author: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnCreateFeatureSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreateFeatureSubscription = {
@@ -1260,7 +1315,12 @@ export type OnCreateFeatureSubscription = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdateFeatureSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdateFeatureSubscription = {
@@ -1275,7 +1335,12 @@ export type OnUpdateFeatureSubscription = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeleteFeatureSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeleteFeatureSubscription = {
@@ -1290,7 +1355,12 @@ export type OnDeleteFeatureSubscription = {
     content: string,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnCreateListItemSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreateListItemSubscription = {
@@ -1306,7 +1376,12 @@ export type OnCreateListItemSubscription = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdateListItemSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdateListItemSubscription = {
@@ -1322,7 +1397,12 @@ export type OnUpdateListItemSubscription = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeleteListItemSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeleteListItemSubscription = {
@@ -1338,7 +1418,12 @@ export type OnDeleteListItemSubscription = {
     content: string,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnCreateListSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreateListSubscription = {
@@ -1353,7 +1438,12 @@ export type OnCreateListSubscription = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdateListSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdateListSubscription = {
@@ -1368,7 +1458,12 @@ export type OnUpdateListSubscription = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeleteListSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeleteListSubscription = {
@@ -1383,7 +1478,12 @@ export type OnDeleteListSubscription = {
     itemIds: Array< string >,
     createdAt: number,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnCreatePodcastEpisodeSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreatePodcastEpisodeSubscription = {
@@ -1399,7 +1499,12 @@ export type OnCreatePodcastEpisodeSubscription = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdatePodcastEpisodeSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdatePodcastEpisodeSubscription = {
@@ -1415,7 +1520,12 @@ export type OnUpdatePodcastEpisodeSubscription = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeletePodcastEpisodeSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeletePodcastEpisodeSubscription = {
@@ -1431,7 +1541,12 @@ export type OnDeletePodcastEpisodeSubscription = {
     author?: string | null,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnCreatePodcastSeasonSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnCreatePodcastSeasonSubscription = {
@@ -1448,7 +1563,12 @@ export type OnCreatePodcastSeasonSubscription = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnUpdatePodcastSeasonSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnUpdatePodcastSeasonSubscription = {
@@ -1465,7 +1585,12 @@ export type OnUpdatePodcastSeasonSubscription = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
+};
+
+export type OnDeletePodcastSeasonSubscriptionVariables = {
+  owner?: string | null,
 };
 
 export type OnDeletePodcastSeasonSubscription = {
@@ -1482,5 +1607,6 @@ export type OnDeletePodcastSeasonSubscription = {
     episodeIds: Array< string >,
     createdAt?: number | null,
     updatedAt?: string | null,
+    owner?: string | null,
   } | null,
 };

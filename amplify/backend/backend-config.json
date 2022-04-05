@@ -17,6 +17,9 @@
               "userPoolConfig": {
                 "userPoolId": "authplasticstyle330f323d"
               }
+            },
+            {
+              "authenticationType": "AWS_IAM"
             }
           ]
         }

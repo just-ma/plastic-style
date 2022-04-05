@@ -18,6 +18,7 @@ export const createReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -37,6 +38,7 @@ export const updateReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -56,6 +58,7 @@ export const deleteReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -74,6 +77,7 @@ export const createFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -92,6 +96,7 @@ export const updateFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -110,6 +115,7 @@ export const deleteFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -129,6 +135,7 @@ export const createListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -148,6 +155,7 @@ export const updateListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -167,6 +175,7 @@ export const deleteListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -185,6 +194,7 @@ export const createList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -203,6 +213,7 @@ export const updateList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -221,6 +232,7 @@ export const deleteList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -240,6 +252,7 @@ export const createPodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -259,6 +272,7 @@ export const updatePodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -278,6 +292,7 @@ export const deletePodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -298,6 +313,7 @@ export const createPodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -318,6 +334,7 @@ export const updatePodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -338,6 +355,7 @@ export const deletePodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;

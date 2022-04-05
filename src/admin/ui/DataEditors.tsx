@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import RootDataEditor from './RootDataEditor';
@@ -14,9 +14,18 @@ const EditorsContainer = styled.div`
 type ComponentProps<T> = {
   data: ReadonlyArray<T>;
   onSubmit: (value: T) => void;
+  onCreate: (value: T) => void;
+  defaultItem: T;
 };
 
-export default function DataEditors<T>({ data, onSubmit }: ComponentProps<T>): React.ReactElement | null {
+export default function DataEditors<T>({
+  data,
+  onSubmit,
+  onCreate,
+  defaultItem,
+}: ComponentProps<T>): React.ReactElement | null {
+  const [newData, setNewData] = useState<T | null>(null);
+
   if (!Array.isArray(data)) {
     return null;
   }
@@ -24,8 +33,16 @@ export default function DataEditors<T>({ data, onSubmit }: ComponentProps<T>): R
   return (
     <EditorsContainer>
       {data.map((d, i) => (
-        <RootDataEditor<typeof d> key={i} data={d} onSubmit={onSubmit} />
+        <RootDataEditor<T> key={i} data={d} onSubmit={onSubmit} />
       ))}
+      {newData ? (
+        <>
+          <RootDataEditor<T> data={newData} onSubmit={onCreate} />
+          <button onClick={() => setNewData(null)}>CANCEL</button>
+        </>
+      ) : (
+        <button onClick={() => setNewData({ ...defaultItem })}>ADD ITEM</button>
+      )}
     </EditorsContainer>
   );
 }

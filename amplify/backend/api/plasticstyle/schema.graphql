@@ -1,4 +1,4 @@
-type Review @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type Review @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   reviewId: ID!
   title: String!
@@ -11,7 +11,7 @@ type Review @model @auth(rules: [{ allow: public, operations: [read] }, { allow:
   updatedAt: AWSDateTime
 }
 
-type Feature @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type Feature @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   featureId: ID!
   title: String!
@@ -23,7 +23,7 @@ type Feature @model @auth(rules: [{ allow: public, operations: [read] }, { allow
   updatedAt: AWSDateTime
 }
 
-type ListItem @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type ListItem @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   listItemId: ID!
   listId: ID!
@@ -36,7 +36,7 @@ type ListItem @model @auth(rules: [{ allow: public, operations: [read] }, { allo
   updatedAt: AWSDateTime
 }
 
-type List @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type List @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   listId: ID!
   author: String!
@@ -48,7 +48,7 @@ type List @model @auth(rules: [{ allow: public, operations: [read] }, { allow: p
   updatedAt: AWSDateTime
 }
 
-type PodcastEpisode @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type PodcastEpisode @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   episodeId: ID!
   podcastId: ID!
@@ -61,7 +61,7 @@ type PodcastEpisode @model @auth(rules: [{ allow: public, operations: [read] }, 
   updatedAt: AWSDateTime
 }
 
-type PodcastSeason @model @auth(rules: [{ allow: public, operations: [read] }, { allow: private, operations: [read, create, update, delete] }]) {
+type PodcastSeason @model @auth(rules: [{ allow: public, operations: [read] }, { allow: owner, operations: [read, create, update, delete] }]) {
   id: ID!
   podcastId: ID!
   title: String!

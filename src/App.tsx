@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Amplify } from 'aws-amplify';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
+import Auth from '@aws-amplify/auth';
 
 import awsExports from './aws-exports.js';
 
@@ -50,8 +51,10 @@ export const client = new AWSAppSyncClient({
   url: awsExports.aws_appsync_graphqlEndpoint,
   region: awsExports.aws_appsync_region,
   auth: {
-    type: AUTH_TYPE.API_KEY,
-    apiKey: awsExports.aws_appsync_apiKey,
+    type: AUTH_TYPE.AMAZON_COGNITO_USER_POOLS,
+    jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken(),
+    // type: AUTH_TYPE.API_KEY,
+    // apiKey: awsExports.aws_appsync_apiKey,
   },
 });
 

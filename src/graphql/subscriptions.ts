@@ -3,8 +3,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateReview = /* GraphQL */ `
-  subscription OnCreateReview {
-    onCreateReview {
+  subscription OnCreateReview($owner: String) {
+    onCreateReview(owner: $owner) {
       id
       reviewId
       title
@@ -15,12 +15,13 @@ export const onCreateReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateReview = /* GraphQL */ `
-  subscription OnUpdateReview {
-    onUpdateReview {
+  subscription OnUpdateReview($owner: String) {
+    onUpdateReview(owner: $owner) {
       id
       reviewId
       title
@@ -31,12 +32,13 @@ export const onUpdateReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteReview = /* GraphQL */ `
-  subscription OnDeleteReview {
-    onDeleteReview {
+  subscription OnDeleteReview($owner: String) {
+    onDeleteReview(owner: $owner) {
       id
       reviewId
       title
@@ -47,12 +49,13 @@ export const onDeleteReview = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateFeature = /* GraphQL */ `
-  subscription OnCreateFeature {
-    onCreateFeature {
+  subscription OnCreateFeature($owner: String) {
+    onCreateFeature(owner: $owner) {
       id
       featureId
       title
@@ -62,12 +65,13 @@ export const onCreateFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateFeature = /* GraphQL */ `
-  subscription OnUpdateFeature {
-    onUpdateFeature {
+  subscription OnUpdateFeature($owner: String) {
+    onUpdateFeature(owner: $owner) {
       id
       featureId
       title
@@ -77,12 +81,13 @@ export const onUpdateFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteFeature = /* GraphQL */ `
-  subscription OnDeleteFeature {
-    onDeleteFeature {
+  subscription OnDeleteFeature($owner: String) {
+    onDeleteFeature(owner: $owner) {
       id
       featureId
       title
@@ -92,12 +97,13 @@ export const onDeleteFeature = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateListItem = /* GraphQL */ `
-  subscription OnCreateListItem {
-    onCreateListItem {
+  subscription OnCreateListItem($owner: String) {
+    onCreateListItem(owner: $owner) {
       id
       listItemId
       listId
@@ -108,12 +114,13 @@ export const onCreateListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateListItem = /* GraphQL */ `
-  subscription OnUpdateListItem {
-    onUpdateListItem {
+  subscription OnUpdateListItem($owner: String) {
+    onUpdateListItem(owner: $owner) {
       id
       listItemId
       listId
@@ -124,12 +131,13 @@ export const onUpdateListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteListItem = /* GraphQL */ `
-  subscription OnDeleteListItem {
-    onDeleteListItem {
+  subscription OnDeleteListItem($owner: String) {
+    onDeleteListItem(owner: $owner) {
       id
       listItemId
       listId
@@ -140,12 +148,13 @@ export const onDeleteListItem = /* GraphQL */ `
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateList = /* GraphQL */ `
-  subscription OnCreateList {
-    onCreateList {
+  subscription OnCreateList($owner: String) {
+    onCreateList(owner: $owner) {
       id
       listId
       author
@@ -155,12 +164,13 @@ export const onCreateList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateList = /* GraphQL */ `
-  subscription OnUpdateList {
-    onUpdateList {
+  subscription OnUpdateList($owner: String) {
+    onUpdateList(owner: $owner) {
       id
       listId
       author
@@ -170,12 +180,13 @@ export const onUpdateList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteList = /* GraphQL */ `
-  subscription OnDeleteList {
-    onDeleteList {
+  subscription OnDeleteList($owner: String) {
+    onDeleteList(owner: $owner) {
       id
       listId
       author
@@ -185,12 +196,13 @@ export const onDeleteList = /* GraphQL */ `
       itemIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreatePodcastEpisode = /* GraphQL */ `
-  subscription OnCreatePodcastEpisode {
-    onCreatePodcastEpisode {
+  subscription OnCreatePodcastEpisode($owner: String) {
+    onCreatePodcastEpisode(owner: $owner) {
       id
       episodeId
       podcastId
@@ -201,12 +213,13 @@ export const onCreatePodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdatePodcastEpisode = /* GraphQL */ `
-  subscription OnUpdatePodcastEpisode {
-    onUpdatePodcastEpisode {
+  subscription OnUpdatePodcastEpisode($owner: String) {
+    onUpdatePodcastEpisode(owner: $owner) {
       id
       episodeId
       podcastId
@@ -217,12 +230,13 @@ export const onUpdatePodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeletePodcastEpisode = /* GraphQL */ `
-  subscription OnDeletePodcastEpisode {
-    onDeletePodcastEpisode {
+  subscription OnDeletePodcastEpisode($owner: String) {
+    onDeletePodcastEpisode(owner: $owner) {
       id
       episodeId
       podcastId
@@ -233,12 +247,13 @@ export const onDeletePodcastEpisode = /* GraphQL */ `
       author
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreatePodcastSeason = /* GraphQL */ `
-  subscription OnCreatePodcastSeason {
-    onCreatePodcastSeason {
+  subscription OnCreatePodcastSeason($owner: String) {
+    onCreatePodcastSeason(owner: $owner) {
       id
       podcastId
       title
@@ -250,12 +265,13 @@ export const onCreatePodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdatePodcastSeason = /* GraphQL */ `
-  subscription OnUpdatePodcastSeason {
-    onUpdatePodcastSeason {
+  subscription OnUpdatePodcastSeason($owner: String) {
+    onUpdatePodcastSeason(owner: $owner) {
       id
       podcastId
       title
@@ -267,12 +283,13 @@ export const onUpdatePodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeletePodcastSeason = /* GraphQL */ `
-  subscription OnDeletePodcastSeason {
-    onDeletePodcastSeason {
+  subscription OnDeletePodcastSeason($owner: String) {
+    onDeletePodcastSeason(owner: $owner) {
       id
       podcastId
       title
@@ -284,6 +301,7 @@ export const onDeletePodcastSeason = /* GraphQL */ `
       episodeIds
       createdAt
       updatedAt
+      owner
     }
   }
 `;

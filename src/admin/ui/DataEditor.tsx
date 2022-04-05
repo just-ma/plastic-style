@@ -9,6 +9,8 @@ const EntryListContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   font-size: 14px;
+  max-height: 400px;
+  overflow-y: auto;
 `;
 
 const EntryContainer = styled.div`
@@ -57,8 +59,14 @@ const Value = styled.div<{ isNull?: boolean }>`
     `}
 `;
 
-const Input = styled.textarea`
+const InputContainer = styled.div`
+  display: flex;
+  gap: 10px;
   width: 100%;
+`;
+
+const Input = styled.textarea`
+  flex-grow: 1;
   height: 15px;
   padding: 0;
   border: none;
@@ -68,9 +76,7 @@ const Input = styled.textarea`
 `;
 
 const DeleteItemButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 10px 10px 0;
+  flex-shrink: 0;
 `;
 
 type ComponentProps<T> = {
@@ -117,14 +123,7 @@ export default function DataEditor<T>({
           <div>
             <button
               onClick={() => {
-                if (!data.length || !data[0] || typeof data !== 'object') {
-                  return;
-                }
-                const newItem = { ...data[0] };
-                Object.keys(newItem).forEach((k) => {
-                  newItem[k] = null;
-                });
-                onChange([...data, newItem] as unknown as T);
+                onChange([...data, ''] as unknown as T);
               }}
             >
               ADD ITEM
@@ -138,11 +137,6 @@ export default function DataEditor<T>({
   if (data && typeof data === 'object') {
     return (
       <EntryContainer>
-        {isListItem && editing && (
-          <DeleteItemButtonContainer>
-            <DeleteButton onClick={() => onChange(null)} />
-          </DeleteItemButtonContainer>
-        )}
         {Object.entries(data).map(([k, v], i) => (
           <EntryRow key={i}>
             <Label>{k}</Label>
@@ -165,7 +159,16 @@ export default function DataEditor<T>({
   }
 
   if (editing) {
-    return <Input value={data ? String(data) : ''} onChange={onInputChange} placeholder="null" disabled={submitting} />;
+    return (
+      <InputContainer>
+        <Input value={data ? String(data) : ''} onChange={onInputChange} placeholder="null" disabled={submitting} />
+        {isListItem && (
+          <DeleteItemButtonContainer>
+            <DeleteButton onClick={() => onChange(null)} />
+          </DeleteItemButtonContainer>
+        )}
+      </InputContainer>
+    );
   }
 
   return <Value isNull={!data}>{data || 'null'}</Value>;
