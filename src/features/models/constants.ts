@@ -18,7 +18,16 @@ import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
 import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
+import LEMONHEADS_THUMBNAIL from '../../images/thumbnails/lemonheads-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-lemonheads-confetti',
+    title: 'Song of The Day: “Confetti” by Lemonheads',
+    author: 'Ben Langdon',
+    createdAt: 1650479404,
+    image: LEMONHEADS_THUMBNAIL,
+    content: `There is no artist as constantly in style as The Lemonheads. For as long as I have been listening to music it seems as if the songs on <em>It’s a Shame About Ray</em>, which recently turned 30,<em> </em>are in a constant state of rediscovery. The strength and timelessness of these songs seem to offhandedly mirror whatever you throw at them, and practically every guitar based pop movement in the last decade has made strides to claim them as a result. The second track off the album, “Confetti”, is today's song of the day purely because it’s the cut off the album most often stuck in my head. Featuring all vibes and little to no substance, this track manages to nail the summery power pop hooks the Lemonheads were so good at without any of the structural baggage some other cuts have. The video is interesting in that low effort - listless band playing to a background b-plot unrelated to the song - kind of 90’s thing. Watch/Listen <a href="https://www.youtube.com/watch?v=4s7Fi2QBXqk"><u>here</u></a>.`,
+  },
   {
     id: 'greet-death-panic-song',
     title: 'Song of The Day: “Panic Song” by Greet Death',
