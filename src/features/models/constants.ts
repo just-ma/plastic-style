@@ -17,8 +17,35 @@ import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
+import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
+import LEMONHEADS_THUMBNAIL from '../../images/thumbnails/lemonheads-thumbnail.jpg';
 import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'bauhaus-drink-the-new-wine',
+    title: 'Song of The Day: “Drink The New Wine” by Bauhaus',
+    author: 'Parker Albert',
+    createdAt: 1650516722,
+    image: BAUHAUS_THUMBNAIL,
+    content: `On the first Bauhaus song in 14 years, Peter Murphy’s voice is as disembodied as a ghost, but he has no interest in returning to his old haunts. Sure, there’s a ​​<expandableText text="deep Reggae bassline" hiddenText="a nice reminder of post-punk's original roots, and an element many revivalists have discarded in favor of something more stilted and rocky
+    "></expandableText>deep Reggae bassline that would make Jah Wobble ~wobble~ with delight and a spindly guitar pulled straight from early contemporaries Siouxsie And The Banshees, but they’re only small actors in the track’s grander narrative. Each band member wrote their own parts to the song without hearing the others’ contributions – a patchwork approach that results in several surprise turns, like when a dense clap sends the track into a paranoid, acoustic lo-fi swamp that’d make a good home for Radiohead. Murphy’s menacing vocals of the past have morphed into something more frightened; his voice swirls untethered as he accepts his fate: “I’ll never see the boys again / Cause I’m off to the funny farm.” “Drink The New Wine” is an anti-anthem, an omen crafted by a band ready to step out of the shadows.`,
+  },
+  {
+    id: 'the-lemonheads-confetti',
+    title: 'Song of The Day: “Confetti” by Lemonheads',
+    author: 'Ben Langdon',
+    createdAt: 1650479404,
+    image: LEMONHEADS_THUMBNAIL,
+    content: `There is no artist as constantly in style as The Lemonheads. For as long as I have been listening to music it seems as if the songs on <em>It’s a Shame About Ray</em>, which recently turned 30,<em> </em>are in a constant state of rediscovery. The strength and timelessness of these songs seem to offhandedly mirror whatever you throw at them, and practically every guitar based pop movement in the last decade has made strides to claim them as a result. The second track off the album, “Confetti”, is today's song of the day purely because it’s the cut off the album most often stuck in my head. Featuring all vibes and little to no substance, this track manages to nail the summery power pop hooks the Lemonheads were so good at without any of the structural baggage some other cuts have. The video is interesting in that low effort - listless band playing to a background b-plot unrelated to the song - kind of 90’s thing. Watch/Listen <a href="https://www.youtube.com/watch?v=4s7Fi2QBXqk"><u>here</u></a>.`,
+  },
+  {
+    id: 'greet-death-panic-song',
+    title: 'Song of The Day: “Panic Song” by Greet Death',
+    author: 'Ben Langdon',
+    createdAt: 1649558715,
+    image: PANIC_THUMBNAIL,
+    content: `Greet Death doesn’t miss. The Michigan based band have spent the last several months releasing singles sporadically, with the most recent, “Panic Song”, being perhaps the greatest. While this breezy and textured pop anthem is most reminiscent of The Lemonheads and earlier MBV, it still integrates their midwestern identity. This is the kind of short and direct pop song Husker Dü was releasing later in their career. When taken as a whole, these singles suggest a new and refined direction for a group that was already putting most shoegaze bands to shame. They are currently on <a href="https://twitter.com/deathbois/status/1506636677858709514"><u>tour</u></a>.`,
+  },
   {
     id: 'wire-i-am-the-fly',
     title: 'Song of The Day: “I Am The Fly” by Wire',
@@ -29,7 +56,7 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   },
   {
     id: 'mj-lenderman-TLC-Cagematch',
-    title: 'Song of The Day: “TLC Cagematch” by Dog Faced Hermans',
+    title: 'Song of The Day: “TLC Cagematch” by MJ Lenderman',
     author: 'Ben Langdon',
     createdAt: 1647990504,
     image: MJ_THUMBNAIL,
