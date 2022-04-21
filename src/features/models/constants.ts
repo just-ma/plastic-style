@@ -17,6 +17,7 @@ import DAD_THUMBNAIL from '../../images/thumbnails/dead-dad-thumbnail.jpg';
 import HERMAN_THUMBNAIL from '../../images/thumbnails/timebomb-thumbnail.jpg';
 import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
+import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'wire-i-am-the-fly',
