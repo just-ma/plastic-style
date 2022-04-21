@@ -19,12 +19,11 @@ import MJ_THUMBNAIL from '../../images/thumbnails/mj-thumbnail.jpg';
 import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
 import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
 import LEMONHEADS_THUMBNAIL from '../../images/thumbnails/lemonheads-thumbnail.jpg';
-<<<<<<< HEAD
 import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'bauhaus-drink-the-new-wine',
-    title: 'Song of The Day: “Drink The New Wine” by Bauhaus',
+    title: 'Song of The Day: “Drink The New Wine” by Bauhaus', 
     author: 'Parker Albert',
     createdAt: 1650516722,
     image: BAUHAUS_THUMBNAIL,
@@ -32,10 +31,6 @@ export const MOCK_FEATURES: ReadonlyArray<Feature> = [
     "></expandableText>deep Reggae bassline that would make Jah Wobble ~wobble~ with delight and a spindly guitar pulled straight from early contemporaries Siouxsie And The Banshees, but they’re only small actors in the track’s grander narrative. Each band member wrote their own parts to the song without hearing the others’ contributions – a patchwork approach that results in several surprise turns, like when a dense clap sends the track into a paranoid, acoustic lo-fi swamp that’d make a good home for Radiohead. Murphy’s menacing vocals of the past have morphed into something more frightened; his voice swirls untethered as he accepts his fate: “I’ll never see the boys again / Cause I’m off to the funny farm.” “Drink The New Wine” is an anti-anthem, an omen crafted by a band ready to step out of the shadows.`,
   },
   {
-=======
-export const MOCK_FEATURES: ReadonlyArray<Feature> = [
-  {
->>>>>>> 88d67914e84bd01074bc4620d2ed809741f6e281
     id: 'the-lemonheads-confetti',
     title: 'Song of The Day: “Confetti” by Lemonheads',
     author: 'Ben Langdon',
