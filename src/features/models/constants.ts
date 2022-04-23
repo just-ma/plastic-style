@@ -23,7 +23,7 @@ import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'bauhaus-drink-the-new-wine',
-    title: 'Song of The Day: “Drink The New Wine” by Bauhaus', 
+    title: 'Song of The Day: “Drink The New Wine” by Bauhaus',
     author: 'Parker Albert',
     createdAt: 1650516722,
     image: BAUHAUS_THUMBNAIL,
