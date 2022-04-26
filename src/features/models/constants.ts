@@ -20,7 +20,16 @@ import WIRE_THUMBNAIL from '../../images/thumbnails/wire-thumbnail.jpg';
 import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
 import LEMONHEADS_THUMBNAIL from '../../images/thumbnails/lemonheads-thumbnail.jpg';
 import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
+import PAVEMENT_THUMBNAIL from '../../images/thumbnails/pavement-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'pavement-billie',
+    title: 'Song of The Day: “Billie” by Pavement',
+    author: 'Ben Langdon',
+    createdAt: 1650516722,
+    image: PAVEMENT_THUMBNAIL,
+    content: `With the lavish reissue of Pavement’s final album <em>Terror Twilight</em> finally released, there is no better time to revisit the project. In truth, it's always been a difficult album for me to connect with despite my all too common fanaticism for the group. Much like the final albums from Hüsker Dü or The Replacements, there is a felt difference between its content and the energy put into the recording. The newly matured songwriting doesn't mesh with a band holding back its loose and sophomoric charm, and the result feels more strung-out than suited-up.\nI do want to stress that this album has some amazing moments.The alternate track listing from producer Nigel Godrich highlights the number of true-blue pop songs on the album by cramming them all into the more immediately accessible b-side. This new order doesn’t do much to improve the albums reputation, and like many retrospectives the constant tinkering might dull the albums magic. However, the uncharacteristically straightforward presentation of these songs does a lot more to clue us in on the state of the band at this time and helps us pick apart this obtuse record more thoroughly.\nThe first track of the b-side “Billie” &nbsp;features a mix of DNA between early pavement and what would eventually color the more heartfelt moments of Steven Malkmus’ self-titled solo LP. Lyrically it marries the character study of “Jenny And The Ess-Dog” with the free association of “Serpentine Pad.” Anchored around a prominent acoustic guitar, the song starts off slow enough before transitioning into full jam rock. The track keeps you on your toes without the feeling of annoyance that can often accompany this sort of aesthetic, and is probably a good introduction for those Pavement neophytes out there. I wouldn’t go so far as to claim this is the best track on <em>Terror Twilight</em>, but it caught my attention this time around and certainly deserves more love. You can find more information on the<em> Farewell Horizontal</em> box set <a href="https://pavement.bandcamp.com/album/terror-twilight-farewell-horizontal"><u>here</u></a>.`,
+  },
   {
     id: 'bauhaus-drink-the-new-wine',
     title: 'Song of The Day: “Drink The New Wine” by Bauhaus',
