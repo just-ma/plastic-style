@@ -21,7 +21,16 @@ import PANIC_THUMBNAIL from '../../images/thumbnails/panic-thumbnail.jpg';
 import LEMONHEADS_THUMBNAIL from '../../images/thumbnails/lemonheads-thumbnail.jpg';
 import BAUHAUS_THUMBNAIL from '../../images/thumbnails/bauhaus-thumbnail.jpg';
 import PAVEMENT_THUMBNAIL from '../../images/thumbnails/pavement-thumbnail.jpg';
+import FROU_THUMBNAIL from '../../images/thumbnails/frou-thumbnail.jpg';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'frou-frou-breathe-in',
+    title: 'Song of The Day: “Breathe In” by Frou Frou',
+    author: 'Parker Albert',
+    createdAt: 1651264074,
+    image: FROU_THUMBNAIL,
+    content: `Anyone who’s ever listened to music knows that golden moment when a song first enters their awareness and immediately becomes the only thing that matters. For a few minutes, the world is drowned out by soundwaves shaped to crash upon the ears like a perfect beach. I felt this elation when I first heard “Breathe In” by Frou Frou, a track about the same world-stopping phenomenon but pertaining to love. “And I'm high enough from all the waiting/To ride a wave on your inhaling'' is the moment singer Imogen Heap reaches love-induced ecstasy, and she takes us along for the ride. The blissful bassline that opens the track is the sound of FOMO, something you’d hear when passing a party you wish you’d been invited to. The lilting, saccharine guitar pulled straight from The Cure on the chorus heralds the moment you walk into the party and everybody cheers because you’re actually awesome and you proceed to have the best night ever. And with that Imogen successfully lures us into fantasy musicland, but there’s a reason it all seems too good to be true. Everything drops out at the bridge when Heap repeats “Is this it?” building tension anxiously until she eventually admits “Yes.” The veil has dropped – take a look at the lyrics and it’s clear Imogen’s infatuation is ill-guided, and likewise the fun little dream that plays in one’s head when this song is heard will <expandableText text="never happen" hiddenText="unless you're incredibly popular at parties"></expandableText>. Music is the most exhilarating lie.`,
+  },
   {
     id: 'pavement-billie',
     title: 'Song of The Day: “Billie” by Pavement',
