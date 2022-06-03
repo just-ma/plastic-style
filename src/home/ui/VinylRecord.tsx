@@ -61,9 +61,10 @@ const RecordHole = styled(CenteredCircle)`
 
 type ComponentProps = {
   children: React.ReactNode;
+  onClick?: () => void;
 };
 
-export default function VinylRecord({ children }: ComponentProps): React.ReactElement {
+export default function VinylRecord({ children, onClick }: ComponentProps): React.ReactElement {
   const { isResponsive } = useResponsive();
 
   const currV = useRef<number>(DEFAULT_VELOCITY);
@@ -94,6 +95,10 @@ export default function VinylRecord({ children }: ComponentProps): React.ReactEl
     nextV.current = 0;
   }, []);
 
+  const handleMouseClick = () => {
+    onClick && onClick();
+  };
+
   const handleMouseUp = useCallback((): void => {
     nextV.current = DEFAULT_VELOCITY;
   }, []);
@@ -109,6 +114,7 @@ export default function VinylRecord({ children }: ComponentProps): React.ReactEl
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onTouchStart={handleTouchStart}
+        onClick={handleMouseClick}
       >
         <RecordRings />
         <DeadWaxRing size={DEAD_WAX_RING_SIZE} />
