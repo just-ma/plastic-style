@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 import VinylRecord from './ui/VinylRecord';
 
-import AiGif from '../images/animations/ai-transitions.gif';
+import AiGif from '../images/animations/duck.gif';
 
 const RecordContainer = styled.div`
   position: absolute;
@@ -14,12 +15,20 @@ const RecordContainer = styled.div`
 
 const RecordLabelContainer = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export default function Home(): React.ReactElement {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push('/features/kira-mcspice-interview');
+  };
+
   return (
     <RecordContainer>
-      <VinylRecord>
+      <VinylRecord onClick={handleClick}>
         <RecordLabelContainer src={AiGif} />
       </VinylRecord>
     </RecordContainer>
