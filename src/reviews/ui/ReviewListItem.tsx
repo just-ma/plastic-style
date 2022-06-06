@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Review } from '../../API';
 import { reviewPagePath, reviewsPath } from '../routes';
+import { Review } from '../models/types';
 
 import PageListItem from '../../common/ui/PageListItem';
 
@@ -10,14 +10,14 @@ type ComponentProps = {
 };
 
 export default function ReviewListItem({
-  review: { id, artist, title, image, content },
+  review: { reviewId, artist, title, image, content },
 }: ComponentProps): React.ReactElement {
-  const link: string = reviewPagePath(id);
-  const preLink: string = reviewsPath(id);
+  const link: string = reviewPagePath(reviewId);
+  const preLink: string = reviewsPath(reviewId);
 
   return (
     <PageListItem
-      id={id}
+      id={reviewId}
       title={title}
       secondaryTitle={artist}
       image={image}
