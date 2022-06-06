@@ -2,11 +2,9 @@ import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { Review } from '../../../API';
-import { getReview } from '../../../graphql/queries';
-import useQueryData from '../../../common/hooks/useQueryData';
 import useResponsive from '../../../common/hooks/useResponsive';
 import { reviewsPath } from '../../routes';
+import { REVIEWS } from '../../models/constants';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import Thumbnail from '../../../common/ui/Thumbnail';
@@ -28,21 +26,15 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement |
   const { reviewId = id } = useParams<RouteParams>();
   const { isMobile } = useResponsive();
 
-  const { data, loading } = useQueryData<{ getReview: Review }, { id: string }>({
-    query: getReview,
-    variables: { id: reviewId || '' },
-    skip: !reviewId,
-  });
+  // const { data, loading } = useQueryData<{ getReview: Review }, { id: string }>({
+  //   query: getReview,
+  //   variables: { id: reviewId || '' },
+  //   skip: !reviewId,
+  // });
 
-  if (loading) {
-    return null;
-  }
-
-  const review = data?.getReview;
+  const review = REVIEWS.find((review) => review.reviewId === reviewId);
 
   if (!review) {
-    console.log('review page', data, loading);
-
     return <Redirect to={reviewsPath()} />;
   }
 

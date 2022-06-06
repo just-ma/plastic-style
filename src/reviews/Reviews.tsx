@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 
-import { ModelReviewConnection } from '../API';
-import useQueryData from '../common/hooks/useQueryData';
-import { listReviews } from '../graphql/queries';
 import { REVIEWS } from './models/constants';
 
 import ReviewListItem from './ui/ReviewListItem';
