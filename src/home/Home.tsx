@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom';
 
 import VinylRecord from './ui/VinylRecord';
 
-import AiGif from '../images/animations/duck.gif';
+//import AiGif from '../images/animations/duck.gif';
+import AiGif from '../images/thumbnails/cman-2.jpg';
 
 const RecordContainer = styled.div`
   position: absolute;
