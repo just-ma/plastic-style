@@ -24,7 +24,7 @@ export default function Home(): React.ReactElement {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/features/kira-mcspice-interview');
+    history.push('/features/marshall-stacks-interview');
   };
 
   return (
