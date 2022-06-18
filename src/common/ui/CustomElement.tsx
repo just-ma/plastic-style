@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import KIRA_PIC_1 from '../../images/thumbnails/kira-pic-1.jpeg';
+import KIRA_PIC_1 from '../../images/thumbnails/kira-pic-1.jpg';
+import CMAN from '../../images/thumbnails/cman-2.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -38,6 +39,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'kira-pic-1': (
     <CenteredWrapper>
       <StyledImg src={KIRA_PIC_1}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'cman-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CMAN}></StyledImg>
     </CenteredWrapper>
   ),
 };
