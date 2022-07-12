@@ -20,6 +20,12 @@ export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
         description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
         link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
       },
+      {
+        id: '2',
+        title: 'Episode 2: Hollie Farris',
+        description: `Episode 2 of plastic chair features the legendary trumpet player Hollie Farris, who was the bandleader for the James Brown Band for over 20 years!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fjames-brown-interview%2F',
+      },
     ],
   },
   {
