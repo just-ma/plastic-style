@@ -22,10 +22,19 @@ import PAVEMENT_THUMBNAIL from '../../images/thumbnails/pavement-thumbnail.jpg';
 import FROU_THUMBNAIL from '../../images/thumbnails/frou-thumbnail.jpg';
 import KIRA_THUMBNAIL from '../../images/thumbnails/kira-thumbnail.jpg';
 import CMAN_THUMBNAIL from '../../images/thumbnails/cman-thumbnail.jpg';
+import FANFARE_THUMBNAIL from '../../images/thumbnails/fanfare_thumbnail.jpg';
 
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'advantage-lucy-solaris',
+    title: 'Song of The Day: "Solaris" by Advantage Lucy',
+    author: 'Parker Albert',
+    createdAt: 1658809826,
+    image: FANFARE_THUMBNAIL,
+    content: `Four bright-color characters wearing thin pencil smiles grace the cover of Advantage Lucy’s 1999 album <em>Fanfare</em>. It’s a fair warning for the whimsy that spills out from every corner of the record, but it’s still hard to prepare for the sheer amount of charm contained within the standout track “Solaris.” Cheerful trumpets glide at hyperspeed, “Last call for the Milky Way” is announced by lead singer Hiramine Aiko with the high-pitched glee of a child playing make-believe, and rapidfire snare hits provide the rocketpower necessary to propel this bop past the stratosphere. The tune really does zoom by – before you know it weightless dream-pop guitars and joyful beeps in morse-code signify a mission successful as the song glimmers out of sight.`,
+  },
   {
     id: 'marshall-stacks-interview',
     title: 'An Interview With Marshall Stacks',
