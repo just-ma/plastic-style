@@ -46,6 +46,28 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <StyledImg src={CMAN}></StyledImg>
     </CenteredWrapper>
   ),
+  'yhwh-interview': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/4bOn7MO6Ibc"
+        title="An Interview With YHWH Nailgun"
+        frameBorder="0"
+        allow=" autoplay; encrypted-media;"
+        allowFullScreen
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'yhwh-video': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Fs4UyojW5PQ"
+        title="YHWH Nailgun - Hawk Violence"
+        frameBorder="0"
+        allow=" autoplay; encrypted-media;"
+        allowFullScreen
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
 };
 
 type CustomElementProps = {
