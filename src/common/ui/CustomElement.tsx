@@ -25,6 +25,18 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'joyer-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Um3bQgE_lfQ"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="An Interview With Joyer"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+
   'kira-vid': (
     <CenteredWrapper>
       <StyledIFrame
