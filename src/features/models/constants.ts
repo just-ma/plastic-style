@@ -25,10 +25,19 @@ import CMAN_THUMBNAIL from '../../images/thumbnails/cman-thumbnail.jpg';
 import FANFARE_THUMBNAIL from '../../images/thumbnails/fanfare_thumbnail.jpg';
 import YHWH_THUMBNAIL from '../../images/thumbnails/yhwh-cover.jpg';
 import JOYER_THUMBNAIL from '../../images/thumbnails/joyer-thumbnail.jpg';
+import ALEX_THUMBNAIL from '../../images/thumbnails/alexg-thumbnail.jpg';
 
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Alex-G-Miracles',
+    title: 'Song Of The Day: "Miracles" by Alex G',
+    author: 'Parker Albert',
+    createdAt: 1663249757,
+    image: ALEX_THUMBNAIL,
+    content: `We’re deep into Alex G season now and the fourth single leans heavy into the kumbaya huggy vibes that big indie names like Big Thief have been so keen to wrap themselves in as of late. This isn’t a new look for G and it shouldn’t be a surprise after the album title “God Save the Animals” was announced, but lyrics like “You say one day we should have a baby, well / God help me, I love you, I agree, yeah” still deliver quite the cuddly shock. I guess in some sense this is the ideal arc for an artist, hell for half of them figuring their shit out is why they make music in the first place. “How many more songs am I supposed to write before / I should turn it off and say goodnight?” asks Alex. Who knows, but he’s getting closer.`,
+  },
   {
     id: 'Joyer-interview',
     title: 'An Interview With Joyer',
