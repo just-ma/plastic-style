@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import VinylRecord from './ui/VinylRecord';
 
 //import AiGif from '../images/animations/duck.gif';
-import AiGif from '../images/thumbnails/joyer-thumbnail.jpg';
+import AiGif from '../images/thumbnails/sanders-thumbnail.jpg';
 
 const RecordContainer = styled.div`
   position: absolute;
@@ -24,7 +24,7 @@ export default function Home(): React.ReactElement {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push('/features/Joyer-interview');
+    history.push('/features/Pharoah-And-I');
   };
 
   return (
