@@ -27,10 +27,18 @@ import YHWH_THUMBNAIL from '../../images/thumbnails/yhwh-cover.jpg';
 import JOYER_THUMBNAIL from '../../images/thumbnails/joyer-thumbnail.jpg';
 import ALEX_THUMBNAIL from '../../images/thumbnails/alexg-thumbnail.jpg';
 import SANDERS_THUMBNAIL from '../../images/thumbnails/sanders-thumbnail.jpg';
-
+import OYSTER_THUMBNAIL from '../../images/thumbnails/oyster-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Blue-Oyster-Cult-Burnin’-For-You',
+    title: 'Song Of The Day: "Burnin\' For You" by Blue Öyster Cult',
+    author: 'Parker Albert',
+    createdAt: 1667218145,
+    image: OYSTER_THUMBNAIL,
+    content: `“Burnin’ For You” is one of those songs I listen to because the best part takes a healthy scoop out of my noggin’s dopamine pool and hands it to me with a smile (in a sugar cone). It’s really a two-scoop kinda deal - you have that rollicking riff that opens the song, bold as spicy chocolate or something, immediately followed by clear blue harmonies that are giving mint chocolate chip. It’s an odd pairing, the vocals sound ambient and placid, out of place in a lusty rock song. But just like my favorite The Cars song (“Magic”), there’s something spellbinding about the combination. The part only happens twice the whole song, at the very beginning and after the first chorus. At four minutes and thirty seconds long, they could have easily fit it in again but don’t, to my simultaneous chagrin and pleasure. I want to hear the part more but such a popular song could get old quickly; BOC were smart to take the good taste route. The end of the song delivers one final hit with the minty harmonies on the last note, leaving me burnin’ for the track evermore.`,
+  },
   {
     id: 'Pharoah-And-I',
     title: 'Pharoah And I',
