@@ -28,9 +28,18 @@ import JOYER_THUMBNAIL from '../../images/thumbnails/joyer-thumbnail.jpg';
 import ALEX_THUMBNAIL from '../../images/thumbnails/alexg-thumbnail.jpg';
 import SANDERS_THUMBNAIL from '../../images/thumbnails/sanders-thumbnail.jpg';
 import OYSTER_THUMBNAIL from '../../images/thumbnails/oyster-thumbnail.jpg';
+import KITTENS_THUMBNAIL from '../../images/thumbnails/kittens-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Crying-Kittens-All-The-Formal-Ways-Of-Sound-Torture',
+    title: 'Song Of The Day: "All The Formal Ways Of Sound Torture by Crying Kittens',
+    author: 'Parker Albert',
+    createdAt: 1667423042,
+    image: KITTENS_THUMBNAIL,
+    content: `Crying Kitten’s <em>LOST IDENTITY 3 </em>is a forest of ambient noise, with “All the Formal Ways of Sound Torture” residing smack in the middle of the overgrowth. It's the loudest song on the album and one of the few to feature any percussion whatsoever, but it feels less like a climax and more like a long fall. One step into this track and the earth gives way, into cavernous vocals and crunching drums that spell doom. Feels like slow motion falling in a dark cave. A wormlike bass wriggles deep below, eventually sucking up all the sonics until the forest is quiet once again.`,
+  },
   {
     id: 'Blue-Oyster-Cult-Burnin’-For-You',
     title: 'Song Of The Day: "Burnin\' For You" by Blue Öyster Cult',
