@@ -34,7 +34,7 @@ import { Feature } from './types';
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'Crying-Kittens-All-The-Formal-Ways-Of-Sound-Torture',
-    title: 'Song Of The Day: "All The Formal Ways Of Sound Torture by Crying Kittens',
+    title: 'Song Of The Day: "All The Formal Ways Of Sound Torture" by Crying Kittens',
     author: 'Parker Albert',
     createdAt: 1667423042,
     image: KITTENS_THUMBNAIL,
