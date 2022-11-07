@@ -29,9 +29,18 @@ import ALEX_THUMBNAIL from '../../images/thumbnails/alexg-thumbnail.jpg';
 import SANDERS_THUMBNAIL from '../../images/thumbnails/sanders-thumbnail.jpg';
 import OYSTER_THUMBNAIL from '../../images/thumbnails/oyster-thumbnail.jpg';
 import KITTENS_THUMBNAIL from '../../images/thumbnails/kittens-thumbnail.jpg';
+import FAUST_THUMBNAIL from '../../images/thumbnails/faust-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Faust-No-Harm',
+    title: 'Song Of The Day: "No Harm" by Faust',
+    author: 'Ben Langdon',
+    createdAt: 1667850347,
+    image: FAUST_THUMBNAIL,
+    content: `Something I find compelling about Faust is the flippancy with which they handle their lengthier compositions. A ten minute experimentation like “No Harm” would be the album centerpiece for a more self-serious group, but Faust defang the concept and deliver another practical joke in the long string of pastiches that comprise their first masterpiece, “So Far.” “No Harm” has a simple enough structure, beginning with a slow orchestral crescendo paired with some modest guitar picking that eventually descends into a 7 minute jam. The nonsensical lyrics “Daddy take the banana/ Tomorrow is Sunday'' are repeated endlessly, delivered with such spite and intensity it almost feels like the group have a bone to pick. Here Faust are at their closest to hard rocking contemporaries Can and Amon Düül II, and the track does feel like a jab at the very concept of this style of progressive rock. Creating their first commercial sounding album after the modest returns from their debut must have come with some baggage, but this frustration is balanced by the fact that Faust are having a damn fun time making it. These two competing impulses - playing with your food and eating it - keep the track feeling alive some 50 years later. Regardless of how Faust felt about the tracks content, they must have known they had struck gold in its execution – the dissonant opening of “No Harm” would be the blueprint for the patchwork style of their next “album” <em>The Faust Tapes.</em>`,
+  },
   {
     id: 'Crying-Kittens-All-The-Formal-Ways-Of-Sound-Torture',
     title: 'Song Of The Day: "All The Formal Ways Of Sound Torture" by Crying Kittens',
