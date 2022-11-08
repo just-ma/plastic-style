@@ -36,7 +36,12 @@ export default function ListPage(): React.ReactElement {
 
   return (
     <div className={classnames(styles.ListPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} image={image} thumbnailWidthPx={260} largeHeader>
+      <TitleDisplay
+        className={styles.titleDisplay}
+        headerProps={{ title, large: true }}
+        image={image}
+        thumbnailWidthPx={260}
+      >
         <TitledParagraph leftTitle={`by ${author}`} rightTitle={getDateLabel(createdAt)} content={description} />
       </TitleDisplay>
       <Divider />

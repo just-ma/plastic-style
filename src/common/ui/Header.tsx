@@ -19,17 +19,25 @@ const SecondaryTitle = styled(HTMLString)<{ large?: boolean }>`
   margin-bottom: 10px;
 `;
 
-type ComponentProps = {
+const Subtitle = styled(HTMLString)<{ large?: boolean }>`
+  font-size: ${({ large }) => (large ? 16 : 14)}px;
+  font-weight: 500;
+  margin-top: 16px;
+`;
+
+export type HeaderProps = {
   title: string;
   secondaryTitle?: string; // rendered above title
+  subtitle?: string; // rendered below title
   large?: boolean;
 };
 
-export default function Header({ title, secondaryTitle, large }: ComponentProps): React.ReactElement {
+export default function Header({ title, secondaryTitle, subtitle, large }: HeaderProps): React.ReactElement {
   return (
     <HeaderContainer>
       {secondaryTitle && <SecondaryTitle large={large}>{secondaryTitle}</SecondaryTitle>}
       <Title large={large}>{title}</Title>
+      {subtitle && <Subtitle large={large}>{subtitle}</Subtitle>}
     </HeaderContainer>
   );
 }

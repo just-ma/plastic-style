@@ -44,7 +44,7 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement |
     <div className={classnames(styles.ReviewPage, isMobile && styles.mobile)}>
       {isMobile ? (
         <div className={styles.mobileHeader}>
-          <TitleDisplay title={title} secondaryTitle={artist} image={image} />
+          <TitleDisplay headerProps={{ title, secondaryTitle: artist }} image={image} />
           <Divider />
         </div>
       ) : (

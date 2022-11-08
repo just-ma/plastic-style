@@ -26,7 +26,7 @@ export default function RankedItem({
           <div className={styles.rankBubble}>{rank}</div>
         </div>
       )}
-      <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={artist} image={image}>
+      <TitleDisplay className={styles.titleDisplay} headerProps={{ title, secondaryTitle: artist }} image={image}>
         <HTMLString element="p">{content}</HTMLString>
       </TitleDisplay>
       <Divider />

@@ -37,7 +37,12 @@ export default function FeaturePage({ id }: ComponentProps): React.ReactElement 
 
   return (
     <div>
-      <TitleDisplay title={title} image={image} description={description} largeHeader thumbnailWidthPx={260} />
+      <TitleDisplay
+        headerProps={{ title, large: true }}
+        image={image}
+        description={description}
+        thumbnailWidthPx={260}
+      />
       <ContentContainer>
         <TitledParagraph leftTitle={author || ''} rightTitle={dateLabel} content={content}></TitledParagraph>
       </ContentContainer>

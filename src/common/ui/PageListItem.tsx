@@ -6,13 +6,13 @@ import useResponsive from '../hooks/useResponsive';
 
 import TitleDisplay from './TitleDisplay';
 import Divider from './Divider';
+import { HeaderProps } from './Header';
 
 import styles from './PageListItem.module.scss';
 
 type ComponentProps = {
   id?: string;
-  title: string;
-  secondaryTitle?: string;
+  headerProps: HeaderProps;
   description?: string;
   image: string;
   link: string;
@@ -23,8 +23,7 @@ type ComponentProps = {
 export default function PageListItem({
   id,
   link,
-  title,
-  secondaryTitle,
+  headerProps,
   description,
   image,
   linkLabel,
@@ -45,13 +44,7 @@ export default function PageListItem({
   return (
     <div id={id} className={classnames(styles.PageListItem, isMobile && styles.mobile)}>
       <div className={styles.link} onClick={onRedirect}>
-        <TitleDisplay
-          className={styles.titleDisplay}
-          title={title}
-          secondaryTitle={secondaryTitle}
-          image={image}
-          description={description}
-        >
+        <TitleDisplay className={styles.titleDisplay} headerProps={headerProps} image={image} description={description}>
           <div className={styles.linkLabel}>{linkLabel}</div>
         </TitleDisplay>
       </div>

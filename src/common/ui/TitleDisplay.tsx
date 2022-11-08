@@ -4,16 +4,14 @@ import classnames from 'classnames';
 import useResponsive from '../hooks/useResponsive';
 
 import Thumbnail from './Thumbnail';
-import Header from './Header';
+import Header, { HeaderProps } from './Header';
 import HTMLString from './HTMLString';
 
 import styles from './TitleDisplay.module.scss';
 
 type ComponentProps = {
   className?: string;
-  title: string;
-  secondaryTitle?: string;
-  largeHeader?: boolean;
+  headerProps: HeaderProps;
   description?: string;
   image?: string;
   children?: React.ReactNode;
@@ -23,9 +21,7 @@ type ComponentProps = {
 
 export default function TitleDisplay({
   className,
-  title,
-  secondaryTitle,
-  largeHeader,
+  headerProps,
   description,
   image,
   children,
@@ -51,7 +47,7 @@ export default function TitleDisplay({
       )}
       <div className={styles.titleContainer}>
         <div className={styles.title}>
-          <Header title={title} secondaryTitle={secondaryTitle} large={largeHeader} />
+          <Header {...headerProps} />
         </div>
         {description && (
           <HTMLString className={styles.description} element="p">

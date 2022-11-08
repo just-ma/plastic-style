@@ -21,7 +21,7 @@ export default function PodcastEpisodeItem({
   return (
     <div className={classnames(styles.PodcastEpisodeItem, isMobile && styles.mobile)}>
       <div className={styles.content}>
-        <TitleDisplay className={styles.titleDisplay} title={title} secondaryTitle={author} fullWidth>
+        <TitleDisplay className={styles.titleDisplay} headerProps={{ title, secondaryTitle: author }} fullWidth>
           <p className={styles.description}>{description}</p>
         </TitleDisplay>
         <iframe className={styles.widget} src={link} frameBorder="0" />

@@ -35,7 +35,12 @@ export default function PodcastSeasonPage(): React.ReactElement {
 
   return (
     <div className={classnames(styles.PodcastSeasonPage, isMobile && styles.mobile)}>
-      <TitleDisplay className={styles.titleDisplay} title={title} image={image} largeHeader thumbnailWidthPx={260}>
+      <TitleDisplay
+        className={styles.titleDisplay}
+        headerProps={{ title, large: true }}
+        image={image}
+        thumbnailWidthPx={260}
+      >
         <TitledParagraph leftTitle={author} rightTitle={year} content={description} />
       </TitleDisplay>
       <Divider />
