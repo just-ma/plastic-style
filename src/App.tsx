@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Page from './app/ui/Page';
 import DecorativeBanner from './app/ui/DecorativeBanner';
@@ -35,25 +35,95 @@ export default function App(): React.ReactElement {
   return (
     <Router>
       <DecorativeBanner />
-      <Switch>
-        <Route exact path="/" component={Page(Home)} />
-        {/* <Route exact path="/admin" component={Admin} /> */}
-        <Route exact path="/admin/text-editor" component={TextEditor} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Page>
+              <Home />
+            </Page>
+          }
+        />
+        {/* <Route  path="/admin" element={Admin} /> */}
+        <Route path="/admin/text-editor" element={<TextEditor />} />
 
-        <Route exact path={reviewsPath()} component={Page(Reviews)} />
-        <Route exact path={reviewPagePath(':reviewId')} component={Page(ReviewPage)} />
+        <Route
+          path={reviewsPath()}
+          element={
+            <Page>
+              <Reviews />
+            </Page>
+          }
+        />
+        <Route
+          path={reviewPagePath(':reviewId')}
+          element={
+            <Page>
+              <ReviewPage />
+            </Page>
+          }
+        />
 
-        <Route exact path={listsPath()} component={Page(Lists)} />
-        <Route exact path={listPagePath(':listId')} component={Page(ListPage)} />
+        <Route
+          path={listsPath()}
+          element={
+            <Page>
+              <Lists />
+            </Page>
+          }
+        />
+        <Route
+          path={listPagePath(':listId')}
+          element={
+            <Page>
+              <ListPage />
+            </Page>
+          }
+        />
 
-        <Route exact path={featuresPath()} component={Page(Features)} />
-        <Route exact path={featurePagePath(':featureId')} component={Page(FeaturePage)} />
+        <Route
+          path={featuresPath()}
+          element={
+            <Page>
+              <Features />
+            </Page>
+          }
+        />
+        <Route
+          path={featurePagePath(':featureId')}
+          element={
+            <Page>
+              <FeaturePage />
+            </Page>
+          }
+        />
 
-        <Route exact path={podcastsPath()} component={Page(Podcasts)} />
-        <Route exact path={podcastPagePath(':podcastId')} component={Page(PodcastSeasonPage)} />
+        <Route
+          path={podcastsPath()}
+          element={
+            <Page>
+              <Podcasts />
+            </Page>
+          }
+        />
+        <Route
+          path={podcastPagePath(':podcastId')}
+          element={
+            <Page>
+              <PodcastSeasonPage />
+            </Page>
+          }
+        />
 
-        <Route exact path={contactPath()} component={Page(Contact)} />
-      </Switch>
+        <Route
+          path={contactPath()}
+          element={
+            <Page>
+              <Contact />
+            </Page>
+          }
+        />
+      </Routes>
     </Router>
   );
 }

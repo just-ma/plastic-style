@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import classnames from 'classnames';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import useResponsive from '../hooks/useResponsive';
 
@@ -29,16 +29,16 @@ export default function PageListItem({
   linkLabel,
   preLink,
 }: ComponentProps): React.ReactElement {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { isMobile } = useResponsive();
 
   const onRedirect = useCallback((): void => {
     if (preLink) {
-      history.replace(preLink);
+      navigate(preLink, { replace: true });
     }
 
-    history.push(link);
+    navigate(link);
   }, [link, preLink]);
 
   return (

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Redirect, useParams } from 'react-router';
+import { Navigate, useParams } from 'react-router';
 import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
@@ -29,7 +29,7 @@ export default function ListPage(): React.ReactElement {
   }, [listId]);
 
   if (!list) {
-    return <Redirect to={listsPath()} />;
+    return <Navigate to={listsPath()} />;
   }
 
   const { title, description = '', author, image, createdAt, listItems } = list;

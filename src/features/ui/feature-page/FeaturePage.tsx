@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 import { getDateLabel } from '../../../common/utils';
 import { Feature } from '../../models/types';
@@ -28,7 +28,7 @@ export default function FeaturePage({ id }: ComponentProps): React.ReactElement 
   const review: Feature | null = MOCK_FEATURES.find((r) => r.id === featureId) || null;
 
   if (!review) {
-    return <Redirect to={featuresPath()} />;
+    return <Navigate to={featuresPath()} />;
   }
 
   const { title, description, author, image, content, createdAt } = review;

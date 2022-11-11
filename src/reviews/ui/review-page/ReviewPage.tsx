@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
@@ -29,7 +29,7 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement |
   const review = REVIEWS.find((review) => review.reviewId === reviewId);
 
   if (!review) {
-    return <Redirect to={reviewsPath()} />;
+    return <Navigate to={reviewsPath()} />;
   }
 
   const { artist, title, image } = review;

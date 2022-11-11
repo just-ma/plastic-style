@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import VinylRecord from './ui/VinylRecord';
 
@@ -21,10 +21,10 @@ const RecordLabelContainer = styled.img`
 `;
 
 export default function Home(): React.ReactElement {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    history.push('/features/Pharoah-And-I');
+    navigate('/features/Pharoah-And-I');
   };
 
   return (

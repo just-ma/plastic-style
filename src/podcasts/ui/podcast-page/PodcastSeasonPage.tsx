@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Redirect, useParams } from 'react-router';
+import { Navigate, useParams } from 'react-router';
 import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
@@ -28,7 +28,7 @@ export default function PodcastSeasonPage(): React.ReactElement {
   }, [podcastId]);
 
   if (!podcast) {
-    return <Redirect to={podcastsPath()} />;
+    return <Navigate to={podcastsPath()} />;
   }
 
   const { title, description = '', author, image, year, episodes } = podcast;
