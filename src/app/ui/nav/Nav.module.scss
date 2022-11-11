@@ -14,6 +14,11 @@
   transition: top 0.3s;
   height: 14px;
   width: 14px;
+  fill: white;
+
+  &.dark {
+    fill: black;
+  }
 }
 
 .navItems {

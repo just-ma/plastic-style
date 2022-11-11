@@ -1,5 +1,9 @@
 import React, { useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
+import useResponsive from '../../../common/hooks/useResponsive';
+import useIsHome from '../../../home/hooks/useIsHome';
 import { reviewsPath } from '../../../reviews/routes';
 import { listsPath } from '../../../lists/routes';
 import { featuresPath } from '../../../features/routes';
@@ -39,7 +43,13 @@ const NAV_MENU = [
 const NAV_ITEM_HEIGHT = 25;
 
 export default function Nav(): React.ReactElement {
-  const currentPagePath = window.location.pathname;
+  const location = useLocation();
+  const isHome = useIsHome();
+  const { isResponsive } = useResponsive();
+
+  const isDark = isHome || isResponsive;
+
+  const currentPagePath = location.pathname;
 
   const activeIndex = useMemo(() => {
     let index = 0;
@@ -55,7 +65,7 @@ export default function Nav(): React.ReactElement {
   const [hovered, setHovered] = useState(activeIndex);
 
   const getIsActive = (link: string): boolean => {
-    if (link === '/' && currentPagePath !== '/') {
+    if (link === '/' && !isHome) {
       return false;
     }
 
@@ -69,7 +79,7 @@ export default function Nav(): React.ReactElement {
   return (
     <div className={styles.Nav}>
       <div className={styles.navItemsContainer}>
-        <div className={styles.navArrow} style={{ top: hovered * NAV_ITEM_HEIGHT }}>
+        <div className={classNames(styles.navArrow, isDark && styles.dark)} style={{ top: hovered * NAV_ITEM_HEIGHT }}>
           <ArrowIcon />
         </div>
         <div className={styles.navItems}>
@@ -80,6 +90,7 @@ export default function Nav(): React.ReactElement {
               onMouseLeave={() => setHovered(activeIndex)}
               isActive={getIsActive(item.link)}
               isHover={hovered === index}
+              isDark={isDark}
               {...item}
             />
           ))}

@@ -67,7 +67,7 @@ type ComponentProps = {
 export default function VinylRecord({ children, onClick }: ComponentProps): React.ReactElement {
   const { isResponsive } = useResponsive();
 
-  const currV = useRef<number>(DEFAULT_VELOCITY);
+  const currV = useRef<number>(0);
   const nextV = useRef<number>(DEFAULT_VELOCITY);
   const requestRef = React.useRef<number>(-1);
 

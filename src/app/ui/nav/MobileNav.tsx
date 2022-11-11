@@ -48,7 +48,7 @@ export default function MobileNav({ isOpen, onRequestClose }: ComponentProps): R
         in={isOpen}
       >
         <div className={styles.drawer}>
-          <div className={styles.navItems}>
+          <div className={styles.navItems} onClick={onRequestClose}>
             <Nav />
           </div>
           <div className={styles.closeButton}>

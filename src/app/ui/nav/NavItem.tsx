@@ -9,6 +9,7 @@ type ComponentProps = {
   onMouseLeave: () => void;
   isActive: boolean;
   isHover: boolean;
+  isDark: boolean;
   title: string;
   link: string;
 };
@@ -18,6 +19,7 @@ export default function NavItem({
   onMouseLeave,
   isActive,
   isHover,
+  isDark,
   title,
   link,
 }: ComponentProps): React.ReactElement {
@@ -25,7 +27,11 @@ export default function NavItem({
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={classnames(styles.NavItem, { [styles.active]: isActive, [styles.hover]: isHover })}
+      className={classnames(styles.NavItem, {
+        [styles.active]: isActive,
+        [styles.hover]: isHover,
+        [styles.dark]: isDark,
+      })}
     >
       <Link to={link}>{title}</Link>
     </div>
