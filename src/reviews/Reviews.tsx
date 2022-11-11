@@ -5,10 +5,6 @@ import { REVIEWS } from './models/constants';
 import ReviewListItem from './ui/ReviewListItem';
 
 export default function Reviews(): React.ReactElement {
-  // const { data } = useQueryData<{
-  //   listReviews: ModelReviewConnection | undefined;
-  // }>({ query: listReviews });
-
   useEffect((): void => {
     if (!location.hash) {
       return;

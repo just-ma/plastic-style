@@ -26,12 +26,6 @@ export default function ReviewPage({ id }: ComponentProps): React.ReactElement |
   const { reviewId = id } = useParams<RouteParams>();
   const { isMobile } = useResponsive();
 
-  // const { data, loading } = useQueryData<{ getReview: Review }, { id: string }>({
-  //   query: getReview,
-  //   variables: { id: reviewId || '' },
-  //   skip: !reviewId,
-  // });
-
   const review = REVIEWS.find((review) => review.reviewId === reviewId);
 
   if (!review) {
