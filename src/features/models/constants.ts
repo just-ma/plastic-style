@@ -30,9 +30,18 @@ import SANDERS_THUMBNAIL from '../../images/thumbnails/sanders-thumbnail.jpg';
 import OYSTER_THUMBNAIL from '../../images/thumbnails/oyster-thumbnail.jpg';
 import KITTENS_THUMBNAIL from '../../images/thumbnails/kittens-thumbnail.jpg';
 import FAUST_THUMBNAIL from '../../images/thumbnails/faust-thumbnail.jpg';
+import RACE_THUMBNAIL from '../../images/thumbnails/race-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Fire-Toolz-Race-For-Titles',
+    title: 'Song Of The Day: "Race For Titles feat. Lipticism" by Fire-Toolz',
+    author: 'Parker Albert',
+    createdAt: 1668661430,
+    image: RACE_THUMBNAIL,
+    content: `“Race For Titles" doesn't feel quite like a race; it employs The Toolz’s gentlest side. The soft singing of Lipticism and friendly emo guitars suggest this song sits outside the realm of said race, so do the lyrics “want to lose my titles.” The track’s accompanying video depicts this no-race zone as a neon geometry wonderland full of humanoid characters that twist and prance. The lightness of the visuals allows the song’s sincere feelings to bloom into an attractive eagerness; “I could lose it all” becomes a freeing statement. <br></br><custom id="race-vid"></custom>`,
+  },
   {
     id: 'Faust-No-Harm',
     title: 'Song Of The Day: "No Harm" by Faust',

@@ -25,6 +25,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'race-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Y4CVBIc2dBs"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Race For Titles feat Lipticism"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'joyer-vid': (
     <CenteredWrapper>
       <StyledIFrame
