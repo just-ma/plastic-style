@@ -14,11 +14,12 @@ const TRANSFORM_DURATION_MS = 1200;
 const Container = styled.div<{ centered: boolean; clickable: boolean }>`
   position: absolute;
   top: 50%;
-  left: ${({ centered }) => (centered ? 50 : 10)}%;
+  left: ${({ centered }) => (centered ? '50%' : 'calc(9% + 20px)')};
   transform: translate(-${({ centered }) => (centered ? 50 : 120)}%, -50%)
     scale(${({ centered }) => (centered ? 1 : 1.5)});
   transition: transform 2s, left ${TRANSFORM_DURATION_MS}ms;
   z-index: ${({ clickable }) => (clickable ? 1 : 0)};
+  overflow: hidden;
 `;
 
 const RecordLabelContainer = styled.img`

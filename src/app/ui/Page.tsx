@@ -1,25 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
+import { useLocation } from 'react-router-dom';
 
 import useResponsive from '../../common/hooks/useResponsive';
+import useHTMLString from '../hooks/useHTMLString';
 
 import NavWrapper from './nav/NavWrapper';
 
 import styles from './Page.module.scss';
 
 type ComponentProps = {
-  children: React.ReactElement;
+  children: React.ReactNode;
 };
 
 export default function Page({ children }: ComponentProps): React.ReactElement {
+  const location = useLocation();
+
   const { isResponsive } = useResponsive();
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const [visible, setVisible] = useState(false);
+
+  useHTMLString();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => setVisible(true), 200);
+
+    return () => {
+      clearTimeout(timeoutId);
+      setVisible(false);
+    };
+  }, [location.pathname]);
+
   return (
     <NavWrapper isResponsive={isResponsive} scrollRef={scrollRef}>
       <div className={styles.scrollContainer} ref={scrollRef}>
-        <div className={classnames(styles.contentContainer, isResponsive && styles.responsive)}>{children}</div>
+        <div
+          className={classnames(styles.contentContainer, isResponsive && styles.responsive, visible && styles.visible)}
+        >
+          {children}
+        </div>
       </div>
     </NavWrapper>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Page from './app/ui/Page';
 import DecorativeBanner from './app/ui/DecorativeBanner';
@@ -34,33 +34,120 @@ import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 // contact
 import { contactPath } from './contact/routes';
 import Contact from './contact/Contact';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+`;
 
 export default function App(): React.ReactElement {
   return (
-    <Router>
-      <DecorativeBanner />
-      <VinylRecordContainer />
-      <Page>
+    <AppContainer>
+      <BrowserRouter>
+        <DecorativeBanner />
+        <VinylRecordContainer />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Page>
+                <Home />
+              </Page>
+            }
+          />
 
-          <Route path="/admin/text-editor" element={<TextEditor />} />
+          <Route
+            path="/admin/text-editor"
+            element={
+              <Page>
+                <TextEditor />
+              </Page>
+            }
+          />
 
-          <Route path={reviewsPath()} element={<Reviews />} />
-          <Route path={reviewPagePath(':reviewId')} element={<ReviewPage />} />
+          <Route
+            path={reviewsPath()}
+            element={
+              <Page>
+                <Reviews />
+              </Page>
+            }
+          />
+          <Route
+            path={reviewPagePath(':reviewId')}
+            element={
+              <Page>
+                <ReviewPage />
+              </Page>
+            }
+          />
 
-          <Route path={listsPath()} element={<Lists />} />
-          <Route path={listPagePath(':listId')} element={<ListPage />} />
+          <Route
+            path={listsPath()}
+            element={
+              <Page>
+                <Lists />
+              </Page>
+            }
+          />
+          <Route
+            path={listPagePath(':listId')}
+            element={
+              <Page>
+                <ListPage />
+              </Page>
+            }
+          />
 
-          <Route path={featuresPath()} element={<Features />} />
-          <Route path={featurePagePath(':featureId')} element={<FeaturePage />} />
+          <Route
+            path={featuresPath()}
+            element={
+              <Page>
+                <Features />
+              </Page>
+            }
+          />
+          <Route
+            path={featurePagePath(':featureId')}
+            element={
+              <Page>
+                <FeaturePage />
+              </Page>
+            }
+          />
 
-          <Route path={podcastsPath()} element={<Podcasts />} />
-          <Route path={podcastPagePath(':podcastId')} element={<PodcastSeasonPage />} />
+          <Route
+            path={podcastsPath()}
+            element={
+              <Page>
+                <Podcasts />
+              </Page>
+            }
+          />
+          <Route
+            path={podcastPagePath(':podcastId')}
+            element={
+              <Page>
+                <PodcastSeasonPage />
+              </Page>
+            }
+          />
 
-          <Route path={contactPath()} element={<Contact />} />
+          <Route
+            path={contactPath()}
+            element={
+              <Page>
+                <Contact />
+              </Page>
+            }
+          />
         </Routes>
-      </Page>
-    </Router>
+      </BrowserRouter>
+    </AppContainer>
   );
 }

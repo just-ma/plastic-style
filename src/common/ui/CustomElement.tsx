@@ -94,13 +94,9 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
 };
 
 type CustomElementProps = {
-  id: string | null;
+  id: string;
 };
 
 export default function CustomElement({ id }: CustomElementProps): React.ReactElement | null {
-  if (!id || !CUSTOM_ELEMENTS[id]) {
-    return null;
-  }
-
-  return CUSTOM_ELEMENTS[id];
+  return CUSTOM_ELEMENTS[id] || null;
 }

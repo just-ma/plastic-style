@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { getDateLabel } from '../../../common/utils';
 import { reviewsPath } from '../../routes';
 import { Review } from '../../models/types';
 
 import TitledParagraph from '../../../common/ui/TitledParagraph';
-
-import styles from './ReviewContent.module.scss';
+import FooterLink from '../../../common/ui/FooterLink';
 
 type ComponentProps = {
   className?: string;
@@ -25,11 +23,7 @@ export default function ReviewContent({
         rightTitle={createdAt ? getDateLabel(createdAt) : ''}
         content={content}
       />
-      <div className={styles.footer}>
-        <Link className={styles.link} to={reviewsPath(reviewId)}>
-          {'< MORE REVIEWS'}
-        </Link>
-      </div>
+      <FooterLink to={reviewsPath(reviewId)}>{'< MORE REVIEWS'}</FooterLink>
     </div>
   );
 }

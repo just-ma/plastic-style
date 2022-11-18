@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { getDateLabel } from '../../../common/utils';
 import { Feature } from '../../models/types';
@@ -8,7 +9,7 @@ import { featuresPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import TitledParagraph from '../../../common/ui/TitledParagraph';
-import styled from 'styled-components';
+import FooterLink from '../../../common/ui/FooterLink';
 
 const ContentContainer = styled.div`
   margin-top: 50px;
@@ -46,6 +47,7 @@ export default function FeaturePage({ id }: ComponentProps): React.ReactElement 
       <ContentContainer>
         <TitledParagraph leftTitle={author || ''} rightTitle={dateLabel} content={content}></TitledParagraph>
       </ContentContainer>
+      <FooterLink to={featuresPath(featureId)}>{'< MORE FEATURES'}</FooterLink>
     </div>
   );
 }

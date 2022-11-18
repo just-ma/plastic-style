@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState, useRef } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import useResponsive from '../../common/hooks/useResponsive';
 
@@ -8,10 +8,19 @@ import { ReactComponent as VinylRecordRingsGraphic } from '../../images/graphics
 const DEAD_WAX_RING_SIZE = 42;
 const CENTER_LABEL_SIZE = 34;
 const RECORD_HOLE_SIZE = 3;
-const DEFAULT_VELOCITY = 0.5;
 
-const SpinningContainer = styled.div<{ rot: number }>`
-  transform: rotate(${({ rot }) => rot}deg);
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const SpinningContainer = styled.div`
+  animation: ${rotate} 10s linear infinite;
 `;
 
 const Record = styled.div<{ isResponsive: boolean }>`
@@ -21,12 +30,8 @@ const Record = styled.div<{ isResponsive: boolean }>`
   border-radius: 50%;
   overflow: hidden;
   background-color: #111111;
-  cursor: grab;
+  cursor: pointer;
   user-select: none;
-
-  &:active {
-    cursor: grabbing;
-  }
 `;
 
 const RecordRings = styled(VinylRecordRingsGraphic)`
@@ -67,55 +72,9 @@ type ComponentProps = {
 export default function VinylRecord({ children, onClick }: ComponentProps): React.ReactElement {
   const { isResponsive } = useResponsive();
 
-  const currV = useRef<number>(0);
-  const nextV = useRef<number>(DEFAULT_VELOCITY);
-  const requestRef = React.useRef<number>(-1);
-
-  const [rot, setRot] = useState(Math.random() * 360);
-
-  const animate = (): void => {
-    setRot((prev) => (prev + currV.current) % 360);
-
-    if (nextV.current !== currV.current) {
-      currV.current += (nextV.current - currV.current) / 10;
-    }
-
-    requestRef.current = requestAnimationFrame(animate);
-  };
-
-  useEffect((): (() => void) => {
-    requestRef.current = requestAnimationFrame(animate);
-
-    return (): void => {
-      cancelAnimationFrame(requestRef.current);
-    };
-  }, []);
-
-  const handleMouseDown = useCallback((): void => {
-    nextV.current = 0;
-  }, []);
-
-  const handleMouseClick = () => {
-    onClick && onClick();
-  };
-
-  const handleMouseUp = useCallback((): void => {
-    nextV.current = DEFAULT_VELOCITY;
-  }, []);
-
-  const handleTouchStart = useCallback((): void => {
-    nextV.current = DEFAULT_VELOCITY - nextV.current;
-  }, []);
-
   return (
-    <SpinningContainer rot={rot}>
-      <Record
-        isResponsive={isResponsive}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onClick={handleMouseClick}
-      >
+    <SpinningContainer>
+      <Record isResponsive={isResponsive} onClick={onClick}>
         <RecordRings />
         <DeadWaxRing size={DEAD_WAX_RING_SIZE} />
         <CenterLabel size={CENTER_LABEL_SIZE}>{children}</CenterLabel>

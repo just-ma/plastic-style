@@ -11,6 +11,7 @@ import { listsPath } from '../../routes';
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import TitledParagraph from '../../../common/ui/TitledParagraph';
 import Divider from '../../../common/ui/Divider';
+import FooterLink from '../../../common/ui/FooterLink';
 
 import RankedItem from './RankedItem';
 
@@ -50,6 +51,7 @@ export default function ListPage(): React.ReactElement {
           <RankedItem key={item.id} listItem={item} />
         ))}
       </div>
+      <FooterLink to={listsPath(listId)}>{'< MORE LISTS'}</FooterLink>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { podcastsPath } from '../../routes';
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import TitledParagraph from '../../../common/ui/TitledParagraph';
 import Divider from '../../../common/ui/Divider';
+import FooterLink from '../../../common/ui/FooterLink';
 
 import PodcastEpisodeItem from './PodcastEpisodeItem';
 
@@ -49,6 +50,7 @@ export default function PodcastSeasonPage(): React.ReactElement {
           <PodcastEpisodeItem key={episode.id} episode={episode} />
         ))}
       </div>
+      <FooterLink to={podcastsPath(podcastId)}>{'< MORE PODCASTS'}</FooterLink>
     </div>
   );
 }
