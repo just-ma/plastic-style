@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import KIRA_PIC_1 from '../../images/thumbnails/kira-pic-1.jpg';
+import SHOTS_PIC from '../../images/thumbnails/shots-pic.jpg';
 import CMAN from '../../images/thumbnails/cman-2.jpg';
 
 const CenteredWrapper = styled.div`
@@ -34,6 +35,22 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Race For Titles feat Lipticism"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'shots-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/vKZbPA7nhaw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Private Hate"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'shots-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SHOTS_PIC}></StyledImg>
     </CenteredWrapper>
   ),
   'joyer-vid': (

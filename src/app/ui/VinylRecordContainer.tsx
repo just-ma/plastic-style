@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import useResponsive from '../../common/hooks/useResponsive';
 import useIsHome from '../../home/hooks/useIsHome';
 
-import AiGif from '../../images/thumbnails/sanders-thumbnail.jpg';
+import AiGif from '../../images/thumbnails/shots-thumbnail.jpg';
 
 import VinylRecord from './VinylRecord';
 
@@ -49,7 +49,7 @@ export default function VinylRecordContainer(): React.ReactElement | null {
       return;
     }
 
-    navigate('/features/Pharoah-And-I');
+    navigate('/features/An-Interview-With-Shots');
   };
 
   if (isResponsive && !isHome) {
