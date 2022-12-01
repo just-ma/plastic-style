@@ -15,16 +15,22 @@ export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
     year: 2022,
     episodes: [
       {
-        id: '1',
-        title: 'Episode 1: Fire-Toolz',
-        description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
+        id: '3',
+        title: 'Episode 3: Shots',
+        description: `Recently I got the chance to talk with Shots, a three member group composed of twins Matt and John Friberg along with Daniel DiMaggio. Their music can best be described as a collection of quiet sounds created with a wide range of instruments, tools and toys. Their latest record is 2019’s Private Hate.`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fan-interview-with-shots%2F',
       },
       {
         id: '2',
         title: 'Episode 2: Hollie Farris',
         description: `Episode 2 of plastic chair features the legendary trumpet player Hollie Farris, who was the bandleader for the James Brown Band for over 20 years!`,
         link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fjames-brown-interview%2F',
+      },
+      {
+        id: '1',
+        title: 'Episode 1: Fire-Toolz',
+        description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
       },
     ],
   },
