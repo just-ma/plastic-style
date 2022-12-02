@@ -2,10 +2,20 @@ import BIG_THIEF_DNWMIBIY_THUMBNAIL from '../../images/thumbnails/big-thief-drag
 import FKA_TWIGS_CAPRISONGS_THUMBNAIL from '../../images/thumbnails/fka-twigs-caprisongs.jpg';
 import CLOAKROOM_DISSOLUTION_WAVE_THUMBNAIL from '../../images/thumbnails/cloakroom-dissolution-wave.jpg';
 import OZ_TAPES_THUMBNAIL from '../../images/thumbnails/oz-tapes-thumbnail.jpg';
+import FLESH_THUMBNAIL from '../../images/thumbnails/flesh-thumbnail.jpg';
 
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'strange-flesh-croydon fox',
+    artist: 'Strange Flesh',
+    author: 'Parker Albert',
+    content: `<em>"Croydon Fox" is the first release from NYC-based duo Strange Flesh, who previously recorded as <a href="https://strangeflesh.bandcamp.com/album/croydon-fox"><u>The Casual Sexists</u></a></em>.<br></br>When I listen to "Croydon Fox" I'm not sure if I'm prowling or the one being prowled upon. At first I skittered along with the beat and was down with the slinky refrain (“My favorite type of day is night”), but singer Varrick’s cold, cutting delivery is straight up scary and so is the shaky piano and wobbling bass. Lines like “I slide into prosaic form to feed your night terrors” are spoken with such unsettling calm that they make me feel like I’m the prey trembling behind a dark tree in the forest.<br></br>“Croydon’s Revenge” is more playful and a bit more danceable, and actually cute too with its sampled cat noises and raccoon-knocking-over-a-trash-bin sounds.<br></br>“Croydon Dub” takes it back to the dark side, shaping a mirrorland of shredded echos. It's “Croydon Fox” heard through a hazy dream where you can't wake up.<br></br>The dazzling cherry on top is the video for “Croydon’s Fox,” which features a <expandableText text="scary fox man" hiddenText="the homemade fox mask worn is, dare I say, suave??"></expandableText> doing spooky things in dark places and intermittently dancing. Take a gander below and listen to all three tracks <a href="https://strangeflesh.bandcamp.com/album/croydon-fox"><u>here</u></a>.<br></br> <custom id = "flesh-vid"></custom>`,
+    createdAt: 1656352259,
+    image: FLESH_THUMBNAIL,
+    title: 'Croydon Fox',
+  },
   {
     reviewId: 'les-rallizes-denudes-oz-tapes',
     artist: 'Les Rallizes Dénudés',

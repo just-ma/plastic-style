@@ -26,6 +26,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'flesh-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/LUtwIozgoK0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Croydon Fox by Strange Flesh"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'race-vid': (
     <CenteredWrapper>
       <StyledIFrame
