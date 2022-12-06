@@ -32,9 +32,19 @@ import KITTENS_THUMBNAIL from '../../images/thumbnails/kittens-thumbnail.jpg';
 import FAUST_THUMBNAIL from '../../images/thumbnails/faust-thumbnail.jpg';
 import RACE_THUMBNAIL from '../../images/thumbnails/race-thumbnail.jpg';
 import SHOTS_THUMBNAIL from '../../images/thumbnails/shots-thumbnail.jpg';
+import BAILTER_THUMBNAIL from '../../images/thumbnails/bailter-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Bailter-Space-Shine',
+    title: 'Song Of The Day: "Shine" by Bailter Space',
+    author: 'Parker Albert',
+    createdAt: 1670335476,
+    image: BAILTER_THUMBNAIL,
+    content: `When I listen to shoegaze I want to mope but feel awestruck at the same time. The love song “Shine” by Bailterspace does this perfectly, in typical fashion for the band: holding the same fuzzed-out guitar chord while letting little melodies play around it. This forms a stuck-in-love drone, pleasant but peals of celestial synth belie a nervousness further explained by the song’s lyrics. “Think I might stop/Hanging round with you.” The line is so casual it’s crushing.
+    `,
+  },
   {
     id: 'An-Interview-With-Shots',
     title: 'An Interview With Shots',
