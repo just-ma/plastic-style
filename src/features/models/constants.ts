@@ -33,9 +33,18 @@ import FAUST_THUMBNAIL from '../../images/thumbnails/faust-thumbnail.jpg';
 import RACE_THUMBNAIL from '../../images/thumbnails/race-thumbnail.jpg';
 import SHOTS_THUMBNAIL from '../../images/thumbnails/shots-thumbnail.jpg';
 import BAILTER_THUMBNAIL from '../../images/thumbnails/bailter-thumbnail.jpg';
+import BABIES_THUMBNAIL from '../../images/thumbnails/babies-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Blake-Babies-Im-Not-Your-Mother',
+    title: `Song Of The Day: "I'm Not Your Mother" by Blake Babies`,
+    author: 'Ben Langdon',
+    createdAt: 1670907686,
+    image: BABIES_THUMBNAIL,
+    content: `With the Lemonheads 30th anniversary tour NYC date around the corner, I have been digging for overlooked gems in the Evan Dando extended universe. Blake Babies, formed in 1986, was Juliana Hatfield's first project and is a damn promising one. Sitting somewhere between The Sundays, Tulula Gosh, and The Nerves, Blake Babies’ disaffected and saccharine brand of power pop cater to a similar itch as The Real Kids or Shoes, yet their name rarely enters the conversation. Sunburn is an album worth your time, but the album opener “I’m Not Your Mother” might be the best of the bunch. The song is driven by a sort of playful competitiveness as Hatfield jabs at a would-be lover for being unable to function outside of a relationship “Girls will do it all without the aid of a mother/ Anything you can do I can do better” With it’s propulsive rhythm section and some creative hooks, “I’m Not Your Mother” deserves a spot on your playlist this winter.`,
+  },
   {
     id: 'Bailter-Space-Shine',
     title: 'Song Of The Day: "Shine" by Bailter Space',
