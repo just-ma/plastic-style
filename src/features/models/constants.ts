@@ -34,9 +34,18 @@ import RACE_THUMBNAIL from '../../images/thumbnails/race-thumbnail.jpg';
 import SHOTS_THUMBNAIL from '../../images/thumbnails/shots-thumbnail.jpg';
 import BAILTER_THUMBNAIL from '../../images/thumbnails/bailter-thumbnail.jpg';
 import BABIES_THUMBNAIL from '../../images/thumbnails/babies-thumbnail.jpg';
+import OMD_THUMBNAIL from '../../images/thumbnails/souvenir-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'OMD-Souvenir',
+    title: `Song Of The Day: "Souvenir" by Orchestral Manoeuvres In The Dark`,
+    author: 'Parker Albert',
+    createdAt: 1671747916,
+    image: OMD_THUMBNAIL,
+    content: `Growing up, a souvenir is a cheap trinket instilled with heaps of sentimental joy every time it’s looked at, like one of those oval pennies with a zoo animal etched into it. But reach a certain age and a souvenir can become unpleasant. Take OMD’s interpretation of the word: on “Souvenir,” lead singer Andy McCluskey’s voice hangs resigned yet unresolved at the chorus-ending line “My feelings still remain.” The synth moves like a slow-motion heartache, allowing all of the emotions to seep in and paralyze. It’s a hazy dreamscape too nice to leave. <br></br><custom id="omd-vid"></custom>`,
+  },
   {
     id: 'Blake-Babies-Im-Not-Your-Mother',
     title: `Song Of The Day: "I'm Not Your Mother" by Blake Babies`,
