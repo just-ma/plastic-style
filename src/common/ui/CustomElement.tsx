@@ -26,6 +26,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'omd-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/XDIYOiQUi2s"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Souvenir by OMD"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'flesh-vid': (
     <CenteredWrapper>
       <StyledIFrame
