@@ -35,9 +35,18 @@ import SHOTS_THUMBNAIL from '../../images/thumbnails/shots-thumbnail.jpg';
 import BAILTER_THUMBNAIL from '../../images/thumbnails/bailter-thumbnail.jpg';
 import BABIES_THUMBNAIL from '../../images/thumbnails/babies-thumbnail.jpg';
 import OMD_THUMBNAIL from '../../images/thumbnails/souvenir-thumbnail.jpg';
+import INTEREST_THUMBNAIL from '../../images/thumbnails/interest-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'Newfound-Interest-In-Conneticut',
+    title: `Album Of The Day: <em>Tell Me About The Long Dark Path Home </em>by The Newfound Interest In Connecticut`,
+    author: 'Ben Langdon',
+    createdAt: 1674071953,
+    image: INTEREST_THUMBNAIL,
+    content: `A latecomer to the style of Midwest Emo, The Newfound Interest In Connecticut dropped their first and only full length, <em>Tell Me About The Long Dark Path Home,</em> well after the likes of The Dashboard Confessional and later period Jimmy Eat World had changed the scene’s landscape. Somewhere between the Appleseed Cast, American Football, and I Hate Myself, TNIIC were eager to explore the boundaries of the genre in a way similar bands from the 90’s were unequipped to. There are hints of everything from Slint, to Godspeed You Black Emperor, to The Microphones buried in this unwieldy and hard to categorize album. Released in 2005, this album was too early to catch the wave of the late aughts emo revival, but thanks to a reissue campaign a few years ago the album has finally found its audience.`,
+  },
   {
     id: 'OMD-Souvenir',
     title: `Song Of The Day: "Souvenir" by Orchestral Manoeuvres In The Dark`,
