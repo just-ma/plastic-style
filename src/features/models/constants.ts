@@ -36,9 +36,18 @@ import BAILTER_THUMBNAIL from '../../images/thumbnails/bailter-thumbnail.jpg';
 import BABIES_THUMBNAIL from '../../images/thumbnails/babies-thumbnail.jpg';
 import OMD_THUMBNAIL from '../../images/thumbnails/souvenir-thumbnail.jpg';
 import INTEREST_THUMBNAIL from '../../images/thumbnails/interest-thumbnail.jpg';
+import SHARIF_THUMBNAIL from '../../images/thumbnails/sharif-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-hybrid-fatboi-sharif',
+    title: `Song Of The Day: "The Hybrid" By Fatboi Sharif and noface`,
+    author: 'Parker Albert',
+    createdAt: 1674136471,
+    image: SHARIF_THUMBNAIL,
+    content: `The sampled beats on “The Hybrid” are desperately trying to escape Fatboi Sharif’s maniacal talk-rap flow – bass drum thumps on an invisible wall and snare scrambles to find anything to grab hold of. But the track is dark and cavernous; delayed reverb on Sharif’s voice obliterates any sense of space. The lyrics offer brief glimpses into a fucked up world without enough detail to paint a full picture: “Grenades surround ledge / PTSD particles.” Sharif’s voice is disturbingly loopy, occasionally heightening like he’s taken a sip of helium – almost like he’s getting high off the dark shit he’s spitting. It’s the worst kind of apocalypse, where fear rots into indiscriminate glee. <br></br>Listen <a href="https://fatboisharif.bandcamp.com/album/preaching-in-havana"><u>here</u></a>`,
+  },
   {
     id: 'Newfound-Interest-In-Conneticut',
     title: `Album Of The Day: <em>Tell Me About The Long Dark Path Home </em>by The Newfound Interest In Connecticut`,
