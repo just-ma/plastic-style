@@ -37,9 +37,18 @@ import BABIES_THUMBNAIL from '../../images/thumbnails/babies-thumbnail.jpg';
 import OMD_THUMBNAIL from '../../images/thumbnails/souvenir-thumbnail.jpg';
 import INTEREST_THUMBNAIL from '../../images/thumbnails/interest-thumbnail.jpg';
 import SHARIF_THUMBNAIL from '../../images/thumbnails/sharif-thumbnail.jpg';
+import LOOP_THUMBNAIL from '../../images/thumbnails/loop-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'sun-shimmer-repeater-ephemeron-loop',
+    title: `Song Of The Day: "Sun Shimmer Repeater" By The Ephemeron Loop`,
+    author: 'Parker Albert',
+    createdAt: 1674252618,
+    image: LOOP_THUMBNAIL,
+    content: `Taken by title alone, “Sun Shimmer Repeater” sounds like it belongs in the ray-casting world of Slowdive’s debut album <em>Just For A Day</em>. And sure it shares the sweeping reverb of that grand debut, but it doesn't evoke sun shimmers, instead cave glimmers. It's a comfy cave though, the finish line for a restless album full of sharp turns into shoegaze, grindcore, and ambient. Maybe it’s less of a cave and more of a bathhouse. Yeah, if I were to name this song I'd call it <expandableText text="Guitar Bath House." hiddenText="Maybe it’s a good thing I didn’t name the song"></expandableText><br></br>Listen <a href="https://heatcrimes.bandcamp.com/album/psychonautic-escapism"><u>here</u></a>`,
+  },
   {
     id: 'the-hybrid-fatboi-sharif',
     title: `Song Of The Day: "The Hybrid" By Fatboi Sharif and noface`,
