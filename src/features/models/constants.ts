@@ -38,9 +38,18 @@ import OMD_THUMBNAIL from '../../images/thumbnails/souvenir-thumbnail.jpg';
 import INTEREST_THUMBNAIL from '../../images/thumbnails/interest-thumbnail.jpg';
 import SHARIF_THUMBNAIL from '../../images/thumbnails/sharif-thumbnail.jpg';
 import LOOP_THUMBNAIL from '../../images/thumbnails/loop-thumbnail.jpg';
+import SEA_THUMBNAIL from '../../images/thumbnails/sea-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'sea-moss-candy-run',
+    title: `Song Of The Day: "Candy Run" By Sea Moss`,
+    author: 'Parker Albert',
+    createdAt: 1674759373,
+    image: SEA_THUMBNAIL,
+    content: `The title of Sea Moss’s rambunctious track “Candy Run” reminds me of turbulent middle school years when everybody was either playing Candy Crush or Temple Run on their phone. Everyone had their nose to the grindstone during lunchtime, and now I'm imagining my clumsy, slightly chubby 11-year-old-self slipping on the cafeteria floor and “Candy Run” wouldn't be a bad soundtrack to the sight. The track has a stutter-stop rambunctiousness, but behind the scenes I think it’s a little more thought out than chaotic middle school me. The shouted, nearly indecipherable vocals remind me of <a href="https://prrfectpussy.bandcamp.com/album/say-yes-to-love"><u>Perfect Pussy</u></a>, but the squeals and grunts of a synth and the clutter of cowbell-saturated drums make “Candy Crush” a lot more playful. Taken all together, this sounds way fresher than a cafeteria lunch.<br></br><custom id="sea-vid"></custom>`,
+  },
   {
     id: 'sun-shimmer-repeater-ephemeron-loop',
     title: `Song Of The Day: "Sun Shimmer Repeater" By The Ephemeron Loop`,
