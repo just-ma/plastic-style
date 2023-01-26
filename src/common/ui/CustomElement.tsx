@@ -26,6 +26,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'sea-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Px-x4zYSM2Q"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Candy Run by Sea Moss"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'omd-vid': (
     <CenteredWrapper>
       <StyledIFrame
