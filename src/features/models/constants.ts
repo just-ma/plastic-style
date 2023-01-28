@@ -39,9 +39,18 @@ import INTEREST_THUMBNAIL from '../../images/thumbnails/interest-thumbnail.jpg';
 import SHARIF_THUMBNAIL from '../../images/thumbnails/sharif-thumbnail.jpg';
 import LOOP_THUMBNAIL from '../../images/thumbnails/loop-thumbnail.jpg';
 import SEA_THUMBNAIL from '../../images/thumbnails/sea-thumbnail.jpg';
+import MFER_THUMBNAIL from '../../images/thumbnails/mfer-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'my-idea-cry-mfer',
+    title: `Song Of The Day: "Cry Mfer" By My Idea`,
+    author: 'Parker Albert',
+    createdAt: 1674924858,
+    image: MFER_THUMBNAIL,
+    content: `Few 2022 records come bursting out of the gates as earnestly as <em>Cry Mfer. </em>“I need space / I will be the one to say goodbye this time” – this is how a concept record about an “it’s complicated” relationship – made by those who were actually <em>in </em>the relationship – begins. It’s impressive how they keep their cool considering: the guitars and synthetic violins are steadfast in a locked groove, not even blinking as Lily and Nate shift to a yearning chorus. The song exudes that “I can do it alone” energy one can often feel right after a breakup, but turns out it's a false confidence – by the next song Lily is admitting Nate’s her “crutch.” Relatable. <br></br><custom id="mfer-vid"></custom>`,
+  },
   {
     id: 'sea-moss-candy-run',
     title: `Song Of The Day: "Candy Run" By Sea Moss`,
