@@ -26,6 +26,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'marco-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/5IUhii6_lHA"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Wave Mode by Marco Zenker"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'mfer-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -33,7 +44,7 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
-        title="Candy Run by Sea Moss"
+        title="Cry Mfer by My Idea"
       ></StyledIFrame>
     </CenteredWrapper>
   ),

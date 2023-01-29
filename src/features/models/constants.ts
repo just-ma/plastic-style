@@ -40,9 +40,18 @@ import SHARIF_THUMBNAIL from '../../images/thumbnails/sharif-thumbnail.jpg';
 import LOOP_THUMBNAIL from '../../images/thumbnails/loop-thumbnail.jpg';
 import SEA_THUMBNAIL from '../../images/thumbnails/sea-thumbnail.jpg';
 import MFER_THUMBNAIL from '../../images/thumbnails/mfer-thumbnail.jpg';
+import MARCO_THUMBNAIL from '../../images/thumbnails/marco-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'marco-zenker-wave-mode',
+    title: `Song Of The Day: "Wave Mode" By Marco Zenker`,
+    author: 'Parker Albert',
+    createdAt: 1675002455,
+    image: MARCO_THUMBNAIL,
+    content: `I primarily know the Zenker Brothers as the power duo behind Ilian Tape, a Swedish label that outputs icy electronic music at a monstrous pace. But the brothers don't just sit back and curate – they jump in and get their hands dirty, dj-ing and recording plenty themselves. 15 years of this hands-on approach has resulted in a distinct sound palette for Ilian Tape – dub experiments, ambient wash, and cold beats. Marco Zenker takes advantage of the label’s tight aesthetics on 2022’s <em>Channel Balance</em>. It works within the bounds of Ilian Tape’s sound, but paradoxically expands its limits with Marco’s fine-tuned structure tinkering. “Wave Mode” sounds a bit like a rocking boat–synths spray into the beat like water on the bow – but Marco still manages to run a tight ship.<br></br><custom id="marco-vid"></custom>`,
+  },
   {
     id: 'my-idea-cry-mfer',
     title: `Song Of The Day: "Cry Mfer" By My Idea`,
