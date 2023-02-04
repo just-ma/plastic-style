@@ -26,14 +26,14 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
-  'marco-vid': (
+  'tinder-vid': (
     <CenteredWrapper>
       <StyledIFrame
-        src="https://www.youtube.com/embed/5IUhii6_lHA"
+        src="https://www.youtube.com/embed/uN5uTYe2DP0"
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
-        title="Wave Mode by Marco Zenker"
+        title="A Night In by Tindersticks"
       ></StyledIFrame>
     </CenteredWrapper>
   ),
