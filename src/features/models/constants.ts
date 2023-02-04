@@ -41,9 +41,18 @@ import LOOP_THUMBNAIL from '../../images/thumbnails/loop-thumbnail.jpg';
 import SEA_THUMBNAIL from '../../images/thumbnails/sea-thumbnail.jpg';
 import MFER_THUMBNAIL from '../../images/thumbnails/mfer-thumbnail.jpg';
 import MARCO_THUMBNAIL from '../../images/thumbnails/marco-thumbnail.jpg';
+import TINDER_THUMBNAIL from '../../images/thumbnails/tinder-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'tindersticks-a-night-in',
+    title: `Song Of The Day: "A Night In" By Tindersticks`,
+    author: 'Ben Langdon',
+    createdAt: 1675471608,
+    image: TINDER_THUMBNAIL,
+    content: `Tindersticks feel like what would've happened had Tom Waits leaned harder into the melodrama and baroque pop in his first few albums. Channeling the repetition and decrepitude found in a Beckett novel, “A Night In” loosely chronicles the end of a relationship through the perspective of a partner unable to quite express their hang ups with domestication: “It's the feeling of waking/ And it's gone”. The hymn-like loop the narrator finds himself in reflects a numbness he desperately wants to break out of as the orchestral strings crescendo over the six minute runtime. The abrupt finish and diffusion of energy leave us wondering how many times he has had this monologue before.<br></br><custom id="tinder-vid"></custom>`,
+  },
   {
     id: 'marco-zenker-wave-mode',
     title: `Song Of The Day: "Wave Mode" By Marco Zenker`,
