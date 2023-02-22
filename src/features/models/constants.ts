@@ -42,9 +42,18 @@ import SEA_THUMBNAIL from '../../images/thumbnails/sea-thumbnail.jpg';
 import MFER_THUMBNAIL from '../../images/thumbnails/mfer-thumbnail.jpg';
 import MARCO_THUMBNAIL from '../../images/thumbnails/marco-thumbnail.jpg';
 import TINDER_THUMBNAIL from '../../images/thumbnails/tinder-thumbnail.jpg';
+import DONOR_THUMBNAIL from '../../images/thumbnails/donor-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'brain-donor-my-pagan-ass',
+    title: `Song Of The Day: "My Pagan Ass" By Brain Donor`,
+    author: 'Ben Langdon',
+    createdAt: 1677099129,
+    image: DONOR_THUMBNAIL,
+    content: `Brain donor is the side project of Julian Cope and Spiritualized members Doggen Foster and Kevin Bales. As exhilarating and euphoric as it is just plain stupid, “My Pagan Ass” channels post 9-11 anxieties through the theatrics of Van Halen. This crew is too smart to be just plain old butt-rock, but one can hear the history of scuzzy drugged out basement rock from the Sonics through the Acid Mothers Temple underneath the farce. However you feel about lines like “Islam patriarchy 2D-vision/ Ground Zero funeral pyre”, I hope you can still appreciate Cope’s put-on machismo and some very accomplished riffage.<br></br><custom id="donor-vid"></custom>`,
+  },
   {
     id: 'tindersticks-a-night-in',
     title: `Song Of The Day: "A Night In" By Tindersticks`,
