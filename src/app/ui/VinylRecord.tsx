@@ -20,13 +20,13 @@ const rotate = keyframes`
 `;
 
 const SpinningContainer = styled.div`
-  animation: ${rotate} 10s linear infinite;
+  animation: ${rotate} 20s linear infinite;
 `;
 
-const Record = styled.div<{ isResponsive: boolean }>`
+const Record = styled.div<{ isTablet: boolean }>`
   position: relative;
-  width: ${({ isResponsive }) => (isResponsive ? 400 : 600)}px;
-  height: ${({ isResponsive }) => (isResponsive ? 400 : 600)}px;
+  width: ${({ isTablet }) => (isTablet ? 400 : 600)}px;
+  height: ${({ isTablet }) => (isTablet ? 400 : 600)}px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #111111;
@@ -70,11 +70,11 @@ type ComponentProps = {
 };
 
 export default function VinylRecord({ children, onClick }: ComponentProps): React.ReactElement {
-  const { isResponsive } = useResponsive();
+  const { isTablet } = useResponsive();
 
   return (
     <SpinningContainer>
-      <Record isResponsive={isResponsive} onClick={onClick}>
+      <Record isTablet={isTablet} onClick={onClick}>
         <RecordRings />
         <DeadWaxRing size={DEAD_WAX_RING_SIZE} />
         <CenterLabel size={CENTER_LABEL_SIZE}>{children}</CenterLabel>

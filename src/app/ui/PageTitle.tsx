@@ -81,7 +81,7 @@ const Title = styled.div<{ small: boolean; blasted: boolean }>`
   font-weight: 500;
 
   > a {
-    color: ${({ blasted }) => (blasted ? '#ff0059' : 'black')};
+    color: ${({ blasted }) => (blasted ? '#ff0059' : '#ffffff')};
     text-decoration: none;
   }
 
@@ -97,7 +97,7 @@ type ComponentProps = {
 };
 
 export default function PageTitle({ hasLink = true }: ComponentProps): React.ReactElement {
-  const { isResponsive } = useResponsive();
+  const { isTablet } = useResponsive();
 
   const [rotDuration, setRotDuration] = useState<number | null>(null);
   const [hovering, setHovering] = useState(false);
@@ -141,7 +141,7 @@ export default function PageTitle({ hasLink = true }: ComponentProps): React.Rea
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
-      <Title small={isResponsive} blasted={blasted}>
+      <Title small={isTablet} blasted={blasted}>
         {hasLink ? <Link to="/">{PAGE_TITLE}</Link> : PAGE_TITLE}
       </Title>
     </SpinningContainer>

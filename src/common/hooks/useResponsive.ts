@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { MOBILE_SIZE, RESPONSIVE_SIZE } from '../constants';
+import { MOBILE_SIZE, TABLET_SIZE } from '../constants';
 
 type HookValue = {
   /*
@@ -10,7 +10,7 @@ type HookValue = {
   /*
    * true if window width is <= responsive size
    */
-  isResponsive: boolean;
+  isTablet: boolean;
   /*
    * true if window width is <= mobile size
    */
@@ -18,11 +18,11 @@ type HookValue = {
 };
 
 const getIsDesktop = (): boolean => {
-  return window.innerWidth > RESPONSIVE_SIZE;
+  return window.innerWidth > TABLET_SIZE;
 };
 
-const getIsResponsive = (): boolean => {
-  return window.innerWidth <= RESPONSIVE_SIZE;
+const getisTablet = (): boolean => {
+  return window.innerWidth <= TABLET_SIZE;
 };
 
 const getIsMobile = (): boolean => {
@@ -31,12 +31,12 @@ const getIsMobile = (): boolean => {
 
 export default function useResponsive(): HookValue {
   const [isDesktop, setIsDesktop] = useState<boolean>(getIsDesktop());
-  const [isResponsive, setIsResponsive] = useState<boolean>(getIsResponsive());
+  const [isTablet, setisTablet] = useState<boolean>(getisTablet());
   const [isMobile, setIsMobile] = useState<boolean>(getIsMobile());
 
   const handleWindowResize = (): void => {
     setIsDesktop(getIsDesktop());
-    setIsResponsive(getIsResponsive());
+    setisTablet(getisTablet());
     setIsMobile(getIsMobile());
   };
 
@@ -50,7 +50,7 @@ export default function useResponsive(): HookValue {
 
   return {
     isDesktop,
-    isResponsive,
+    isTablet,
     isMobile,
   };
 }

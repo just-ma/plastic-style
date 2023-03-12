@@ -45,9 +45,9 @@ const NAV_ITEM_HEIGHT = 25;
 export default function Nav(): React.ReactElement {
   const location = useLocation();
   const isHome = useIsHome();
-  const { isResponsive } = useResponsive();
+  const { isTablet } = useResponsive();
 
-  const isDark = isHome || isResponsive;
+  const isDark = isHome || isTablet;
 
   const currentPagePath = location.pathname;
 
