@@ -35,6 +35,7 @@ import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 import { contactPath } from './contact/routes';
 import Contact from './contact/Contact';
 import styled from 'styled-components';
+import AppHeader from './app/ui/AppHeader';
 
 const AppContainer = styled.div`
   position: relative;
@@ -43,6 +44,7 @@ const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: #bac7c7;
 `;
 
 export default function App(): React.ReactElement {
@@ -50,6 +52,7 @@ export default function App(): React.ReactElement {
     <AppContainer>
       <BrowserRouter>
         <DecorativeBanner />
+        <AppHeader />
         <VinylRecordContainer />
         <Routes>
           <Route

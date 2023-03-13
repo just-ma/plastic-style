@@ -32,7 +32,7 @@ export default function VinylRecordContainer(): React.ReactElement | null {
   const navigate = useNavigate();
 
   const isHome = useIsHome();
-  const { isResponsive } = useResponsive();
+  const { isTablet } = useResponsive();
 
   const [clickable, setClickable] = useState(isHome);
 
@@ -52,7 +52,7 @@ export default function VinylRecordContainer(): React.ReactElement | null {
     navigate('/reviews/strange-flesh-croydon-fox');
   };
 
-  if (isResponsive && !isHome) {
+  if (isTablet && !isHome) {
     return null;
   }
 
