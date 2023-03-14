@@ -16,9 +16,7 @@ type ComponentProps = {
 export default function Page({ children }: ComponentProps): React.ReactElement {
   const location = useLocation();
 
-  const { isResponsive } = useResponsive();
-
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const { isTablet } = useResponsive();
 
   const [visible, setVisible] = useState(false);
 
@@ -34,11 +32,9 @@ export default function Page({ children }: ComponentProps): React.ReactElement {
   }, [location.pathname]);
 
   return (
-    <NavWrapper isResponsive={isResponsive} scrollRef={scrollRef}>
-      <div className={styles.scrollContainer} ref={scrollRef}>
-        <div
-          className={classnames(styles.contentContainer, isResponsive && styles.responsive, visible && styles.visible)}
-        >
+    <NavWrapper>
+      <div className={styles.scrollContainer}>
+        <div className={classnames(styles.contentContainer, isTablet && styles.responsive, visible && styles.visible)}>
           {children}
         </div>
       </div>
