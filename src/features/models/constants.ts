@@ -43,6 +43,7 @@ import MFER_THUMBNAIL from '../../images/thumbnails/mfer-thumbnail.jpg';
 import MARCO_THUMBNAIL from '../../images/thumbnails/marco-thumbnail.jpg';
 import TINDER_THUMBNAIL from '../../images/thumbnails/tinder-thumbnail.jpg';
 import DONOR_THUMBNAIL from '../../images/thumbnails/donor-thumbnail.jpg';
+import ALASKA_THUMBNAIL from '../../images/thumbnails/alaska-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
