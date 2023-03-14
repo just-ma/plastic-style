@@ -26,6 +26,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'alaska-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/BuUi86tm3C4"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="A Night In by Tindersticks"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'donor-vid': (
     <CenteredWrapper>
       <StyledIFrame

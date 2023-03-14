@@ -44,10 +44,19 @@ import MARCO_THUMBNAIL from '../../images/thumbnails/marco-thumbnail.jpg';
 import TINDER_THUMBNAIL from '../../images/thumbnails/tinder-thumbnail.jpg';
 import DONOR_THUMBNAIL from '../../images/thumbnails/donor-thumbnail.jpg';
 import CHRIS_BROKAW_THUMBNAIL from '../../images/thumbnails/chris-brokaw.jpg';
-
+import SMOG_THUMBNAIL from '../../images/thumbnails/knock-thumbnail.jpg';
+import SOG_THUMBNAIL from '../../images/thumbnails/knock-thumbnail.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'smog-teenage-spaceship',
+    title: 'Song Of The Day: "Teenage Spaceship" by Smog',
+    author: 'Ben Langdon',
+    createdAt: 1678813009,
+    image: SMOG_THUMBNAIL,
+    content: `“Teenage Spaceship” is a perfect example of romanticism in slowcore. Lacking the bitterness of Codeine or the apathy of Bedhead, Bill Callahan describes a mostly-undefiled and &nbsp;&nbsp;younger version of himself taking a midnight walk, absorbing his surroundings with the mystical solipsism where every discovery feels like the first, where every strip mall or suburban block is imbued with significance. While short and unambitious compared to the other classics on <em>Knock Knock</em>, “Teenage Spaceship” captures the feeling of youthful wonder better than anything else in his catalog.`,
+  },
   {
     id: 'chris-brokaw-interview',
     title: 'An Interview With Chris Brokaw',
