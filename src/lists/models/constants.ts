@@ -39,11 +39,102 @@ import DAZY_THUMBNAIL from '../../images/thumbnails/maximumblastsuperloud.jpg';
 import LIGHT_THUMBNAIL from '../../images/thumbnails/light-heaven.jpg';
 import STATE_THUMBNAIL from '../../images/thumbnails/statesend.jpg';
 import MUTTS_THUMBNAIL from '../../images/thumbnails/mutts-nuts.jpg';
+import SUNFLOWER_THUMBNAIL from '../../images/thumbnails/sunflower-thumbnail.jpg';
+import VELVET_THUMBNAIL from '../../images/thumbnails/velvet-thumbnail.jpg';
+import ADORE_THUMBNAIL from '../../images/thumbnails/adore-thumbnail.jpg';
+import LEAVES_THUMBNAIL from '../../images/thumbnails/leaves-thumbnail.jpg';
+import DRAGON_THUMBNAIL from '../../images/thumbnails/dragon-thumbnail.jpg';
+import THIRD_THUMBNAIL from '../../images/thumbnails/third-thumbnail.jpg';
+import MYSELF_THUMBNAIL from '../../images/thumbnails/myself-thumbnail.jpg';
+import COMPUTER_THUMBNAIL from '../../images/thumbnails/computer-thumbnail.jpg';
+import SUMMERTIME_THUMBNAIL from '../../images/thumbnails/summertime-thumbnail.jpg';
+import ZUMA_THUMBNAIL from '../../images/thumbnails/zuma-thumbnail.jpg';
+import TORTOISE_THUMBNAIL from '../../images/thumbnails/tortoise-thumbnail.jpg';
 import { List } from './types';
 
 export const PARKERS_TOP_ALBUMS_2020_KEY = 'parkers-top-albums-2020';
 
 export const MOCK_LISTS: ReadonlyArray<List> = [
+  {
+    id: 'top-ten-slowcore-songs-on-non-slowcore-albums',
+    title: 'Top Ten Slowcore Songs On Non-Slowcore Albums',
+    description: `These are my ten favorite slowcore songs made by non-slowcore artists, on non-slowcore albums.`,
+    author: 'Parker Albert',
+    image: TORTOISE_THUMBNAIL,
+    createdAt: 1678844438,
+    listItems: [
+      {
+        id: ' the-velvet-underground-candy-says',
+        title: '"Candy Says"',
+        artist: 'The Velvet Underground',
+        content: `Yup, slowcore is another thing that can be traced back to The Velvet Underground. “Candy Says” is gentle and delicate and definitely influenced The For Carnation’s careful, hushed dynamics approach, while Lou Reed’s languid vocals set the blueprint for Acetone. Lou’s words on the song’s meaning also encapsulate the vibe of slowcore (and emo) pretty well: “We look in the mirror and we don't like what we see...I don't know a person alive who doesn't feel that way."`,
+        image: VELVET_THUMBNAIL,
+      },
+      {
+        id: 'neil-young-cortez-the-killer',
+        title: '"Cortez The Killer"',
+        artist: 'Neil Young',
+        content: `Velvet Underground may have been the first to light the torch for slowcore’s dreary style, but Neil Young is the genre’s true grandfather. You can point to a dozen or so Young tracks that are slow, heavy, and rife with riffage, but “Cortez” is less of the “throw back a beer” vibe that most of these songs evoke, and more of “hold back your tears.”`,
+        image: ZUMA_THUMBNAIL,
+      },
+      {
+        id: 'big-thief-sparrow',
+        title: '"Sparrow"',
+        artist: 'Big Thief',
+        content: `“Sparrow” is a masterclass in the art of the subtle climax – the song is cyclical and Adrianne Lenker’s cadence is measured and steady, but her trembling warble slowly rises in intensity as she gives her rendition of the age-old tale of Adam and Eve. It’s a testament to Big Thief’s dynamic control and storytelling prowess, and it’s also a testament to slowcore’s ability to balance tension on the edge of a knife.`,
+        image: DRAGON_THUMBNAIL,
+      },
+      {
+        id: 'vince-staples-summertime',
+        title: '"Summertime"',
+        artist: 'Vince Staples',
+        content: `I can wager a bet that of all the artists anyone expected to be on this list, Vince Staples was not one of them. It makes sense, because an integral part of slowcore’s definition insists that the music contains some form of <em>rock</em>. Vince Staples is not rock. But hear me out. Listen to the sample used on “Summertime.” It's a broken shard of dark guitar, apocalyptically sad when paired with Vince’s cold despair.`,
+        image: SUMMERTIME_THUMBNAIL,
+      },
+      {
+        id: 'unwound-below-the-salt',
+        title: '"Below The Salt"',
+        artist: 'Unwound',
+        content: `I could write a whole article about all the styles Unwound explores on their magnum opus <em>Leaves Turn Inside You</em>, but more than any genre outside of post-hardcore, they’ve toyed with slowcore the most and they perfect it on “Below The Salt.” The first half of this ten minute odyssey is spent in an instrumental wasteland, guitars reverberate like radar waves picking up nothing – Duster wishes their landscapes were this bleak. Halfway through vocals appear, lyrics speak to searching for a land beyond lands. And that’s how I feel when I listen, getting lost in a place where there’s nowhere to go.`,
+        image: LEAVES_THUMBNAIL,
+      },
+      {
+        id: 'the-smashing-pumpkins-shame',
+        title: '"Shame"',
+        artist: 'The Smashing Pumpkins',
+        content: `I could write yet another article about all the styles explored on The Smashing Pumpkins’ underrated album <em>Adore</em>, but I won’t, instead I’ll just keep threatening to. “Shame” is classic head-hung-low slowcore, with Corgan pulling a typical Pumpkins move by simultaneously praising and condemning love: “Love is good and love is kind / Love is drunk and love is blind.” I like how punchy and subtly electronic the drums are – put next to the startlingly human moaning of the guitar, it brings a similar contrast as the lyrics.`,
+        image: ADORE_THUMBNAIL,
+      },
+      {
+        id: 'radiohead-the-tourist',
+        title: '"The Tourist"',
+        artist: 'Radiohead',
+        content: `“The Tourist” is the type of slowcore song that makes me want to slouch and breathe out a long sigh of relief. Maybe it’s because this song arrives at the end of an album-long trip through anxiety and paranoia, but even when divorced from the rest of <em>Ok Computer</em>, “The Tourist” provides quite the release. I’m hesitant to label any Radiohead song as the best of anything for fear of being basic and boring, but I have to admit that “The Tourist” is my favorite slowcore song.`,
+        image: COMPUTER_THUMBNAIL,
+      },
+      {
+        id: 'i-hate-myself-secret-lovers-at-the-heavens-gate-ranch',
+        title: '"Secret Lovers At The Heaven’s Gate Ranch"',
+        artist: 'I Hate Myself',
+        content: `“Secret Lovers At The Heaven’s Gate Ranch” packs a lot into a one-minute-and-thirty-seconds song, and it’s a great example of a slowcore emo crossover. It’s definitely the darkest zone of slowcore, and this track is especially bleak, serving as a slowed last heartbeat to an otherwise manic album. “This drink could be the last for you and me / Don't swallow.”`,
+        image: MYSELF_THUMBNAIL,
+      },
+      {
+        id: 'big-star-big-black-car',
+        title: '"Big Black Car"',
+        artist: 'Big Star',
+        content: `Honestly I mostly included “Big Black Car” for its wide influence on slowcore. I think &lt;em&gt;Third &lt;/em&gt;is overrated and this song registers as the boring kind of sad for me, but when it ends and the saloon-like piano stretches into infinity, it’s hard to argue that this isn’t the “Starman” of slowcore songs.`,
+        image: THIRD_THUMBNAIL,
+      },
+      {
+        id: 'the-beach-boys-forever',
+        title: '"Forever""',
+        artist: 'The Beach Boys',
+        content: `You probably didn’t expect The Beach Boys on this list, and if you did, you probably thought I was gonna choose “All I Wanna Do” or “Disney Girls (1957).” Sad Beach Boys songs always hit hard, because they so beautifully paint what an ideal love would look like, and then make it painfully obvious that it’ll never happen. We both know the guy in this song has never talked to the girl he’s so madly in love with. The original forever alone.`,
+        image: SUNFLOWER_THUMBNAIL,
+      },
+    ],
+  },
   {
     id: 'bens-low-effort-ep-list',
     title: "Ben's Top 10 EPs of 2021",
