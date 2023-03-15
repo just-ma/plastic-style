@@ -123,7 +123,7 @@ export const MOCK_LISTS: ReadonlyArray<List> = [
         id: 'big-star-big-black-car',
         title: '"Big Black Car"',
         artist: 'Big Star',
-        content: `Honestly I mostly included “Big Black Car” for its wide influence on slowcore. I think &lt;em&gt;Third &lt;/em&gt;is overrated and this song registers as the boring kind of sad for me, but when it ends and the saloon-like piano stretches into infinity, it’s hard to argue that this isn’t the “Starman” of slowcore songs.`,
+        content: `Honestly I mostly included “Big Black Car” for its wide influence on slowcore. I think <em>Third<em> is overrated and this song registers as the boring kind of sad for me, but when it ends and the saloon-like piano stretches into infinity, it’s hard to argue that this isn’t the “Starman” of slowcore songs.`,
         image: THIRD_THUMBNAIL,
       },
       {
