@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import KIRA_PIC_1 from '../../images/thumbnails/kira-pic-1.jpg';
 import SHOTS_PIC from '../../images/thumbnails/shots-pic.jpg';
+import TABLE_1 from '../../images/thumbnails/table-1.jpg';
+import TABLE_2 from '../../images/thumbnails/table-2.jpg';
+import CHART_1 from '../../images/thumbnails/chart-1.jpg';
+import CHART_2 from '../../images/thumbnails/chart-2.jpg';
 import CMAN from '../../images/thumbnails/cman-2.jpg';
 
 const CenteredWrapper = styled.div`
@@ -128,6 +132,26 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'shots-pic': (
     <CenteredWrapper>
       <StyledImg src={SHOTS_PIC}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'table-one': (
+    <CenteredWrapper>
+      <StyledImg src={TABLE_1}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'table-two': (
+    <CenteredWrapper>
+      <StyledImg src={TABLE_2}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'chart-one': (
+    <CenteredWrapper>
+      <StyledImg src={CHART_1}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'chart-two': (
+    <CenteredWrapper>
+      <StyledImg src={CHART_2}></StyledImg>
     </CenteredWrapper>
   ),
   'joyer-vid': (
