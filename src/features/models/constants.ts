@@ -46,10 +46,19 @@ import DONOR_THUMBNAIL from '../../images/thumbnails/donor-thumbnail.jpg';
 import CHRIS_BROKAW_THUMBNAIL from '../../images/thumbnails/chris-brokaw.jpg';
 import SMOG_THUMBNAIL from '../../images/thumbnails/knock-thumbnail.jpg';
 import THING_THUMBNAIL from '../../images/thumbnails/thing-thumbnail.jpg';
+import STRAP_THUMBNAIL from '../../images/thumbnails/strap-thumbnail.jpg';
 import SLOWCORE from '../../images/thumbnails/slowcore.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'arab-strap-i-would-have-liked-me-a-lot-last-night',
+    title: '(Slowcore) Song Of The Day: "I Would Have Liked Me A Lot Last Night" By Arab Strap',
+    author: 'Ben Langdon',
+    createdAt: 1679102508,
+    image: STRAP_THUMBNAIL,
+    content: `Arab Strap’s “I Would Have Liked Me a Lot Last Night” is the comedown that the rest of Arab Strap’s sophomore LP, <em>Philophobia</em>, orbits around. Most Arab Strap songs are based on moments of lucidity that unwillingly dawn upon us in the middle of the party, similar to catching one's cocaine-addled reflection in the mirror, and the self-abasement that follows . “I Would Have Liked Me a Lot Last Night” inverts that dynamic, sympathetically looking at the cascade of emotions we have the next morning.<br></br>"You said we had a good time/I hear I was a right laugh/I really loved you a lot last night/I could've hugged you to death" <br></br>The repetitive and mournful backing track adds weight to what very well could be fleeting moments of kindness, while the narrator betrays a dim awareness as to the cyclical nature of his habits and interpersonal relationships, and how the end of one night is just the start of another (“I'm still trying to decide where the weekend ends”). The song closes with a tongue-in-cheek loop of some anti-drug propaganda, suggesting he's already been too soppy for one day. While most of us are liable to promise to never take it that far again while heaving into the toilet, “I Would Have Liked Me a Lot Last Night” dwells on the reasons why we ultimately will.`,
+  },
   {
     id: 'slowcore-study',
     title: 'How Slow Can You Go: A Study of Slowness In Slowcore',
