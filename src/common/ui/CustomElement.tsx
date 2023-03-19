@@ -30,6 +30,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'codeine-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/ffarN0kCzSg"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="A Snapshot Of Codeine Fans"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'alaska-vid': (
     <CenteredWrapper>
       <StyledIFrame
