@@ -47,10 +47,19 @@ import CHRIS_BROKAW_THUMBNAIL from '../../images/thumbnails/chris-brokaw.jpg';
 import SMOG_THUMBNAIL from '../../images/thumbnails/knock-thumbnail.jpg';
 import THING_THUMBNAIL from '../../images/thumbnails/thing-thumbnail.jpg';
 import STRAP_THUMBNAIL from '../../images/thumbnails/strap-thumbnail.jpg';
+import CSHOW_THUMBNAIL from '../../images/thumbnails/cshow-thumbnail.jpg';
 import SLOWCORE from '../../images/thumbnails/slowcore.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'an-ode-to-codeine',
+    title: 'Loss Leader: An Ode To Codeine',
+    author: 'Parker Albert',
+    createdAt: 1679184184,
+    image: CSHOW_THUMBNAIL,
+    content: `Codeine used to sound so boring to me. When I first listened to “D,” their classic bummed-out anthem off <em>Frigid Stars </em>and most popular song, the monotone verse felt like pure drudgery and some of the lyrics felt overly simplistic: “Take a smile / Make it sad.” But most of all, the music was so, so <em>slow</em>. And so sad. But I was in Ireland and the weather was dreary so I kept listening.<br></br>Now Codeine is one of my favorite bands. “D” got me into <em>Frigid Stars </em>and made me a fan throughout college, but I didn’t truly immerse myself in Codeine until a recent breakup. Turns out Codeine is best when emotions are rushing in at an unmanageable rate – songs like “Pickup Song” rein me in with laconic guitar, and once I’m calmed the wordless chorus bursts forth like water breaking a dam. The music is heavy, simultaneously minimal and deeply psychedelic.<br></br>Codeine was cathartic then but now that I have some distance from heartbreak, I can appreciate the vastness of their songs, towering monuments to past emotions. Sometimes it almost feels like a celebration of sadness, a reminder that we’re real.<br></br>The <a href="https://en.wikipedia.org/wiki/Frigid_Stars_LP"><u>best slowcore album of all time</u></a> was recorded on an 8-track in a Brooklyn basement. Humble Stephen Immerwahr sung vocals and played bass, tactful John Engle played guitar, and powerhouse <a href="https://www.plasticstyle.net/features/chris-brokaw-interview"><u>Chris Brokaw</u></a> played drums and overdubbed guitar. It’s quite the trio and I was overjoyed to hear they were reuniting and playing their first show in <expandableText text="eleven years" hiddenText="their second reunion, their first reunion was in 2012. Codeine originally broke up in 1994"></expandableText> at Union Pool. I took the chance to document the show and ask a few fans some questions.<br></br><custom id="codeine-vid"></custom>`,
+  },
   {
     id: 'arab-strap-i-would-have-liked-me-a-lot-last-night',
     title: '(Slowcore) Song Of The Day: "I Would Have Liked Me A Lot Last Night" By Arab Strap',
