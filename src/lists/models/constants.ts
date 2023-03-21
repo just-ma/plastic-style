@@ -50,11 +50,46 @@ import COMPUTER_THUMBNAIL from '../../images/thumbnails/computer-thumbnail.jpg';
 import SUMMERTIME_THUMBNAIL from '../../images/thumbnails/summertime-thumbnail.jpg';
 import ZUMA_THUMBNAIL from '../../images/thumbnails/zuma-thumbnail.jpg';
 import TORTOISE_THUMBNAIL from '../../images/thumbnails/tortoise-thumbnail.jpg';
+import SNAIL_THUMBNAIL from '../../images/thumbnails/snail-thumbnail.jpg';
+import SUNDAY_THUMBNAIL from '../../images/thumbnails/sunday-thumbnail.jpg';
+import JOYERSLOW_THUMBNAIL from '../../images/thumbnails/joyerslow-thumbnail.jpg';
+import QUICK_THUMBNAIL from '../../images/thumbnails/quick-thumbnail.jpg';
 import { List } from './types';
 
 export const PARKERS_TOP_ALBUMS_2020_KEY = 'parkers-top-albums-2020';
 
 export const MOCK_LISTS: ReadonlyArray<List> = [
+  {
+    id: 'slowcore-sampler-part-one',
+    title: 'Slowcore Sampler: Part One',
+    description: `Luckily for me, I’m not the only one I know who likes slowcore. Check out these slowcore playlists that my friends made!`,
+    author: 'Parker Albert',
+    image: SNAIL_THUMBNAIL,
+    createdAt: 1679435587,
+    listItems: [
+      {
+        id: 'quick-slowcore-playlist',
+        title: 'QUICK SLOWCORE PLAYLIST',
+        artist: 'Tristin Souvannarath',
+        content: `Tristin is responsible for introducing me to many of my favorite slowcore bands, including Acetone and Seam. This playlist introduced me to yet another, The American Analog Set. The Low deep cut “Violence” and the slowburn “Tinyspot” from the <expandableText text = "Sooyoung Park" hiddenText = "lead singer of Seam"> </expandableText> project ee were also highlights for me. Check out Tristin’s bands <a href="https://t-rexico.bandcamp.com/album/t-rexico"><u>T. Rexico</u></a> and <a href="https://friendshouse.bandcamp.com/"><u>Friend’s House</u></a>!<br></br><br></br><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2YAf37BBb2n3M1BWM6hCLH?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        image: QUICK_THUMBNAIL,
+      },
+      {
+        id: 'slow-sunday',
+        title: 'Slow Sunday',
+        artist: 'Kevin Rowe',
+        content: `Kevin named this playlist “Slow Sunday” because this list was originally going to be posted on Sunday, so do him a favor and listen to it on a sunday, mkay? I appreciate the folky slowcore on “Sue’s Last Ride” by <a href="https://dirtythree.bandcamp.com/"><u>Dirty Three</u></a>, I’m glad that he included a song from Galaxie 500’s best album <expandableText text="'Today,'" hiddenText="hot take, I know, but fight me"></expandableText>, and it was lovely to listen to “Nashville Moon” by Magnolia Electric Co. during my visit home in Nashville.<br></br><br></br><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2OaHAUI3ZAerjhJoFyF0Ro?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        image: SUNDAY_THUMBNAIL,
+      },
+      {
+        id: 'joyer-listening',
+        title: 'Joyer Listening',
+        artist: 'Joyer',
+        content: `I <a href="https://www.plasticstyle.net/features/Joyer-interview"><u>interviewed</u></a> <a href = https://joyer.bandcamp.com/album/perfect-gray> <u>Joyer</u></a> last year, they’re some of the sweetest guys you’ll come across and I was lucky enough to see them play a few weeks ago. I asked them to make a playlist of what they’re listening to – this playlist casts a wider net than just slowcore, but features some slower gems nonetheless. I liked the soft strut of <a href="https://22halo.bandcamp.com/album/garden-bed"><u>22º Halo’s</u></a> “Scarecrows” and the gentle acoustics of “Breezeblowsback (Disguise)” by <a href="https://okwhatever.bandcamp.com/album/four-songs-2022"><u>Kitchen</u></a>. I was also thrilled to see a track (“The Blossom Filled Streets”) by the underrated <a href="https://movietone.bandcamp.com/album/the-sand-and-the-stars"><u>Movietone</u></a> on there. Catch Joyer at <a href="https://link.dice.fm/3VHr7rgVlyb"><u>Elsewhere</u></a> in June!<br></br><br></br> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1di3TyRT1qcfSIdhm7Nnlt?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+        image: JOYERSLOW_THUMBNAIL,
+      },
+    ],
+  },
   {
     id: 'top-ten-slowcore-songs-on-non-slowcore-albums',
     title: 'Top Ten Slowcore Songs On Non-Slowcore Albums',
