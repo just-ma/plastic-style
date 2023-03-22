@@ -30,6 +30,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'halle-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Z-VzY8zxRB0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="I'm Not Green"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'codeine-vid': (
     <CenteredWrapper>
       <StyledIFrame
