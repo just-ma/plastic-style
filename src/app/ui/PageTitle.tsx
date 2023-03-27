@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 
 import useResponsive from '../../common/hooks/useResponsive';
+import { APP_TITLE_COLOR } from './constants';
 
 const PAGE_TITLE = 'plasticstyle.net';
 
@@ -81,7 +82,7 @@ const Title = styled.div<{ small: boolean; blasted: boolean }>`
   font-weight: 500;
 
   > a {
-    color: ${({ blasted }) => (blasted ? '#ff0059' : '#ffffff')};
+    color: ${({ blasted }) => (blasted ? '#ff0059' : APP_TITLE_COLOR)};
     text-decoration: none;
   }
 

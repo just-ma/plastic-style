@@ -7,7 +7,7 @@ const FREQUENCY_2 = 17;
 const FREQUENCY_3 = 31;
 
 const MAX_DIFF = 50;
-const MAX_OPACITY = 75;
+const MAX_OPACITY = 70;
 
 const randDiff = (): number => {
   return (Math.random() - 1) * 2 * MAX_DIFF;
@@ -62,9 +62,9 @@ export default function DecorativeBanner(): React.ReactElement {
         style={{
           backgroundImage:
             `linear-gradient(` +
-            `rgba(165, 77, 57, 0.4), ` +
-            `rgba(230, 157, 0, 0.1), ` +
-            `rgba(0, 255, 94, 0.05), ` +
+            `rgba(110, 190, 255, 0.4), ` +
+            `rgba(0, 120, 190, 0.1), ` +
+            `rgba(255, 205, 98, 0.05), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />
@@ -75,8 +75,8 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_1}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(255, 111, 0, 0.2), ` +
-            `rgba(200, 161, 21, 0.1), ` +
+            `rgba(0, 80, 255, 0.2), ` +
+            `rgba(255, 255, 220, 0.1), ` +
             `rgba(255, ${150 + diff1}, 90, 0.05), ` +
             `rgba(${150 + diff1}, ${120 + diff1}, 180, 0.05), ` +
             `rgba(235, 235, 235, 0))`,
@@ -89,7 +89,7 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_2}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(60, 20, 0, 0.2), ` +
+            `rgba(0, 20, 60, 0.2), ` +
             `rgba(10, 0, ${130 + diff2}, 0.2), ` +
             `rgba(${100 + diff2}, 40, ${120 + diff2}, 0.1), ` +
             `rgba(255, ${170 + diff2}, ${110 + diff2}, 0.1), ` +
@@ -104,9 +104,9 @@ export default function DecorativeBanner(): React.ReactElement {
           transitionDuration: `${FREQUENCY_3}s`,
           backgroundImage:
             `linear-gradient(` +
-            `rgba(${50 + diff3}, ${140 + diff3}, 255, 0.2), ` +
-            `rgba(${120 + diff3}, 150, 240, 0.2), ` +
-            `rgba(200, 200, ${150 + diff3}, 0.1), ` +
+            `rgba(${50 + diff3}, ${170 + diff3}, 255, 0.2), ` +
+            `rgba(${150 + diff3}, 220, 230, 0.2), ` +
+            `rgba(255, 220, ${190 + diff3}, 0.1), ` +
             `rgba(235, 235, 235, 0))`,
         }}
       />

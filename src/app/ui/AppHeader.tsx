@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useResponsive from '../../common/hooks/useResponsive';
+import { BANNER_BACKGROUND_COLOR, SCROLLING_BANNER_TEXT } from './constants';
 
 import PageTitle from './PageTitle';
 
@@ -10,7 +11,7 @@ const Container = styled.div<{ isMobile: boolean }>`
   left: 0;
   width: 100%;
   height: ${({ isMobile }) => (isMobile ? 40 : 45)}px;
-  background-color: #9a4c22;
+  background-color: ${BANNER_BACKGROUND_COLOR};
   display: flex;
   align-items: center;
   gap: 20px;
@@ -59,13 +60,15 @@ export default function AppHeader() {
       <TitleContainer>
         <PageTitle />
       </TitleContainer>
-      <ScrollingTextContainer>
-        <ScrollingText>
-          {new Array(isMobile ? 2 : 8).fill('slowcore week').map((v, i) => (
-            <div key={i}>{v}</div>
-          ))}
-        </ScrollingText>
-      </ScrollingTextContainer>
+      {!!SCROLLING_BANNER_TEXT.length && (
+        <ScrollingTextContainer>
+          <ScrollingText>
+            {new Array(isMobile ? 2 : 8).fill(SCROLLING_BANNER_TEXT).map((v, i) => (
+              <div key={i}>{v}</div>
+            ))}
+          </ScrollingText>
+        </ScrollingTextContainer>
+      )}
     </Container>
   );
 }

@@ -36,6 +36,7 @@ import { contactPath } from './contact/routes';
 import Contact from './contact/Contact';
 import styled from 'styled-components';
 import AppHeader from './app/ui/AppHeader';
+import { APP_BACKGROUND_COLOR } from './app/ui/constants';
 
 const AppContainer = styled.div`
   position: relative;
@@ -44,7 +45,7 @@ const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #bac7c7;
+  background-color: ${APP_BACKGROUND_COLOR};
 `;
 
 export default function App(): React.ReactElement {

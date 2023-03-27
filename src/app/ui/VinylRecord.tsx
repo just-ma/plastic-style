@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import useResponsive from '../../common/hooks/useResponsive';
 
 import { ReactComponent as VinylRecordRingsGraphic } from '../../images/graphics/vinyl-record-rings.svg';
+import { VINYL_ROTATE_DURATION_SECONDS } from './constants';
 
 const DEAD_WAX_RING_SIZE = 42;
 const CENTER_LABEL_SIZE = 34;
@@ -20,7 +21,7 @@ const rotate = keyframes`
 `;
 
 const SpinningContainer = styled.div`
-  animation: ${rotate} 20s linear infinite;
+  animation: ${rotate} ${VINYL_ROTATE_DURATION_SECONDS}s linear infinite;
 `;
 
 const Record = styled.div<{ isTablet: boolean }>`
