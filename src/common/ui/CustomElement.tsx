@@ -8,6 +8,7 @@ import TABLE_2 from '../../images/thumbnails/table-2.jpg';
 import CHART_1 from '../../images/thumbnails/chart-1.jpg';
 import CHART_2 from '../../images/thumbnails/chart-2.jpg';
 import CMAN from '../../images/thumbnails/cman-2.jpg';
+import SAMARA from '../../images/thumbnails/samara-pic.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -30,6 +31,22 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'samara-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SAMARA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'samara-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Z0BIcdqY7IM"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="An Interview With Samara Lubelski"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'halle-vid': (
     <CenteredWrapper>
       <StyledIFrame
