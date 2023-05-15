@@ -9,6 +9,8 @@ import CHART_1 from '../../images/thumbnails/chart-1.jpg';
 import CHART_2 from '../../images/thumbnails/chart-2.jpg';
 import CMAN from '../../images/thumbnails/cman-2.jpg';
 import SAMARA from '../../images/thumbnails/samara-pic.jpg';
+import ERGOT from '../../images/thumbnails/ergot.jpg';
+import MEZCAL from '../../images/thumbnails/mezcal.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -31,9 +33,30 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'mezcal-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MEZCAL}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ergot-pic': (
+    <CenteredWrapper>
+      <StyledImg src={ERGOT}></StyledImg>
+    </CenteredWrapper>
+  ),
   'samara-pic': (
     <CenteredWrapper>
       <StyledImg src={SAMARA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'joanne-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/GoIpVoaQeNY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Joanne Robertson"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'samara-vid': (
