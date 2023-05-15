@@ -4,9 +4,19 @@ import CLOAKROOM_DISSOLUTION_WAVE_THUMBNAIL from '../../images/thumbnails/cloakr
 import OZ_TAPES_THUMBNAIL from '../../images/thumbnails/oz-tapes-thumbnail.jpg';
 import FLESH_THUMBNAIL from '../../images/thumbnails/flesh-thumbnail.jpg';
 import HALLE_THUMBNAIL from '../../images/thumbnails/halle-thumbnail.jpg';
+import JOANNE_THUMBNAIL from '../../images/thumbnails/joanne.jpg';
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'joanne-robertson-at-ergot',
+    artist: 'Joanne Robertson',
+    author: 'Parker Albert',
+    content: `On Saturday I went to Ergot Records to see Joanne Robertson play. I hadn't heard her stuff, but my friends said she was good. I ran into <a href = https://www.plasticstyle.net/features/an-interview-with-samara-lubelski > <u>Samara Lubelski</u></a> there. She was close friends with Joanne, but hadn’t seen her perform. It was hot in the room, and the sparsely plucked acoustics of the opener somehow made the air more humid. Joanne went on an hour after I arrived. Surprisingly she was playing electric guitar, not acoustic. <br></br> <custom id = "joanne-vid"></custom> <br></br>In between songs Joanne muttered, wondering what she should play and commenting on the increasing heat in the small record store lit with two dim red lightbulbs. I swayed, partially because I was tired but also because the music was making me. <br></br><custom id = "ergot-pic"> </custom> <br></br>“I think I need some whiskey” said Joanne after one of the songs. She was offered whisky or mezcal from the back of the record store - she was mostly unfamiliar with mezcal (“that’s what they put in margaritas, right?”) but chose it anyway. <br></br> <custom id = "mezcal-pic"> </custom>`,
+    createdAt: 1684156826,
+    image: JOANNE_THUMBNAIL,
+    title: 'Live at Ergot Records 5/13/23',
+  },
   {
     reviewId: 'hallelujahs-eat-meat-swear-an-oath',
     artist: 'Hallelujahs',
