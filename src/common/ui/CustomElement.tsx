@@ -11,6 +11,7 @@ import CMAN from '../../images/thumbnails/cman-2.jpg';
 import SAMARA from '../../images/thumbnails/samara-pic.jpg';
 import ERGOT from '../../images/thumbnails/ergot.jpg';
 import MEZCAL from '../../images/thumbnails/mezcal.jpg';
+import DOOR from '../../images/thumbnails/door.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -33,6 +34,11 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'door-pic': (
+    <CenteredWrapper>
+      <StyledImg src={DOOR}></StyledImg>
+    </CenteredWrapper>
+  ),
   'mezcal-pic': (
     <CenteredWrapper>
       <StyledImg src={MEZCAL}></StyledImg>

@@ -5,9 +5,19 @@ import OZ_TAPES_THUMBNAIL from '../../images/thumbnails/oz-tapes-thumbnail.jpg';
 import FLESH_THUMBNAIL from '../../images/thumbnails/flesh-thumbnail.jpg';
 import HALLE_THUMBNAIL from '../../images/thumbnails/halle-thumbnail.jpg';
 import JOANNE_THUMBNAIL from '../../images/thumbnails/joanne.jpg';
+import WEAVE_THUMBNAIL from '../../images/thumbnails/weave.jpg';
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'midwife-orbweaving',
+    artist: 'Midwife',
+    author: 'Parker Albert',
+    content: `I usually listen to Midwife right before bed. This is a relaxing experience, but it does run the risk that I will have sad dreams. The new Midwife album has a spiderweb on the cover, with a door caught in the middle. The way to new places and new opportunities stuck smack dab in a predator’s trap. Similar juxtapositions can be found in the album’s lyrics: “The hounds of heaven / Run like hell.” <br></br> <custom id = "door-pic" > </custom> <br></br>The journey of <em>Orbweaving </em>is interesting. The two quietest songs sandwich the album. The title track is last, a twelve minute ambient song that sounds like The Void. Maybe that’s what lies on the other side of the stuck door. Maybe it’s a good thing the door is closed.`,
+    createdAt: 1684387648,
+    image: WEAVE_THUMBNAIL,
+    title: 'Orbweaving',
+  },
   {
     reviewId: 'joanne-robertson-at-ergot',
     artist: 'Joanne Robertson',
