@@ -12,6 +12,11 @@ import SAMARA from '../../images/thumbnails/samara-pic.jpg';
 import ERGOT from '../../images/thumbnails/ergot.jpg';
 import MEZCAL from '../../images/thumbnails/mezcal.jpg';
 import DOOR from '../../images/thumbnails/door.jpg';
+import KOTZ from '../../images/thumbnails/kotz.jpg';
+import BEN from '../../images/thumbnails/ben.jpg';
+import COOLER from '../../images/thumbnails/cooler.jpg';
+import SAMARATWO from '../../images/thumbnails/samara.jpg';
+import HELEN from '../../images/thumbnails/helen.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -34,6 +39,31 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'ben-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BEN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'helen-pic': (
+    <CenteredWrapper>
+      <StyledImg src={HELEN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'kotz-pic': (
+    <CenteredWrapper>
+      <StyledImg src={KOTZ}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'cooler-pic': (
+    <CenteredWrapper>
+      <StyledImg src={COOLER}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'samara-pic-2': (
+    <CenteredWrapper>
+      <StyledImg src={SAMARATWO}></StyledImg>
+    </CenteredWrapper>
+  ),
   'door-pic': (
     <CenteredWrapper>
       <StyledImg src={DOOR}></StyledImg>
@@ -52,6 +82,17 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'samara-pic': (
     <CenteredWrapper>
       <StyledImg src={SAMARA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'helen-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/y1O9O21TXqc"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Helen"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'joanne-vid': (
