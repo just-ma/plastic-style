@@ -6,9 +6,19 @@ import FLESH_THUMBNAIL from '../../images/thumbnails/flesh-thumbnail.jpg';
 import HALLE_THUMBNAIL from '../../images/thumbnails/halle-thumbnail.jpg';
 import JOANNE_THUMBNAIL from '../../images/thumbnails/joanne.jpg';
 import WEAVE_THUMBNAIL from '../../images/thumbnails/weave.jpg';
+import HELEN_THUMBNAIL from '../../images/thumbnails/helen-thumbnail.jpg';
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'helen-show-review',
+    artist: 'Helen',
+    author: 'Parker Albert',
+    content: `I go to Union Pool on Friday night to see <a href="https://grouper.bandcamp.com/album/the-original-faces"><u>Helen</u></a> play. I meet my friend Megan there at 7:30 and immediately get a shot of tequila and a Budweiser. We run into <a href="https://www.plasticstyle.net/features/an-interview-with-samara-lubelski"><u>Samara Lubelski</u></a> in the outdoor area, where there is a bar, a taco truck, and a plethora of wooden benches. There is also a water cooler, my favorite. We say hi to <expandableText text = "Samara" hiddenText = "Samara if you're reading this I promise you won't be mentioned in every show review"> </expandableText> and she introduces us to some friends she’s talking to. One of them is the bassist for Helen. I realize I don’t want to be one of those guys who arrives in the middle of a conversation and lingers despite having no idea what is being talked about, so Megan and I walk a few feet away and discuss the current state of music journalism because we are very serious music journalists.<br></br><custom id = "cooler-pic"></custom> <br></br>Samara starts playing at 8:20. She is playing solo violin in a drone-like manner, just like every time I’ve seen her play. It is my third time seeing her and this time I am not too anchored to the performance. My thoughts wander but since I decided to leave my earplugs out, every time she plays a higher, more piercing note, my eyes fall out of my head and land back on the stage. It is semi-hypnotic.<br></br> <custom id = "samara-pic-2"></custom> <br></br>I forgot to mention that I was drinking a tall can of Kostritzer during Samara’s performance. Kostritzer is a dark German beer that we have on draft at the restaurant I work at. It was $8 but the bartender originally told me it was $9. He apologized and said he works at <expandableText text = "four" hiddenText = "I don't actually remember how many bars he worked at but four feels like the right number"></expandableText> bars. I was not upset.<br></br> <custom id = "kotz-pic"></custom><br></br>Helen starts playing while I’m in the bathroom. I quickly purchase another Kostritzer and stand behind all the other people watching Helen play. I decide to put in my earplugs but as it turns out they were missing from my keychain container the entire time. Because of this when Megan asks if I want to move closer to the stage I decline.<br></br><custom id = "helen-pic"></custom><br></br>The drums and bass of Helen, played by the two band members who aren’t Liz Harris from Grouper, are pretty loud and drown out Liz’s voice even more than a Grouper song. The songs were high quality shoegaze and Liz dispersed some very nice fuzz with the guitar she was playing.<br></br><custom id = "helen-vid"></custom><br></br>After the show Megan and I meet <a href="https://www.plasticstyle.net/lists/bens-low-effort-ep-list"><u>Ben</u></a> at one of his favorite cocktail bars. It is not that good and Ben is very drunk. I order an espresso martini, my favorite, and Ben makes fun of me. When the drink arrives he tastes it and emphatically tells me it is a great coffee drink.<br></br><custom id = "ben-pic"></custom>`,
+    createdAt: 1684628381,
+    image: HELEN_THUMBNAIL,
+    title: 'Helen At Union Pool',
+  },
   {
     reviewId: 'midwife-orbweaving',
     artist: 'Midwife',
