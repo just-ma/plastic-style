@@ -17,6 +17,10 @@ import BEN from '../../images/thumbnails/ben.jpg';
 import COOLER from '../../images/thumbnails/cooler.jpg';
 import SAMARATWO from '../../images/thumbnails/samara.jpg';
 import HELEN from '../../images/thumbnails/helen.jpg';
+import JACK from '../../images/thumbnails/jack.jpg';
+import STUDIO from '../../images/thumbnails/studio.jpg';
+import RESIDENTS from '../../images/thumbnails/residents.jpg';
+import GROCERY from '../../images/thumbnails/grocery.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -39,6 +43,37 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'michael-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/vc3xZ0Sn5q8"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="An Interview With I.R. Michael"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'grocery-pic': (
+    <CenteredWrapper>
+      <StyledImg src={GROCERY}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'residents-pic': (
+    <CenteredWrapper>
+      <StyledImg src={RESIDENTS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'studio-pic': (
+    <CenteredWrapper>
+      <StyledImg src={STUDIO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'jack-pic': (
+    <CenteredWrapper>
+      <StyledImg src={JACK}></StyledImg>
+    </CenteredWrapper>
+  ),
   'ben-pic': (
     <CenteredWrapper>
       <StyledImg src={BEN}></StyledImg>

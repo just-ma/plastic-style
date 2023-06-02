@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import useResponsive from '../../common/hooks/useResponsive';
 import useIsHome from '../../home/hooks/useIsHome';
 
-import AiGif from '../../images/thumbnails/samara-thumbnail.jpg';
+import AiGif from '../../images/thumbnails/michael-thumbnail.jpg';
 
 import VinylRecord from './VinylRecord';
 
