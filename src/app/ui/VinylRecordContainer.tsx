@@ -49,7 +49,7 @@ export default function VinylRecordContainer(): React.ReactElement | null {
       return;
     }
 
-    navigate('/features/an-interview-with-samara-lubelski');
+    navigate('/features/an-interview-with-ir-michael');
   };
 
   if (isTablet && !isHome) {
