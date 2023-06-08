@@ -51,9 +51,18 @@ import CSHOW_THUMBNAIL from '../../images/thumbnails/cshow-thumbnail.jpg';
 import SAMARA_THUMBNAIL from '../../images/thumbnails/samara-thumbnail.jpg';
 import MICHAEL_THUMBNAIL from '../../images/thumbnails/michael-thumbnail.jpg';
 import SLOWCORE from '../../images/thumbnails/slowcore.jpg';
+import LEOR from '../../images/thumbnails/leor.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'leor-millers-fear-of-her-own-desire-shrieking-matter',
+    title: 'Song Of The Day: "Shrieking Matter" by Leor Miller’s Fear of Her Own Desire',
+    author: 'Parker Albert',
+    createdAt: 1686202046,
+    image: LEOR,
+    content: `“Shrieking Matter” is a balm for shrieking thoughts. The warm guitar washes make it my favorite track on Leor Miller’s Fear of Her Own Desire’s new album <a href="https://whoisleormiller.bandcamp.com/album/eternal-bliss-now-2"><u><em>Eternal Bliss Now</em></u></a>. It was the first song she played at her last show on tour, at the Broadway on a night where I was feeling particularly anxious and antisocial. The tune has a way of reeling flying thoughts back to the ground for a brief encounter with the present moment. It soothed me and I’m sure it soothed others in the crowd too.`,
+  },
   {
     id: 'an-interview-with-ir-michael',
     title: 'An Interview With I.R. Michael',
