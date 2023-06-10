@@ -43,6 +43,28 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'hel-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Cg4mfBSkyQw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Let Hel Hold What She Has"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'self-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/ktOUevztFKw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="This Strain Of The Self"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'michael-vid': (
     <CenteredWrapper>
       <StyledIFrame
