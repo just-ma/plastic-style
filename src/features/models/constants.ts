@@ -53,9 +53,18 @@ import MICHAEL_THUMBNAIL from '../../images/thumbnails/michael-thumbnail.jpg';
 import SLOWCORE from '../../images/thumbnails/slowcore.jpg';
 import LEOR from '../../images/thumbnails/leor.jpg';
 import BITUMENIC from '../../images/thumbnails/bitumenic.jpg';
+import NUMBER from '../../images/thumbnails/number.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-face-on-my-number-card-ryu-yoshizawa-koeosaeme',
+    title: 'Song Of The Day: "The face on my number card was smiling by Ryu Yoshizawa / Koeosaeme',
+    author: 'Parker Albert',
+    createdAt: 1686659969,
+    image: NUMBER,
+    content: `Keith Rankin, the founder of Orange Milk Records, has announced a new label called Avant Lard. The premise for the label is simple. He’ll ask artists to make weird tracks, then he’ll share these weird tracks on the label. It’s a funny premise for someone who already runs a label that puts out quite experimental and often weird music. But I’m here for it.<br></br>The first Avant Lard <a href="https://avantlard.bandcamp.com/album/the-face-on-my-number-card-was-smiling"><u>release</u></a> is a song by Ryu Yoshizawa / Koeosame called “The face on my number card was smiling” and it is indeed weird. It’s a collage-like piece that kind of sounds like a journey through the guts of a digital piano.`,
+  },
   {
     id: 'gnom-this-strain-of-the-self',
     title: 'Song Of The Day: "This Strain Of The Self (feat. Fire-Toolz)" by GNOM',
