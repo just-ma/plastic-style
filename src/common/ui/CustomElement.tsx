@@ -21,6 +21,11 @@ import JACK from '../../images/thumbnails/jack.jpg';
 import STUDIO from '../../images/thumbnails/studio.jpg';
 import RESIDENTS from '../../images/thumbnails/residents.jpg';
 import GROCERY from '../../images/thumbnails/grocery.jpg';
+import EYE from '../../images/thumbnails/eye.jpg';
+import PHONO from '../../images/thumbnails/phonograph.jpg';
+import HEART from '../../images/thumbnails/heart.jpg';
+import NINA from '../../images/thumbnails/nina.jpg';
+import SCARRS from '../../images/thumbnails/scarrs.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -43,6 +48,64 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'scarrs-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SCARRS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'eye-pic': (
+    <CenteredWrapper>
+      <StyledImg src={EYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'phono-pic': (
+    <CenteredWrapper>
+      <StyledImg src={PHONO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'nina-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NINA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'heart-pic': (
+    <CenteredWrapper>
+      <StyledImg src={HEART}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'aasr-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Q5Xl6bx1KjY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Aim"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'locust-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/k9k1NzqFSuE"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="I Am The Murderer"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'bar-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/PpbB0g0shqY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Mariana Trenchrock"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'hel-vid': (
     <CenteredWrapper>
       <StyledIFrame
