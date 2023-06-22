@@ -26,7 +26,10 @@ import PHONO from '../../images/thumbnails/phonograph.jpg';
 import HEART from '../../images/thumbnails/heart.jpg';
 import NINA from '../../images/thumbnails/nina.jpg';
 import SCARRS from '../../images/thumbnails/scarrs.jpg';
-
+import BEE from '../../images/thumbnails/bee.jpg';
+import HEAD from '../../images/thumbnails/head.jpg';
+import BLOOM from '../../images/thumbnails/bloom.jpg';
+import JAR from '../../images/thumbnails/jar2.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -48,6 +51,48 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'nondi-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/_vYxBCcrDcM"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Orchid Juke"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'ricks-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/uX4fdvZsNSw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Porter Ricks"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'bloom-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BLOOM}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'head-pic': (
+    <CenteredWrapper>
+      <StyledImg src={HEAD}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'jar-pic': (
+    <CenteredWrapper>
+      <StyledImg src={JAR}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'bee-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BEE}></StyledImg>
+    </CenteredWrapper>
+  ),
   'scarrs-pic': (
     <CenteredWrapper>
       <StyledImg src={SCARRS}></StyledImg>
