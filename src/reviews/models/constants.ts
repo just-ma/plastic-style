@@ -8,9 +8,19 @@ import JOANNE_THUMBNAIL from '../../images/thumbnails/joanne.jpg';
 import WEAVE_THUMBNAIL from '../../images/thumbnails/weave.jpg';
 import HELEN_THUMBNAIL from '../../images/thumbnails/helen-thumbnail.jpg';
 import TRACEY_THUMBNAIL from '../../images/thumbnails/tracey.jpg';
+import NONDI_THUMBNAIL from '../../images/thumbnails/nondi.jpg';
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'flood-city-trax-by-nondi_',
+    artist: 'Nondi_',
+    author: 'Parker Albert',
+    content: `Ambient electronic music with a propulsive beat underneath is nothing new – ambient techno has been a thing since the 90’s and Burial evaporated 2-step with 2007’s <em>Untrue</em>. Most of the time, the mood is dreary.<br></br><custom id = "ricks-vid"></custom><br></br><em>Flood City Trax </em>is not dreary. There's an upbeat undercurrent; the tracks are electricity in a jar.<br></br><custom id = "jar-pic"></custom></br></br>“Orchid Juke,” “Sun Juke,” “Healing Rain,” “Floaty Cloud Dream.” These tunes suggest bloom, not decay.<br></br><custom id = "nondi-vid"></custom><br></br>“Orchid Juke” sounds like the microcosm of a backyard garden – synths whirr and buzz and pop in the brightest way. This is music for bees high on pollen.<br></br><custom id = "bee-pic"></custom><br></br>Traces of footwork can be found throughout the album, but they’re covered by comforting blankets of ambience. By shaving off the attack and release, “Sentimental Juke” turns a House cymbal into a home’s salt and pepper shaker. Songs like “Long Ago” could smooth out small anxious moments in the office, when the party music from the night before is still racketing around in your brain.<br></br><custom id ="head-pic"></custom>`,
+    createdAt: 1687410115,
+    image: NONDI_THUMBNAIL,
+    title: 'Flood City Trax',
+  },
   {
     reviewId: 'three-nights-with-bar-italia',
     artist: 'Bar Italia',
