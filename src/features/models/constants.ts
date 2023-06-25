@@ -54,9 +54,18 @@ import SLOWCORE from '../../images/thumbnails/slowcore.jpg';
 import LEOR from '../../images/thumbnails/leor.jpg';
 import BITUMENIC from '../../images/thumbnails/bitumenic.jpg';
 import NUMBER from '../../images/thumbnails/number.jpg';
+import MORR from '../../images/thumbnails/morr.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-face-on-my-number-card-ryu-yoshizawa-koeosaeme',
+    title: 'I Listened to Three Morrissey Albums',
+    author: 'Parker Albert',
+    createdAt: 1687670335,
+    image: MORR,
+    content: `It’s Friday morning and it’s raining which means I take the subway to work instead of biking which means I can listen to music on my Sony over-the-ear headphones. I can’t find them and I fear I left them at the Sampha show at Pioneer Works the previous night. I am sad so I listen to Morrissey.<br></br><custom id = "sony-pic"></custom><br></br>I’ve never listened to a full Morrissey album so I start with <em>Viva Hate</em>. It’s great music for moping and I’m happy with how sad it makes me.<br></br><custom id = "maudlin-vid"></custom></br></br>As the day goes on I listen to two other Morrissey albums – <em>Your Arsenal </em>and <em>Vauxhall and I</em>. “The National Front Disco” sticks out; it gets me going. I will listen to it on my run the next day.<br></br><custom id = "disco-vid"></custom>`,
+  },
   {
     id: 'the-face-on-my-number-card-ryu-yoshizawa-koeosaeme',
     title: 'Song Of The Day: "The face on my number card was smiling by Ryu Yoshizawa / Koeosaeme',
