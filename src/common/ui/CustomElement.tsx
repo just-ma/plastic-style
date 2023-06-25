@@ -31,6 +31,7 @@ import HEAD from '../../images/thumbnails/head.jpg';
 import BLOOM from '../../images/thumbnails/bloom.jpg';
 import JAR from '../../images/thumbnails/jar2.jpg';
 import SONY from '../../images/thumbnails/sony.jpg';
+import GOTT from '../../images/thumbnails/gott.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -52,6 +53,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'hated-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/ZXmAjQmkkEs"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Hated"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'disco-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -94,6 +106,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'gott-pic': (
+    <CenteredWrapper>
+      <StyledImg src={GOTT}></StyledImg>
     </CenteredWrapper>
   ),
   'sony-pic': (
