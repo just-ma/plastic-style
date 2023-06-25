@@ -30,6 +30,7 @@ import BEE from '../../images/thumbnails/bee.jpg';
 import HEAD from '../../images/thumbnails/head.jpg';
 import BLOOM from '../../images/thumbnails/bloom.jpg';
 import JAR from '../../images/thumbnails/jar2.jpg';
+import SONY from '../../images/thumbnails/sony.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -51,6 +52,28 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'disco-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/O1cTiqXWKII"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Disco"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'maudlin-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/EJW5ZjJbgM0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Maudlin"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'nondi-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -71,6 +94,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'sony-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SONY}></StyledImg>
     </CenteredWrapper>
   ),
   'bloom-pic': (
