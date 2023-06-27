@@ -34,6 +34,7 @@ import SONY from '../../images/thumbnails/sony.jpg';
 import GOTT from '../../images/thumbnails/gott.jpg';
 import MBEER from '../../images/thumbnails/mystery2.jpg';
 import COUCH from '../../images/thumbnails/couch.jpg';
+import PICKLES from '../../images/thumbnails/pickles.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -130,6 +131,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'pickles-pic': (
+    <CenteredWrapper>
+      <StyledImg src={PICKLES}></StyledImg>
     </CenteredWrapper>
   ),
   'mbeer-pic': (
