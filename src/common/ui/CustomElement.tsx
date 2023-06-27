@@ -32,6 +32,8 @@ import BLOOM from '../../images/thumbnails/bloom.jpg';
 import JAR from '../../images/thumbnails/jar2.jpg';
 import SONY from '../../images/thumbnails/sony.jpg';
 import GOTT from '../../images/thumbnails/gott.jpg';
+import MBEER from '../../images/thumbnails/mystery2.jpg';
+import COUCH from '../../images/thumbnails/couch.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -53,6 +55,28 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'irc-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/zqG-rElbj2E"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="The Burning"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'tblack-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/0o9Aw1200E4"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Theme Black"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'hated-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -106,6 +130,16 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'mbeer-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MBEER}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'couch-pic': (
+    <CenteredWrapper>
+      <StyledImg src={COUCH}></StyledImg>
     </CenteredWrapper>
   ),
   'gott-pic': (

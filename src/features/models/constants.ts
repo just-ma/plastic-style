@@ -55,9 +55,18 @@ import LEOR from '../../images/thumbnails/leor.jpg';
 import BITUMENIC from '../../images/thumbnails/bitumenic.jpg';
 import NUMBER from '../../images/thumbnails/number.jpg';
 import MORR from '../../images/thumbnails/morr.jpg';
+import IRC from '../../images/thumbnails/irc.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'iron-curtain',
+    title: 'Iron Curtain',
+    author: 'Parker Albert',
+    createdAt: 1687842633,
+    image: IRC,
+    content: `After <a href="https://www.plasticstyle.net/features/i-listened-to-three-morrissey-albums"><u>eating a pretzel and drinking two beers</u></a> at Gotscheer Hall with Sabrina and James I bike to Clinton Hill to visit a basement where the boyfriend of Jenna hangs out with his friends. His name is David and he is painting a poster for a West Coast tour that a band called Theme Black is taking.<br></br><custom id = "tblack-vid"></custom><br></br>David and his friends call the basement the stu. They give me a tour of the stu. They make shirts here for bands they like: Minutemen, Calm, Theme Black. I sit on the couch and I am handed a beer but I cannot remember what kind.<br></br><custom id = "mbeer-pic"></custom><br></br>David’s friend Duncan is also on the couch so we talk about music. He tells me about a band called Iron Curtain. They made synth pop in the 80s; they are from California.<br></br><custom id = "couch-pic"></custom><br></br>It’s Monday and I am at the office. I listen to music while I work which sometimes impacts my communication with coworkers. I don’t know what to listen to so I look at my list of things to listen to. I pick Iron Curtain; it is a good choice.<br></br><custom id = "irc-vid"></custom>`,
+  },
   {
     id: 'i-listened-to-three-morrissey-albums',
     title: 'I Listened to Three Morrissey Albums',
