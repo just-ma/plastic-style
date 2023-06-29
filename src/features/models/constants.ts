@@ -56,9 +56,18 @@ import BITUMENIC from '../../images/thumbnails/bitumenic.jpg';
 import NUMBER from '../../images/thumbnails/number.jpg';
 import MORR from '../../images/thumbnails/morr.jpg';
 import IRC from '../../images/thumbnails/irc.jpg';
+import CASSEROLE_THUMBNAIL from '../../images/thumbnails/casserole.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'tuesday-night',
+    title: 'Tuesday Night',
+    author: 'Parker Albert',
+    createdAt: 1688045337,
+    image: CASSEROLE_THUMBNAIL,
+    content: `Speaker 1: [00:00:01] What is your favorite like? Do you like it or not? It sounds like a sorry, that sounds awesome, but I would say it's a toss up between the mirrors and microphone issues. Demos. Yeah. No, that's Rocket from the tunes. Demos. They're fucking unbelievable. I agree. I'm now looking to see if I find five action compilation someplace where I should write. Yeah, I'll be fine if you pull it out. Do you like, Devo? So it's very much like what someone's like and drugs, they can take this with like, hardcore, you know, we even. Yeah. And this like, here's a thing. They're like, you know, Devo are just as important as suicide. It in terms of like, oh, the early electronic music seems like it's better than whatever, like the First Amendment. Well, that's stupid. But like, what about the scene in the first movie with, like, the suicide song that's like. Yeah. I mean, it's fascinating and amazing references and all this. Like, I think that it's like a, you know. Yeah, Yeah. Have your mind blown. The question is, what about the scene in 8 hours? Don't equal a day in like the third hour where these two guys sit down next to a lamp and have a drink. And underneath the lamp is the folk red bow. Anders Pearson recorded it. Oh, shit. It's unbelievable. That fucking like. Like, like. Like what? Like, listen, like I saw the premier of the DC because that was like, a pretty hard, fast film from DC. And like, up until this point there was just a TV with the standard definition. They have a fan service. I carry like a goofy song, but it's just I have a because I knew a restoration has come in and I watched it at MoMA and when that scene happened, I was like, oh, like audibly throughout the theater was like, Holy, holy, like, it's like the conflagration. My two favorite things in the world, like, come like God tried Grass ax dinner and like Fassbinder, like New German Center in the seventies, like in one fucking scene. James Wong Unbelievable mess. Blew my fucking mind. Like, it's really hard for me to think of, like, a cooler, creamy casserole. [00:02:29][147.7]`,
+  },
   {
     id: 'iron-curtain',
     title: 'Iron Curtain',
