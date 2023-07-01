@@ -57,9 +57,27 @@ import NUMBER from '../../images/thumbnails/number.jpg';
 import MORR from '../../images/thumbnails/morr.jpg';
 import IRC from '../../images/thumbnails/irc.jpg';
 import CASSEROLE_THUMBNAIL from '../../images/thumbnails/casserole.jpg';
+import ESTRELLA_THUMBNAIL from '../../images/thumbnails/estrella.jpg';
+import HOME_THUMBNAIL from '../../images/thumbnails/foothouse.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'estrella-jalisco',
+    title: 'Estrella Jalisco',
+    author: 'Parker Albert',
+    createdAt: 1688241126,
+    image: ESTRELLA_THUMBNAIL,
+    content: `It’s Wednesday morning and I order an Omelette from my local deli. He makes it and gives it to me and it is the best Omelette I have eaten in New York City.<br></br><custom id = "omelette-pic"></custom><br></br>It’s Wednesday night and I remember the name of the beer that Jenna’s boyfriend David handed to me in the stu. I remember because I am at Trans Pecos and I see the beer on the counter at the bar. It is called Estrella Jalisco.<br></br><custom id = "estrella-pic"></custom><br></br>I leave Trans Pecos and walk to Ben’s apartment. Ben’s girlfriend Megan and my friend Kim are also there. Four people are present so we can play my favorite card game, Hearts. During the game I play “Protection” by Massive Attack. I can tell everyone likes the track but nobody says anything. I win the game.<br></br><custom id = "protection-vid"></custom><br></br>It’s Thursday morning so I go to work.<br></br><custom id = "work-pic"></custom><br></br>It’s Thursday evening so I go home.<br></br><custom id = "walkhome-pic"></custom><br></br>It’s Friday morning. Today I will sign the lease for my new apartment. My coworker is playing Ambulance Blues by Neil Young out loud. I do not complain.<br></br><custom id = "ambulance-vid"></custom><br></br>When I leave the office I bring home two Coronas, two Modelos, and a Stella Artois. I take them from the office fridge but it is not stealing because the fridge is getting cleaned out today.<br></br><custom id = "beers-pic"></custom><br></br>After I sign my lease I bike home and listen to “Easy” by The Commodores.<br></br><custom id = "easy-vid"></custom>`,
+  },
+  {
+    id: 'home-listening',
+    title: 'Ben’s Home Listening',
+    author: 'Ben Langdon',
+    createdAt: 1688241126,
+    image: HOME_THUMBNAIL,
+    content: `I woke up early and knew I wasn't going to get anything done so I put on <em>There's Nothing Wrong with Love </em>by Built To Spill. While listening to the objectively greatest BTS album from the best band out of Idaho, I discovered a deep desire within me to go to the Treefort Music Fest in Boise one day.<br></br><custom id = "morning-vid"></custom><br></br>I actually had been in the Boise area in early 2019 while the festival was in progress, I unwisely chose to go camping with friends instead.<br></br><custom id = "camping-pic"></custom><br></br>While thinking about that lost opportunity I saw a record store post that they had a copy of <em>Double Nickels on the Dime</em> by the Minutemen, which is a record I have been chasing for quite a while. When I got there I realized it was way out of my budget, so I walked out with a copy of <em>Bug </em>by Dinosaur Jr. instead. It’s a pretty good time.<br></br><custom id = "bug-pic"></custom><br></br>Coincidentally, Dinosaur Jr. are slated to play next year's Treefort festival.<br></br><custom id = "dino-pic"></custom><br></br>While dwelling over my loss later in the evening, I got a victory royale in Fortnite. I was listening to <em>Ongaku Zukan </em>by Ryuichi Sakamoto. Because of that victory, I feel comfortable giving it a hearty recommendation.<br></br><custom id = "ryu-pic"></custom><br></br>To my knowledge, Mr. Sakamoto never appeared at a Treefort festival. That being said I could be wrong, these posters have a pretty small text font and I really dont have the time to go through them all.<br></br><custom id = "treefort-pic"></custom><br></br>Built to Spill have played at like nearly every Treefort, I think I forgot to mention that.`,
+  },
   {
     id: 'tuesday-night',
     title: 'Tuesday Night',

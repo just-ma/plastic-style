@@ -35,6 +35,17 @@ import GOTT from '../../images/thumbnails/gott.jpg';
 import MBEER from '../../images/thumbnails/mystery2.jpg';
 import COUCH from '../../images/thumbnails/couch.jpg';
 import PICKLES from '../../images/thumbnails/pickles.jpg';
+import OMELETTE from '../../images/thumbnails/omelette.jpg';
+import ESTRELLA from '../../images/thumbnails/estrella.jpg';
+import CAMPING from '../../images/thumbnails/camping.jpg';
+import DINO from '../../images/thumbnails/dino.jpg';
+import BEERS from '../../images/thumbnails/beers.jpg';
+import BUG from '../../images/thumbnails/bug.jpg';
+import NICKEL from '../../images/thumbnails/nickel.jpg';
+import RYU from '../../images/thumbnails/ryu.jpg';
+import TREEFORT from '../../images/thumbnails/treefort.jpg';
+import WALKHOME from '../../images/thumbnails/walkhome.jpg';
+import WORK from '../../images/thumbnails/work.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -56,6 +67,50 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'easy-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/7XcTyEKSnYg"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Easy"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'protection-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Epgo8ixX6Wo"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Protection"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'ambulance-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/EA2BNB_4m3g"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Ambulance Blues"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'morning-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/CUIyppCO8BY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="In The Morning"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'irc-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -131,6 +186,61 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'omelette-pic': (
+    <CenteredWrapper>
+      <StyledImg src={OMELETTE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'work-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WORK}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'walkhome-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WALKHOME}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'treefort-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TREEFORT}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ryu-pic': (
+    <CenteredWrapper>
+      <StyledImg src={RYU}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'nickel-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NICKEL}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'estrella-pic': (
+    <CenteredWrapper>
+      <StyledImg src={ESTRELLA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'dino-pic': (
+    <CenteredWrapper>
+      <StyledImg src={DINO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'camping-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CAMPING}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'bug-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BUG}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'beers-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BEERS}></StyledImg>
     </CenteredWrapper>
   ),
   'pickles-pic': (
