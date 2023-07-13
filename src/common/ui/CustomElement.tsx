@@ -46,7 +46,7 @@ import RYU from '../../images/thumbnails/ryu.jpg';
 import TREEFORT from '../../images/thumbnails/treefort.jpg';
 import WALKHOME from '../../images/thumbnails/walkhome.jpg';
 import WORK from '../../images/thumbnails/work.jpg';
-import TRASH from '../../images/thumbnails/trash.jpg';
+import TRASH from '../../images/thumbnails/trash2.jpg';
 import RADIOACTIVE from '../../images/thumbnails/radioactive.jpg';
 import FIREWORKS from '../../images/thumbnails/fireworks.jpg';
 const CenteredWrapper = styled.div`
