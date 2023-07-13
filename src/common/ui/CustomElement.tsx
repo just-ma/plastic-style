@@ -46,6 +46,9 @@ import RYU from '../../images/thumbnails/ryu.jpg';
 import TREEFORT from '../../images/thumbnails/treefort.jpg';
 import WALKHOME from '../../images/thumbnails/walkhome.jpg';
 import WORK from '../../images/thumbnails/work.jpg';
+import TRASH from '../../images/thumbnails/trash2.jpg';
+import RADIOACTIVE from '../../images/thumbnails/radioactive.jpg';
+import FIREWORKS from '../../images/thumbnails/fireworks.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -67,6 +70,61 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'respect-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/x34icYC8zA0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Meat"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'meat-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/WkIO8zJjX3M"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Meat"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'seam-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/sEMQzfIo-mk"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Seam"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'buch-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Tvs_5NTl9b4"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Buch"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'chanel-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/ATBi04xqjB0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Easy"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'easy-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -186,6 +244,21 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Porter Ricks"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'radioactive-pic': (
+    <CenteredWrapper>
+      <StyledImg src={RADIOACTIVE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'fireworks-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FIREWORKS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'trash-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TRASH}></StyledImg>
     </CenteredWrapper>
   ),
   'omelette-pic': (

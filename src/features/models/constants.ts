@@ -59,9 +59,18 @@ import IRC from '../../images/thumbnails/irc.jpg';
 import CASSEROLE_THUMBNAIL from '../../images/thumbnails/casserole.jpg';
 import ESTRELLA_THUMBNAIL from '../../images/thumbnails/estrella.jpg';
 import HOME_THUMBNAIL from '../../images/thumbnails/foothouse.jpg';
+import TV_THUMBNAIL from '../../images/thumbnails/tv.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'bushwick-depression',
+    title: 'Bushwick Depression',
+    author: 'Parker Albert',
+    createdAt: 1689211702,
+    image: TV_THUMBNAIL,
+    content: `It is Monday July 10th and my TV is broken. I go to Purgatory to see Chanel Beads. The show is sold out and I do not get in.<br></br><custom id = "chanel-vid"></custom><br></br>It is Sunday July 9th and my TV is broken. It rains and the restaurant I work at is dead.<br></br><custom id = "buch-vid"></custom><br></br>It is Saturday July 8th and my TV is broken. Friends sit on my floor and I play them Seam, Neil Young and Terry Riley.<br></br><custom id = "seam-vid"></custom><br></br>It is Friday July 7th and my TV is broken. I see Shep Treasure at Mercury Lounge. I learn that I live a block away from the most radioactive place in New York.<br></br><custom id = "radioactive-pic"></custom><br></br>It is Thursday July 6th and my TV is broken.<br></br><custom id = "trash-pic"></custom><br></br>It is Wednesday July 5th and my TV is broken. I make Big Plans.<br></br><custom id ="meat-vid"></custom><br></br>It is Tuesday July 4th and my TV is broken. I am one of the first to a roof party and one of the last to leave.<br></br><custom id = "fireworks-pic"></custom><br></br>It is Monday July 3rd and my TV is not broken. It is the morning and I am moving. My new apartment is in Bushwick but I tell people it is in Ridgewood.<br></br><custom id = "respect-vid"></custom>`,
+  },
   {
     id: 'estrella-jalisco',
     title: 'Estrella Jalisco',
