@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import useResponsive from '../../common/hooks/useResponsive';
 import useIsHome from '../../home/hooks/useIsHome';
 
-import AiGif from '../../images/thumbnails/michael-thumbnail.jpg';
+import AiGif from '../../images/thumbnails/flesh2.jpg';
 
 import VinylRecord from './VinylRecord';
 
@@ -49,7 +49,7 @@ export default function VinylRecordContainer(): React.ReactElement | null {
       return;
     }
 
-    navigate('/features/an-interview-with-ir-michael');
+    navigate('/features/an-interview-with-strange-flesh');
   };
 
   if (isTablet && !isHome) {
