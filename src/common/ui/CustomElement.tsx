@@ -49,6 +49,13 @@ import WORK from '../../images/thumbnails/work.jpg';
 import TRASH from '../../images/thumbnails/trash2.jpg';
 import RADIOACTIVE from '../../images/thumbnails/radioactive.jpg';
 import FIREWORKS from '../../images/thumbnails/fireworks.jpg';
+import STARLING from '../../images/thumbnails/starling.jpg';
+import GOLDENMOLE from '../../images/thumbnails/goldenmole.jpg';
+import PIKA from '../../images/thumbnails/pika.jpg';
+import FOX from '../../images/thumbnails/fox.jpg';
+import FOSSA from '../../images/thumbnails/fossa.jpg';
+import AYEAYE from '../../images/thumbnails/ayeaye.jpg';
+import FLESH3_PIC from '../../images/thumbnails/flesh3.jpg';
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -70,6 +77,118 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'flesh2-pic': (
+    <CenteredWrapper>
+      <StyledImg src={STARLING}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'starling-pic': (
+    <CenteredWrapper>
+      <StyledImg src={STARLING}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'goldenmole-pic': (
+    <CenteredWrapper>
+      <StyledImg src={GOLDENMOLE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'pika-pic': (
+    <CenteredWrapper>
+      <StyledImg src={PIKA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'fox-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FOX}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'fossa-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FOSSA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ayeaye-pic': (
+    <CenteredWrapper>
+      <StyledImg src={AYEAYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'vulture-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/zxj9YO4Qtx0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Bone Vulture"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'remix-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/DvIzD8GxcQw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Very Remix"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'lauren-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/cu66EDMxAbI"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Lauren Bacall"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'sugoku-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/OkOmoVU-M_s"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Sugoku"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'very-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/fmZzDqcc2Sg"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Very"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'famous-song': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341315591&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="I'm Famous"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'grave-song': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1565172523%3Fsecret_token%3Ds-cBz8dsgBcVw&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Grave"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'respect-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -669,6 +788,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="Private Hate"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'flesh3-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FLESH3_PIC}></StyledImg>
     </CenteredWrapper>
   ),
   'shots-pic': (
