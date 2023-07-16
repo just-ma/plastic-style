@@ -61,9 +61,18 @@ import ESTRELLA_THUMBNAIL from '../../images/thumbnails/estrella.jpg';
 import HOME_THUMBNAIL from '../../images/thumbnails/foothouse.jpg';
 import TV_THUMBNAIL from '../../images/thumbnails/tv.jpg';
 import FLESH2_THUMBNAIL from '../../images/thumbnails/flesh2.jpg';
+import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'rays-candy-store',
+    title: 'Ray’s Candy Store',
+    author: 'Parker Albert',
+    createdAt: 1689540296,
+    image: OREOS_THUMBNAIL,
+    content: `Wednesday I am in a forest. The forest is in Forest Park. There are trails in the forest. I am running on the trails and when I finish my run I no longer have Bushwick Depression.<br></br><custom id = "run-pic"></custom><br></br>Thursday I am at the office. It is almost time to leave but Jenna texts me and asks if I want to get a drink. I say yes so I buy a bottle of orange wine and we walk to seward park and we drink it. Jenna’s friend is playing ping pong in the park. He is having more fun than me.<br></br><custom id = "sepia-vid"></custom><br></br>I get 5 buffalo wings and an oreo milkshake from Ray’s Candy Store.<br></br><custom id = "rays-pic"></custom>`,
+  },
   {
     id: 'an-interview-with-strange-flesh',
     title: 'An Interview With Strange Flesh',
