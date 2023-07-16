@@ -56,6 +56,9 @@ import FOX from '../../images/thumbnails/fox.jpg';
 import FOSSA from '../../images/thumbnails/fossa.jpg';
 import AYEAYE from '../../images/thumbnails/ayeaye.jpg';
 import FLESH3_PIC from '../../images/thumbnails/flesh3.jpg';
+import RUN from '../../images/thumbnails/run.jpg';
+import RAYS from '../../images/thumbnails/rays.jpg';
+
 const CenteredWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -97,6 +100,16 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <StyledImg src={PIKA}></StyledImg>
     </CenteredWrapper>
   ),
+  'rays-pic': (
+    <CenteredWrapper>
+      <StyledImg src={RAYS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'run-pic': (
+    <CenteredWrapper>
+      <StyledImg src={RUN}></StyledImg>
+    </CenteredWrapper>
+  ),
   'fox-pic': (
     <CenteredWrapper>
       <StyledImg src={FOX}></StyledImg>
@@ -110,6 +123,17 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'ayeaye-pic': (
     <CenteredWrapper>
       <StyledImg src={AYEAYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'sepia-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/mnO4Y-Nz6mY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Sepiatone"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'vulture-vid': (
