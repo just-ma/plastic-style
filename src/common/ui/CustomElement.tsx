@@ -58,6 +58,12 @@ import AYEAYE from '../../images/thumbnails/ayeaye.jpg';
 import FLESH3_PIC from '../../images/thumbnails/flesh3.jpg';
 import RUN from '../../images/thumbnails/run.jpg';
 import RAYS from '../../images/thumbnails/rays.jpg';
+import BROADE from '../../images/thumbnails/broade.jpg';
+import FEET from '../../images/thumbnails/feet.jpg';
+import MOOSE from '../../images/thumbnails/moose.jpg';
+import TCAP from '../../images/thumbnails/tcap.jpg';
+import NET from '../../images/thumbnails/net.jpg';
+import NYC from '../../images/thumbnails/nyc.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -80,6 +86,36 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'nyc-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NYC}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'net-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NET}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'moose-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MOOSE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'feet-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FEET}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'tcap-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TCAP}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'broade-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BROADE}></StyledImg>
+    </CenteredWrapper>
+  ),
   'flesh2-pic': (
     <CenteredWrapper>
       <StyledImg src={STARLING}></StyledImg>
@@ -123,6 +159,17 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'ayeaye-pic': (
     <CenteredWrapper>
       <StyledImg src={AYEAYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'lamar-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/_GghFQ8ryEU"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="untitled 2"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'sepia-vid': (

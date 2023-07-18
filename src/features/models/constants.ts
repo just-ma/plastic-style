@@ -62,16 +62,17 @@ import HOME_THUMBNAIL from '../../images/thumbnails/foothouse.jpg';
 import TV_THUMBNAIL from '../../images/thumbnails/tv.jpg';
 import FLESH2_THUMBNAIL from '../../images/thumbnails/flesh2.jpg';
 import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
+import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import { Feature } from './types';
 
 export const MOCK_FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'rays-candy-store',
-    title: 'Ray’s Candy Store',
+    title: 'My New Roommate',
     author: 'Parker Albert',
-    createdAt: 1689540296,
-    image: OREOS_THUMBNAIL,
-    content: `Wednesday I am in a forest. The forest is in Forest Park. There are trails in the forest. I am running on the trails and when I finish my run I no longer have Bushwick Depression.<br></br><custom id = "run-pic"></custom><br></br>Thursday I am at the office. It is almost time to leave but Jenna texts me and asks if I want to get a drink. I say yes so I buy a bottle of orange wine and we walk to seward park and we drink it. Jenna’s friend is playing ping pong in the park. He is having more fun than me.<br></br><custom id = "sepia-vid"></custom><br></br>I get 5 buffalo wings and an oreo milkshake from Ray’s Candy Store.<br></br><custom id = "rays-pic"></custom>`,
+    createdAt: 1689652322,
+    image: JUSTIN_THUMBNAIL,
+    content: `I am in a forest. The forest is in Forest Park. There are trails in the forest. I run on the trails; I am grounded.<br></br><custom id = "run-pic"></custom><br></br>I am at the office. It is almost time to leave but Jenna texts me and asks if I want to get a drink. I say yes so I buy a bottle of orange wine and we walk to Seward Park and we drink it. Jenna’s friend is playing ping pong in the park. He is having more fun than me.<br></br><custom id = "sepia-vid"></custom><br></br>We go to Ray’s Candy Store and Ray is there. Jenna says I should get the chicken fingers and fries. I get 5 buffalo wings and an oreo milkshake.<br></br><custom id = "rays-pic"></custom><br></br>I am in the forest. I am running again, but this time I am less grounded.<br></br><custom id = "feet-pic"></custom><br></br>It is 2010 and I am in middle school. Justin is holding a TCAP test prep book and he is my friend. We make the TCAP test prep book into a choose your own adventure book.<br></br><custom id = "tcap-pic"></custom><br></br>It is 2016 and I am in my high school cafeteria in the morning waiting for class to start. Justin is there and he tells me there is a new Kendrick Lamar album. He shows me the album on iTunes and I think iTunes is broken because all the songs are untitled.<br></br><custom id = "lamar-vid"></custom><br></br>It is 2020 and I am in college and Justin is there. We make it to the roof of the Broad Art Center.<br></br><custom id = "broade-pic"></custom><br></br>It is 2021 and I call Justin on Facebook messenger and I ask him to create a website called plasticstyle.net.<br></br><custom id = "net-pic"></custom><br></br>It is 2023 and Justin quits his job and moves out of his apartment and flies to New York and unpacks his luggage and puts it in the bedroom that I am not using and now he is my roommate.<br></br><custom id = "nyc-pic"></custom>`,
   },
   {
     id: 'an-interview-with-strange-flesh',
