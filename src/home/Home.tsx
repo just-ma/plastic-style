@@ -21,16 +21,20 @@ export const ALL_ARTICLES = [
   .sort((a, b) => b.createdAt - a.createdAt)
   .slice(0, NUM_NEW_ARTICLES);
 
-const articleToListItem = (article: Review | List | Feature): React.ReactElement => {
-  if ('reviewId' in article) {
+const articleToListItem = (article: Review | List | Feature): React.ReactElement | null => {
+  if ('reviewId' in article && typeof article?.reviewId === 'string') {
     return <ReviewListItem key={article.reviewId} review={article} />;
   }
 
-  if ('listId' in article) {
-    return <ListListItem key={article.listId as string} list={article as List} />;
+  if ('listId' in article && typeof article?.listId === 'string') {
+    return <ListListItem key={article.listId} list={article as List} />;
   }
 
-  return <FeatureListItem key={article.id} feature={article as Feature} />;
+  if ('id' in article && typeof article?.id === 'string') {
+    return <FeatureListItem key={article.id} feature={article as Feature} />;
+  }
+
+  return null;
 };
 
 const DesktopWrapper = styled.div`
@@ -46,7 +50,7 @@ export default function Home(): React.ReactElement {
   const { isDesktop } = useResponsive();
 
   if (isDesktop) {
-    return <DesktopWrapper>{ALL_ARTICLES.slice(0, 3).map(articleToListItem)}</DesktopWrapper>;
+    return <DesktopWrapper>{ALL_ARTICLES.map(articleToListItem).slice(0, 3)}</DesktopWrapper>;
   }
 
   return <>{ALL_ARTICLES.map(articleToListItem)}</>;

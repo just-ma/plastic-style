@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 
 import useResponsive from '../../common/hooks/useResponsive';
 import useIsHome from '../../home/hooks/useIsHome';
@@ -29,8 +28,6 @@ const RecordLabelContainer = styled.img`
 `;
 
 export default function VinylRecordContainer(): React.ReactElement | null {
-  const navigate = useNavigate();
-
   const isHome = useIsHome();
   const { isTablet } = useResponsive();
 
