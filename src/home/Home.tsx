@@ -22,16 +22,16 @@ export const ALL_ARTICLES = [
   .slice(0, NUM_NEW_ARTICLES);
 
 const articleToListItem = (article: Review | List | Feature): React.ReactElement | null => {
-  if ('reviewId' in article && typeof article?.reviewId === 'string') {
-    return <ReviewListItem key={article.reviewId} review={article} />;
+  if ('reviewId' in article) {
+    return <ReviewListItem key={article['reviewId']} review={article} />;
   }
 
-  if ('listId' in article && typeof article?.listId === 'string') {
-    return <ListListItem key={article.listId} list={article as List} />;
+  if ('listId' in article) {
+    return <ListListItem key={article['listId'] as string} list={article as List} />;
   }
 
-  if ('id' in article && typeof article?.id === 'string') {
-    return <FeatureListItem key={article.id} feature={article as Feature} />;
+  if ('id' in article) {
+    return <FeatureListItem key={article['id'] as string} feature={article as Feature} />;
   }
 
   return null;
