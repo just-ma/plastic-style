@@ -58,7 +58,7 @@ import { List } from './types';
 
 export const PARKERS_TOP_ALBUMS_2020_KEY = 'parkers-top-albums-2020';
 
-export const MOCK_LISTS: ReadonlyArray<List> = [
+export const LISTS: ReadonlyArray<List> = [
   {
     id: 'slowcore-sampler-part-one',
     title: 'Slowcore Sampler: Part One',

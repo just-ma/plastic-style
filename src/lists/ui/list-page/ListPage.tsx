@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import useResponsive from '../../../common/hooks/useResponsive';
 import { getDateLabel } from '../../../common/utils';
 import { List, ListItem } from '../../models/types';
-import { MOCK_LISTS } from '../../models/constants';
+import { LISTS } from '../../models/constants';
 import { listsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
@@ -26,7 +26,7 @@ export default function ListPage(): React.ReactElement {
   const { isMobile } = useResponsive();
 
   const list = useMemo((): List | null => {
-    return MOCK_LISTS.find((l) => l.id === listId) || null;
+    return LISTS.find((l) => l.id === listId) || null;
   }, [listId]);
 
   if (!list) {

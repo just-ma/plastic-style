@@ -5,7 +5,7 @@ import CHAIR_THUMBNAIL from '../../images/thumbnails/chair.jpg';
 
 import { PodcastSeason } from './types';
 
-export const MOCK_PODCASTS: ReadonlyArray<PodcastSeason> = [
+export const PODCASTS: ReadonlyArray<PodcastSeason> = [
   {
     id: 'plastic-chair',
     title: 'plastic chair',

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import useResponsive from '../../common/hooks/useResponsive';
 import useIsHome from '../../home/hooks/useIsHome';
 
-import AiGif from '../../images/thumbnails/flesh2.jpg';
+import AiGif from '../../images/animations/ai-transitions.gif';
 
 import VinylRecord from './VinylRecord';
 
@@ -14,7 +14,7 @@ const TRANSFORM_DURATION_MS = 1200;
 const Container = styled.div<{ centered: boolean; clickable: boolean }>`
   position: absolute;
   top: 50%;
-  left: ${({ centered }) => (centered ? '50%' : 'calc(9% + 20px)')};
+  left: ${({ centered }) => (centered ? '35%' : 'calc(9% + 20px)')};
   transform: translate(-${({ centered }) => (centered ? 50 : 120)}%, -50%)
     scale(${({ centered }) => (centered ? 1 : 1.5)});
   transition: transform 2s, left ${TRANSFORM_DURATION_MS}ms;
@@ -45,14 +45,10 @@ export default function VinylRecordContainer(): React.ReactElement | null {
   }, [isHome]);
 
   const handleClick = (): void => {
-    if (!isHome) {
-      return;
-    }
-
-    navigate('/features/an-interview-with-strange-flesh');
+    return;
   };
 
-  if (isTablet && !isHome) {
+  if (isTablet) {
     return null;
   }
 

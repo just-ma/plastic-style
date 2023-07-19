@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { PodcastSeason } from './models/types';
-import { MOCK_PODCASTS } from './models/constants';
+import { PODCASTS } from './models/constants';
 
 import PodcastSeasonListItem from './ui/PodcastSeasonListItem';
 
@@ -19,7 +19,7 @@ export default function Podcasts(): React.ReactElement {
 
   return (
     <div>
-      {MOCK_PODCASTS.map((season: PodcastSeason) => (
+      {PODCASTS.map((season: PodcastSeason) => (
         <PodcastSeasonListItem key={season.id} season={season} />
       ))}
     </div>

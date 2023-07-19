@@ -31,7 +31,7 @@ const Record = styled.div<{ isTablet: boolean }>`
   border-radius: 50%;
   overflow: hidden;
   background-color: #111111;
-  cursor: pointer;
+  /* cursor: pointer; */
   user-select: none;
 `;
 

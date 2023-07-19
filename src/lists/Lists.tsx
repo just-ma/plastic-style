@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { List } from './models/types';
-import { MOCK_LISTS } from './models/constants';
+import { LISTS } from './models/constants';
 
 import ListListItem from './ui/ListListItem';
 
@@ -19,7 +19,7 @@ export default function Lists(): React.ReactElement {
 
   return (
     <div>
-      {MOCK_LISTS.map((list: List) => (
+      {LISTS.map((list: List) => (
         <ListListItem key={list.id} list={list} />
       ))}
     </div>

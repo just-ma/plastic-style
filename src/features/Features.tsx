@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { Feature } from './models/types';
-import { MOCK_FEATURES } from './models/constants';
+import { FEATURES } from './models/constants';
 
 import FeatureListItem from './ui/FeatureListItem';
 
@@ -19,7 +19,7 @@ export default function Features(): React.ReactElement {
 
   return (
     <div>
-      {MOCK_FEATURES.map((feature: Feature) => (
+      {FEATURES.map((feature: Feature) => (
         <FeatureListItem key={feature.id} feature={feature} />
       ))}
     </div>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { getDateLabel } from '../../../common/utils';
 import { Feature } from '../../models/types';
-import { MOCK_FEATURES } from '../../models/constants';
+import { FEATURES } from '../../models/constants';
 import { featuresPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
@@ -26,7 +26,7 @@ type RouteParams = {
 export default function FeaturePage({ id }: ComponentProps): React.ReactElement {
   const { featureId = id } = useParams<RouteParams>();
 
-  const review: Feature | null = MOCK_FEATURES.find((r) => r.id === featureId) || null;
+  const review: Feature | null = FEATURES.find((r) => r.id === featureId) || null;
 
   if (!review) {
     return <Navigate to={featuresPath()} />;

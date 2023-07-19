@@ -65,7 +65,7 @@ import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import { Feature } from './types';
 
-export const MOCK_FEATURES: ReadonlyArray<Feature> = [
+export const FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'rays-candy-store',
     title: 'My New Roommate',

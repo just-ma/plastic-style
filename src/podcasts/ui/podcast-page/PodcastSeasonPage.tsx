@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import useResponsive from '../../../common/hooks/useResponsive';
 import { PodcastSeason, PodcastEpisode } from '../../models/types';
-import { MOCK_PODCASTS } from '../../models/constants';
+import { PODCASTS } from '../../models/constants';
 import { podcastsPath } from '../../routes';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
@@ -25,7 +25,7 @@ export default function PodcastSeasonPage(): React.ReactElement {
   const { isMobile } = useResponsive();
 
   const podcast = useMemo((): PodcastSeason | null => {
-    return MOCK_PODCASTS.find((p) => p.id === podcastId) || null;
+    return PODCASTS.find((p) => p.id === podcastId) || null;
   }, [podcastId]);
 
   if (!podcast) {
