@@ -64,6 +64,14 @@ import MOOSE from '../../images/thumbnails/moose.jpg';
 import TCAP from '../../images/thumbnails/tcap.jpg';
 import NET from '../../images/thumbnails/net.jpg';
 import NYC from '../../images/thumbnails/nyc.jpg';
+import BOYZZ from '../../images/thumbnails/boyzz.jpg';
+import THICKET from '../../images/thumbnails/thicket.jpg';
+import AMBIENT from '../../images/thumbnails/ambient.jpg';
+import SAX from '../../images/thumbnails/sax.jpg';
+import XRAY from '../../images/thumbnails/xray.jpg';
+import TAO from '../../images/thumbnails/tao.jpg';
+import REESES from '../../images/thumbnails/reeses.jpg';
+import FRISBEE from '../../images/thumbnails/reeses.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -86,6 +94,46 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'frisbee-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FRISBEE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'tao-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TAO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'reeses-pic': (
+    <CenteredWrapper>
+      <StyledImg src={REESES}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'boyzz-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BOYZZ}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'thicket-pic': (
+    <CenteredWrapper>
+      <StyledImg src={THICKET}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ambient-pic': (
+    <CenteredWrapper>
+      <StyledImg src={AMBIENT}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'sax-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SAX}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'xray-pic': (
+    <CenteredWrapper>
+      <StyledImg src={XRAY}></StyledImg>
+    </CenteredWrapper>
+  ),
   'nyc-pic': (
     <CenteredWrapper>
       <StyledImg src={NYC}></StyledImg>
@@ -159,6 +207,28 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'ayeaye-pic': (
     <CenteredWrapper>
       <StyledImg src={AYEAYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'sly-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/KsVY87NdXqw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Let Me Hear It From You"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'prefab-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/DMIXwZRygmw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="horsing around"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'lamar-vid': (
