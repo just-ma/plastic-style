@@ -63,9 +63,18 @@ import TV_THUMBNAIL from '../../images/thumbnails/tv.jpg';
 import FLESH2_THUMBNAIL from '../../images/thumbnails/flesh2.jpg';
 import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
+import FRISBEE_THUMBNAIL from '../../images/thumbnails/frisbee.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-scene-report',
+    title: 'The Scene Report',
+    author: 'Parker Albert',
+    createdAt: 1690481426,
+    image: FRISBEE_THUMBNAIL,
+    content: `It’s Monday. Let’s fucking go.<br></br>I’ve seen two raccoons since I wrote to you last. One was more aggressive than the other.<br></br>The show at Ergot Records on Tuesday is my kinda show, short and sweet but I’m sitting crosslegged and my feet fall asleep so I stumble against the doorframe when I stand up; I make my escape as soon as I can walk.<br></br><custom id = "xray-pic"></custom><br></br>On Wednesday July 19th in a beach house in the Rockaways I meet a poet and he tells me I will be meeting a lot more poets now. It is Wednesday July 26th and I have not met another poet.<br></br>I am sitting on dirt at the ambient show in Prospect Park on Saturday July 15th and an ant is climbing on string lights wrapped around a bush. The sun is rising but I cannot see the sunrise.<br></br><custom id = "ambient-pic"></custom><br></br>Before I drink the Tsing Tao beer that is purchased for $3.50 from the E Smoke and Convenience on Canal Street on Monday July 24th, I drink an espresso martini that Jenna makes me at Cafe Katja while I wait for her to finish her shift so we can go see African American Sound Recordings perform at Montez Radio. I also drink a Schöfferhofer grapefruit beer before the Tsing Tao, after I knock over, spill, and break the glass of the second espresso martini Jenna makes me.<br></br><custom id = "tao-pic"></custom><br></br>I’m on a Beach Boys kick today.<br></br><custom id = "boyzz-pic"></custom><br></br>I am walking to the Prospect Park ambient show and I am carrying a tote bag that contains a Reeses Fast Break, sour cream and onion chips, two water bottles, a frisbee. I see the more aggressive raccoon; it stares me down.<br></br><custom id = "reeses-pic"></custom><br></br>I have two hours to kill between work and the show at Ergot records. I drink a large hot mocha, call my parents, walk to Sara D. Roosevelt Park, and lie on a bench and listen to <em>A Whole New Thing </em>by Sly and The Family Stone.<br></br><custom id = "sly-vid"></custom><br></br>The AASR set at Montez is very good. I am drinking the Tsing Tao and he is playing the saxophone. He finishes the set before I finish my beer.<br></br><custom id = "sax-pic"></custom><br></br>The ambient show at the park ends and I stand up and reveal my frisbee to a fellow frisbee player in the audience. We start walking down a path in search of an open field to throw the frisbee. Along the way we toss the frisbee but something is wrong with my throw and I throw the frisbee into a thicket.<br></br><custom id = "thicket-pic"></custom><br></br>After the show Montez plays Prefab Sprout’s <em>Steve McQueen </em>front to back. I am flying high.<br></br><custom id = "prefab-vid"></custom><br></br>With effort I retrieve the frisbee from the thicket. I give the frisbee another toss and it goes back into the thicket. I retrieve the frisbee and I do not throw it again until we reach an open field.<br></br><custom id = "thicket-pic"></custom><br></br>I see the less aggressive raccoon when I bike home after the show at Ergot Records. It runs away from me.`,
+  },
   {
     id: 'rays-candy-store',
     title: 'My New Roommate',
