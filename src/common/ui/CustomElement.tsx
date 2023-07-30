@@ -72,6 +72,10 @@ import XRAY from '../../images/thumbnails/xray.jpg';
 import TAO from '../../images/thumbnails/tao.jpg';
 import REESES from '../../images/thumbnails/reeses.jpg';
 import FRISBEE from '../../images/thumbnails/reeses.jpg';
+import DANCE from '../../images/thumbnails/dance.jpg';
+import MODELO from '../../images/thumbnails/modelo.jpg';
+import BACK from '../../images/thumbnails/back.jpg';
+import FORESTRUN from '../../images/thumbnails/forestrun.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -94,6 +98,26 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'forestrun-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FORESTRUN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'back-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BACK}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'modelo-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MODELO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'dance-pic': (
+    <CenteredWrapper>
+      <StyledImg src={DANCE}></StyledImg>
+    </CenteredWrapper>
+  ),
   'frisbee-pic': (
     <CenteredWrapper>
       <StyledImg src={FRISBEE}></StyledImg>
@@ -207,6 +231,17 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'ayeaye-pic': (
     <CenteredWrapper>
       <StyledImg src={AYEAYE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'pm-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/30RX1yi2V9c"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Reality Used To Be a Friend of Mine"
+      ></StyledIFrame>
     </CenteredWrapper>
   ),
   'sly-vid': (

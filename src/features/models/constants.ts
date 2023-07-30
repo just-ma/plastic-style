@@ -64,9 +64,18 @@ import FLESH2_THUMBNAIL from '../../images/thumbnails/flesh2.jpg';
 import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import FRISBEE_THUMBNAIL from '../../images/thumbnails/frisbee.jpg';
+import RAVE_THUMBNAIL from '../../images/thumbnails/rave.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'forest-rave',
+    title: 'Forest Rave',
+    author: 'Parker Albert',
+    createdAt: 1690481426,
+    image: RAVE_THUMBNAIL,
+    content: `It is Saturday and I am unlocked. I am dancing and Justin is dancing and other people are dancing. We are at a rave.<br></br><custom id = "dance-pic"></custom><br></br>The rave is in the forest. We are letting loose. We are having good, clean fun. My back hurts; I stop dancing.<br></br><custom id = "back-pic"></custom><br></br>My friends arrive and so do other people. We are drinking modelos by a dead tree. The rave is getting bigger and their fun is not as clean.<br></br><custom id = "modelo-pic"></custom><br></br>The music sounds like crazy frog. I want to run in the forest but a friend is concerned. They say it is dark; they suggest I go home.<br></br><custom id = "forestrun-pic"></custom><br></br>I bike home.<br></br><custom id = "pm-vid"></custom><br></br>`,
+  },
   {
     id: 'the-scene-report',
     title: 'The Scene Report',
