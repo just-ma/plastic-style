@@ -76,6 +76,11 @@ import DANCE from '../../images/thumbnails/dance.jpg';
 import MODELO from '../../images/thumbnails/modelo.jpg';
 import BACK from '../../images/thumbnails/back.jpg';
 import FORESTRUN from '../../images/thumbnails/forestrun.jpg';
+import MACULA from '../../images/thumbnails/macula.jpg';
+import SANDERS from '../../images/thumbnails/sanders.jpg';
+import SEVEN from '../../images/thumbnails/seven.jpg';
+import CELLO from '../../images/thumbnails/cello.jpg';
+import MARTINI from '../../images/thumbnails/martini.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -98,6 +103,53 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'people-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/mUFOBXKyf0w"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Multiple People"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'gibbons-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/VmqmpD581oc"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Gibbons"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'martini-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MARTINI}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'cello-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CELLO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  '7/11-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SEVEN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'sanders-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SANDERS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'macula-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MACULA}></StyledImg>
+    </CenteredWrapper>
+  ),
   'forestrun-pic': (
     <CenteredWrapper>
       <StyledImg src={FORESTRUN}></StyledImg>
