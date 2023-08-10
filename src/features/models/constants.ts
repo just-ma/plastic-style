@@ -65,9 +65,18 @@ import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import FRISBEE_THUMBNAIL from '../../images/thumbnails/frisbee.jpg';
 import RAVE_THUMBNAIL from '../../images/thumbnails/rave.jpg';
+import ABASEMENT_THUMBNAIL from '../../images/thumbnails/abasement.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'artists-space',
+    title: 'Artists Space',
+    author: 'Parker Albert',
+    createdAt: 1691626252,
+    image: ABASEMENT_THUMBNAIL,
+    content: `It is Monday August 7th when I try the espresso martini at Mr. Fong’s for the first time. It is less sweet than I am used to but my British friend, who is also trying the espresso martini for the first time, says the opposite.<br></br><custom id = "martini-pic"></custom><br></br>We are at Artists Space and the show is about to begin. Both of us buy a Stella Artois and an older woman onstage starts making strange noises into three different microphones. On occasion she makes whooping noises and I am reminded of the Gibbons I used to hear at the Nashville Zoo as a kid.<br></br><custom id = "gibbons-vid"></custom><br></br>The second set is my favorite. Two DJs slowly build a beat and then evaporate it. I get sleepy during the set which makes it hypnotic. A trumpet is played; a cello lies on its side during the whole performance and I think they forgot to use it until they remove a contact mic from it at the end. It must have been reverberating.<br></br><custom id = "cello-pic"></custom><br></br>Before the third set starts my British friend mentions tea and I get a hankering. I tell them 7/11 has tea but they do not believe me. We leave Artists Space and go to 7/11 and there is tea. We both get black tea in small portable cups and return to the space.<br></br><custom id = "7/11-pic"></custom><br></br>A duo wearing body frames is up next. They are projecting live footage of their faces on circular screens mounted in front of them. The leg framing allows them to sit without chairs. It is a fun performance but I can’t find the melody; the fire alarm goes off and they decide to stop playing.<br></br><custom id = "macula-pic"></custom><br></br>Jay Sanders talks to the firemen.<br></br><custom id = "sanders-pic"></custom><br></br>I take the subway home; I go the wrong direction.<br></br><custom id = "people-vid"></custom>`,
+  },
   {
     id: 'forest-rave',
     title: 'Forest Rave',
