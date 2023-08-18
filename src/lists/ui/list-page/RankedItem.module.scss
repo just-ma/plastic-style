@@ -1,37 +1,5 @@
 div.RankedItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 30px 0;
-
-  &.mobile {
-    padding: 40px 10px 0;
-
-    .rankContainer {
-      margin: 10px 0 35px;
-    }
-
-    .titleDisplay {
-      margin-bottom: 35px;
-    }
-  }
-}
-
-.rankContainer {
-  align-self: center;
-  margin: 20px 0 50px;
-}
-
-.rankBubble {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: black;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 40px;
+  margin-top: 60px;
 }
 
 .titleDisplay {

@@ -9,27 +9,41 @@ import Divider from '../../../common/ui/Divider';
 import HTMLString from '../../../common/ui/HTMLString';
 
 import styles from './RankedItem.module.scss';
+import Thumbnail from '../../../common/ui/Thumbnail';
+import styled from 'styled-components';
+import { MEDIA_SIZE } from '../../../common/constants';
+
+const StyledDivider = styled(Divider)`
+  margin-bottom: 60px;
+`;
+
+const Header = styled.div`
+  display: flex;
+  align-items: end;
+
+  @media ${MEDIA_SIZE.mobile} {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 
 type ComponentProps = {
   listItem: ListItem;
 };
 
 export default function RankedItem({
-  listItem: { rank, title, artist, image, content },
+  listItem: { title, artist, image, content },
 }: ComponentProps): React.ReactElement {
   const { isMobile } = useResponsive();
 
   return (
     <div className={classnames(styles.RankedItem, isMobile && styles.mobile)}>
-      {rank === undefined ? null : (
-        <div className={styles.rankContainer}>
-          <div className={styles.rankBubble}>{rank}</div>
-        </div>
-      )}
-      <TitleDisplay className={styles.titleDisplay} headerProps={{ title, secondaryTitle: artist }} image={image}>
-        <HTMLString element="p">{content}</HTMLString>
-      </TitleDisplay>
-      <Divider />
+      <StyledDivider />
+      <Header>
+        {image && <Thumbnail src={image} />}
+        <TitleDisplay title={artist ? `${artist} - ${title}` : title}></TitleDisplay>
+      </Header>
+      <HTMLString element="p">{content}</HTMLString>
     </div>
   );
 }

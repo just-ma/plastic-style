@@ -7,21 +7,16 @@ const HeaderContainer = styled.div`
   width: 100%;
 `;
 
-const Title = styled(HTMLString)<{ large?: boolean }>`
-  font-family: Helvetica;
-  font-size: ${({ large }) => (large ? 26 : 22)}px;
+const Title = styled(HTMLString)`
   font-weight: 500;
 `;
 
-const SecondaryTitle = styled(HTMLString)<{ large?: boolean }>`
-  font-size: ${({ large }) => (large ? 20 : 18)}px;
+const SecondaryTitle = styled(HTMLString)`
   font-weight: 300;
   margin-bottom: 10px;
 `;
 
-const Subtitle = styled(HTMLString)<{ large?: boolean }>`
-  font-size: ${({ large }) => (large ? 16 : 14)}px;
-  font-weight: 500;
+const Subtitle = styled(HTMLString)`
   margin-top: 16px;
 `;
 
@@ -35,9 +30,9 @@ export type HeaderProps = {
 export default function Header({ title, secondaryTitle, subtitle, large }: HeaderProps): React.ReactElement {
   return (
     <HeaderContainer>
-      {secondaryTitle && <SecondaryTitle large={large}>{secondaryTitle}</SecondaryTitle>}
-      <Title large={large}>{title}</Title>
-      {subtitle && <Subtitle large={large}>{subtitle}</Subtitle>}
+      {secondaryTitle && <SecondaryTitle>{secondaryTitle}</SecondaryTitle>}
+      <Title>{title}</Title>
+      {subtitle && <Subtitle>{subtitle}</Subtitle>}
     </HeaderContainer>
   );
 }

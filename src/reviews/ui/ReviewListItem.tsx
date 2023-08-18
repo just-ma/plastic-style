@@ -1,22 +1,25 @@
 import React from 'react';
 
-import { reviewPagePath, reviewsPath } from '../routes';
+import { reviewPagePath } from '../routes';
 import { Review } from '../models/types';
 
-import PageListItem from '../../common/ui/PageListItem';
+import ArticleCard from '../../common/ui/ArticleCard';
+import { useLocation } from 'react-router-dom';
 
 type ComponentProps = {
   review: Review;
 };
 
 export default function ReviewListItem({
-  review: { reviewId, artist, title, image, content, author },
+  review: { reviewId, artist, title, image, author, createdAt },
 }: ComponentProps): React.ReactElement {
+  const location = useLocation();
+
   const link: string = reviewPagePath(reviewId);
-  const preLink: string = reviewsPath(reviewId);
+  const preLink = `${location.pathname}#${reviewId}`;
 
   return (
-    <PageListItem
+    <ArticleCard
       id={reviewId}
       headerProps={{
         title,
@@ -24,10 +27,10 @@ export default function ReviewListItem({
         secondaryTitle: artist,
       }}
       image={image}
-      description={content}
       link={link}
-      linkLabel="READ MORE >"
       preLink={preLink}
+      timestamp={createdAt}
+      symbol="✎"
     />
   );
 }

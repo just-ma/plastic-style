@@ -1,33 +1,35 @@
 import React from 'react';
 
 import { PodcastSeason } from '../models/types';
-import { podcastPagePath, podcastsPath } from '../routes';
+import { podcastPagePath } from '../routes';
 
-import PageListItem from '../../common/ui/PageListItem';
+import ArticleCard from '../../common/ui/ArticleCard';
+import { useLocation } from 'react-router-dom';
 
 type ComponentProps = {
   season: PodcastSeason;
 };
 
 export default function PodcastSeasonListItem({
-  season: { id, title, image, description, seasonLabel, author },
+  season: { id, title, image, author, createdAt },
 }: ComponentProps): React.ReactElement {
-  const link: string = podcastPagePath(id);
-  const preLink: string = podcastsPath(id);
+  const location = useLocation();
+
+  const link = podcastPagePath(id);
+  const preLink = `${location.pathname}#${id}`;
 
   return (
-    <PageListItem
+    <ArticleCard
       id={id}
       headerProps={{
         title,
         subtitle: author,
-        secondaryTitle: seasonLabel,
       }}
       image={image}
-      description={description}
       link={link}
-      linkLabel="VIEW SEASON >"
       preLink={preLink}
+      timestamp={createdAt}
+      symbol="♪"
     />
   );
 }

@@ -1,32 +1,35 @@
 import React from 'react';
 
 import { Feature } from '../models/types';
-import { featurePagePath, featuresPath } from '../routes';
+import { featurePagePath } from '../routes';
 
-import PageListItem from '../../common/ui/PageListItem';
+import ArticleCard from '../../common/ui/ArticleCard';
+import { useLocation } from 'react-router-dom';
 
 type ComponentProps = {
   feature: Feature;
 };
 
 export default function FeatureListItem({
-  feature: { id, title, description, image, author },
+  feature: { id, title, image, author, createdAt },
 }: ComponentProps): React.ReactElement {
+  const location = useLocation();
+
   const link: string = featurePagePath(id);
-  const preLink: string = featuresPath(id);
+  const preLink = `${location.pathname}#${id}`;
 
   return (
-    <PageListItem
+    <ArticleCard
       id={id}
       headerProps={{
         title,
         subtitle: author,
       }}
       image={image}
-      description={description}
       link={link}
-      linkLabel="READ MORE >"
+      timestamp={createdAt}
       preLink={preLink}
+      symbol="✦"
     />
   );
 }

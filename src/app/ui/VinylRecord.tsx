@@ -26,8 +26,8 @@ const SpinningContainer = styled.div`
 
 const Record = styled.div<{ isTablet: boolean }>`
   position: relative;
-  width: ${({ isTablet }) => (isTablet ? 400 : 600)}px;
-  height: ${({ isTablet }) => (isTablet ? 400 : 600)}px;
+  width: ${({ isTablet }) => (isTablet ? 200 : 200)}px;
+  height: ${({ isTablet }) => (isTablet ? 200 : 200)}px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #111111;

@@ -12,13 +12,13 @@ export const PODCASTS: ReadonlyArray<PodcastSeason> = [
     description: 'Interviews with artists we like!',
     author: 'Parker Albert',
     image: CHAIR_THUMBNAIL,
-    year: 2022,
+    createdAt: 1643414400,
     episodes: [
       {
-        id: '3',
-        title: 'Episode 3: Shots',
-        description: `Recently I got the chance to talk with Shots, a three member group composed of twins Matt and John Friberg along with Daniel DiMaggio. Their music can best be described as a collection of quiet sounds created with a wide range of instruments, tools and toys. Their latest record is 2019’s Private Hate.`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fan-interview-with-shots%2F',
+        id: '1',
+        title: 'Episode 1: Fire-Toolz',
+        description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
       },
       {
         id: '2',
@@ -27,10 +27,10 @@ export const PODCASTS: ReadonlyArray<PodcastSeason> = [
         link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fjames-brown-interview%2F',
       },
       {
-        id: '1',
-        title: 'Episode 1: Fire-Toolz',
-        description: `Episode 1 of plastic chair featuring Angel Marcloid of Fire-Toolz talking about her album Eternal Home!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fplasticstyledotnet%2Ffire-toolz-interview%2F',
+        id: '3',
+        title: 'Episode 3: Shots',
+        description: `Recently I got the chance to talk with Shots, a three member group composed of twins Matt and John Friberg along with Daniel DiMaggio. Their music can best be described as a collection of quiet sounds created with a wide range of instruments, tools and toys. Their latest record is 2019’s Private Hate.`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fan-interview-with-shots%2F',
       },
     ],
   },
@@ -41,7 +41,7 @@ export const PODCASTS: ReadonlyArray<PodcastSeason> = [
       'Pushing the Envelope was created with the intent of forming an experimental approach to music journalism. With our curation of up-and-coming independent artists, we hope to offer a new lens for those looking to explore while building a diverse community of fans along the way. Originally started as a podcast, PtE became a blog in the summer of 2021.',
     author: 'Parker Albert',
     image: PUSHING_THE_ENVELOPE_THUMBNAIL,
-    year: 2021,
+    createdAt: 1594512000,
     episodes: [
       {
         id: '1',
@@ -88,14 +88,66 @@ export const PODCASTS: ReadonlyArray<PodcastSeason> = [
     ],
   },
   {
+    id: 'painting-music-s2',
+    title: 'Painting Music (Season 2)',
+    description:
+      'Season 2 of Painting Music was created at home during the pandemic, displaying DJ Klutzkat’s fine-honed craft of creating imagistic narrations for songs. One continuous story of a mysterious land hidden in the ocean is told throughout the season, and each episode starts off by discussing and reviewing an album that has come out in the past week.',
+    author: 'Parker Albert',
+    image: PAINTING_MUSIC_S2_THUMBNAIL,
+    createdAt: 1587168000,
+    episodes: [
+      {
+        id: '9',
+        title: 'Episode 9: Dreams',
+        description: `First Episode of Season Two of Painting Music featuring Waxahatchee, Yves Tumor, Tim Hecker, Nicolas Jaar, Fennesz, and Bark Psychosis`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-9-dreams%2F',
+      },
+      {
+        id: '10',
+        title: 'Episode 10: Anomaly',
+        description: `Episode 10 of Painting Music featuring songs from Fiona Apple, Jefre-Cantu Ledesma, Tim Hecker, and Yves Tumor!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-10-anomoly%2F',
+      },
+      {
+        id: '11',
+        title: 'Episode 11: Hypnosis',
+        description: `Episode 11 of Painting Music featuring songs from Julianna Barwick, Jon Hassell, Brian Eno, Harold Budd, Bing & Ruth, and Sean McCann!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-11-hypnosis%2F',
+      },
+      {
+        id: '12',
+        title: 'Episode 12: Cinema',
+        description: `Episode 12 of Painting Music featuring songs from Kraftwerk, Autechre, ELO, Andrew Bird, and Vampire Weekend! Featuring special guest DJ Manic Chungus!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-12-cinema%2F',
+      },
+      {
+        id: '13',
+        title: 'Episode 13: Compilation',
+        description: `A compilation of three weeks' worth of narrations describing a fantastical land!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-13-compilation%2F',
+      },
+      {
+        id: '14',
+        title: 'Episode 14: Identity',
+        description: `The 14th episode of Painting Music featuring songs from Perfume Genius, Moses Sumney, Julianna Barwick, and Phoebe Bridgers!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-14-identity%2F',
+      },
+      {
+        id: '15',
+        title: 'Episode 15: Contrast',
+        description: `Episode 15 of Painting Music featuring Laurie Spiegel, The Blue Nile, Ernest Hood, Steve Reich, and Iasos!`,
+        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-15-contrast%2F',
+      },
+    ],
+  },
+  {
     id: 'painting-music-s1',
-    title: 'Painting Music',
+    title: 'Painting Music (Season 1)',
     description:
       'Season 1 of Painting Music provided imagistic narrations for songs, in addition to a historical and analytical background for each artist. Artists featured range from Brian Eno to Prefab Sprout, with each episode themed around a visual environment or music genre. Features several episodes with special guests!',
     author: 'Parker Albert',
     image: PAINTING_MUSIC_S1_THUMBNAIL,
-    seasonLabel: 'Season 1',
-    year: 2020,
+    createdAt: 1578960000,
     episodes: [
       {
         id: '1',
@@ -144,60 +196,6 @@ export const PODCASTS: ReadonlyArray<PodcastSeason> = [
         title: 'Episode 8: Rebirth',
         description: `Episode 8 of Painting Music features songs by Prefab Sprout, Brian Eno, (Sandy) Alex G, Skee Mask, and Bark Psychosis!`,
         link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-8-rebirth%2F',
-      },
-    ],
-  },
-  {
-    id: 'painting-music-s2',
-    title: 'Painting Music',
-    description:
-      'Season 2 of Painting Music was created at home during the pandemic, displaying DJ Klutzkat’s fine-honed craft of creating imagistic narrations for songs. One continuous story of a mysterious land hidden in the ocean is told throughout the season, and each episode starts off by discussing and reviewing an album that has come out in the past week.',
-    author: 'Parker Albert',
-    image: PAINTING_MUSIC_S2_THUMBNAIL,
-    seasonLabel: 'Season 2',
-    year: 2021,
-    episodes: [
-      {
-        id: '9',
-        title: 'Episode 9: Dreams',
-        description: `First Episode of Season Two of Painting Music featuring Waxahatchee, Yves Tumor, Tim Hecker, Nicolas Jaar, Fennesz, and Bark Psychosis`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-9-dreams%2F',
-      },
-      {
-        id: '10',
-        title: 'Episode 10: Anomaly',
-        description: `Episode 10 of Painting Music featuring songs from Fiona Apple, Jefre-Cantu Ledesma, Tim Hecker, and Yves Tumor!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-10-anomoly%2F',
-      },
-      {
-        id: '11',
-        title: 'Episode 11: Hypnosis',
-        description: `Episode 11 of Painting Music featuring songs from Julianna Barwick, Jon Hassell, Brian Eno, Harold Budd, Bing & Ruth, and Sean McCann!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-11-hypnosis%2F',
-      },
-      {
-        id: '12',
-        title: 'Episode 12: Cinema',
-        description: `Episode 12 of Painting Music featuring songs from Kraftwerk, Autechre, ELO, Andrew Bird, and Vampire Weekend! Featuring special guest DJ Manic Chungus!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-12-cinema%2F',
-      },
-      {
-        id: '13',
-        title: 'Episode 13: Compilation',
-        description: `A compilation of three weeks' worth of narrations describing a fantastical land!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-13-compilation%2F',
-      },
-      {
-        id: '14',
-        title: 'Episode 14: Identity',
-        description: `The 14th episode of Painting Music featuring songs from Perfume Genius, Moses Sumney, Julianna Barwick, and Phoebe Bridgers!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-14-identity%2F',
-      },
-      {
-        id: '15',
-        title: 'Episode 15: Contrast',
-        description: `Episode 15 of Painting Music featuring Laurie Spiegel, The Blue Nile, Ernest Hood, Steve Reich, and Iasos!`,
-        link: 'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fplasticstyledotnet%2Fepisode-15-contrast%2F',
       },
     ],
   },

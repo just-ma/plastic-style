@@ -1,32 +1,35 @@
 import React from 'react';
 
 import { List } from '../models/types';
-import { listPagePath, listsPath } from '../routes';
+import { listPagePath } from '../routes';
 
-import PageListItem from '../../common/ui/PageListItem';
+import ArticleCard from '../../common/ui/ArticleCard';
+import { useLocation } from 'react-router-dom';
 
 type ComponentProps = {
   list: List;
 };
 
 export default function ListListItem({
-  list: { id, title, image, description, author },
+  list: { id, title, image, author, createdAt },
 }: ComponentProps): React.ReactElement {
-  const link: string = listPagePath(id);
-  const preLink: string = listsPath(id);
+  const location = useLocation();
+
+  const link = listPagePath(id);
+  const preLink = `${location.pathname}#${id}`;
 
   return (
-    <PageListItem
+    <ArticleCard
       id={id}
       headerProps={{
         title,
         subtitle: author,
       }}
       image={image}
-      description={description}
       link={link}
-      linkLabel="VIEW LIST >"
       preLink={preLink}
+      timestamp={createdAt}
+      symbol="☰"
     />
   );
 }
