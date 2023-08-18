@@ -80,16 +80,18 @@ const ExpandButton = styled.div<{ expanded: boolean }>`
   align-items: center;
   justify-content: center;
 
-  &:hover ${ExpandIcon} {
-    transform: rotate(${({ expanded }) => (expanded ? 150 : -15)}deg)
-      translate(${({ expanded }) => (expanded ? 0 : 0.5)}px, ${({ expanded }) => (expanded ? -1.5 : -1)}px);
+  @media ${MEDIA_SIZE.nonMobile} {
+    &:hover ${ExpandIcon} {
+      transform: rotate(${({ expanded }) => (expanded ? 150 : -15)}deg)
+        translate(${({ expanded }) => (expanded ? 0 : 0.5)}px, ${({ expanded }) => (expanded ? -1.5 : -1)}px);
+    }
   }
 `;
 
 const Title = styled.div`
+  flex-grow: 1;
   font-size: 26px;
   line-height: 40px;
-  width: fit-content;
   cursor: pointer;
 
   @media ${MEDIA_SIZE.mobile} {
