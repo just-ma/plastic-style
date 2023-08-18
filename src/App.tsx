@@ -1,10 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Page from './app/ui/Page';
-import DecorativeBanner from './app/ui/DecorativeBanner';
-import VinylRecordContainer from './app/ui/VinylRecordContainer';
-
 // home
 import Home from './home/Home';
 
@@ -13,27 +9,21 @@ import TextEditor from './admin/ui/TextEditor';
 
 // reviews
 import { reviewPagePath, reviewsPath } from './reviews/routes';
-import Reviews from './reviews/Reviews';
 import ReviewPage from './reviews/ui/review-page/ReviewPage';
 
 // lists
 import { listPagePath, listsPath } from './lists/routes';
-import Lists from './lists/Lists';
 import ListPage from './lists/ui/list-page/ListPage';
 
 // features
 import { featurePagePath, featuresPath } from './features/routes';
-import Features from './features/Features';
 import FeaturePage from './features/ui/feature-page/FeaturePage';
 
 // podcasts
 import { podcastPagePath, podcastsPath } from './podcasts/routes';
-import Podcasts from './podcasts/Podcasts';
 import PodcastSeasonPage from './podcasts/ui/podcast-page/PodcastSeasonPage';
 
 // contact
-import { contactPath } from './contact/routes';
-import Contact from './contact/Contact';
 import styled from 'styled-components';
 import AppHeader from './app/ui/AppHeader';
 import { APP_BACKGROUND_COLOR } from './app/ui/constants';
@@ -46,110 +36,33 @@ const AppContainer = styled.div`
   height: 100vh;
   overflow: hidden;
   background-color: ${APP_BACKGROUND_COLOR};
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function App(): React.ReactElement {
   return (
     <AppContainer>
       <BrowserRouter>
-        <DecorativeBanner />
         <AppHeader />
-        <VinylRecordContainer />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Page>
-                <Home />
-              </Page>
-            }
-          />
+          <Route path="/" element={<Home />} />
 
-          <Route
-            path="/admin/text-editor"
-            element={
-              <Page>
-                <TextEditor />
-              </Page>
-            }
-          />
+          <Route path="/admin/text-editor" element={<TextEditor />} />
 
-          <Route
-            path={reviewsPath()}
-            element={
-              <Page>
-                <Reviews />
-              </Page>
-            }
-          />
-          <Route
-            path={reviewPagePath(':reviewId')}
-            element={
-              <Page>
-                <ReviewPage />
-              </Page>
-            }
-          />
+          <Route path={reviewsPath()} element={<Home category="reviews" />} />
+          <Route path={reviewPagePath(':reviewId')} element={<ReviewPage />} />
 
-          <Route
-            path={listsPath()}
-            element={
-              <Page>
-                <Lists />
-              </Page>
-            }
-          />
-          <Route
-            path={listPagePath(':listId')}
-            element={
-              <Page>
-                <ListPage />
-              </Page>
-            }
-          />
+          <Route path={listsPath()} element={<Home category="lists" />} />
+          <Route path={listPagePath(':listId')} element={<ListPage />} />
 
-          <Route
-            path={featuresPath()}
-            element={
-              <Page>
-                <Features />
-              </Page>
-            }
-          />
-          <Route
-            path={featurePagePath(':featureId')}
-            element={
-              <Page>
-                <FeaturePage />
-              </Page>
-            }
-          />
+          <Route path={featuresPath()} element={<Home category="features" />} />
+          <Route path={featurePagePath(':featureId')} element={<FeaturePage />} />
 
-          <Route
-            path={podcastsPath()}
-            element={
-              <Page>
-                <Podcasts />
-              </Page>
-            }
-          />
-          <Route
-            path={podcastPagePath(':podcastId')}
-            element={
-              <Page>
-                <PodcastSeasonPage />
-              </Page>
-            }
-          />
+          <Route path={podcastsPath()} element={<Home category="podcasts" />} />
+          <Route path={podcastPagePath(':podcastId')} element={<PodcastSeasonPage />} />
 
-          <Route
-            path={contactPath()}
-            element={
-              <Page>
-                <Contact />
-              </Page>
-            }
-          />
+          {/* <Route path={contactPath()} element={<Contact />} /> */}
         </Routes>
       </BrowserRouter>
     </AppContainer>

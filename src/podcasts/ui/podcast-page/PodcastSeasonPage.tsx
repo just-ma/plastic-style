@@ -1,20 +1,13 @@
 import React, { useMemo } from 'react';
 import { Navigate, useParams } from 'react-router';
-import classnames from 'classnames';
 
-import useResponsive from '../../../common/hooks/useResponsive';
 import { PodcastSeason, PodcastEpisode } from '../../models/types';
 import { PODCASTS } from '../../models/constants';
 import { podcastsPath } from '../../routes';
 
-import TitleDisplay from '../../../common/ui/TitleDisplay';
-import TitledParagraph from '../../../common/ui/TitledParagraph';
-import Divider from '../../../common/ui/Divider';
-import FooterLink from '../../../common/ui/FooterLink';
-
 import PodcastEpisodeItem from './PodcastEpisodeItem';
 
-import styles from './PodcastSeasonPage.module.scss';
+import ArticlePage from '../../../common/ui/ArticlePage';
 
 type RouteParams = {
   podcastId: string;
@@ -22,7 +15,6 @@ type RouteParams = {
 
 export default function PodcastSeasonPage(): React.ReactElement {
   const { podcastId } = useParams<RouteParams>();
-  const { isMobile } = useResponsive();
 
   const podcast = useMemo((): PodcastSeason | null => {
     return PODCASTS.find((p) => p.id === podcastId) || null;
@@ -32,25 +24,13 @@ export default function PodcastSeasonPage(): React.ReactElement {
     return <Navigate to={podcastsPath()} />;
   }
 
-  const { title, description = '', author, image, year, episodes } = podcast;
+  const { title, description = '', author, image, createdAt, episodes } = podcast;
 
   return (
-    <div className={classnames(styles.PodcastSeasonPage, isMobile && styles.mobile)}>
-      <TitleDisplay
-        className={styles.titleDisplay}
-        headerProps={{ title, large: true }}
-        image={image}
-        thumbnailWidthPx={260}
-      >
-        <TitledParagraph leftTitle={author} rightTitle={year} content={description} />
-      </TitleDisplay>
-      <Divider />
-      <div className={styles.podcast}>
-        {episodes.map((episode: PodcastEpisode) => (
-          <PodcastEpisodeItem key={episode.id} episode={episode} />
-        ))}
-      </div>
-      <FooterLink to={podcastsPath(podcastId)}>{'< MORE PODCASTS'}</FooterLink>
-    </div>
+    <ArticlePage image={image} headerProps={{ title, subtitle: author }} timestamp={createdAt} content={description}>
+      {episodes.map((episode: PodcastEpisode) => (
+        <PodcastEpisodeItem key={episode.id} episode={episode} />
+      ))}
+    </ArticlePage>
   );
 }

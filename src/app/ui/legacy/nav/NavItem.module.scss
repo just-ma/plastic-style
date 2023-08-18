@@ -1,0 +1,28 @@
+.NavItem {
+  width: 100%;
+  height: 25px;
+
+  &.active > a {
+    font-weight: 600;
+  }
+
+  &.hover > a {
+    padding-left: 15px;
+  }
+
+  &.dark > a {
+    color: black;
+  }
+
+  > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    transition: padding-left 0.3s, color 0.5s;
+  }
+}

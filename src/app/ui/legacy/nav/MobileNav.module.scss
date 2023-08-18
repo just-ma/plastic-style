@@ -1,0 +1,57 @@
+.MobileNav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.drawer {
+  position: relative;
+  width: 200px;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.navItems {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.animationEnter {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
+}
+
+.animationEnterActive {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExit {
+  width: 200px;
+  transition: width 0.2s;
+}
+
+.animationExitActive {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.2s;
+}

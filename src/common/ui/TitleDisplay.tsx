@@ -1,61 +1,35 @@
 import React from 'react';
-import classnames from 'classnames';
+import styled from 'styled-components';
 
-import useResponsive from '../hooks/useResponsive';
-
-import Thumbnail from './Thumbnail';
-import Header, { HeaderProps } from './Header';
 import HTMLString from './HTMLString';
+import { getDateLabel } from '../utils';
 
-import styles from './TitleDisplay.module.scss';
+const Container = styled.div`
+  margin: 5px;
+`;
+
+const Title = styled(HTMLString)`
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 22px;
+  transform: scaleY(0.6);
+  transform-origin: top left;
+  line-height: 30px;
+  letter-spacing: -1px;
+`;
 
 type ComponentProps = {
-  className?: string;
-  headerProps: HeaderProps;
-  description?: string;
-  image?: string;
-  children?: React.ReactNode;
-  thumbnailWidthPx?: number;
-  fullWidth?: boolean;
+  title: string;
+  subtitle?: string;
+  timestamp?: number;
 };
 
-export default function TitleDisplay({
-  className,
-  headerProps,
-  description,
-  image,
-  children,
-  thumbnailWidthPx,
-  fullWidth,
-}: ComponentProps): React.ReactElement {
-  const { isMobile } = useResponsive();
-
+export default function TitleDisplay({ title, subtitle, timestamp }: ComponentProps): React.ReactElement {
   return (
-    <div
-      className={classnames(
-        styles.TitleDisplay,
-        isMobile && styles.mobile,
-        !image && styles.noThumbnail,
-        fullWidth && styles.fullWidth,
-        className,
-      )}
-    >
-      {image && (
-        <div className={styles.thumbnail}>
-          <Thumbnail src={image} widthPx={thumbnailWidthPx} fullWidth={isMobile} />
-        </div>
-      )}
-      <div className={styles.titleContainer}>
-        <div className={styles.title}>
-          <Header {...headerProps} />
-        </div>
-        {description && (
-          <HTMLString className={styles.description} element="p">
-            {description}
-          </HTMLString>
-        )}
-        {children}
-      </div>
-    </div>
+    <Container>
+      <Title>{title}</Title>
+      {subtitle && <HTMLString>{subtitle}</HTMLString>}
+      {timestamp && <HTMLString>{getDateLabel(timestamp)}</HTMLString>}
+    </Container>
   );
 }

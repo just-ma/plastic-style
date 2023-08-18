@@ -1,13 +1,21 @@
 import React from 'react';
-import classnames from 'classnames';
 
-import useResponsive from '../../../common/hooks/useResponsive';
 import { PodcastEpisode } from '../../models/types';
 
 import TitleDisplay from '../../../common/ui/TitleDisplay';
 import Divider from '../../../common/ui/Divider';
 
 import styles from './PodcastEpisodeItem.module.scss';
+import HTMLString from '../../../common/ui/HTMLString';
+import styled from 'styled-components';
+
+const StyledDivider = styled(Divider)`
+  margin: 60px 0;
+`;
+
+const Description = styled(HTMLString)`
+  margin: 0 0 10px 5px;
+`;
 
 type ComponentProps = {
   episode: PodcastEpisode;
@@ -16,17 +24,14 @@ type ComponentProps = {
 export default function PodcastEpisodeItem({
   episode: { title, author, description, link },
 }: ComponentProps): React.ReactElement {
-  const { isMobile } = useResponsive();
-
   return (
-    <div className={classnames(styles.PodcastEpisodeItem, isMobile && styles.mobile)}>
+    <div>
+      <StyledDivider />
       <div className={styles.content}>
-        <TitleDisplay className={styles.titleDisplay} headerProps={{ title, secondaryTitle: author }} fullWidth>
-          <p className={styles.description}>{description}</p>
-        </TitleDisplay>
+        <TitleDisplay title={title} subtitle={author}></TitleDisplay>
+        <Description element="p">{description}</Description>
         <iframe className={styles.widget} src={link} frameBorder="0" />
       </div>
-      <Divider />
     </div>
   );
 }

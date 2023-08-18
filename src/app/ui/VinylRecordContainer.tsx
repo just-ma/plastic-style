@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import useResponsive from '../../common/hooks/useResponsive';
-import useIsHome from '../../home/hooks/useIsHome';
 
 import AiGif from '../../images/animations/ai-transitions.gif';
 
 import VinylRecord from './VinylRecord';
 
-const TRANSFORM_DURATION_MS = 1200;
-
-const Container = styled.div<{ centered: boolean; clickable: boolean }>`
+const Container = styled.div`
   position: absolute;
-  top: 50%;
-  left: ${({ centered }) => (centered ? '35%' : 'calc(9% + 20px)')};
-  transform: translate(-${({ centered }) => (centered ? 50 : 120)}%, -50%)
-    scale(${({ centered }) => (centered ? 1 : 1.5)});
-  transition: transform 2s, left ${TRANSFORM_DURATION_MS}ms;
-  z-index: ${({ clickable }) => (clickable ? 1 : 0)};
+  bottom: 10px;
+  right: 10px;
+  transform: scaleY(0.4);
+  transform-origin: bottom right;
   overflow: hidden;
+  transition: transform 10s ease;
+
+  &:hover {
+    transform: scaleY(1);
+  }
 `;
 
 const RecordLabelContainer = styled.img`
@@ -28,30 +26,9 @@ const RecordLabelContainer = styled.img`
 `;
 
 export default function VinylRecordContainer(): React.ReactElement | null {
-  const isHome = useIsHome();
-  const { isTablet } = useResponsive();
-
-  const [clickable, setClickable] = useState(isHome);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => setClickable(isHome), TRANSFORM_DURATION_MS);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [isHome]);
-
-  const handleClick = (): void => {
-    return;
-  };
-
-  if (isTablet) {
-    return null;
-  }
-
   return (
-    <Container centered={isHome} clickable={clickable}>
-      <VinylRecord onClick={handleClick}>
+    <Container>
+      <VinylRecord>
         <RecordLabelContainer src={AiGif} />
       </VinylRecord>
     </Container>
