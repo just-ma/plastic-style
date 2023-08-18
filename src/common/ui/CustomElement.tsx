@@ -79,7 +79,7 @@ import FORESTRUN from '../../images/thumbnails/forestrun.jpg';
 import MACULA from '../../images/thumbnails/macula.jpg';
 import SANDERS from '../../images/thumbnails/sanders.jpg';
 import SEVEN from '../../images/thumbnails/seven.jpg';
-import CELLO from '../../images/thumbnails/cello.jpg';
+import CELLO from '../../images/thumbnails/cello.png';
 import MARTINI from '../../images/thumbnails/martini.jpg';
 
 const CenteredWrapper = styled.div`

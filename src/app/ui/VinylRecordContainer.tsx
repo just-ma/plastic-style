@@ -1,27 +1,20 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import AiGif from '../../images/animations/ai-transitions.gif';
+import AiGif from '../../images/animations/ai-smol.gif';
 
 import VinylRecord from './VinylRecord';
 
-const Container = styled.div<{ shift: boolean }>`
+const Container = styled.div<{ clicked: boolean }>`
   position: absolute;
-  bottom: 10px;
+  bottom: ${({ clicked }) => (clicked ? 75 : 10)}px;
   right: 10px;
-  transform: scaleY(0.4);
+  transform: scaleY(${({ clicked }) => (clicked ? 1 : 0.4)});
   transform-origin: bottom right;
   overflow: hidden;
   transition: transform 2s ease, bottom 2s ease;
   z-index: 1;
   cursor: pointer;
-
-  ${({ shift }) =>
-    shift &&
-    css`
-      transform: scaleY(1);
-      bottom: 75px;
-    `}
 `;
 
 const RecordLabelContainer = styled.img`
@@ -30,12 +23,14 @@ const RecordLabelContainer = styled.img`
   object-fit: cover;
 `;
 
-const Message = styled.span`
+const Message = styled.span<{ clicked: boolean }>`
   position: absolute;
   bottom: 25px;
   right: 40px;
   width: 120px;
   user-select: none;
+  opacity: ${({ clicked }) => (clicked ? 1 : 0)};
+  transition: opacity 2s ease;
 `;
 
 const Link = styled.a`
@@ -44,16 +39,16 @@ const Link = styled.a`
 `;
 
 export default function VinylRecordContainer(): React.ReactElement | null {
-  const [shift, setShift] = useState(false);
+  const [clicked, setClicked] = useState(false);
 
   return (
     <div>
-      <Container shift={shift} onClick={() => setShift((prev) => !prev)}>
+      <Container clicked={clicked} onClick={() => setClicked((prev) => !prev)}>
         <VinylRecord>
           <RecordLabelContainer src={AiGif} />
         </VinylRecord>
       </Container>
-      <Message>
+      <Message clicked={clicked}>
         website made by{' '}
         <Link href="https://www.instagram.com/nit.su.j/" target="_blank" rel="noreferrer">
           NIT SU J.
