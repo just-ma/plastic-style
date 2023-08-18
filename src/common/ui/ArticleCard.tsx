@@ -5,6 +5,7 @@ import { HeaderProps } from './Header';
 import Thumbnail from './Thumbnail';
 import styled from 'styled-components';
 import TitleDisplay from './TitleDisplay';
+import { MEDIA_SIZE } from '../constants';
 
 const Container = styled.div`
   width: 230px;
@@ -14,8 +15,10 @@ const Container = styled.div`
   position: relative;
   background-color: #ebebeb;
 
-  &:hover {
-    border-radius: 0 0 20px 0;
+  @media ${MEDIA_SIZE.nonMobile} {
+    &:hover {
+      border-radius: 0 0 20px 0;
+    }
   }
 
   transition: border-radius 0.3s ease;

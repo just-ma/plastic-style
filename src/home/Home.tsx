@@ -20,8 +20,8 @@ import PodcastSeasonListItem from '../podcasts/ui/PodcastSeasonListItem';
 export const ALL_ARTICLES = [...REVIEWS, ...LISTS, ...FEATURES, ...PODCASTS].sort((a, b) => b.createdAt - a.createdAt);
 
 const Header = styled.div`
-  flex-shrink: 0;
-  margin: 10px 10px calc(30vh - 100px);
+  flex: 0 0 calc(30vh - 100px);
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -29,19 +29,38 @@ const Header = styled.div`
   @media ${MEDIA_SIZE.mobile} {
     flex-direction: column;
     width: fit-content;
+    justify-content: flex-start;
   }
 `;
 
 const Filter = styled.div`
+  font-size: 14px;
   user-select: none;
 `;
 
 const Select = styled.select`
+  font-size: 14px;
   cursor: pointer;
+  font-family: 'Sligoil-Micro';
+`;
+
+const SearchContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+
+  @media ${MEDIA_SIZE.mobile} {
+    align-items: flex-start;
+  }
 `;
 
 const Search = styled.input`
+  font-size: 16px;
+  font-family: 'Sligoil-Micro';
+
   @media ${MEDIA_SIZE.nonMobile} {
+    font-size: 14px;
     min-width: 200px;
   }
 `;
@@ -108,9 +127,9 @@ const ArticlesContainer = styled.div`
   }
 `;
 
-const NoSearchResults = styled.div`
-  line-height: 50vh;
-  text-align: center;
+const SearchMessage = styled.div`
+  white-space: pre;
+  font-size: 12px;
 `;
 
 const articleToListItemContent = (article: Review | List | Feature | PodcastSeason): React.ReactElement | null => {
@@ -156,6 +175,7 @@ export default function Home({ category }: ComponentProps): React.ReactElement {
   }, [location.hash]);
 
   const [searchFocus, setSearchFocus] = useState(false);
+  const [searchResultIndex, setSearchResultIndex] = useState(0);
   const [searchValue, setSearchValue] = useState('');
   const formattedSearchValue = searchValue?.trim().toLowerCase();
 
@@ -264,9 +284,23 @@ export default function Home({ category }: ComponentProps): React.ReactElement {
     }
   };
 
-  const noResultsMessage = useMemo(() => {
-    return noResultsMessages[Math.floor(Math.random() * noResultsMessages.length - 1)];
+  useEffect(() => {
+    if (filteredArticles.length === 0) {
+      setSearchResultIndex((prev) => (prev + 1) % noResultsMessages.length);
+    }
   }, [filteredArticles.length === 0]);
+
+  const searchMessage = useMemo(() => {
+    if (formattedSearchValue.length < 3) {
+      return null;
+    }
+
+    if (filteredArticles.length === 0) {
+      return noResultsMessages[searchResultIndex];
+    }
+
+    return `${filteredArticles.length} results`;
+  }, [filteredArticles.length, formattedSearchValue]);
 
   return (
     <ScrollContainer id="home-scroll-container">
@@ -274,92 +308,112 @@ export default function Home({ category }: ComponentProps): React.ReactElement {
         <Filter>
           show me{' '}
           <Select value={category ?? 'all'} onChange={handleFilterSelect}>
-            <option value="all" label="❤ everything"></option>
-            <option value="features" label="✦ features"></option>
-            <option value="reviews" label="✎ reviews"></option>
-            <option value="lists" label="☰ lists"></option>
-            <option value="podcasts" label="♪ podcasts"></option>
+            <option value="all">{'❤︎ everything'}</option>
+            <option value="features">{'✦ features'}</option>
+            <option value="reviews">{'✎ reviews'}</option>
+            <option value="lists">{'☰ lists'}</option>
+            <option value="podcasts">{'♪ podcasts'}</option>
           </Select>
         </Filter>
-        <Search
-          type="text"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-          placeholder={searchFocus ? '⦿⦿ search' : '⊖⊖ search'}
-          onFocus={() => setSearchFocus(true)}
-          onBlur={() => setSearchFocus(false)}
-        />
+        <SearchContainer>
+          <Search
+            type="text"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+            placeholder={searchFocus ? '•ᴥ• search' : '-ᴥ- search'}
+            onFocus={() => setSearchFocus(true)}
+            onBlur={() => setSearchFocus(false)}
+          />
+          {searchMessage && <SearchMessage>{searchMessage}</SearchMessage>}
+        </SearchContainer>
       </Header>
       <ArticlesContainer>{articlesGroupedByRow}</ArticlesContainer>
-      {filteredArticles.length === 0 && <NoSearchResults>{noResultsMessage}</NoSearchResults>}
       {filteredArticles.length !== 0 && <PageFooter></PageFooter>}
     </ScrollContainer>
   );
 }
 
 const noResultsMessages = [
-  'uhhh nah',
-  'uhhh nah',
-  'uhh nah',
-  'uhh nah',
-  'sorry bud',
-  'not in stock',
+  'no results',
+  'still no results',
+  "nothing found:'(",
   'outta luck',
-  'outta luck',
-  'outta luck',
-  'hmmm no results',
-  'hmm no results',
-  'hm no results',
   'no results',
   'no results',
-  'no results',
-  'no results',
-  'hm nope nothing',
-  'hm nothing here',
-  'hm nothing here',
-  'nothing here',
-  'nothing here',
-  'nothing here',
-  'nothing here',
   'absolutely no results',
-  'absolutely no results',
-  'unlucky',
-  'not found',
-  'oof nah',
-  'hm nothing',
-  'hmm nothing',
-  'hmm nothing',
-  'hmm nothing',
-  'hmmm nothing',
-  'hmmm nothing',
-  'hmmmm nothing',
-  "don't recognize that one",
-  "sorry couldn't find that",
-  "sorry couldn't find that",
-  "sorry couldn't find that",
-  "sorry couldn't find that",
-  'hm nothing found',
-  'nothing found',
-  'nothing found',
-  'nothing found',
-  'nothing found',
-  'hm sorry nothing found',
-  'hmm sorry nothing found',
-  'sorry nothing found',
-  'sorry nothing found',
-  'sorry nothing found',
-  'hm no matches',
-  'hmm no matches',
-  'hmm no matches',
-  'no matches',
-  'no matches',
-  'no matches',
-  'no matches',
-  'no matches',
-  'hm sorry no matches',
-  'hmm sorry no matches',
-  'sorry no matches',
-  'sorry no matches',
-  'absolutely no matches',
-  'absolutely NO matches',
+  'still no results',
+  "nothing found:'(",
+  'outta luck',
+  'no results',
+  'no results',
+  'no results',
+  'no results',
+  'no results',
+  'no results',
+  'no results',
+  `┤├┤├┤├┤├░├░├┤├┤├├├▒████▓√├┤├├├┤├░├┤├┤├┤├
+├├├┤├┤├┤├√├√├┤├┤▓█████████▒┤├√├├├├├┤├├├├
+┤├┤├┤├┤├├├├├├├███▓▒├├├┤╫▓███▒├┤├┤├┤├┤├├├
+├┤├├├┤├┤├┤├√▒██▓├┤├┤├┤├┤├├▒██▓├┤├├├√├┤├┤
+░├├├┤├┤├┤├┤▓██┤├√┤░░░░╫░░░┤├▓██├┤├┤├├├┤├
+├√├┤├√├├├├▓█▓├├░░╫░░░╫░╫░╫░░├▒██├√├┤├├├┤
+┤├├├┤├├├√▒█▓├├░░╫░░░╫░░░╫╫╫╫╫├╫██├┤├√├√├
+├┤├┤├├├┤├█▓├√░░░░░░░░╫░╫╫╫╫╫╫╫├▒█▓├┤├√├├
+┤├┤├├├√├██┤├░░╫░░░░░░░░░╫╫╫╫╫╫╫├▓█╫├√├√├
+├┤├┤├┤├▓█░├╫░╫░░░░░░░░░░░╫╫╫╫╫╫╫├██├├├├├
+┤├┤├├├√█▓├╫╫╫░╫░░░░░░░░░╫░╫╫╫╫▒╫╫░█▓┤├┤├
+├┤├├├┤██├░╫╫░╫░░░░┤░┤░░░░╫╫╫╫╫╫▒╫░▓█├┤├√
+░├√├√├█▒√╫╫╫╫░░░░┤░┤░░░░╫░╫╫╫╫╫╫▒╫░█▓├┤├
+├├├√├██├░╫╫╫░╫░░░░√┤┤░░░░╫╫╫╫╫╫▒╫▒░▓█┤├┤
+┤├√├┤█▒├╫╫╫░╫░░░░├┤├░░░░░░╫░╫╫╫╫▒▒╫░█▓├├
+├├├┤▒█├╫╫╫░╫░░░░░░├├├░░░░░░√├░╫╫╫▒╫░▓█├┤
+░├┤├█▓├╫╫╫░├┤├┤├┤├√├┤┤░░░├├╫▒╫├░▒▒▒╫╫█░├
+├├├├█▒░╫╫╫├░▓▓▒√├├├┤┤░░░├√█████┤░▒▒▒√█▓┤
+┤├┤▒█├╫╫╫├▒█████├├┤├░┤░├┤██▓╫▓██┤╫▒╫░▓█├
+├√├██┤╫╫├╫██├├▒██┤├░┤░┤├▒█├┤├√░█▓░╫▒╫▒█├
+┤├√█▓░╫╫┤██├├├┤├█▒┤├░░├├█▓├├┤├┤▓█┤╫╫▒░█├
+├┤├█╫╫╫░╫█├├├▒├┤▓█├┤░░├╫█√├▓█▓├├█▒╫▒╫░█▒
+┤├▒█░╫╫├▓█┤├▓██├√█┤├░░├▓█├╫▓▓█▒├█▓╫╫▒░▓▓
+├├▓█┤╫╫├█▓├▒▓▓█╫├█╫√░░├█▓├▓▓██▓┤▓█░▒╫░▒█
+├├██░╫╫├█▒├▓▓██▓√█▒├░░┤█▓├▓▓███├▓█░╫▒╫▒█
+├├█▓░▒╫√█╫├▓▓██▓├█▓├░░├█▓┤▓████├▓█░▒▒╫░█
+├├█▓╫▒╫├█▒├████▒┤█▒├░░├▓█├▓███▓├█▓░╫▒╫░█
+├├█▒░▒╫├█▓├▓███√├█╫┤░░├▒█┤├███├├█▒╫▒▒▒├█
+├├█▒╫▒▒░▓█┤├██▓├╫█√░╫╫░├█▒┤├▒├├▒█░╫▒▒╫░█
+├┤█▒╫▒▒╫░█░┤├√├├██├░╫╫░├▓█├√├├├█▓░╫▒▒▒┤█
+├├█▒╫▒▒╫├██├├├┤▒█░√╫╫╫╫░┤██├├├██░╫▒▒▒╫░▓
+├├█▒╫▒▒╫├├██▒░▓█▓√░╫╫╫╫╫├╫█████▒░▒▒▒▒▒┤█
+┤├█▒╫╫╫╫█▓┤████▓┤░╫╫╫╫╫╫╫├░▓█▓╫░▒▒▒▒▒╫░█
+├┤█▒░╫┤███░██▓├├░╫╫╫╫▒╫╫╫╫░░├░╫▒▒▒▒▒▒▒√█
+┤├█▒├├▒█√▓██▓█┤░╫╫╫╫▒╫▒╫▒╫▒╫▒╫▒▒▒▒▒▒▒╫░█
+├├█▒╫██▓├▒█┤├█▓░╫▒╫▒╫▒╫▒▒▒▒▒▒▒▒▒▒▒▒▒▒╫░█
+┤├█▒███▒√╫█├├▓█√╫╫▒╫▒╫▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒╫░█
+├┤▓██┤█▓├├█░├▓█░╫▒▒▒╫▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒╫╫█
+├├▒█▓├█▓┤├█░√▓█┤▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒█
+├├▒█╫┤██├┤█▒├▓█░╫▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒╫░▓▓
+┤▓██▒├▓█┤├█▒┤▓█░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒╫╫▒▒▒▒┤█▓
+▒█▒█▒√▓█├┤█▓├▓█░╫▒▒▒▒▒▒▒▒▒▒▒▒▒╫▒▓╫▒▒╫░█░
+█▓┤█▓├▓█√├█▓┤▓█┤▒▒▒▒▒▒▒▒▒▒▒▒▒╫░▓█░╫▒╫╫█├
+█▒├▓█√▒█├┤█▓├▓█├╫╫╫╫╫▒▒▒▒▒▒▒╫░░█▓░╫▒░▓█┤
+█▒┤▓█├▒█┤├█▓┤▒█├░▒▒░╫╫▒▒▒▒▒╫╫├██░╫▒╫░█▓├
+█▒├▓█√▒█├├█▓├▒█▒████░╫▒▒▒▒╫░├██▒░▒▒╫░█╫├
+█▒┤▓█├╫█├├██┤╫███▒▓█▓┤╫╫╫┤√▒██▒┤╫╫▒░▓█┤├
+█▒├▓█┤├╫├├▒▒├▒█▓├√├▓█┤├┤╫▓███▒┤╫╫▒╫┤█▓├├
+█▓├▓█├┤├┤├┤├├▒█├┤├┤▒█▓█████▓░░▒▒▒▒░▒█├┤├
+█▓├▓█┤├√├├├┤├√├├├┤├█████▓▒┤░╫▒▒▒▒╫├██┤├┤
+▓█├├┤├┤├┤├√├├├┤├├▒██▒√░├┤░╫╫▒▒▒▒▒░▒█┤├┤├
+▒█├├├┤├├├├├├├┤├√▒██╫░╫╫╫╫▒▒▒▒▒▒▒╫┤██├√├├
+░█┤├┤├├├├├√├┤├├├█▓√░▒╫▒▒▒▒▒▒▒▒▒╫┤▓█├├├├├
+├█░├├┤├├├┤├├├├├██√╫▒▒▒▒▒▒▒▒▒▒▒╫░▒█▒├├┤├┤
+┤█▒├┤├√├├├├├├├├█▒░▒▒▒▒▒▒▒▒▒▒▒╫░░██┤├┤├┤├
+├▓█┤├┤├├├┤├├├┤├█╫╫▒▒▒▒▒▒▒▒▒▒╫░░██√├┤├┤├┤
+√▒█├├├┤├┤├├├┤├╫█░╫▒▒▒▒▒▒▒▒▒╫░░██┤├├├├├┤├
+├┤█√├┤├┤├┤├√├├▒█├╫▒▒▒▒▒▒╫╫░┤▒██┤├┤├┤├├├┤
+├├█▒┤├√├┤├┤├┤├▒█┤├╫╫╫╫╫╫░├░▓██├├┤├┤├┤├┤├
+├┤▓█├√├┤├├├├├┤▒██▓╫░├√├░▒███▓├├┤├├├√├├├┤
+├├░█├├┤├├├┤├├├▓████████████├├├√├┤├√├┤├├├
+├┤├█▓┤├├├┤├┤├┤█▒├╫▓█████▒┤├√├┤├┤├√├├├┤├┤
+┤├├▓█├┤├┤├┤├├╫█├√├┤├┤├├├├├┤├√├┤├√├├├├├√├
+├├├┤██▒╫├┤░▒███┤├┤├┤├√├├├├├┤├√├┤├┤├√├├├┤
+░├┤├├████████▒├├┤├┤├├├┤├┤├├├├├┤├┤├┤├┤├┤├`,
 ];

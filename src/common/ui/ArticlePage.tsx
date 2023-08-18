@@ -29,12 +29,13 @@ const Page = styled.div`
 `;
 
 const Header = styled.div`
-  flex-shrink: 0;
+  flex: 0 0 calc(30vh - 100px);
   margin: 10px;
   align-self: stretch;
 `;
 
 const BackButton = styled.button`
+  font-size: 14px;
   cursor: pointer;
 `;
 
@@ -42,7 +43,7 @@ const ContentHeader = styled.div`
   flex-shrink: 0;
   display: flex;
   border: 1px solid black;
-  margin: calc(30vh - 100px) 0 calc(20vh - 100px);
+  margin: 0 0 calc(20vh - 100px);
   max-width: 800px;
   position: relative;
 
@@ -89,6 +90,7 @@ const ShareMessage = styled.div`
   opacity: 0;
   white-space: nowrap;
   user-select: none;
+  z-index: 1;
 `;
 
 const bodyCss = css`
@@ -144,7 +146,30 @@ export default function ArticlePage({
   }, [shareMessage]);
 
   const handleShareClick = () => {
-    navigator.clipboard.writeText(window.location.href);
+    // Navigator clipboard api needs a secure context (https)
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(window.location.href);
+    } else {
+      // Use the 'out of viewport hidden text area' trick
+      const textArea = document.createElement('textarea');
+      textArea.value = window.location.href;
+
+      // Move textarea out of the viewport so it's not visible
+      textArea.style.position = 'absolute';
+      textArea.style.left = '-999999px';
+
+      document.body.prepend(textArea);
+      textArea.select();
+
+      try {
+        document.execCommand('copy');
+      } catch (error) {
+        console.error(error);
+      } finally {
+        textArea.remove();
+      }
+    }
+
     setShareMessage('open');
   };
 
