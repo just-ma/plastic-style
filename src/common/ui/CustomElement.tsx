@@ -81,6 +81,9 @@ import SANDERS from '../../images/thumbnails/sanders.jpg';
 import SEVEN from '../../images/thumbnails/seven.jpg';
 import CELLO from '../../images/thumbnails/cello.png';
 import MARTINI from '../../images/thumbnails/martini.jpg';
+import CLAW from '../../images/thumbnails/claw.jpg';
+import GARAGE from '../../images/thumbnails/garage.jpg';
+import FIFTY from '../../images/thumbnails/5150.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -103,6 +106,54 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'nights-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/coDVcuVoINU"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Summer Nights"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'halen-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/STVcNX7anGU"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Why Can't This Be Love"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'fifty-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/RvV3nn_de2k"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="I Can't Drive 55"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'fifty-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FIFTY}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'claw-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CLAW}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'garage-pic': (
+    <CenteredWrapper>
+      <StyledImg src={GARAGE}></StyledImg>
+    </CenteredWrapper>
+  ),
   'people-vid': (
     <CenteredWrapper>
       <StyledIFrame

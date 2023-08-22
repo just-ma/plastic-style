@@ -66,9 +66,18 @@ import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import FRISBEE_THUMBNAIL from '../../images/thumbnails/frisbee.jpg';
 import RAVE_THUMBNAIL from '../../images/thumbnails/rave.jpg';
 import ABASEMENT_THUMBNAIL from '../../images/thumbnails/abasement.jpg';
+import FOOTBALL2_THUMBNAIL from '../../images/thumbnails/football2.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'home-listening-2',
+    title: 'Home Listening Part 2',
+    author: 'Ben Langdon',
+    createdAt: 1692679736,
+    image: FOOTBALL2_THUMBNAIL,
+    content: `After receiving hundreds of fan letters after the previous column concerned with whether or not I had gotten my hands on a copy of <em>Double Nickels on the Dime</em> by The Minutemen, I can finally &nbsp;put those fears to rest and proudly say I got my hands on a reissue.<br></br><custom id = "nickel-pic"></custom><br></br>I gotta say, it was worth the wait.<br></br>The cover of Double Nickels has a couple neat little details, unfortunately only one is relevant to this article. The speedometer is set exactly to 55 mph, a tongue in cheek response to Sammy Hagar’s hit at the time, “I Can’t Drive 55.” Strangely, I couldn't remember ever hearing this song, which considering the number of Hard Rock Cafes I have patronized in my lifetime felt suspect, so I gave it a listen.<br></br><custom id = "fifty-vid"></custom><br></br>Unfortunately, I can’t say I recommend it. What once might have read as mildly subversive in the 80s comes across as real jackass behavior these days. The entire music video feels like the ultimate fantasy of that one uncle you had who impulse bought a Harley, only to leave it sitting in the garage.<br></br><custom id = "garage-pic"></custom><br></br>While listening to that mess of a song I realized I hadn't listened to a single Van Halen album with Sammy Hagar as lead vocalist, so I spun <em>5150, </em>their most commercially successful album, for the first time.<br></br><custom id = "fifty-pic"></custom><br></br>It honestly is pretty listenable if you are into that sorta thing, very middle of the road glam metal. “Why Can’t This Be Love" in particular has a great synth line. Curiously, I found the songs that closely resemble earlier eras of Van Halen like “Good Enough” and “Get Up” to be the worst of the bunch.<br></br><custom id = "halen-vid"></custom><br></br>Anyways enough with all that, aficionados of <em>5150 </em>know I’m dancing around the subject of “Summer Nights”, clearly the greatest song on the album. “SN” is the kinda tune that makes you wanna pound a few claws with the boys.<br></br><custom id = "claw-pic"></custom>Unfortunately while I was listening to “Summer Nights” in summer, I experienced the thrill of the track alone in my apartment at 3:35 pm without a claw in sight. I gave out a wistful sigh and continued listening.<br></br><custom id = "nights-vid"></custom>`,
+  },
   {
     id: 'artists-space',
     title: 'Artists Space',
