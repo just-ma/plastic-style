@@ -84,6 +84,7 @@ import MARTINI from '../../images/thumbnails/martini.jpg';
 import CLAW from '../../images/thumbnails/claw.jpg';
 import GARAGE from '../../images/thumbnails/garage.jpg';
 import FIFTY from '../../images/thumbnails/5150.jpg';
+import NEWSLOW from '../../images/thumbnails/newslow.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -106,6 +107,99 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'newslow-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NEWSLOW}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ep-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/C5Zued8Uo1Y"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Slowdive"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'cello-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/cjpxk3vL8iY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Cello"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'star-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/spNuc9-8zn4"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Dagger"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'dagger-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/GbngixAJoec"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Dagger"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'celia-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/t-nm9XDN8iw"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Celia's Dream"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'know-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/_kB2ot1PWy8"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Know"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'crank-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/DoEav9mAB3U"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Kisses"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'kisses-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/97U7erexyR0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Kisses"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'nights-vid': (
     <CenteredWrapper>
       <StyledIFrame
