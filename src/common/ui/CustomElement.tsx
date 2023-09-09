@@ -85,6 +85,12 @@ import CLAW from '../../images/thumbnails/claw.jpg';
 import GARAGE from '../../images/thumbnails/garage.jpg';
 import FIFTY from '../../images/thumbnails/5150.jpg';
 import NEWSLOW from '../../images/thumbnails/newslow.jpg';
+import NOEL from '../../images/thumbnails/noel.jpg';
+import BRANDON from '../../images/thumbnails/brandon.jpg';
+import INSIDE from '../../images/thumbnails/inside.jpg';
+import OUTSIDE from '../../images/thumbnails/outside.jpg';
+import MANNEQUIN2 from '../../images/thumbnails/mannequin2.jpg';
+import MUSHY from '../../images/thumbnails/mushy.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -107,6 +113,36 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'brandon-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BRANDON}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'noel-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NOEL}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'inside-pic': (
+    <CenteredWrapper>
+      <StyledImg src={INSIDE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'outside-pic': (
+    <CenteredWrapper>
+      <StyledImg src={OUTSIDE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'mannequin2-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MANNEQUIN2}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'mushy-pic': (
+    <CenteredWrapper>
+      <StyledImg src={MUSHY}></StyledImg>
+    </CenteredWrapper>
+  ),
   'newslow-pic': (
     <CenteredWrapper>
       <StyledImg src={NEWSLOW}></StyledImg>
