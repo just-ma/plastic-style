@@ -91,6 +91,12 @@ import INSIDE from '../../images/thumbnails/inside.jpg';
 import OUTSIDE from '../../images/thumbnails/outside.jpg';
 import MANNEQUIN2 from '../../images/thumbnails/mannequin2.jpg';
 import MUSHY from '../../images/thumbnails/mushy.jpg';
+import DMG from '../../images/thumbnails/dmg2.jpg';
+import BOBA from '../../images/thumbnails/boba2.jpg';
+import NOODLES from '../../images/thumbnails/noodles.jpg';
+import YUNNAN from '../../images/thumbnails/yunnan.jpg';
+import CUCUMBERS from '../../images/thumbnails/cucumbers.jpg';
+import BACKPACK from '../../images/thumbnails/backpack.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -113,6 +119,58 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'anorak-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/X2wYZ4e3pm8"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Anorak"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'geese-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Acc-FaLqXzI"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Geese"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'backpack-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BACKPACK}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'yunnan-pic': (
+    <CenteredWrapper>
+      <StyledImg src={YUNNAN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'cucumbers-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CUCUMBERS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'boba-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BOBA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'dmg-pic': (
+    <CenteredWrapper>
+      <StyledImg src={DMG}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'noodles-pic': (
+    <CenteredWrapper>
+      <StyledImg src={NOODLES}></StyledImg>
+    </CenteredWrapper>
+  ),
   'brandon-pic': (
     <CenteredWrapper>
       <StyledImg src={BRANDON}></StyledImg>

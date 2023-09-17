@@ -69,9 +69,18 @@ import ABASEMENT_THUMBNAIL from '../../images/thumbnails/abasement.jpg';
 import FOOTBALL2_THUMBNAIL from '../../images/thumbnails/football2.jpg';
 import SLOWDIVE_THUMBNAIL from '../../images/thumbnails/slowdive-thumbnail.jpg';
 import NUDO_THUMBNAIL from '../../images/thumbnails/nudo.jpg';
+import DMG_THUMBNAIL from '../../images/thumbnails/dmgcd.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'dmg',
+    title: 'Downtown Music Gallery',
+    author: 'Parker Albert',
+    createdAt: 1694921439,
+    image: DMG_THUMBNAIL,
+    content: `It is Tuesday and I am hard at work for the first time in months. While I work a documentary is playing on a big screen in front of me. It is about a man who raised geese to fly alongside his homemade ultralight. I am touched.<br></br><custom id = "geese-vid"></custom><br></br>I tell my coworkers I am planning to meet my British friend for dinner at Vaselka after work. My coworkers tell me Vaselka will have a line out the door and I should go to Lil’ Frankies instead but my British friend suggests we go to the weekly Tuesday show at Downtown Music Gallery so we decide to go to Yunnan Noodle House since it is closer to the show.<br></br><custom id = "yunnan-pic"></custom><br></br>The Noodle House menus require decoding. My British friend wants a noodle bowl but she is vegetarian and the pork is unavoidable. She orders tofu and shredded cucumbers but when the cucumbers arrive they are not shredded. They are sliced, lengthwise.<br></br><custom id = "cucumbers-pic"></custom><br></br>I order my noodle bowl with sweet potato noodles and lamb. It arrives and I cannot find the lamb, only mushrooms. The noodles are missing color; we cannot find the sweet potato. Our server investigates and confirms there is no lamb and the noodles are sweet potato.<br></br><custom id = "noodles-pic"></custom><br></br>The bowl is delicious. We head to Downtown Music Gallery on my bike. My British friend sits on the back where I usually tie my backpack. One of the straps on my backpack has ripped so I tie the ripped end to the still functioning strap which makes it wearable but it slides around a lot so I ask my British friend to adjust it as needed.<br></br><custom id = "backpack-pic"></custom><br></br>When we arrive there are two sets left. The first set is jazz.<br></br>The second set is a man wearing a hat playing the saxophone; there is a ferocity in his eyes. He makes the sax sound like dirty dishes in a washing machine, a boiling kettle, and a prize wheel. He is circular breathing. I am impressed and inspired.<br></br><custom id = "dmg-pic"></custom><br></br>After the show we want to get ice cream at Chinatown Ice Cream Factory but it is closed so we go to Shan Fu instead. We get fish shaped ice cream sandwiches - I get brown sugar boba and my British friend gets green tea. There is red bean in it but she does not notice at first.<br></br><custom id = "boba-pic"></custom><br></br>After ice cream we are tandem biking again and I am having a ball. We bike along the Hudson; I want to sit on a lawn but the lawn is blocked off by construction.<br></br><custom id = "anorak-vid"></custom><br></br>I get off the bike and race my British friend to her subway stop on foot; she is riding the bike. I beat her but I think she can go faster.`,
+  },
   {
     id: 'working-the-door',
     title: 'Working The Door',
