@@ -70,9 +70,18 @@ import FOOTBALL2_THUMBNAIL from '../../images/thumbnails/football2.jpg';
 import SLOWDIVE_THUMBNAIL from '../../images/thumbnails/slowdive-thumbnail.jpg';
 import NUDO_THUMBNAIL from '../../images/thumbnails/nudo.jpg';
 import DMG_THUMBNAIL from '../../images/thumbnails/dmgcd.jpg';
+import MESHI_THUMBNAIL from '../../images/thumbnails/meshi.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'kuuna-meshi-kuuna',
+    title: 'Reissue of the Day: <em>Meshi Kuuna!</em> by INU',
+    author: 'Ben Langdon',
+    createdAt: 1696635711,
+    image: MESHI_THUMBNAIL,
+    content: `<em>Meshi Kuuna!</em> is the only proper studio LP from Osaka’s INU to be released during their short existence. Part of an emerging wave of Kansai punk in the late 70’s and early 80’s, <em>Meshi Kuuna! </em>serves as both a high water mark and a great entry point. Zig-zagging from bubbly new wave “Tsurutsuru No Tsubo”, to hypnotic post-punk “Dum Dum Dan”, and even an attempt at balladry “Yume No Nakahe”, this album prioritizes energy above all else. Running at a tight 34 minutes, <em>Meshi-Kuuna! </em>twists and turns in so many unpredictably charming ways that it's hard not to smile the whole way through. This was a record truly ahead of its time.\nFrontman Kou Machida went on to be an acclaimed fiction writer, with his work only just beginning to be translated into english, see <a href="https://inpatientpress.bigcartel.com/product/rip-it-up-by-kou-machidahttps://inpatientpress.bigcartel.com/product/rip-it-up-by-kou-machida"><u>Rip it Up</u></a> for more. <em>Meshi Kuuna! </em>is being reissued on MESH-KEY records, check it out <a href="https://inujapan.bandcamp.com/album/dont-eat-food"><u>here</u></a>.`,
+  },
   {
     id: 'dmg',
     title: 'Downtown Music Gallery',
