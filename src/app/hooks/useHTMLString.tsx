@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { useLocation } from 'react-router-dom';
 
-import CustomElement from '../../common/ui/CustomElement';
+import CustomElement from '../../common/ui/custom/CustomElement';
 import ExpandableText from '../../common/ui/ExpandableText';
 
 export default function useHTMLString(): void {

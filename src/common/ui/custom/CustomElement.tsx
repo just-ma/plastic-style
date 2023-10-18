@@ -105,6 +105,7 @@ import WICKER from '../../videos/wicker-clip.mp4';
 import PRINCESS from '../../videos/princess-clip.mp4';
 import PASOLINI from '../../videos/pasolini-clip.mp4';
 import MOOD from '../../videos/mood-clip.mp4';
+import ExpandableButton from './ExpandableButton';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -127,6 +128,11 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'test-button': (
+    <CenteredWrapper>
+      <ExpandableButton />
+    </CenteredWrapper>
+  ),
   'mood-vid': (
     <CenteredWrapper>
       <video width="100%" controls autoPlay muted>
