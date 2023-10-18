@@ -61,7 +61,6 @@ import ESTRELLA_THUMBNAIL from '../../images/thumbnails/estrella.jpg';
 import HOME_THUMBNAIL from '../../images/thumbnails/foothouse.jpg';
 import TV_THUMBNAIL from '../../images/thumbnails/tv.jpg';
 import FLESH2_THUMBNAIL from '../../images/thumbnails/flesh2.jpg';
-import OREOS_THUMBNAIL from '../../images/thumbnails/oreos.jpg';
 import JUSTIN_THUMBNAIL from '../../images/thumbnails/justin.jpg';
 import FRISBEE_THUMBNAIL from '../../images/thumbnails/frisbee.jpg';
 import RAVE_THUMBNAIL from '../../images/thumbnails/rave.jpg';
