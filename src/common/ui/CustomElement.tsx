@@ -97,6 +97,14 @@ import NOODLES from '../../images/thumbnails/noodles.jpg';
 import YUNNAN from '../../images/thumbnails/yunnan.jpg';
 import CUCUMBERS from '../../images/thumbnails/cucumbers.jpg';
 import BACKPACK from '../../images/thumbnails/backpack.jpg';
+import TWILLEY from '../../videos/magic-clip.mp4';
+import KEANU from '../../videos/devil-clip.mp4';
+import COOPER from '../../videos/peaks-clip.mp4';
+import CRUISE from '../../videos/cruise-clip.mp4';
+import WICKER from '../../videos/wicker-clip.mp4';
+import PRINCESS from '../../videos/princess-clip.mp4';
+import PASOLINI from '../../videos/pasolini-clip.mp4';
+import MOOD from '../../videos/mood-clip.mp4';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -119,6 +127,62 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'mood-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={MOOD} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'keanu-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={KEANU} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'twilley-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={TWILLEY} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'cooper-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={COOPER} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'tom-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={CRUISE} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'wicker-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={WICKER} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'princess-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={PRINCESS} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'theorem-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted>
+        <source src={PASOLINI} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
   'anorak-vid': (
     <CenteredWrapper>
       <StyledIFrame
