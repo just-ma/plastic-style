@@ -135,56 +135,56 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   ),
   'mood-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={MOOD} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'keanu-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={KEANU} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'twilley-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={TWILLEY} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'cooper-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={COOPER} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'tom-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={CRUISE} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'wicker-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={WICKER} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'princess-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={PRINCESS} type="video/mp4" />
       </video>
     </CenteredWrapper>
   ),
   'theorem-vid': (
     <CenteredWrapper>
-      <video width="100%" controls autoPlay muted>
+      <video width="100%" controls autoPlay muted playsInline>
         <source src={PASOLINI} type="video/mp4" />
       </video>
     </CenteredWrapper>
