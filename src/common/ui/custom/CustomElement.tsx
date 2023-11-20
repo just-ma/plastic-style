@@ -106,6 +106,8 @@ import PRINCESS from '../../../videos/princess-clip.mp4';
 import PASOLINI from '../../../videos/pasolini-clip.mp4';
 import MOOD from '../../../videos/mood-clip.mp4';
 import ExpandableButton from './ExpandableButton';
+import FLEMMING2 from '../../../images/thumbnails/flemming-2.jpg';
+import FLEMMING3 from '../../../images/thumbnails/flemming-3.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -128,6 +130,159 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'auger-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/C39-C-cjSRI"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Nigh Train To Nowhere"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'koto-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/t9Su07bksDI"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Chinese Revenge"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'flemming-3-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FLEMMING3}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'flemming-2-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FLEMMING2}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'kano-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Sz9YT4P0lc0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Another Life"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'pedrini-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/29Slwiw2174"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="New Dream"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'happy-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/gcrxvZSY_6I"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Happy Station"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'challenger-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/vN1cekvzY98"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Challenger"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'govindo-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/2KsKxmdA8gY"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Govindo"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'afraid-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/IJd2MpP60pQ"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Don't Be Afraid"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'passion-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/knvkNjmam3M"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Bad Passion"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'lectric-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/GvUZUtUsK4o"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Robot Is Systematic"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'flagio-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/zDV_dBYp4h0"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Take a Chance"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'cybernetic-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/DbYRXtsCU40"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Cybernetic"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'italo-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/videoseries?si=d2DVgiIGsbnSW5tF&amp;list=PLvkRYqVrmvNEamCJHjPCMzOTT-jm7Mxnh"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Italo Playlist"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'test-button': (
     <CenteredWrapper>
       <ExpandableButton />
