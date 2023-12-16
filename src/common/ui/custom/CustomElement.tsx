@@ -108,6 +108,12 @@ import MOOD from '../../../videos/mood-clip.mp4';
 import ExpandableButton from './ExpandableButton';
 import FLEMMING2 from '../../../images/thumbnails/flemming-2.jpg';
 import FLEMMING3 from '../../../images/thumbnails/flemming-3.jpg';
+import BEACH from '../../../images/thumbnails/beach.jpg';
+import CORNER from '../../../images/thumbnails/corner.jpg';
+import IPA from '../../../images/thumbnails/ipa.jpg';
+import TECATE from '../../../images/thumbnails/tecate.jpg';
+import SAPPARO from '../../../images/thumbnails/sapparo.jpg';
+import KENKA from '../../../images/thumbnails/kanka.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -130,6 +136,69 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'beach-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/rsPTZrgKaVI"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Beach House"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'honda-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/4nDvA1pqP0U"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Little Honda"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'cutter-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/nMplIrSlg8E"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="The Cutter"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'beach-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BEACH}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'corner-pic': (
+    <CenteredWrapper>
+      <StyledImg src={CORNER}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'ipa-pic': (
+    <CenteredWrapper>
+      <StyledImg src={IPA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'tecate-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TECATE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'sapparo-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SAPPARO}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'kenka-pic': (
+    <CenteredWrapper>
+      <StyledImg src={KENKA}></StyledImg>
+    </CenteredWrapper>
+  ),
   'auger-vid': (
     <CenteredWrapper>
       <StyledIFrame
