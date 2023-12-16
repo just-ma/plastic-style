@@ -74,9 +74,18 @@ import TWILLEY_THUMBNAIL from '../../images/thumbnails/twilley.jpg';
 import FLEMMING_THUMBNAIL from '../../images/thumbnails/flemming-1.jpg';
 import COLLAGE_THUMBNAIL from '../../images/thumbnails/collage.jpg';
 import TICKET_THUMBNAIL from '../../images/thumbnails/ticket.jpg';
+import BEACH_THUMBNAIL from '../../images/thumbnails/beach.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'beach-house-opens-for-yo-la-tengo',
+    title: 'Beach House Opens For Yo La Tengo',
+    author: 'Parker Albert',
+    createdAt: 1702706954,
+    image: BEACH_THUMBNAIL,
+    content: `It is December 13th, the sixth night of the Yo La Tengo Hannakuh shows, and rumors have it that Beach House is opening.<br></br>I meet Ben at Kenka bar at 6:43 PM. We sit in the corner; the chairs are small. The menus: extravagant. The cost of sapparo on draft is $1.50.<br></br><custom id = "kenka-pic"></custom><br></br>We order a pitcher for $8 and what might be the worst deal on the menu, the Japanese pickles ($4). The serving size is very small and after Ben’s chicken katsu arrives he tries the bean sprouts on the side and declares that vegetables should be avoided at Kenka.<br></br><custom id = "sapparo-pic"></custom><br></br>After another $8 pitcher we walk to Bowery Ballroom. It takes 17 minutes but it feels like 5; we are buzzed. Beach House is playing. We stand at the back of the venue and I drink several cups of water. Their setup is minimal, they are not silhouettes behind fog machines, they are both sitting down.<br></br><custom id = "beach-vid"></custom><br></br>After Beach House we are standing in the very long Men’s Bathroom line – there is no line for the Women’s Bathroom. Someone cuts in front of Ben, Ben looks back at me in shock, I shake my head in solidarity, Ben steps in front of The Cutter but I stay put.<br></br><custom id = "cutter-vid"></custom><br></br>Ben asks how I’m doing on drinks, I say I’m not going to get anything, he gets Tecate and a shot of tequila.<br></br><custom id = "tecate-pic"></custom><br></br>Moments before Yo La Tengo takes the stage I get myself a Founders IPA.<br></br><custom id = "ipa-pic"></custom><br></br>“Our Way To Fall” opens the set. I try to meet the song in its gentle zone but we are the walls to a tunnel that people are passing through to get to their spot and I am bumped and jostled harder than I would expect Yo La Tengo fans to bump and jostle. At my suggestion we move to the front right corner of the room.<br></br><custom id = "corner-pic"></custom><br></br>At 10:45 PM my back begins to hurt severely. I consider leaving but instead I stand against the wall and tighten my core; the pain lessens. I am glad I do not leave because YLT plays “Cherry Chapstick” and “Sugarcube” almost back to back, and finishes their set with “Little Honda,” which is deconstructed with a noise section halfway through and then put back together again. After the show I tell Ben this is a metaphor.<br></br><custom id ="honda-vid"></custom>`,
+  },
   {
     id: 'jenna-sees-helena-deland',
     title: 'Jenna Sees Helena Deland',
