@@ -114,6 +114,11 @@ import IPA from '../../../images/thumbnails/ipa.jpg';
 import TECATE from '../../../images/thumbnails/tecate.jpg';
 import SAPPARO from '../../../images/thumbnails/sapparo.jpg';
 import KENKA from '../../../images/thumbnails/kanka.jpg';
+import DOG from '../../../images/thumbnails/dogclip.gif';
+import MDOU from '../../../images/thumbnails/mdougif.gif';
+import BAND from '../../../images/thumbnails/bandgif.gif';
+import FANG from '../../../images/thumbnails/fang.jpg';
+import JULIA from '../../../images/thumbnails/juliaswar.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -136,6 +141,28 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'mdou-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/y23ewhFf_hs"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Mdou Moctar"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'shep-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/huvPeRwTW9M"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Shep Treasure"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'beach-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -167,6 +194,31 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
         allowFullScreen
         title="The Cutter"
       ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'mdou-gif': (
+    <CenteredWrapper>
+      <StyledImg src={MDOU}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'band-gif': (
+    <CenteredWrapper>
+      <StyledImg src={BAND}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'dog-gif': (
+    <CenteredWrapper>
+      <StyledImg src={DOG}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'julia-pic': (
+    <CenteredWrapper>
+      <StyledImg src={JULIA}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'fang-pic': (
+    <CenteredWrapper>
+      <StyledImg src={FANG}></StyledImg>
     </CenteredWrapper>
   ),
   'beach-pic': (
