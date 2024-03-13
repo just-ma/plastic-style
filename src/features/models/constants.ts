@@ -82,7 +82,7 @@ import { Feature } from './types';
 export const FEATURES: ReadonlyArray<Feature> = [
   {
     id: 'shep-treasure-interview',
-    title: 'An Interview With Shep Treasure',
+    title: 'An Interview With Shep Treasure WOWWWW',
     author: 'Parker Albert',
     createdAt: 1707141522,
     image: SHEP_THUMBNAIL,
