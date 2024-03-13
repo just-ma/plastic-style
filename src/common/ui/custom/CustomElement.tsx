@@ -118,7 +118,14 @@ import DOG from '../../../images/thumbnails/dogclip.gif';
 import MDOU from '../../../images/thumbnails/mdougif.gif';
 import BAND from '../../../images/thumbnails/bandgif.gif';
 import FANG from '../../../images/thumbnails/fang.jpg';
+import TAMBURAS from '../../../images/thumbnails/tamburas.jpg';
+import BROCCOLI from '../../../images/thumbnails/broccoli.jpg';
+import OVEN1 from '../../../images/thumbnails/oven1.jpg';
+import OVEN2 from '../../../images/thumbnails/oven2.jpg';
+import WALKMAN from '../../../images/thumbnails/walkman.jpg';
+import ASPARAGUS from '../../../images/thumbnails/asparagus.jpg';
 import JULIA from '../../../images/thumbnails/juliaswar.jpg';
+import FRIENDS from '../../../images/thumbnails/friends.mp4';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -141,6 +148,39 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'smile-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/7uRvG1nXxCQ"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="e+e Smile"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'cat-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/Ag2J4MC2KRA"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Cats"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'movie-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/t7oY6ZgbjEo"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Where Is The Friends House Full Movie"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'mdou-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -196,6 +236,13 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       ></StyledIFrame>
     </CenteredWrapper>
   ),
+  'friends-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted playsInline>
+        <source src={FRIENDS} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
   'mdou-gif': (
     <CenteredWrapper>
       <StyledImg src={MDOU}></StyledImg>
@@ -209,6 +256,36 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'dog-gif': (
     <CenteredWrapper>
       <StyledImg src={DOG}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'oven2-pic': (
+    <CenteredWrapper>
+      <StyledImg src={OVEN2}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'tamburas-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TAMBURAS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'oven1-pic': (
+    <CenteredWrapper>
+      <StyledImg src={OVEN1}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'walkman-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WALKMAN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'asparagus-pic': (
+    <CenteredWrapper>
+      <StyledImg src={ASPARAGUS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'broccoli-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BROCCOLI}></StyledImg>
     </CenteredWrapper>
   ),
   'julia-pic': (
