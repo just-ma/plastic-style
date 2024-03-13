@@ -77,9 +77,18 @@ import TICKET_THUMBNAIL from '../../images/thumbnails/ticket.jpg';
 import BEACH_THUMBNAIL from '../../images/thumbnails/beach.jpg';
 import SHEP_THUMBNAIL from '../../images/thumbnails/shep.jpg';
 import SAB_THUMBNAIL from '../../images/thumbnails/finalsab.jpg';
+import BROCCOLI from '../../images/thumbnails/broccoli.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'the-broccoli-is-burnt',
+    title: 'The Broccoli is Burnt',
+    author: 'Parker Albert',
+    createdAt: 1710217616,
+    image: BROCCOLI,
+    content: `The broccoli is burnt: it was in the oven too long.<br></br><custom id = "broccoli-pic"></custom><br></br>I am watching “Where Is The Friend’s House” with my friends. All of the characters are repeating themselves.<br></br><custom id = "movie-vid"></custom><br></br>The broccoli is too charred to eat so I put asparagus in the oven.<br></br><custom id = "asparagus-pic"></custom><br></br>The main character is eight years old; he is running back and forth. “Kid’s got lungs,” I say.<br></br><custom id = "friends-vid"></custom><br></br>It’s been too long since I checked the oven; the asparagus should be burnt by now but I open the oven and the asparagus is not cooked. The oven is off but the dial is turned to 450 degrees Fahrenheit.<br></br><custom id = "oven2-pic"></custom><br></br><br></br><br></br>                            The movie is over.<br></br><br></br><br></br>I access YouTube via the Roku TV remote and I select an eleven hour-long video of cats. The cats are in a small haven, some of the cats are more active than others, all of the cats are cute, one of the cats is stuffed and not real. On top of this, I play my CD copy of La Monte Young and Marian Zazeela’s “82 VII 15 c. 6:35 - 7:35 PM + c. 6:37 - 6:52:30 PM NYC” on my Sony D-FJ401 G-Protection CD Walkman. They are playing tamburas; it is an homage to Pandit Pran Nath.<br></br><custom id = "cat-vid"></custom><br></br><custom id = "tamburas-pic"></custom><br></br><custom id = "walkman-pic"></custom><br></br>Unfortunately the asparagus is still not cooked. My friends are getting antsy but I do not give in. I turn the dial past the 450 degree mark, past where it should ever go, and I hear a click. The dial is back in the off position.<br></br><custom id = "oven1-pic"></custom><br></br>I turn the oven on.<br></br><custom id = "smile-vid"></custom>`,
+  },
   {
     id: 'shep-treasure-interview',
     title: 'An Interview With Shep Treasure',
