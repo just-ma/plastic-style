@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleDisplay {
+  width: 100%;
+  margin-top: 60px;
+  align-items: flex-start;
+}
+
+.widget {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 40px;
+}

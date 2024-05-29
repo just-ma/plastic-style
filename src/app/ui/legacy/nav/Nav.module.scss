@@ -1,0 +1,28 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navItemsContainer {
+  position: relative;
+}
+
+.navArrow {
+  position: absolute;
+  margin: 1px 0 0 -3px;
+  transition: top 0.3s, fill 0.5s;
+  height: 14px;
+  width: 14px;
+  fill: white;
+  z-index: 1;
+
+  &.dark {
+    fill: black;
+  }
+}
+
+.navItems {
+  position: absolute;
+  z-index: 1;
+}

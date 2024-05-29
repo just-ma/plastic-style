@@ -1,0 +1,12 @@
+.PodcastSeasonPage {
+  &.mobile {
+    .titleDisplay {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.titleDisplay {
+  margin-bottom: 80px;
+  align-items: flex-start;
+}

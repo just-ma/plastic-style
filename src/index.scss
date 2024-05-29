@@ -1,0 +1,34 @@
+html {
+  background-color: #ebebeb;
+}
+
+body {
+  margin: 0;
+  font-family: 'Sligoil-Micro', Inconsolata, monospace;
+  font-size: 13px;
+  height: 100vh;
+  overflow: hidden;
+
+  #root {
+    height: 100vh;
+  }
+}
+
+p {
+  line-height: 18px;
+  white-space: pre-wrap;
+}
+
+@font-face {
+  font-family: 'FT88-Italic';
+  src: local('FT88-Italic'), url(./fonts/FT88-Italic.otf) format('otf'), url(./fonts/FT88-Italic.eot) format('eot'),
+    url(./fonts/FT88-Italic.svg) format('svg'), url(./fonts/FT88-Italic.ttf) format('ttf'),
+    url(./fonts/FT88-Italic.woff) format('woff'), url(./fonts/FT88-Italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Sligoil-Micro';
+  src: local('Sligoil-Micro'), url(./fonts/Sligoil-Micro.otf) format('otf'),
+    url(./fonts/Sligoil-Micro.svg) format('svg'), url(./fonts/Sligoil-Micro.ttf) format('ttf'),
+    url(./fonts/Sligoil-Micro.woff) format('woff'), url(./fonts/Sligoil-Micro.woff2) format('woff2');
+}
