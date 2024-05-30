@@ -300,7 +300,6 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <StyledImg src={DOG}></StyledImg>
     </CenteredWrapper>
   ),
-<<<<<<< HEAD
   'truck-pic': (
     <CenteredWrapper>
       <StyledImg src={TRUCK}></StyledImg>
@@ -336,8 +335,6 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <StyledImg src={BASKETBALL}></StyledImg>
     </CenteredWrapper>
   ),
-=======
->>>>>>> origin/main
   'oven2-pic': (
     <CenteredWrapper>
       <StyledImg src={OVEN2}></StyledImg>
@@ -566,7 +563,6 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <ExpandableButton />
     </CenteredWrapper>
   ),
-<<<<<<< HEAD
   'destination-vid': (
     <CenteredWrapper>
       <video width="100%" controls autoPlay muted playsInline>
@@ -581,8 +577,6 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       </video>
     </CenteredWrapper>
   ),
-=======
->>>>>>> origin/main
   'mood-vid': (
     <CenteredWrapper>
       <video width="100%" controls autoPlay muted playsInline>
