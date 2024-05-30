@@ -113,10 +113,10 @@ export default function AppHeader() {
   const stackRef = useRef<string[]>([]);
 
   useEffect(() => {
-    let intervalId1: NodeJS.Timer;
-    let intervalId2: NodeJS.Timer;
-    let timeoutId1: NodeJS.Timer;
-    let timeoutId2: NodeJS.Timer;
+    let intervalId1: NodeJS.Timeout;
+    let intervalId2: NodeJS.Timeout;
+    let timeoutId1: NodeJS.Timeout;
+    let timeoutId2: NodeJS.Timeout;
 
     if (stackMax > 0) {
       intervalId1 = setInterval(() => {
