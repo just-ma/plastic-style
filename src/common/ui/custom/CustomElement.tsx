@@ -126,6 +126,18 @@ import WALKMAN from '../../../images/thumbnails/walkman.jpg';
 import ASPARAGUS from '../../../images/thumbnails/asparagus.jpg';
 import JULIA from '../../../images/thumbnails/juliaswar.jpg';
 import FRIENDS from '../../../images/thumbnails/friends.mp4';
+<<<<<<< HEAD
+import DISC from '../../../images/thumbnails/disc.jpg';
+import BASKETBALL from '../../../images/thumbnails/basketball.jpg';
+import GAS from '../../../images/thumbnails/gas.jpg';
+import SPEAKERS from '../../../images/thumbnails/speakers.jpg';
+import BURGER from '../../../images/thumbnails/burger.jpg';
+import FLICK from '../../../images/thumbnails/flick2.mp4';
+import STATION from '../../../images/thumbnails/station.jpg';
+import DESTINATION from '../../../images/thumbnails/destination.mp4';
+import TRUCK from '../../../images/thumbnails/truck.jpg';
+=======
+>>>>>>> origin/main
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -148,6 +160,39 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'men-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/l5aZJBLAu1E?si=bUwqS9GHoSB47l6t"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="It's Raining Men"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'barry-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/E7zmRvhFEYo?si=LYJNwaGVNQqb0KqO"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="You're My First, My Last, My Everything"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'talk-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/cFH5JgyZK1I?si=aNjknyHVy3G7bvjpv"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Talk Talk It's My Life"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'smile-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -258,6 +303,44 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <StyledImg src={DOG}></StyledImg>
     </CenteredWrapper>
   ),
+<<<<<<< HEAD
+  'truck-pic': (
+    <CenteredWrapper>
+      <StyledImg src={TRUCK}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'station-pic': (
+    <CenteredWrapper>
+      <StyledImg src={STATION}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'speakers-pic': (
+    <CenteredWrapper>
+      <StyledImg src={SPEAKERS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'gas-pic': (
+    <CenteredWrapper>
+      <StyledImg src={GAS}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'burger-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BURGER}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'frisbee2-pic': (
+    <CenteredWrapper>
+      <StyledImg src={DISC}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'basketball-pic': (
+    <CenteredWrapper>
+      <StyledImg src={BASKETBALL}></StyledImg>
+    </CenteredWrapper>
+  ),
+=======
+>>>>>>> origin/main
   'oven2-pic': (
     <CenteredWrapper>
       <StyledImg src={OVEN2}></StyledImg>
@@ -486,6 +569,23 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
       <ExpandableButton />
     </CenteredWrapper>
   ),
+<<<<<<< HEAD
+  'destination-vid': (
+    <CenteredWrapper>
+      <video width="100%" controls autoPlay muted playsInline>
+        <source src={DESTINATION} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+  'flick-vid': (
+    <CenteredWrapper>
+      <video width="70%" loop autoPlay muted playsInline>
+        <source src={FLICK} type="video/mp4" />
+      </video>
+    </CenteredWrapper>
+  ),
+=======
+>>>>>>> origin/main
   'mood-vid': (
     <CenteredWrapper>
       <video width="100%" controls autoPlay muted playsInline>
