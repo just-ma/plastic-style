@@ -135,6 +135,16 @@ import FLICK from '../../../images/thumbnails/flick2.mp4';
 import STATION from '../../../images/thumbnails/station.jpg';
 import DESTINATION from '../../../images/thumbnails/destination.mp4';
 import TRUCK from '../../../images/thumbnails/truck.jpg';
+import WILLALBUM from '../../../images/thumbnails/willalbum.jpg';
+import WILLCHILD from '../../../images/thumbnails/willchild.jpg';
+import WILLCROWD from '../../../images/thumbnails/willcrowd.jpg';
+import WILLCURTAIN from '../../../images/thumbnails/willcurtain.jpg';
+import WILLMAGNIFY from '../../../images/thumbnails/willmagnify.jpg';
+import WILLSHADOW from '../../../images/thumbnails/willshadow.jpg';
+import WILLTHUMB from '../../../images/thumbnails/willthumb.jpg';
+import WILLTV from '../../../images/thumbnails/willtv.jpg';
+import WILLARTICLE from '../../../images/thumbnails/willarticle.jpg';
+import WONTSMITH from '../../../images/thumbnails/wontsmith.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -157,6 +167,17 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'chicken-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/l5aZJBLAu1E?si=bUwqS9GHoSB47l6t"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="It's Raining Men"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'men-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -298,6 +319,56 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'dog-gif': (
     <CenteredWrapper>
       <StyledImg src={DOG}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'wontsmith-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WONTSMITH}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willarticle-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLARTICLE}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willalbum-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLALBUM}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willchild-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLCHILD}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willcrowd-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLCROWD}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willcurtain-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLCURTAIN}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willmagnify-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLMAGNIFY}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willshadow-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLSHADOW}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willthumb-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLTHUMB}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'willtv-pic': (
+    <CenteredWrapper>
+      <StyledImg src={WILLTV}></StyledImg>
     </CenteredWrapper>
   ),
   'truck-pic': (

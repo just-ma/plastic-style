@@ -9,9 +9,19 @@ import WEAVE_THUMBNAIL from '../../images/thumbnails/weave.jpg';
 import HELEN_THUMBNAIL from '../../images/thumbnails/helen-thumbnail.jpg';
 import TRACEY_THUMBNAIL from '../../images/thumbnails/tracey.jpg';
 import NONDI_THUMBNAIL from '../../images/thumbnails/nondi.jpg';
+import WILL_THUMBNAIL from '../../images/thumbnails/willalbum.jpg';
 import { Review } from './types';
 
 export const REVIEWS: ReadonlyArray<Review> = [
+  {
+    reviewId: 'wont-smith',
+    artist: 'Will Smith',
+    author: 'Parker Albert',
+    content: `Will Smith is an entertainer.<br></br><custom id = "willcrowd-pic"></custom><br></br>Will Smith is on your TV.<br></br><custom id = "willtv-pic"></custom><br></br>Will Smith is not the man behind the curtain.<br></br><custom id = "willcurtain-pic"></custom><br></br>Will Smith is afraid of his shadow.<br></br><custom id = "willshadow-pic"></custom><br></br>Will Smith is not hard to find.<br></br><custom id = "willmagnify-pic"></custom><br></br>Nobody is looking for Will Smith.<br></br><custom id = "willarticle-pic"></custom><br></br>Will Smith is not a bad boy.<br></br><custom id = "willchild-pic"></custom><br></br>Will Smith wants to be everything that he's not, so he rips the spine out of Yeezus and calls his album "Based on a True Story," where the true story is everything he's not, and the invisible hand turns true story to uncanny valley where Will Smith sounds like Kanye and raps like Kanye and <em>is</em> Kanye, and this will be happening a lot more because what celebrity or chump with big bucks would not want to try their shot at being Miley or Bono or Bon Iver? And I guess the stakes are zilch when you've got wads to blow and everything is thrown at the wall until something sticks to the right receptors and then uh oh, everyone likes Will Smith now.<br></br><br></br><br></br><br></br><br></br><custom id = "wontsmith-pic"></custom>`,
+    createdAt: 1745186285,
+    image: WILL_THUMBNAIL,
+    title: 'Based on a True Story',
+  },
   {
     reviewId: 'flood-city-trax-by-nondi_',
     artist: 'Nondi_',
