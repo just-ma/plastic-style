@@ -145,6 +145,7 @@ import WILLTHUMB from '../../../images/thumbnails/willthumb.jpg';
 import WILLTV from '../../../images/thumbnails/willtv.jpg';
 import WILLARTICLE from '../../../images/thumbnails/willarticle.jpg';
 import WONTSMITH from '../../../images/thumbnails/wontsmith.jpg';
+import PANTHERESS from '../../../images/thumbnails/fancythat.jpg';
 
 const CenteredWrapper = styled.div`
   width: 100%;
@@ -167,6 +168,61 @@ const StyledImg = styled.img`
 `;
 
 const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
+  'mj-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/cy-djtiU5RE?si=5WvSLNoJdNNEaX2-"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Sincere by MJ Cole"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'streets-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/22U2LLVRwtk?si=l4mw7P7uTzU_7Pe9"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Has It Come to This? by The Streets"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'soulboy-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/iKGZXULgslw?si=Zm2RFlqzss7NuxRa"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Soulboy by p-rallel"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'burial-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/z5NMTyAuPMk?si=L1dYYU_YAXMryxP-"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Burial by Leviticus"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
+  'pantheress-vid': (
+    <CenteredWrapper>
+      <StyledIFrame
+        src="https://www.youtube.com/embed/0Szr5Dcwn4Y?si=tXyhnwYu0fxgbyo9"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Passion by PinkPantheress"
+      ></StyledIFrame>
+    </CenteredWrapper>
+  ),
   'chicken-vid': (
     <CenteredWrapper>
       <StyledIFrame
@@ -506,6 +562,11 @@ const CUSTOM_ELEMENTS: Record<string, React.ReactElement> = {
   'flemming-2-pic': (
     <CenteredWrapper>
       <StyledImg src={FLEMMING2}></StyledImg>
+    </CenteredWrapper>
+  ),
+  'pantheress-pic': (
+    <CenteredWrapper>
+      <StyledImg src={PANTHERESS}></StyledImg>
     </CenteredWrapper>
   ),
   'kano-vid': (

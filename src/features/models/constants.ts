@@ -79,9 +79,18 @@ import SHEP_THUMBNAIL from '../../images/thumbnails/shep.jpg';
 import SAB_THUMBNAIL from '../../images/thumbnails/finalsab.jpg';
 import BROCCOLI from '../../images/thumbnails/broccoli.jpg';
 import HANDBURGER from '../../images/thumbnails/handburger.jpg';
+import FANCYTHAT from '../../images/thumbnails/fancythat.jpg';
 import { Feature } from './types';
 
 export const FEATURES: ReadonlyArray<Feature> = [
+  {
+    id: 'pinkpantheress-top-five-jungle-tracks',
+    title: "PinkPantheress's Top Five Jungle Tracks",
+    author: 'Parker Albert',
+    createdAt: 1747522055,
+    image: FANCYTHAT,
+    content: `MJ Cole - “Sincere”<br></br><custom id = "mj-vid"></custom><br></br>The Streets - “Has It Come to This?”<br></br><custom id = "streets-vid"></custom><br></br>p-rallel - “soulboy - IZCO Remix”<br></br><custom id = "soulboy-vid"></custom><br></br>Leviticus - “Burial”<br></br><custom id = "burial-vid"></custom><br></br>PinkPantheress - “Passion”<br></br><custom id = "pantheress-vid"></custom>`,
+  },
   {
     id: 'smacking-burger',
     title: 'Smacking Burger',
